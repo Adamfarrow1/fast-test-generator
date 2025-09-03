@@ -46,8 +46,52 @@ export async function generateTestPDF(questions: Question[]): Promise<Uint8Array
 
     // Draw questions
     questions.forEach((q, index) => {
-      // Check if we need a new page
-      if (yOffset < margins.bottom + 100) {
+      // Calculate total space needed for this question
+      const questionWidth = width - margins.left - margins.right - 25;
+      const words = q.questionText.split(' ');
+      let lines = [''];
+      let currentLine = 0;
+      
+      words.forEach(word => {
+        const testLine = lines[currentLine] + (lines[currentLine] ? ' ' : '') + word;
+        const testWidth = font.widthOfTextAtSize(testLine, 12);
+        
+        if (testWidth <= questionWidth) {
+          lines[currentLine] = testLine;
+        } else {
+          currentLine++;
+          lines[currentLine] = word;
+        }
+      });
+
+      // Calculate space needed for all choices
+      let totalChoiceHeight = 0;
+      q.choices.forEach(choice => {
+        const choiceWidth = width - margins.left - margins.right - 50;
+        const choiceWords = choice.split(' ');
+        let choiceLines = [''];
+        let currentChoiceLine = 0;
+        
+        choiceWords.forEach(word => {
+          const testLine = choiceLines[currentChoiceLine] + (choiceLines[currentChoiceLine] ? ' ' : '') + word;
+          const testWidth = font.widthOfTextAtSize(testLine, 12);
+          
+          if (testWidth <= choiceWidth) {
+            choiceLines[currentChoiceLine] = testLine;
+          } else {
+            currentChoiceLine++;
+            choiceLines[currentChoiceLine] = word;
+          }
+        });
+        totalChoiceHeight += choiceLines.length * 20 + spacing.betweenChoices;
+      });
+
+      // Total space needed for this question
+      const questionHeight = lines.length * 20 + spacing.afterQuestion;
+      const totalSpaceNeeded = questionHeight + totalChoiceHeight + spacing.betweenQuestions;
+
+      // Check if we need a new page for the entire question
+      if (yOffset - totalSpaceNeeded < margins.bottom) {
         currentPage = pdfDoc.addPage(pageSize);
         yOffset = height - margins.top;
       }
@@ -60,24 +104,21 @@ export async function generateTestPDF(questions: Question[]): Promise<Uint8Array
         font: boldFont
       });
 
-      // Draw question text
-      currentPage.drawText(q.questionText, {
-        x: margins.left + 25,
-        y: yOffset,
-        size: 12,
-        font: font,
-        maxWidth: width - margins.left - margins.right - 25
+      // Draw question text line by line
+      lines.forEach((line, lineIndex) => {
+        currentPage.drawText(line, {
+          x: margins.left + 25,
+          y: yOffset - (lineIndex * 20),
+          size: 12,
+          font: font
+        });
       });
-      yOffset -= spacing.afterQuestion;
+      
+      // Adjust yOffset based on number of lines
+      yOffset -= (lines.length * 20 + spacing.afterQuestion);
 
       // Draw choices
       q.choices.forEach((choice, choiceIndex) => {
-        // Check if we need a new page for choices
-        if (yOffset < margins.bottom + 50) {
-          currentPage = pdfDoc.addPage(pageSize);
-          yOffset = height - margins.top;
-        }
-
         // Draw choice letter
         currentPage.drawText(`${String.fromCharCode(65 + choiceIndex)})`, {
           x: margins.left + 25,
@@ -86,16 +127,35 @@ export async function generateTestPDF(questions: Question[]): Promise<Uint8Array
           font: font
         });
 
-        // Draw choice text
-        currentPage.drawText(choice, {
-          x: margins.left + 50,
-          y: yOffset,
-          size: 12,
-          font: font,
-          maxWidth: width - margins.left - margins.right - 50
+        // Calculate lines needed for choice text
+        const choiceWidth = width - margins.left - margins.right - 50;
+        const choiceWords = choice.split(' ');
+        let choiceLines = [''];
+        let currentChoiceLine = 0;
+        
+        choiceWords.forEach(word => {
+          const testLine = choiceLines[currentChoiceLine] + (choiceLines[currentChoiceLine] ? ' ' : '') + word;
+          const testWidth = font.widthOfTextAtSize(testLine, 12);
+          
+          if (testWidth <= choiceWidth) {
+            choiceLines[currentChoiceLine] = testLine;
+          } else {
+            currentChoiceLine++;
+            choiceLines[currentChoiceLine] = word;
+          }
         });
 
-        yOffset -= spacing.betweenChoices;
+        // Draw choice text line by line
+        choiceLines.forEach((line, lineIndex) => {
+          currentPage.drawText(line, {
+            x: margins.left + 50,
+            y: yOffset - (lineIndex * 20),
+            size: 12,
+            font: font
+          });
+        });
+
+        yOffset -= (choiceLines.length * 20 + spacing.betweenChoices);
       });
 
       yOffset -= spacing.betweenQuestions;
@@ -131,15 +191,40 @@ export async function generateTestPDF(questions: Question[]): Promise<Uint8Array
 
       // Draw answer and solution
       const answerText = `${q.correctAnswer}${q.solution ? ' - ' + q.solution : ''}`;
-      currentPage.drawText(answerText, {
-        x: margins.left + 25,
-        y: yOffset,
-        size: 12,
-        font: font,
-        maxWidth: width - margins.left - margins.right - 25
+      const answerWidth = width - margins.left - margins.right - 25;
+      const answerWords = answerText.split(' ');
+      let answerLines = [''];
+      let currentAnswerLine = 0;
+      
+      answerWords.forEach(word => {
+        const testLine = answerLines[currentAnswerLine] + (answerLines[currentAnswerLine] ? ' ' : '') + word;
+        const testWidth = font.widthOfTextAtSize(testLine, 12);
+        
+        if (testWidth <= answerWidth) {
+          answerLines[currentAnswerLine] = testLine;
+        } else {
+          currentAnswerLine++;
+          answerLines[currentAnswerLine] = word;
+        }
       });
 
-      yOffset -= spacing.afterQuestion;
+      // Draw answer text line by line
+      answerLines.forEach((line, lineIndex) => {
+        // Check if we need a new page
+        if (yOffset - (lineIndex * 20) < margins.bottom + 50) {
+          currentPage = pdfDoc.addPage(pageSize);
+          yOffset = height - margins.top;
+        }
+
+        currentPage.drawText(line, {
+          x: margins.left + 25,
+          y: yOffset - (lineIndex * 20),
+          size: 12,
+          font: font
+        });
+      });
+
+      yOffset -= (answerLines.length * 20 + spacing.afterQuestion);
     });
 
     return await pdfDoc.save();
