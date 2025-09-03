@@ -1,5 +1,9 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
-
+## TODO 
+create more fun questions
+add more questions to 5-8
+verify the domains that are attached to each grade
+check official fast book against the question set to verify the integrity of the questions
 ## Getting Started
 
 First, run the development server:

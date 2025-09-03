@@ -36,8 +36,8 @@ export async function generateTestPDF(questions: Question[]): Promise<Uint8Array
     let yOffset = height - margins.top;
 
     // Draw title
-    currentPage.drawText('Math Test', {
-      x: width / 2 - 50,
+    currentPage.drawText('Fast Practice Test', {
+      x: width / 2 - 100,
       y: yOffset,
       size: 24,
       font: boldFont

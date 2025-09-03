@@ -1,5 +1,8 @@
 import { Question } from './types';
 
+
+
+//TODO add more fun questions
 export const mockQuestions: Question[] = [
   // Number Sense Questions (Grades 1-3)
   {
@@ -1182,7 +1185,7 @@ export const mockQuestions: Question[] = [
     id: '229', gradeMin: 2, gradeMax: 2, domain: 'Place Value', difficulty: 1,
     questionText: 'Round 572 to the nearest hundred.', choices: ['500','600','570','580'],
     correctAnswer: '600',
-    solution: 'Tens digit is 7 (≥5), so round up'
+    solution: 'Tens digit is 7 (>=5), so round up'
   },
   {
     id: '230', gradeMin: 2, gradeMax: 2, domain: 'Place Value', difficulty: 1,
@@ -1333,7 +1336,7 @@ export const mockQuestions: Question[] = [
     solution: 'Number before 1000 is 999' },
   { id: '307', gradeMin: 3, gradeMax: 3, domain: 'Number Sense', difficulty: 3,
     questionText: 'Round 768 to the nearest hundred.', choices: ['700','750','760','800'], correctAnswer: '800',
-    solution: 'Tens digit is 6 (≥5), round up -> 800' },
+    solution: 'Tens digit is 6 (>=5), round up -> 800' },
   { id: '308', gradeMin: 3, gradeMax: 3, domain: 'Number Sense', difficulty: 3,
     questionText: 'Round 872 to the nearest ten.', choices: ['870','872','880','900'], correctAnswer: '870',
     solution: 'Ones digit is 2 (<5), round down -> 870' },
@@ -1379,7 +1382,7 @@ export const mockQuestions: Question[] = [
     solution: '592 = 500 + 90 + 2' },
   { id: '321', gradeMin: 3, gradeMax: 3, domain: 'Place Value', difficulty: 2,
     questionText: 'Round 4,678 to the nearest hundred.', choices: ['4,600','4,700','4,800','5,000'], correctAnswer: '4,700',
-    solution: 'Tens digit is 7 (≥5), round up' },
+    solution: 'Tens digit is 7 (>=5), round up' },
   { id: '322', gradeMin: 3, gradeMax: 3, domain: 'Place Value', difficulty: 2,
     questionText: 'Round 8,145 to the nearest thousand.', choices: ['8,000','8,100','8,200','9,000'], correctAnswer: '8,000',
     solution: 'Hundreds digit is 1 (<5), round down' },
@@ -1489,7 +1492,7 @@ export const mockQuestions: Question[] = [
     solution: '900 - 456 = 444' },
   { id: '403', gradeMin: 4, gradeMax: 4, domain: 'Number Sense', difficulty: 2,
     questionText: 'Round 3,486 to the nearest hundred.', choices: ['3,400','3,500','3,600','3,000'],
-    correctAnswer: '3,500', solution: 'Tens digit is 8 (≥5), round up -> 3,500' },
+    correctAnswer: '3,500', solution: 'Tens digit is 8 (>=5), round up -> 3,500' },
   { id: '404', gradeMin: 4, gradeMax: 4, domain: 'Number Sense', difficulty: 2,
     questionText: 'Round 7,248 to the nearest thousand.', choices: ['7,000','7,200','7,500','8,000'],
     correctAnswer: '7,000', solution: 'Hundreds digit is 2 (<5), round down -> 7,000' },
@@ -1529,10 +1532,10 @@ export const mockQuestions: Question[] = [
     solution: '6 is in the tens place' },
   { id: '415', gradeMin: 4, gradeMax: 4, domain: 'Place Value', difficulty: 2,
     questionText: 'Round 5,489 to the nearest hundred.', choices: ['5,400','5,500','5,600','5,000'],
-    correctAnswer: '5,500', solution: 'Tens digit is 8 (≥5), round up' },
+    correctAnswer: '5,500', solution: 'Tens digit is 8 (>=5), round up' },
   { id: '416', gradeMin: 4, gradeMax: 4, domain: 'Place Value', difficulty: 2,
     questionText: 'Round 8,765 to the nearest thousand.', choices: ['8,000','8,500','9,000','9,500'],
-    correctAnswer: '9,000', solution: 'Hundreds digit is 7 (≥5), round up' },
+    correctAnswer: '9,000', solution: 'Hundreds digit is 7 (>=5), round up' },
   { id: '417', gradeMin: 4, gradeMax: 4, domain: 'Place Value', difficulty: 3,
     questionText: 'Write 6,309 in expanded form.', choices: ['6000+30+9','6000+300+9','6000+309','6300+9'],
     correctAnswer: '6000+300+9', solution: '6,309 = 6000 + 300 + 9' },

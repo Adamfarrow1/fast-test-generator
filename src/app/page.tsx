@@ -104,66 +104,86 @@ export default function Home() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-md mx-auto">
-        <div className="bg-white rounded-lg shadow-lg p-6 space-y-6">
-          <div className="text-center">
-            <h1 className="text-3xl font-bold text-gray-900">Math Test Generator</h1>
-            <p className="mt-2 text-gray-600">Create customized math tests for your students</p>
+    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-gray-100 py-16 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-xl mx-auto">
+        <div className="bg-white rounded-2xl shadow-xl p-8">
+          <div className="text-center mb-8">
+            <h1 className="text-4xl font-extrabold text-gray-900 tracking-tight">
+              Fast Practice Test Generator
+            </h1>
+            <p className="mt-3 text-lg text-gray-600">
+              Create customized math tests for your students
+            </p>
           </div>
 
-          <form onSubmit={handleSubmit} className="space-y-6">
-            <div>
-              <label htmlFor="grade" className="block text-sm font-medium text-gray-700">
-                Grade Level
-              </label>
-              <select
-                id="grade"
-                value={formData.grade}
-                onChange={(e) => handleGradeChange(e.target.value)}
-                className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
-                required
-              >
-                {[1, 2, 3, 4, 5, 6, 7, 8].map(grade => (
-                  <option key={grade} value={grade}>
-                    Grade {grade}
-                  </option>
-                ))}
-              </select>
-            </div>
+          <form onSubmit={handleSubmit} className="space-y-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="space-y-2">
+                <label htmlFor="grade" className="block text-sm font-semibold text-gray-700">
+                  Grade Level
+                </label>
+                <select
+                  id="grade"
+                  value={formData.grade}
+                  onChange={(e) => handleGradeChange(e.target.value)}
+                  className="block w-full rounded-lg border-gray-300 bg-gray-50 shadow-sm transition-colors
+                    focus:border-indigo-500 focus:ring-indigo-500 hover:bg-white"
+                  required
+                >
+                  {[1, 2, 3, 4, 5, 6, 7, 8].map(grade => (
+                    <option key={grade} value={grade}>
+                      Grade {grade}
+                    </option>
+                  ))}
+                </select>
+              </div>
 
-            <div>
-              <label htmlFor="numQuestions" className="block text-sm font-medium text-gray-700">
-                Number of Questions
-              </label>
-              <input
-                type="number"
-                id="numQuestions"
-                min="1"
-                max="50"
-                value={formData.numQuestions}
-                onChange={(e) => setFormData(prev => ({ ...prev, numQuestions: e.target.value }))}
-                className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
-                required
-              />
-              <p className="mt-1 text-sm text-gray-500">
-                Available questions for selected domains: {
-                  mockQuestions.filter(q => 
+              <div className="space-y-2">
+                <label htmlFor="numQuestions" className="block text-sm font-semibold text-gray-700">
+                  Number of Questions
+                </label>
+                <input
+                  type="number"
+                  id="numQuestions"
+                  min="1"
+                  max="50"
+                  value={formData.numQuestions}
+                  onChange={(e) => setFormData(prev => ({ ...prev, numQuestions: e.target.value }))}
+                  className="block w-full rounded-lg border-gray-300 bg-gray-50 shadow-sm transition-colors
+                    focus:border-indigo-500 focus:ring-indigo-500 hover:bg-white"
+                  required
+                />
+                <p className="text-sm text-gray-500">
+                  {mockQuestions.filter(q => 
                     q.gradeMin <= parseInt(formData.grade) && 
                     q.gradeMax >= parseInt(formData.grade) &&
                     formData.domains.includes(q.domain)
-                  ).length
-                }
-              </p>
+                  ).length} questions available
+                </p>
+              </div>
             </div>
 
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">
-                Available Math Domains for Grade {formData.grade}
-              </label>
-              <div className="space-y-2">
+            <div className="space-y-4">
+              <div className="flex items-center justify-between">
+                <label className="text-sm font-semibold text-gray-700">
+                  Math Domains
+                </label>
+                <span className="text-sm text-gray-500">
+                  Selected: {formData.domains.length}
+                </span>
+              </div>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 p-4 bg-gray-50 rounded-lg">
                 {availableDomains.map(domain => (
-                  <div key={domain} className="flex items-center">
+                  <div 
+                    key={domain}
+                    className={`
+                      flex items-center p-3 rounded-lg transition-colors cursor-pointer
+                      ${formData.domains.includes(domain)
+                        ? 'bg-indigo-50 border-2 border-indigo-200'
+                        : 'bg-white border-2 border-gray-200 hover:border-indigo-200'}
+                    `}
+                    onClick={() => handleDomainChange(domain)}
+                  >
                     <input
                       type="checkbox"
                       id={domain}
@@ -171,7 +191,10 @@ export default function Home() {
                       onChange={() => handleDomainChange(domain)}
                       className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
                     />
-                    <label htmlFor={domain} className="ml-2 block text-sm text-gray-700">
+                    <label 
+                      htmlFor={domain}
+                      className="ml-3 block text-sm font-medium text-gray-700 cursor-pointer select-none"
+                    >
                       {domain}
                     </label>
                   </div>
@@ -179,25 +202,49 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-2 gap-4 pt-4">
               <button
                 type="button"
                 onClick={handlePreview}
                 disabled={loading || formData.domains.length === 0}
-                className={`flex justify-center py-2 px-4 border border-indigo-600 rounded-md shadow-sm text-sm font-medium text-indigo-600 bg-white hover:bg-indigo-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 ${
-                  (loading || formData.domains.length === 0) && 'opacity-50 cursor-not-allowed'
-                }`}
+                className={`
+                  inline-flex items-center justify-center px-6 py-3 text-base font-medium
+                  rounded-lg transition-all duration-200 
+                  border-2 border-indigo-600 text-indigo-600
+                  hover:bg-indigo-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500
+                  disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:bg-transparent
+                `}
               >
-                {loading ? 'Generating...' : 'Preview'}
+                {loading ? (
+                  <span className="inline-flex items-center">
+                    <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-indigo-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                      <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                      <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                    </svg>
+                    Generating...
+                  </span>
+                ) : 'Preview Test'}
               </button>
               <button
                 type="submit"
                 disabled={loading || formData.domains.length === 0}
-                className={`flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 ${
-                  (loading || formData.domains.length === 0) && 'opacity-50 cursor-not-allowed'
-                }`}
+                className={`
+                  inline-flex items-center justify-center px-6 py-3 text-base font-medium
+                  rounded-lg transition-all duration-200
+                  border-2 border-transparent bg-indigo-600 text-white
+                  hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500
+                  disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:bg-indigo-600
+                `}
               >
-                {loading ? 'Generating...' : 'Download'}
+                {loading ? (
+                  <span className="inline-flex items-center">
+                    <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                      <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                      <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                    </svg>
+                    Generating...
+                  </span>
+                ) : 'Download Test'}
               </button>
             </div>
           </form>
