@@ -1,3 +1,7 @@
+export type QuestionChoice =
+  | { type: 'text'; value: string }
+  | { type: 'image'; src: string; alt?: string };
+
 export interface Question {
   id: string;
   gradeMin: number;
@@ -5,7 +9,7 @@ export interface Question {
   domain: string;
   difficulty: number;
   questionText: string;
-  choices: string[];
+  choices: QuestionChoice[];
   correctAnswer: string;
   solution?: string;
 }

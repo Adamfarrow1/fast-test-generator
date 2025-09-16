@@ -1,4 +1,7 @@
 import { PDFDocument, rgb, StandardFonts } from 'pdf-lib';
+import fs from 'fs/promises';
+import path from 'path';
+import sharp from 'sharp';
 import { Question } from './types';
 
 export async function generateTestPDF(questions: Question[]): Promise<Uint8Array> {
@@ -45,7 +48,7 @@ export async function generateTestPDF(questions: Question[]): Promise<Uint8Array
     yOffset -= spacing.afterTitle;
 
     // Draw questions
-    questions.forEach((q, index) => {
+  for (const [index, q] of questions.entries()) {
       // Calculate total space needed for this question
       const questionWidth = width - margins.left - margins.right - 25;
       const words = q.questionText.split(' ');
@@ -66,25 +69,28 @@ export async function generateTestPDF(questions: Question[]): Promise<Uint8Array
 
       // Calculate space needed for all choices
       let totalChoiceHeight = 0;
-      q.choices.forEach(choice => {
-        const choiceWidth = width - margins.left - margins.right - 50;
-        const choiceWords = choice.split(' ');
-        let choiceLines = [''];
-        let currentChoiceLine = 0;
-        
-        choiceWords.forEach(word => {
-          const testLine = choiceLines[currentChoiceLine] + (choiceLines[currentChoiceLine] ? ' ' : '') + word;
-          const testWidth = font.widthOfTextAtSize(testLine, 12);
-          
-          if (testWidth <= choiceWidth) {
-            choiceLines[currentChoiceLine] = testLine;
-          } else {
-            currentChoiceLine++;
-            choiceLines[currentChoiceLine] = word;
+      for (const choice of q.choices) {
+        if (choice.type === 'text') {
+          const choiceWidth = width - margins.left - margins.right - 50;
+          const choiceWords = choice.value.split(' ');
+          let choiceLines = [''];
+          let currentChoiceLine = 0;
+          for (const word of choiceWords) {
+            const testLine = choiceLines[currentChoiceLine] + (choiceLines[currentChoiceLine] ? ' ' : '') + word;
+            const testWidth = font.widthOfTextAtSize(testLine, 12);
+            if (testWidth <= choiceWidth) {
+              choiceLines[currentChoiceLine] = testLine;
+            } else {
+              currentChoiceLine++;
+              choiceLines[currentChoiceLine] = word;
+            }
           }
-        });
-        totalChoiceHeight += choiceLines.length * 20 + spacing.betweenChoices;
-      });
+          totalChoiceHeight += choiceLines.length * 20 + spacing.betweenChoices;
+        } else if (choice.type === 'image') {
+          // Estimate image height for layout (fixed value for now)
+          totalChoiceHeight += 60 + spacing.betweenChoices;
+        }
+      }
 
       // Total space needed for this question
       const questionHeight = lines.length * 20 + spacing.afterQuestion;
@@ -118,7 +124,7 @@ export async function generateTestPDF(questions: Question[]): Promise<Uint8Array
       yOffset -= (lines.length * 20 + spacing.afterQuestion);
 
       // Draw choices
-      q.choices.forEach((choice, choiceIndex) => {
+      for (const [choiceIndex, choice] of q.choices.entries()) {
         // Draw choice letter
         currentPage.drawText(`${String.fromCharCode(65 + choiceIndex)})`, {
           x: margins.left + 25,
@@ -127,39 +133,54 @@ export async function generateTestPDF(questions: Question[]): Promise<Uint8Array
           font: font
         });
 
-        // Calculate lines needed for choice text
-        const choiceWidth = width - margins.left - margins.right - 50;
-        const choiceWords = choice.split(' ');
-        let choiceLines = [''];
-        let currentChoiceLine = 0;
-        
-        choiceWords.forEach(word => {
-          const testLine = choiceLines[currentChoiceLine] + (choiceLines[currentChoiceLine] ? ' ' : '') + word;
-          const testWidth = font.widthOfTextAtSize(testLine, 12);
-          
-          if (testWidth <= choiceWidth) {
-            choiceLines[currentChoiceLine] = testLine;
-          } else {
-            currentChoiceLine++;
-            choiceLines[currentChoiceLine] = word;
-          }
-        });
-
-        // Draw choice text line by line
-        choiceLines.forEach((line, lineIndex) => {
-          currentPage.drawText(line, {
+        if (choice.type === 'image') {
+          // Load SVG, convert to PNG, embed in PDF
+          const imagePath = path.join(process.cwd(), 'public', path.basename(choice.src));
+          const svgBuffer = await fs.readFile(imagePath);
+          const pngBuffer = await sharp(svgBuffer).png().toBuffer();
+          const pngImage = await pdfDoc.embedPng(pngBuffer);
+          const imgDims = pngImage.scale(0.4); // scale for PDF
+          currentPage.drawImage(pngImage, {
             x: margins.left + 50,
-            y: yOffset - (lineIndex * 20),
-            size: 12,
-            font: font
+            y: yOffset - imgDims.height / 2,
+            width: imgDims.width,
+            height: imgDims.height,
           });
-        });
+          yOffset -= (imgDims.height + spacing.betweenChoices);
+        } else if (choice.type === 'text') {
+          // Calculate lines needed for choice text
+          const choiceWidth = width - margins.left - margins.right - 50;
+          const choiceWords = choice.value.split(' ');
+          let choiceLines = [''];
+          let currentChoiceLine = 0;
+          
+          choiceWords.forEach(word => {
+            const testLine = choiceLines[currentChoiceLine] + (choiceLines[currentChoiceLine] ? ' ' : '') + word;
+            const testWidth = font.widthOfTextAtSize(testLine, 12);
+            
+            if (testWidth <= choiceWidth) {
+              choiceLines[currentChoiceLine] = testLine;
+            } else {
+              currentChoiceLine++;
+              choiceLines[currentChoiceLine] = word;
+            }
+          });
 
-        yOffset -= (choiceLines.length * 20 + spacing.betweenChoices);
-      });
+          // Draw choice text line by line
+          choiceLines.forEach((line, lineIndex) => {
+            currentPage.drawText(line, {
+              x: margins.left + 50,
+              y: yOffset - (lineIndex * 20),
+              size: 12,
+              font: font
+            });
+          });
+          yOffset -= (choiceLines.length * 20 + spacing.betweenChoices);
+        }
+      }
 
       yOffset -= spacing.betweenQuestions;
-    });
+    };
 
     // Create answer key
     currentPage = pdfDoc.addPage(pageSize);

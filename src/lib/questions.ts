@@ -5,6 +5,183 @@ import { Question } from './types';
 //TODO add more fun questions
 export const mockQuestions: Question[] = [
   // Number Sense Questions (Grades 1-3)
+    // Grade 5 Questions
+    {
+      id: '5-1',
+      gradeMin: 5,
+      gradeMax: 5,
+      domain: 'Fractions',
+      difficulty: 2,
+      questionText: 'What is 3/4 + 1/8?',
+      choices: ['7/8', '5/8', '1', '3/8'],
+      correctAnswer: '7/8',
+      solution: '3/4 = 6/8, so 6/8 + 1/8 = 7/8.'
+    },
+    {
+      id: '5-2',
+      gradeMin: 5,
+      gradeMax: 5,
+      domain: 'Decimals & Percents',
+      difficulty: 2,
+      questionText: 'What is 25% of 60?',
+      choices: ['15', '12', '20', '30'],
+      correctAnswer: '15',
+      solution: '25% of 60 = 0.25 × 60 = 15.'
+    },
+    {
+      id: '5-3',
+      gradeMin: 5,
+      gradeMax: 5,
+      domain: 'Measurement',
+      difficulty: 2,
+      questionText: 'How many millimeters are in 5 centimeters?',
+      choices: ['50', '5', '500', '25'],
+      correctAnswer: '50',
+      solution: '1 cm = 10 mm, so 5 × 10 = 50 mm.'
+    },
+    {
+      id: '5-4',
+      gradeMin: 5,
+      gradeMax: 5,
+      domain: 'Geometry',
+      difficulty: 2,
+      questionText: 'What is the perimeter of a rectangle with length 8 cm and width 3 cm?',
+      choices: ['22 cm', '24 cm', '11 cm', '16 cm'],
+      correctAnswer: '22 cm',
+      solution: 'Perimeter = 2 × (8 + 3) = 22 cm.'
+    },
+    {
+      id: '5-5',
+      gradeMin: 5,
+      gradeMax: 5,
+      domain: 'Number Sense',
+      difficulty: 2,
+      questionText: 'What is the value of 3² + 4²?',
+      choices: ['25', '12', '7', '16'],
+      correctAnswer: '25',
+      solution: '3² = 9, 4² = 16, 9 + 16 = 25.'
+    },
+      // Additional Grade 5 Questions
+      {
+        id: '5-6', gradeMin: 5, gradeMax: 5, domain: 'Number Sense', difficulty: 2,
+        questionText: 'What is 125 ÷ 5?', choices: ['20', '25', '30', '15'], correctAnswer: '25', solution: '125 ÷ 5 = 25.'
+      },
+      {
+        id: '5-7', gradeMin: 5, gradeMax: 5, domain: 'Fractions', difficulty: 2,
+        questionText: 'Which is greater: 2/3 or 3/5?', choices: ['2/3', '3/5', 'Equal', 'Cannot tell'], correctAnswer: '2/3', solution: '2/3 = 0.666..., 3/5 = 0.6.'
+      },
+      {
+        id: '5-8', gradeMin: 5, gradeMax: 5, domain: 'Decimals & Percents', difficulty: 2,
+        questionText: 'Convert 0.75 to a percent.', choices: ['7.5%', '75%', '0.75%', '750%'], correctAnswer: '75%', solution: '0.75 × 100 = 75%.'
+      },
+      {
+        id: '5-9', gradeMin: 5, gradeMax: 5, domain: 'Measurement', difficulty: 2,
+        questionText: 'How many grams are in 2 kilograms?', choices: ['200', '2000', '20', '2'], correctAnswer: '2000', solution: '1 kg = 1000 g, so 2 × 1000 = 2000 g.'
+      },
+      {
+        id: '5-10', gradeMin: 5, gradeMax: 5, domain: 'Geometry', difficulty: 2,
+        questionText: 'What is the area of a rectangle with length 7 cm and width 4 cm?', choices: ['28 cm²', '11 cm²', '14 cm²', '21 cm²'], correctAnswer: '28 cm²', solution: 'Area = 7 × 4 = 28 cm².'
+      },
+      {
+        id: '5-11', gradeMin: 5, gradeMax: 5, domain: 'Number Sense', difficulty: 2,
+        questionText: 'What is the value of 2 × (6 + 3)?', choices: ['18', '12', '9', '15'], correctAnswer: '18', solution: '6 + 3 = 9, 2 × 9 = 18.'
+      },
+      {
+        id: '5-12', gradeMin: 5, gradeMax: 5, domain: 'Fractions', difficulty: 2,
+        questionText: 'What is 1/2 of 36?', choices: ['18', '12', '24', '36'], correctAnswer: '18', solution: '36 ÷ 2 = 18.'
+      },
+      {
+        id: '5-13', gradeMin: 5, gradeMax: 5, domain: 'Decimals & Percents', difficulty: 2,
+        questionText: 'What is 0.2 × 50?', choices: ['10', '20', '5', '15'], correctAnswer: '10', solution: '0.2 × 50 = 10.'
+      },
+      {
+        id: '5-14', gradeMin: 5, gradeMax: 5, domain: 'Measurement', difficulty: 2,
+        questionText: 'How many centimeters are in 3 meters?', choices: ['30', '300', '3', '100'], correctAnswer: '300', solution: '1 m = 100 cm, so 3 × 100 = 300 cm.'
+      },
+      {
+        id: '5-15', gradeMin: 5, gradeMax: 5, domain: 'Geometry', difficulty: 2,
+        questionText: 'How many sides does a hexagon have?', choices: ['5', '6', '7', '8'], correctAnswer: '6', solution: 'A hexagon has 6 sides.'
+      },
+      {
+        id: '5-16', gradeMin: 5, gradeMax: 5, domain: 'Number Sense', difficulty: 2,
+        questionText: 'What is the value of 9 × 7?', choices: ['63', '56', '72', '49'], correctAnswer: '63', solution: '9 × 7 = 63.'
+      },
+      {
+        id: '5-17', gradeMin: 5, gradeMax: 5, domain: 'Fractions', difficulty: 2,
+        questionText: 'What is 2/5 of 25?', choices: ['10', '5', '15', '20'], correctAnswer: '10', solution: '25 × 2/5 = 10.'
+      },
+      {
+        id: '5-18', gradeMin: 5, gradeMax: 5, domain: 'Decimals & Percents', difficulty: 2,
+        questionText: 'What is 10% of 120?', choices: ['12', '10', '120', '20'], correctAnswer: '12', solution: '10% of 120 = 0.1 × 120 = 12.'
+      },
+      {
+        id: '5-19', gradeMin: 5, gradeMax: 5, domain: 'Measurement', difficulty: 2,
+        questionText: 'How many milliliters are in 2 liters?', choices: ['200', '2000', '20', '2'], correctAnswer: '2000', solution: '1 L = 1000 mL, so 2 × 1000 = 2000 mL.'
+      },
+      {
+        id: '5-20', gradeMin: 5, gradeMax: 5, domain: 'Geometry', difficulty: 2,
+        questionText: 'What is the sum of the angles in a triangle?', choices: ['180°', '90°', '360°', '270°'], correctAnswer: '180°', solution: 'Sum of angles in a triangle is 180°.'
+      },
+      {
+        id: '5-21', gradeMin: 5, gradeMax: 5, domain: 'Number Sense', difficulty: 2,
+        questionText: 'What is the value of 8 × 8?', choices: ['64', '56', '72', '48'], correctAnswer: '64', solution: '8 × 8 = 64.'
+      },
+      {
+        id: '5-22', gradeMin: 5, gradeMax: 5, domain: 'Fractions', difficulty: 2,
+        questionText: 'What is 3/4 of 40?', choices: ['30', '10', '20', '40'], correctAnswer: '30', solution: '40 × 3/4 = 30.'
+      },
+      {
+        id: '5-23', gradeMin: 5, gradeMax: 5, domain: 'Decimals & Percents', difficulty: 2,
+        questionText: 'What is 0.6 × 100?', choices: ['60', '6', '600', '10'], correctAnswer: '60', solution: '0.6 × 100 = 60.'
+      },
+      {
+        id: '5-24', gradeMin: 5, gradeMax: 5, domain: 'Measurement', difficulty: 2,
+        questionText: 'How many inches are in 2 feet?', choices: ['24', '12', '6', '18'], correctAnswer: '24', solution: '1 foot = 12 inches, so 2 × 12 = 24 inches.'
+      },
+      {
+        id: '5-25', gradeMin: 5, gradeMax: 5, domain: 'Geometry', difficulty: 2,
+        questionText: 'What is the volume of a cube with side length 3 cm?', choices: ['27 cm³', '9 cm³', '18 cm³', '12 cm³'], correctAnswer: '27 cm³', solution: 'Volume = 3 × 3 × 3 = 27 cm³.'
+      },
+      {
+        id: '5-26', gradeMin: 5, gradeMax: 5, domain: 'Number Sense', difficulty: 2,
+        questionText: 'What is the value of 100 - 37?', choices: ['63', '73', '67', '57'], correctAnswer: '63', solution: '100 - 37 = 63.'
+      },
+      {
+        id: '5-27', gradeMin: 5, gradeMax: 5, domain: 'Fractions', difficulty: 2,
+        questionText: 'What is 1/3 of 21?', choices: ['7', '3', '14', '21'], correctAnswer: '7', solution: '21 × 1/3 = 7.'
+      },
+      {
+        id: '5-28', gradeMin: 5, gradeMax: 5, domain: 'Decimals & Percents', difficulty: 2,
+        questionText: 'What is 50% of 80?', choices: ['40', '80', '20', '60'], correctAnswer: '40', solution: '50% of 80 = 0.5 × 80 = 40.'
+      },
+      {
+        id: '5-29', gradeMin: 5, gradeMax: 5, domain: 'Measurement', difficulty: 2,
+        questionText: 'How many days are in 3 weeks?', choices: ['21', '14', '7', '28'], correctAnswer: '21', solution: '1 week = 7 days, so 3 × 7 = 21 days.'
+      },
+      {
+        id: '5-30', gradeMin: 5, gradeMax: 5, domain: 'Geometry', difficulty: 2,
+        questionText: 'How many faces does a cube have?', choices: ['6', '8', '12', '4'], correctAnswer: '6', solution: 'A cube has 6 faces.'
+      },
+      {
+        id: '5-31', gradeMin: 5, gradeMax: 5, domain: 'Number Sense', difficulty: 2,
+        questionText: 'What is the value of 45 ÷ 9?', choices: ['5', '4', '6', '9'], correctAnswer: '5', solution: '45 ÷ 9 = 5.'
+      },
+      {
+        id: '5-32', gradeMin: 5, gradeMax: 5, domain: 'Fractions', difficulty: 2,
+        questionText: 'What is 5/6 of 12?', choices: ['10', '6', '8', '12'], correctAnswer: '10', solution: '12 × 5/6 = 10.'
+      },
+      {
+        id: '5-33', gradeMin: 5, gradeMax: 5, domain: 'Decimals & Percents', difficulty: 2,
+        questionText: 'What is 0.4 × 25?', choices: ['10', '4', '25', '8'], correctAnswer: '10', solution: '0.4 × 25 = 10.'
+      },
+      {
+        id: '5-34', gradeMin: 5, gradeMax: 5, domain: 'Measurement', difficulty: 2,
+        questionText: 'How many hours are in 3 days?', choices: ['72', '24', '36', '48'], correctAnswer: '72', solution: '1 day = 24 hours, so 3 × 24 = 72 hours.'
+      },
+      {
+        id: '5-35', gradeMin: 5, gradeMax: 5, domain: 'Geometry', difficulty: 2,
+        questionText: 'What is the area of a triangle with base 10 cm and height 6 cm?', choices: ['30 cm²', '60 cm²', '16 cm²', '36 cm²'], correctAnswer: '30 cm²', solution: 'Area = 1/2 × base × height = 1/2 × 10 × 6 = 30 cm².'
+      },
   {
     id: '1',
     gradeMin: 1,
@@ -16,6 +193,52 @@ export const mockQuestions: Question[] = [
     correctAnswer: '12',
     solution: '5 + 7 = 12'
   },
+    // Grade 1 Image-Based Shape Questions
+    {
+      id: 'img-1',
+      gradeMin: 1,
+      gradeMax: 1,
+      domain: 'Shapes',
+      difficulty: 1,
+      questionText: 'Which of these is a triangle?',
+      choices: [
+        { type: 'image', src: '/triangle.png', alt: 'Triangle' },
+        { type: 'image', src: '/square.png', alt: 'Square' },
+        { type: 'image', src: '/circle.png', alt: 'Circle' }
+      ],
+      correctAnswer: 'A',
+      solution: 'A triangle has three sides.'
+    },
+    {
+      id: 'img-2',
+      gradeMin: 1,
+      gradeMax: 1,
+      domain: 'Shapes',
+      difficulty: 1,
+      questionText: 'Which of these is a square?',
+      choices: [
+        { type: 'image', src: '/circle.png', alt: 'Circle' },
+        { type: 'image', src: '/square.png', alt: 'Square' },
+        { type: 'image', src: '/triangle.png', alt: 'Triangle' }
+      ],
+      correctAnswer: 'B',
+      solution: 'A square has four equal sides.'
+    },
+    {
+      id: 'img-3',
+      gradeMin: 1,
+      gradeMax: 1,
+      domain: 'Shapes',
+      difficulty: 1,
+      questionText: 'Which of these is a circle?',
+      choices: [
+        { type: 'image', src: '/square.png', alt: 'Square' },
+        { type: 'image', src: '/triangle.png', alt: 'Triangle' },
+        { type: 'image', src: '/circle.png', alt: 'Circle' }
+      ],
+      correctAnswer: 'C',
+      solution: 'A circle is round and has no corners.'
+    },
   {
     id: '2',
     gradeMin: 1,
