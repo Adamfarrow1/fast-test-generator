@@ -9,6 +9,19 @@ export interface Question {
   domain: string;
   difficulty: number;
   questionText: string;
+  choices: QuestionChoice[] | string[];
+  correctAnswer: string;
+  solution?: string;
+}
+
+// Type for questions that have been formatted for PDF generation
+export interface FormattedQuestion {
+  id: string;
+  gradeMin: number;
+  gradeMax: number;
+  domain: string;
+  difficulty: number;
+  questionText: string;
   choices: QuestionChoice[];
   correctAnswer: string;
   solution?: string;

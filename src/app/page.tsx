@@ -14,6 +14,7 @@ function getAvailableDomainsForGrade(grade: number): string[] {
 export default function Home() {
   const [loading, setLoading] = useState(false)
   const [formData, setFormData] = useState({
+    studentName: "",
     grade: "1",
     numQuestions: "10",
     domains: [] as string[],
@@ -41,6 +42,7 @@ export default function Home() {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
+          studentName: formData.studentName,
           grade: Number.parseInt(formData.grade),
           numQuestions: Number.parseInt(formData.numQuestions),
           domains: formData.domains,
@@ -71,9 +73,10 @@ export default function Home() {
 
       // Clean up the URL
       setTimeout(() => window.URL.revokeObjectURL(url), 1000)
-    } catch (error: any) {
+    } catch (error: unknown) {
+      const errorMessage = error instanceof Error ? error.message : 'Failed to generate test. Please try again.';
       console.error("Error:", error)
-      alert(error.message || "Failed to generate test. Please try again.")
+      alert(errorMessage)
     } finally {
       setLoading(false)
     }
@@ -156,6 +159,23 @@ export default function Home() {
       <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
         <div className="bg-card border border-border rounded-2xl shadow-lg p-8">
           <form onSubmit={handleSubmit} className="space-y-8">
+            <div className="space-y-3">
+              <label htmlFor="studentName" className="block text-sm font-semibold text-foreground">
+                Student Name
+              </label>
+              <input
+                type="text"
+                id="studentName"
+                value={formData.studentName}
+                onChange={(e) => setFormData((prev) => ({ ...prev, studentName: e.target.value }))}
+                placeholder="Enter student's name"
+                className="block w-full rounded-lg border-border bg-input shadow-sm transition-all duration-200
+                  focus:border-primary focus:ring-2 focus:ring-primary/20 hover:border-primary/50
+                  text-foreground px-4 py-3"
+                required
+              />
+            </div>
+            
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="space-y-3">
                 <label htmlFor="grade" className="block text-sm font-semibold text-foreground">

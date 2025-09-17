@@ -1,22 +1,23 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { mockQuestions } from '@/lib/questions';
 import { generateTestPDF } from '@/lib/pdf-generator';
-import { MathDomain } from '@/lib/types';
+import { MathDomain, QuestionChoice, FormattedQuestion } from '@/lib/types';
 
 export async function POST(req: NextRequest) {
     try {
       console.log('API route: Parsing request body');
       const body = await req.json();
-      const { grade, numQuestions, domains } = body as {
+      const { studentName, grade, numQuestions, domains } = body as {
+        studentName: string;
         grade: number;
         numQuestions: number;
         domains: MathDomain[];
       };
 
-      console.log('API route: Received request', { grade, numQuestions, domains });
+      console.log('API route: Received request', { studentName, grade, numQuestions, domains });
 
       // Validate inputs
-      if (!grade || !numQuestions || !domains || domains.length === 0) {
+      if (!studentName || !grade || !numQuestions || !domains || domains.length === 0) {
         console.log('API route: Missing required fields');
         return NextResponse.json(
           { error: 'Missing required fields' },
@@ -68,8 +69,16 @@ export async function POST(req: NextRequest) {
 
     console.log('API route: Generating PDF with questions:', selectedQuestions.length);
 
+    // Convert string choices to proper QuestionChoice format
+    const formattedQuestions: FormattedQuestion[] = selectedQuestions.map(q => ({
+      ...q,
+      choices: Array.isArray(q.choices) && typeof q.choices[0] === 'string' 
+        ? (q.choices as string[]).map(choice => ({ type: 'text' as const, value: choice }))
+        : q.choices as QuestionChoice[]
+    }));
+
     // Generate PDF
-    const pdfBytes = await generateTestPDF(selectedQuestions);
+    const pdfBytes = await generateTestPDF(formattedQuestions, studentName, domains);
     console.log('API route: PDF generated successfully');
 
     // Return the PDF as a downloadable file
@@ -79,13 +88,15 @@ export async function POST(req: NextRequest) {
         'Content-Disposition': 'attachment; filename="math-test.pdf"'
       }
     });
-  } catch (error: any) {
+  } catch (error: unknown) {
+    const errorMessage = error instanceof Error ? error.message : 'Unknown error';
+    const errorStack = error instanceof Error ? error.stack : undefined;
     console.error('Error generating test:', error);
-    console.error('Error stack:', error?.stack);
+    console.error('Error stack:', errorStack);
     return NextResponse.json(
       { 
-        error: `Failed to generate test: ${error?.message || 'Unknown error'}`,
-        details: error?.stack
+        error: `Failed to generate test: ${errorMessage}`,
+        details: errorStack
       },
       { status: 500 }
     );
