@@ -206,7 +206,7 @@ export default function Home() {
                   type="number"
                   id="numQuestions"
                   min="1"
-                  max="50"
+                  max="200"
                   value={formData.numQuestions}
                   onChange={(e) => setFormData((prev) => ({ ...prev, numQuestions: e.target.value }))}
                   className="block w-full rounded-lg border-border bg-input shadow-sm transition-all duration-200
