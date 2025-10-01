@@ -12,7 +12,7 @@ export const mockQuestions: Question[] = [
       gradeMax: 5,
       domain: 'Fractions',
       difficulty: 2,
-      questionText: 'Maria is making trail mix for her camping trip. She uses 3/4 cup of nuts and 1/8 cup of dried fruit. How many cups of ingredients has she used so far for her trail mix?',
+       questionText: 'Maria is making trail mix for her camping trip. She uses 3/4 cup of nuts and 1/8 cup of dried fruit. How many cups of ingredients has she used so far for her trail mix?',
       choices: ['7/8 cup', '5/8 cup', '1 cup', '3/8 cup'],
       correctAnswer: '7/8 cup',
       solution: 'To add fractions, find common denominator: 3/4 = 6/8, so 6/8 + 1/8 = 7/8 cup.'
@@ -4487,3 +4487,5 @@ export const mockQuestions: Question[] = [
     choices: ['15 students', '16 students', '17 students', '18 students'], correctAnswer: '17 students',
     solution: 'Students at tables: 3 x 5 = 15 students. Total with 2 more: 15 + 2 = 17 students.' }
 ];
+
+import { pertQuestions } from './pert-questions';

@@ -1,7 +1,8 @@
 "use client"
 
 import type React from "react"
-import { mockQuestions } from "@/lib/questions"
+import { mockQuestions} from "@/lib/questions"
+import { pertQuestions } from "@/lib/pert-questions"
 import { useState, useMemo } from "react"
 import { Calculator, Download, Eye, BookOpen, Users, Target } from "lucide-react"
 
@@ -21,11 +22,21 @@ export default function Home() {
   })
 
   // Calculate available domains whenever grade changes
-  const availableDomains = useMemo(() => getAvailableDomainsForGrade(Number.parseInt(formData.grade)), [formData.grade])
+  const availableDomains = useMemo(() => {
+    if (formData.grade === 'PERT') {
+      return [...new Set(pertQuestions.map((q) => q.domain))].sort()
+    }
+    return getAvailableDomainsForGrade(Number.parseInt(formData.grade))
+  }, [formData.grade])
 
   // Clear selected domains that are no longer available for the new grade
   const handleGradeChange = (newGrade: string) => {
-    const newAvailableDomains = getAvailableDomainsForGrade(Number.parseInt(newGrade))
+    let newAvailableDomains: string[] = [];
+    if (newGrade === 'PERT') {
+      newAvailableDomains = [...new Set(pertQuestions.map((q) => q.domain))];
+    } else {
+      newAvailableDomains = getAvailableDomainsForGrade(Number.parseInt(newGrade));
+    }
     setFormData((prev) => ({
       ...prev,
       grade: newGrade,
@@ -36,6 +47,8 @@ export default function Home() {
   const generatePDF = async (preview = false) => {
     setLoading(true)
     try {
+      // Call the API to generate the PDF
+      // make sure that there is an associated grade when selectingg 
       const response = await fetch("/api/generate", {
         method: "POST",
         headers: {
@@ -43,9 +56,10 @@ export default function Home() {
         },
         body: JSON.stringify({
           studentName: formData.studentName,
-          grade: Number.parseInt(formData.grade),
+          grade: formData.grade === 'PERT' ? 10 : Number.parseInt(formData.grade),
           numQuestions: Number.parseInt(formData.numQuestions),
           domains: formData.domains,
+          pert: formData.grade === 'PERT',
         }),
       })
 
@@ -59,19 +73,16 @@ export default function Home() {
       const url = window.URL.createObjectURL(blob)
 
       if (preview) {
-        // Open in VS Code's simple browser
         window.open(url, "_blank")
       } else {
-        // Download the file
         const a = document.createElement("a")
         a.href = url
-        a.download = "math-test.pdf"
+        a.download = formData.grade === 'PERT' ? "pert-practice-test.pdf" : "math-test.pdf"
         document.body.appendChild(a)
         a.click()
         a.remove()
       }
 
-      // Clean up the URL
       setTimeout(() => window.URL.revokeObjectURL(url), 1000)
     } catch (error: unknown) {
       const errorMessage = error instanceof Error ? error.message : 'Failed to generate test. Please try again.';
@@ -99,15 +110,20 @@ export default function Home() {
     }))
   }
 
-  const availableQuestions = mockQuestions.filter(
-    (q) =>
-      q.gradeMin <= Number.parseInt(formData.grade) &&
-      q.gradeMax >= Number.parseInt(formData.grade) &&
-      (formData.domains.length === 0 || formData.domains.includes(q.domain)),
-  ).length
+  const availableQuestions = formData.grade === 'PERT'
+    ? pertQuestions.filter(
+        (q) => formData.domains.length === 0 || formData.domains.includes(q.domain)
+      ).length
+    : mockQuestions.filter(
+        (q) =>
+          q.gradeMin <= Number.parseInt(formData.grade) &&
+          q.gradeMax >= Number.parseInt(formData.grade) &&
+          (formData.domains.length === 0 || formData.domains.includes(q.domain)),
+      ).length
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-background via-card to-background">
+      {/* No PERT toggle needed; handled by grade dropdown */}
       <div className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-primary/5 to-secondary/5" />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -195,6 +211,7 @@ export default function Home() {
                       Grade {grade}
                     </option>
                   ))}
+                  <option value="PERT">PERT Practice Test</option>
                 </select>
               </div>
 

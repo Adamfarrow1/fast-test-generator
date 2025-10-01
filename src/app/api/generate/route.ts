@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { mockQuestions } from '@/lib/questions';
+import { pertQuestions } from '@/lib/pert-questions';
 import { generateTestPDF } from '@/lib/pdf-generator';
 import { MathDomain, QuestionChoice, FormattedQuestion } from '@/lib/types';
 
@@ -7,29 +8,37 @@ export async function POST(req: NextRequest) {
     try {
       console.log('API route: Parsing request body');
       const body = await req.json();
-      const { studentName, grade, numQuestions, domains } = body as {
+      const { studentName, grade, numQuestions, domains, pert } = body as {
         studentName: string;
         grade: number;
         numQuestions: number;
-        domains: MathDomain[];
+        domains: MathDomain[] | string[];
+        pert?: boolean;
       };
 
       console.log('API route: Received request', { studentName, grade, numQuestions, domains });
 
       // Validate inputs
-      if (!studentName || !grade || !numQuestions || !domains || domains.length === 0) {
+      if (!studentName || !numQuestions || !domains || domains.length === 0 || (!pert && !grade)) {
         console.log('API route: Missing required fields');
         return NextResponse.json(
           { error: 'Missing required fields' },
           { status: 400 }
         );
-      }    // Filter questions based on grade level and domains
+      }
+
+    // Choose question source based on PERT flag
+    const isPert = !!pert;
+    const source = isPert ? pertQuestions : mockQuestions;
+
+    // Filter questions based on grade level and domains
     console.log('API route: Filtering questions...');
-    console.log('Total questions in database:', mockQuestions.length);
+    console.log('Question source:', isPert ? 'PERT' : 'General', 'Total:', source.length);
     
-    const eligibleQuestions = mockQuestions.filter(q => {
-      const gradeMatch = q.gradeMin <= grade && q.gradeMax >= grade;
-      const domainMatch = domains.includes(q.domain as MathDomain);
+    const effectiveGrade = isPert ? (grade ?? 10) : grade;
+    const eligibleQuestions = source.filter(q => {
+      const gradeMatch = q.gradeMin <= effectiveGrade && q.gradeMax >= effectiveGrade;
+      const domainMatch = (domains as string[]).includes(q.domain);
       
       if (gradeMatch && !domainMatch) {
         console.log(`Question ${q.id} matches grade but not domain. Domain: ${q.domain}`);
@@ -78,7 +87,7 @@ export async function POST(req: NextRequest) {
     }));
 
     // Generate PDF
-    const pdfBytes = await generateTestPDF(formattedQuestions, studentName, domains);
+  const pdfBytes = await generateTestPDF(formattedQuestions, studentName, domains as MathDomain[]);
     console.log('API route: PDF generated successfully');
 
     // Return the PDF as a downloadable file

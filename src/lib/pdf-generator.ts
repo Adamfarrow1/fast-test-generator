@@ -1,8 +1,145 @@
 import { PDFDocument, StandardFonts, rgb } from 'pdf-lib';
+import fontkit from '@pdf-lib/fontkit';
 import fs from 'fs/promises';
 import path from 'path';
 import sharp from 'sharp';
 import { FormattedQuestion, MathDomain } from './types';
+import { fileURLToPath } from 'url';
+
+// Flag to track if we're using Unicode-capable fonts
+let usingUnicodeFonts = false;
+
+/**
+ * Formats mathematical expressions to look more like proper math notation
+ * This adds proper spacing around operators and enhances readability
+ * Now uses Unicode characters thanks to fontkit and Noto Sans font
+ */
+const formatMathExpression = (text: string): string => {
+  // Skip formatting if the text is very short (likely not a math expression)
+  if (text.length <= 3) return text;
+  
+  // With Unicode fonts, we can use proper mathematical symbols
+  let formattedText = text;
+  
+  if (usingUnicodeFonts) {
+    // Use Unicode symbols for mathematical operations
+    formattedText = text
+      // Format exponents with superscripts
+      .replace(/\^2(?!\d)/g, '²')      // Replace ^2 with ²
+      .replace(/\^3(?!\d)/g, '³')      // Replace ^3 with ³
+      .replace(/\^4(?!\d)/g, '⁴')      // Replace ^4 with ⁴
+      .replace(/\^5(?!\d)/g, '⁵')      // Replace ^5 with ⁵
+      .replace(/\^6(?!\d)/g, '⁶')      // Replace ^6 with ⁶
+      .replace(/\^7(?!\d)/g, '⁷')      // Replace ^7 with ⁷
+      .replace(/\^8(?!\d)/g, '⁸')      // Replace ^8 with ⁸
+      .replace(/\^9(?!\d)/g, '⁹')      // Replace ^9 with ⁹
+      .replace(/\^0/g, '⁰')            // Replace ^0 with ⁰
+      
+      // Format mathematical symbols
+      .replace(/\*/g, '×')             // Replace * with ×
+      .replace(/ \/ /g, ' ÷ ')         // Replace / with ÷
+      .replace(/-/g, '−')              // Replace - with − (Unicode minus)
+      .replace(/sqrt\(/g, '√(')        // Replace sqrt( with √(
+      .replace(/1\/4/g, '¼')           // Replace 1/4 with ¼
+      .replace(/1\/2/g, '½')           // Replace 1/2 with ½
+      .replace(/3\/4/g, '¾')           // Replace 3/4 with ¾
+      .replace(/<=?/g, '≤')            // Replace <= with ≤
+      .replace(/>=?/g, '≥')            // Replace >= with ≥
+      .replace(/!=|<>/g, '≠');         // Replace != or <> with ≠
+  } else {
+    // Fallback to ASCII equivalents if we're not using Unicode fonts
+    formattedText = text
+      .replace(/[\u2212]/g, '-')       // Replace Unicode minus (U+2212) with ASCII hyphen
+      .replace(/[\u00d7]/g, 'x')       // Replace multiplication × with x 
+      .replace(/[\u00f7]/g, '/')       // Replace division ÷ with /
+      .replace(/[\u221a]/g, 'sqrt')    // Replace square root √ with 'sqrt'
+      .replace(/[\u00b2]/g, '^2')      // Replace superscript ² with ^2
+      .replace(/[\u00b3]/g, '^3')      // Replace superscript ³ with ^3
+      .replace(/[\u2074\u2075\u2076\u2077\u2078\u2079\u2070]/g, m => {
+        // Convert Unicode superscripts to ASCII
+        const map: {[key: string]: string} = {
+          '\u2074': '^4', '\u2075': '^5', '\u2076': '^6', 
+          '\u2077': '^7', '\u2078': '^8', '\u2079': '^9', '\u2070': '^0'
+        };
+        return map[m] || m;
+      });
+  }
+  
+  // Apply common formatting regardless of font type
+  formattedText = formattedText
+    // Parenthesized expressions formatting
+    .replace(/\(([^()]+)\)/g, (match: string) => {
+      // Keep parentheses as is but format contents
+      return '(' + match.slice(1, -1).trim() + ')';
+    })    // Format division with spacing
+    .replace(/\s*\/\s*/g, ' / ')
+    
+    // Format multiplication using asterisk - more compatible than × 
+    .replace(/\*/g, ' * ')
+    .replace(/([0-9a-zA-Z])\s*\*\s*([0-9a-zA-Z])/g, '$1 * $2')
+    
+    // Format subtraction with proper spacing using standard ASCII minus/hyphen
+    .replace(/(?<=[0-9a-zA-Z\)])\s*-\s*(?=[0-9a-zA-Z\(])/g, ' - ')
+    
+    // Format addition with proper spacing
+    .replace(/(?<=[0-9a-zA-Z\)])\s*\+\s*(?=[0-9a-zA-Z\(])/g, ' + ')
+    
+    // Handle exponents better
+    .replace(/\^([0-9]+)/g, '^$1')  // Keep exponents clear
+    
+    // Format fractions indicated by division
+    .replace(/\(([^()]+)\)\s*\/\s*\(([^()]+)\)/g, '($1) / ($2)')
+    .replace(/\(([^()]+)\)\s*\/\s*([0-9a-zA-Z]+)/g, '($1) / $2')
+    .replace(/([0-9a-zA-Z]+)\s*\/\s*\(([^()]+)\)/g, '$1 / ($2)')
+    .replace(/([0-9a-zA-Z]+)\s*\/\s*([0-9a-zA-Z]+)/g, '$1 / $2')
+    
+    // Clean up extra spaces and ensure nice formatting
+    .replace(/\(\s+/g, '(')      // No space after opening parenthesis
+    .replace(/\s+\)/g, ')')      // No space before closing parenthesis
+    .replace(/\s+/g, ' ')        // Reduce multiple spaces to single space
+    .replace(/\( /g, '(')        // No space after opening parenthesis
+    .replace(/ \)/g, ')')        // No space before closing parenthesis
+    .replace(/\(\)/g, '( )')     // Empty parentheses should have a space
+    .replace(/\s*=\s*/g, ' = '); // Equal signs should have spaces
+    
+  return formattedText;
+};
+
+/**
+ * Helper function to detect if text is likely a mathematical expression
+ * Support both ASCII and Unicode math patterns
+ */
+const isMathExpression = (text: string): boolean => {
+  // Normalize text to consistent format for pattern matching
+  let normalizedText = text;
+  
+  // Convert Unicode math symbols to ASCII equivalents for pattern matching
+  normalizedText = normalizedText
+    .replace(/[\u2212]/g, '-')      // Replace Unicode minus with ASCII hyphen
+    .replace(/[\u00d7]/g, '*')      // Replace multiplication × with *
+    .replace(/[\u00f7]/g, '/')      // Replace division ÷ with /
+    .replace(/[\u221a]/g, 'sqrt')   // Replace square root √ with 'sqrt'
+    .replace(/[\u00b2]/g, '^2')     // Replace superscript ² with ^2
+    .replace(/[\u00b3]/g, '^3')     // Replace superscript ³ with ^3
+    .replace(/[\u2074\u2075\u2076\u2077\u2078\u2079\u2070]/g, m => {
+      // Convert Unicode superscripts to ASCII
+      const map: {[key: string]: string} = {
+        '\u2074': '^4', '\u2075': '^5', '\u2076': '^6', 
+        '\u2077': '^7', '\u2078': '^8', '\u2079': '^9', '\u2070': '^0'
+      };
+      return map[m] || m;
+    });
+    
+  // Check if the text contains common math symbols or patterns
+  return /[\+\-\*\/\^\=\(\)\[\]\{\}]|\bdiv\b|\bsqrt\b|\blog\b|\bsin\b|\bcos\b|\btan\b/i.test(normalizedText) &&
+         /[0-9a-zA-Z]{1,2}[\^\+\-\*\/\=]|[\+\-\*\/\=][0-9a-zA-Z]|\([^\(\)]+\)/i.test(normalizedText);
+};
+
+// Function that now simply returns the text as is, without formatting
+const formatWithSuperscripts = (text: string): string => {
+  // Return the text exactly as provided, no formatting
+  return text;
+};
 
 export async function generateTestPDF(
   questions: FormattedQuestion[], 
@@ -17,9 +154,54 @@ export async function generateTestPDF(
     console.log('PDF Generator: Creating new PDF document');
     const pdfDoc = await PDFDocument.create();
     
+    // Register fontkit with pdf-lib to handle Unicode fonts
+    pdfDoc.registerFontkit(fontkit);
+    
     console.log('PDF Generator: Embedding fonts');
-    const font = await pdfDoc.embedFont(StandardFonts.Helvetica);
-    const boldFont = await pdfDoc.embedFont(StandardFonts.HelveticaBold);
+    
+    // Load font files
+    let font, boldFont;
+    
+    // Try to use Noto Sans for better Unicode support
+    try {
+      // Path to the Noto Sans font files - prefer woff2 for smaller size but try woff as fallback
+      const baseFontDir = path.resolve(process.cwd(), 'node_modules/@fontsource/noto-sans/files');
+      
+      // Try to load the woff2 format first (better compression)
+      let notoSansRegularFont, notoSansBoldFont;
+      try {
+        // Try woff2 format first
+        const regularWoff2Path = path.join(baseFontDir, 'noto-sans-latin-400-normal.woff2');
+        const boldWoff2Path = path.join(baseFontDir, 'noto-sans-latin-700-normal.woff2');
+        
+        notoSansRegularFont = await fs.readFile(regularWoff2Path);
+        notoSansBoldFont = await fs.readFile(boldWoff2Path);
+        console.log('PDF Generator: Using woff2 format fonts');
+      } catch (woff2Error) {
+        // Fallback to woff format
+        const regularWoffPath = path.join(baseFontDir, 'noto-sans-latin-400-normal.woff');
+        const boldWoffPath = path.join(baseFontDir, 'noto-sans-latin-700-normal.woff');
+        
+        notoSansRegularFont = await fs.readFile(regularWoffPath);
+        notoSansBoldFont = await fs.readFile(boldWoffPath);
+        console.log('PDF Generator: Using woff format fonts');
+      }
+      
+      // Embed the fonts with Unicode support
+      font = await pdfDoc.embedFont(notoSansRegularFont);
+      boldFont = await pdfDoc.embedFont(notoSansBoldFont);
+      
+      // Set flag to indicate we're using Unicode-capable fonts
+      usingUnicodeFonts = true;
+      console.log('PDF Generator: Successfully embedded Noto Sans fonts with Unicode support');
+    } catch (error: any) {
+      // Fallback to standard fonts if Noto Sans can't be loaded
+      console.log('PDF Generator: Falling back to standard fonts:', error?.message || 'Unknown error');
+      font = await pdfDoc.embedFont(StandardFonts.Helvetica);
+      boldFont = await pdfDoc.embedFont(StandardFonts.HelveticaBold);
+      usingUnicodeFonts = false;
+      console.log('PDF Generator: Using standard fonts (Unicode superscripts will be converted to regular notation)');
+    }
 
     // Constants for layout
     const pageSize: [number, number] = [612, 792]; // Standard US Letter size
@@ -283,16 +465,18 @@ export async function generateTestPDF(
         x: margins.left,
         y: yOffset,
         size: 12,
-        font: boldFont
+        font: font
       });
 
-      // Draw question text line by line
+      // Draw question text line by line without formatting
       lines.forEach((line, lineIndex) => {
+        // Use the line exactly as is
         currentPage.drawText(line, {
           x: margins.left + 25,
           y: yOffset - (lineIndex * 20),
-          size: 12,
-          font: font
+          size: 12,                      // Standard size for all text
+          font: font,                    // Regular font for all questions
+          color: rgb(0, 0, 0)           // All text in black
         });
       });
       
@@ -342,13 +526,15 @@ export async function generateTestPDF(
             }
           });
 
-          // Draw choice text line by line
+          // Draw choice text line by line exactly as provided without any formatting
           choiceLines.forEach((line, lineIndex) => {
+            // Use the line exactly as is without any formatting
             currentPage.drawText(line, {
               x: margins.left + 50,
               y: yOffset - (lineIndex * 20),
-              size: 12,
-              font: font
+              size: 12,                              // Standard size for all text
+              font: font,                            // Regular font for all choices
+              color: rgb(0, 0, 0)                    // All text in black
             });
           });
           yOffset -= (choiceLines.length * 20 + spacing.betweenChoices);
@@ -383,7 +569,7 @@ export async function generateTestPDF(
         x: margins.left,
         y: yOffset,
         size: 12,
-        font: boldFont
+        font: font
       });
 
       // Draw answer and solution
@@ -405,18 +591,20 @@ export async function generateTestPDF(
         }
       });
 
-      // Draw answer text line by line
+      // Draw answer text line by line without formatting
       answerLines.forEach((line, lineIndex) => {
         // Check if we need a new page
         if (yOffset - (lineIndex * 20) < margins.bottom + 50) {
           currentPage = pdfDoc.addPage(pageSize);
           yOffset = height - margins.top;
         }
-
+        
+        // Use the line exactly as is without any formatting
         currentPage.drawText(line, {
           x: margins.left + 25,
           y: yOffset - (lineIndex * 20),
-          size: 12,
+          size: 12,                      // Standard size for all text
+          color: rgb(0, 0, 0),           // All text in black
           font: font
         });
       });
