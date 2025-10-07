@@ -188,8 +188,8 @@ export const pertQuestions: Question[] = [
     domain: 'Developmental Math I (MAT0018): Fractions',
     difficulty: 3,
     questionText: 'Find the sum: 3/5 + 7/10',
-    choices: ['10/15', '13/15', '1', '17/15'],
-    correctAnswer: '13/15',
+    choices: ['10/15', '13/10', '1', '17/10'],
+    correctAnswer: '13/10',
     solution: '3/5 + 7/10 = 6/10 + 7/10 = 13/10'
   },
   {
@@ -298,8 +298,8 @@ export const pertQuestions: Question[] = [
     domain: 'Developmental Math I (MAT0018): Solving Equations Lvl. 1 (one-, two-, multi-step linear)',
     difficulty: 3,
     questionText: 'Solve for z: 2(z + 3) = 5z - 4(z - 1)',
-    choices: ['z = 2', 'z = 7/3', 'z = 10/3', 'z = 4'],
-    correctAnswer: 'z = 2',
+    choices: ['z = -2', 'z = 7/3', 'z = 10/3', 'z = 4'],
+    correctAnswer: 'z = -2',
     solution: '2(z + 3) = 5z - 4(z - 1) -> 2z + 6 = 5z - 4z + 4 -> 2z + 6 = z + 4 -> z = -2'
   },
   
@@ -343,10 +343,10 @@ export const pertQuestions: Question[] = [
     gradeMax: 12,
     domain: 'Developmental Math II (MAT0028): Exponent Rules (properties; zero/negative exponents) & Scientific Notation',
     difficulty: 3,
-    questionText: 'Simplify: (3x^4y^(-2))^2 x (2x^(-3)y)',
-    choices: ['6x^5y^(-3)', '18x^5y^(-3)', '18x^5y', '6x^9y^(-3)'],
-    correctAnswer: '18x^5y^(-3)',
-    solution: '(3x^4y^(-2))^2 x (2x^(-3)y) = 9x^8y^(-4) x 2x^(-3)y = 18x^5y^(-3)'
+  questionText: 'Simplify: (3x⁴y⁻²)² × (2x⁻³y)',
+  choices: ['6x⁵y⁻³', '18x⁵y⁻³', '18x⁵y', '6x⁹y⁻³'],
+  correctAnswer: '18x⁵y⁻³',
+  solution: '(3x⁴y⁻²)² × (2x⁻³y) = 9x⁸y⁻⁴ × 2x⁻³y = 18x⁵y⁻³'
   },
   {
     id: 'mat0028-exponents-2',
@@ -354,10 +354,10 @@ export const pertQuestions: Question[] = [
     gradeMax: 12,
     domain: 'Developmental Math II (MAT0028): Exponent Rules (properties; zero/negative exponents) & Scientific Notation',
     difficulty: 3,
-    questionText: 'Express 0.0042 in scientific notation.',
-    choices: ['4.2 × 10^-3', '4.2 × 10^3', '0.42 × 10^-2', '42 × 10^-4'],
-    correctAnswer: '4.2 × 10^-3',
-    solution: '0.0042 = 4.2 × 10^-3 (move decimal point 3 places to the right)'
+  questionText: 'Express 0.0042 in scientific notation.',
+  choices: ['4.2 × 10⁻³', '4.2 × 10³', '0.42 × 10⁻²', '42 × 10⁻⁴'],
+  correctAnswer: '4.2 × 10⁻³',
+  solution: '0.0042 = 4.2 × 10⁻³ (move decimal point 3 places to the right)'
   },
   {
     id: 'mat0028-exponents-3',
@@ -365,10 +365,10 @@ export const pertQuestions: Question[] = [
     gradeMax: 12,
     domain: 'Developmental Math II (MAT0028): Exponent Rules (properties; zero/negative exponents) & Scientific Notation',
     difficulty: 3,
-    questionText: 'Simplify: (a^4b^2)/(a^-3b^5)',
-    choices: ['a^7b^-3', 'ab^-3', 'a^7b^-7', 'a^7b^3'],
-    correctAnswer: 'a^7b^-3',
-    solution: '(a^4b^2)/(a^-3b^5) = a^4-(-3)b^2-5 = a^7b^-3'
+  questionText: 'Simplify: (a⁴b²)/(a⁻³b⁵)',
+  choices: ['a⁷b⁻³', 'ab⁻³', 'a⁷b⁻⁷', 'a⁷b³'],
+  correctAnswer: 'a⁷b⁻³',
+  solution: '(a⁴b²)/(a⁻³b⁵) = a⁴⁻⁻³b²⁻⁵ = a⁷b⁻³'
   },
   {
     id: 'mat0028-factoring-1-1',
@@ -621,9 +621,9 @@ export const pertQuestions: Question[] = [
     domain: 'Intermediate Algebra (MAT1033): Solving Equations Lvl. 3 (linear systems: graphing, substitution, elimination)',
     difficulty: 3,
     questionText: 'Solve the system of equations using substitution: y = 2x - 3 and 3x + 2y = 12',
-    choices: ['x = 3, y = 3', 'x = 2, y = 1', 'x = 3, y = 0', 'x = 1, y = -1'],
-    correctAnswer: 'x = 3, y = 3',
-    solution: 'Substitute y = 2x - 3 into the second equation: 3x + 2(2x - 3) = 12. Simplify: 3x + 4x - 6 = 12. 7x = 18. x = 18/7. y = 2(18/7) - 3 = 36/7 - 3 = 36/7 - 21/7 = 15/7.'
+    choices: ['x = 18/7, y = 15/7', 'x = 2, y = 1', 'x = 3, y = 0', 'x = 1, y = -1'],
+    correctAnswer: 'x = 18/7, y = 15/7',
+    solution: 'Substitute y = 2x - 3 into the second equation: 3x + 2(2x - 3) = 12. Simplify: 3x + 4x - 6 = 12. 7x = 18. x = 18/7. y = 2(18/7) - 3 = 36/7 - 21/7 = 15/7.'
   },
   {
     id: 'mat1033-eq-3-3',
@@ -654,9 +654,9 @@ export const pertQuestions: Question[] = [
   domain: 'Intermediate Algebra (MAT1033): Radicals Lvl. 2 (higher-order roots; conjugates; radical equations; extraneous solutions)',
   difficulty: 3,
   questionText: 'Simplify the radical expression: ³√16x¹²',
-  choices: ['2x⁴', '2³√x⁴', '4x⁴', '³√16x¹²'],
-  correctAnswer: '2x⁴',
-  solution: '³√16x¹² = ³√16 × ³√x¹² = ³√(2³)³ × ³√(x⁴)³ = 2 × x⁴ = 2x⁴'
+  choices: ['2x⁴³√2', '2x⁴', '4x⁴³√2', '2³√2x⁴'],
+  correctAnswer: '2x⁴³√2',
+  solution: '³√16x¹² = ³√(2⁴) × ³√x¹² = ³√(8 × 2) × x⁴ = ³√8 × ³√2 × x⁴ = 2³√2 × x⁴ = 2x⁴³√2'
 },
   {
   id: 'mat1033-radicals-2-3',
@@ -697,9 +697,493 @@ export const pertQuestions: Question[] = [
     gradeMax: 12,
     domain: 'Intermediate Algebra (MAT1033): Complex Numbers (intro to i; add/subtract/multiply/divide)',
     difficulty: 3,
-    questionText: 'Evaluate: i⁵⁰',
+    questionText: 'Evaluate: i to the 50th power',
     choices: ['1', '-1', 'i', '-i'],
-    correctAnswer: '1',
-    solution: 'Since i⁴ = 1, we can write i⁵⁰ = (i⁴)¹² × i² = (1)¹² × i² = 1 × (-1) = -1. Actually, i⁵⁰ = i⁴×¹²·⁵ = i² = -1, but i⁵⁠ = i⁴×¹µ = 1.'
+    correctAnswer: '-1',
+    solution: 'Since i⁴ = 1, we can write i⁵⁰ = (i⁴)¹² × i² = (1)¹² × i² = 1 × (-1) = -1'
+  },
+  // --- Additional 30 Problems ---
+  // Common Knowledge: Basic Geometry
+  {
+    id: 'ck-geometry-4',
+    gradeMin: 9,
+    gradeMax: 12,
+    domain: 'Common Knowledge: Basic Geometry',
+    difficulty: 3,
+    questionText: 'What is the perimeter of a rectangle with length 10 cm and width 4 cm?',
+    choices: ['28 cm', '40 cm', '14 cm', '20 cm'],
+    correctAnswer: '28 cm',
+    solution: 'Perimeter = 2 × (length + width) = 2 × (10 + 4) = 28 cm'
+  },
+  {
+    id: 'ck-geometry-5',
+    gradeMin: 9,
+    gradeMax: 12,
+    domain: 'Common Knowledge: Basic Geometry',
+    difficulty: 3,
+    questionText: 'A right triangle has legs of 6 cm and 8 cm. What is the length of the hypotenuse?',
+    choices: ['10 cm', '12 cm', '14 cm', '8 cm'],
+    correctAnswer: '10 cm',
+    solution: 'By Pythagoras: hypotenuse = √(6² + 8²) = √(36 + 64) = √100 = 10 cm'
+  },
+  // Common Knowledge: Probability (Simple & Dependent)
+  {
+    id: 'ck-probability-4',
+    gradeMin: 9,
+    gradeMax: 12,
+    domain: 'Common Knowledge: Probability (Simple & Dependent)',
+    difficulty: 3,
+    questionText: 'If you flip a fair coin three times, what is the probability of getting exactly two heads?',
+    choices: ['3/8', '1/2', '1/4', '1/8'],
+    correctAnswer: '3/8',
+    solution: 'There are 8 possible outcomes. Ways to get exactly 2 heads: HHT, HTH, THH = 3. Probability = 3/8.'
+  },
+  {
+    id: 'ck-probability-5',
+    gradeMin: 9,
+    gradeMax: 12,
+    domain: 'Common Knowledge: Probability (Simple & Dependent)',
+    difficulty: 3,
+    questionText: 'A box contains 5 red and 7 blue balls. If one is drawn at random, what is the probability it is not red?',
+    choices: ['5/12', '7/12', '1/2', '2/5'],
+    correctAnswer: '7/12',
+    solution: 'Probability not red = number of blue/total = 7/12.'
+  },
+  // Common Knowledge: Basic Statistics
+  {
+    id: 'ck-statistics-4',
+    gradeMin: 9,
+    gradeMax: 12,
+    domain: 'Common Knowledge: Basic Statistics (mean/median/mode; reading bar, pie, line graphs)',
+    difficulty: 3,
+    questionText: 'What is the median of the data set: 2, 4, 7, 9, 11?',
+    choices: ['4', '7', '9', '6'],
+    correctAnswer: '7',
+    solution: 'Median is the middle value when ordered: 2, 4, 7, 9, 11. Median = 7.'
+  },
+  {
+    id: 'ck-statistics-5',
+    gradeMin: 9,
+    gradeMax: 12,
+    domain: 'Common Knowledge: Basic Statistics (mean/median/mode; reading bar, pie, line graphs)',
+    difficulty: 3,
+    questionText: 'A bar graph shows 10 students prefer apples, 15 prefer bananas, and 5 prefer oranges. What fraction prefer bananas?',
+    choices: ['1/2', '1/3', '3/10', '1/4'],
+    correctAnswer: '1/2',
+    solution: 'Total = 10 + 15 + 5 = 30. Fraction for bananas = 15/30 = 1/2.'
+  },
+  // Developmental Math I (MAT0018): Signed Numbers
+  {
+    id: 'mat0018-signed-4',
+    gradeMin: 9,
+    gradeMax: 12,
+    domain: 'Developmental Math I (MAT0018): Signed Numbers',
+    difficulty: 3,
+    questionText: 'Evaluate: -7 + 4 × (-2)',
+    choices: ['-15', '-7', '-8', '1'],
+    correctAnswer: '-15',
+    solution: '-7 + 4 × (-2) = -7 + (-8) = -15.'
+  },
+  {
+    id: 'mat0018-signed-5',
+    gradeMin: 9,
+    gradeMax: 12,
+    domain: 'Developmental Math I (MAT0018): Signed Numbers',
+    difficulty: 3,
+    questionText: 'Which is greater: -3, 0, or 2?',
+    choices: ['-3', '0', '2', 'All are equal'],
+    correctAnswer: '2',
+    solution: '2 > 0 > -3.'
+  },
+  // Developmental Math I (MAT0018): Decimals
+  {
+    id: 'mat0018-decimals-4',
+    gradeMin: 9,
+    gradeMax: 12,
+    domain: 'Developmental Math I (MAT0018): Decimals',
+    difficulty: 3,
+    questionText: 'Subtract: 5.6 - 2.75',
+    choices: ['2.85', '3.15', '2.95', '3.25'],
+    correctAnswer: '2.85',
+    solution: '5.6 - 2.75 = 2.85.'
+  },
+  {
+    id: 'mat0018-decimals-5',
+    gradeMin: 9,
+    gradeMax: 12,
+    domain: 'Developmental Math I (MAT0018): Decimals',
+    difficulty: 3,
+    questionText: 'Which is greater: 0.45 or 0.405?',
+    choices: ['0.45', '0.405', 'They are equal', 'Cannot determine'],
+    correctAnswer: '0.45',
+    solution: '0.45 > 0.405.'
+  },
+  // Developmental Math I (MAT0018): Fractions
+  {
+    id: 'mat0018-fractions-4',
+    gradeMin: 9,
+    gradeMax: 12,
+    domain: 'Developmental Math I (MAT0018): Fractions',
+    difficulty: 3,
+    questionText: 'What is 2/5 of 25?',
+    choices: ['5', '10', '15', '20'],
+    correctAnswer: '10',
+    solution: '2/5 × 25 = 10.'
+  },
+  {
+    id: 'mat0018-fractions-5',
+    gradeMin: 9,
+    gradeMax: 12,
+    domain: 'Developmental Math I (MAT0018): Fractions',
+    difficulty: 3,
+    questionText: 'Which is larger: 3/4 or 5/8?',
+    choices: ['3/4', '5/8', 'They are equal', 'Cannot determine'],
+    correctAnswer: '3/4',
+    solution: '3/4 = 0.75, 5/8 = 0.625. 3/4 > 5/8.'
+  },
+  // Developmental Math I (MAT0018): Order of Operations
+  {
+    id: 'mat0018-order-ops-4',
+    gradeMin: 9,
+    gradeMax: 12,
+    domain: 'Developmental Math I (MAT0018): Order of Operations',
+    difficulty: 3,
+    questionText: 'Evaluate: 2 + 3 × (4 - 1)',
+    choices: ['9', '11', '15', '7'],
+    correctAnswer: '11',
+    solution: '3 × (4 - 1) = 3 × 3 = 9; 2 + 9 = 11.'
+  },
+  {
+    id: 'mat0018-order-ops-5',
+    gradeMin: 9,
+    gradeMax: 12,
+    domain: 'Developmental Math I (MAT0018): Order of Operations',
+    difficulty: 3,
+    questionText: 'Evaluate: (8 ÷ 2) × (3 + 1)',
+    choices: ['16', '32', '8', '12'],
+    correctAnswer: '16',
+    solution: '8 ÷ 2 = 4; 3 + 1 = 4; 4 × 4 = 16.'
+  },
+  // Developmental Math I (MAT0018): Polynomials Lvl. 1
+  {
+    id: 'mat0018-poly-1-4',
+    gradeMin: 9,
+    gradeMax: 12,
+    domain: 'Developmental Math I (MAT0018): Polynomials Lvl. 1 (combining like terms; add/subtract)',
+    difficulty: 3,
+    questionText: 'Simplify: 2x + 3x - 4',
+    choices: ['5x - 4', '5x + 4', 'x - 4', '2x - 1'],
+    correctAnswer: '5x - 4',
+    solution: '2x + 3x = 5x; 5x - 4.'
+  },
+  {
+    id: 'mat0018-poly-1-5',
+    gradeMin: 9,
+    gradeMax: 12,
+    domain: 'Developmental Math I (MAT0018): Polynomials Lvl. 1 (combining like terms; add/subtract)',
+    difficulty: 3,
+    questionText: 'Subtract: (4x² + 2x) - (x² + 5x)',
+    choices: ['3x² - 3x', '5x² - 3x', '3x² + 3x', '3x² - 7x'],
+    correctAnswer: '3x² - 3x',
+    solution: '4x² - x² = 3x²; 2x - 5x = -3x.'
+  },
+  // Developmental Math I (MAT0018): Solving Equations Lvl. 1
+  {
+    id: 'mat0018-eq-1-4',
+    gradeMin: 9,
+    gradeMax: 12,
+    domain: 'Developmental Math I (MAT0018): Solving Equations Lvl. 1 (one-, two-, multi-step linear)',
+    difficulty: 3,
+    questionText: 'Solve for x: x/3 = 5',
+    choices: ['x = 8', 'x = 15', 'x = 5', 'x = 3'],
+    correctAnswer: 'x = 15',
+    solution: 'x = 5 × 3 = 15.'
+  },
+  {
+    id: 'mat0018-eq-1-5',
+    gradeMin: 9,
+    gradeMax: 12,
+    domain: 'Developmental Math I (MAT0018): Solving Equations Lvl. 1 (one-, two-, multi-step linear)',
+    difficulty: 3,
+    questionText: 'Solve for y: 2y + 6 = 18',
+    choices: ['y = 6', 'y = 12', 'y = 9', 'y = 3'],
+    correctAnswer: 'y = 6',
+    solution: '2y = 18 - 6 = 12; y = 12/2 = 6.'
+  },
+  // Developmental Math II (MAT0028): Polynomials Lvl. 2
+  {
+    id: 'mat0028-poly-2-4',
+    gradeMin: 9,
+    gradeMax: 12,
+    domain: 'Developmental Math II (MAT0028): Polynomials Lvl. 2 (multiply; special products; divide by monomials)',
+    difficulty: 3,
+    questionText: 'Multiply: (x + 2)(x - 2)',
+    choices: ['x² - 4', 'x² + 4', 'x² - 2', 'x² + 2'],
+    correctAnswer: 'x² - 4',
+    solution: '(x + 2)(x - 2) = x² - 4.'
+  },
+  {
+    id: 'mat0028-poly-2-5',
+    gradeMin: 9,
+    gradeMax: 12,
+    domain: 'Developmental Math II (MAT0028): Polynomials Lvl. 2 (multiply; special products; divide by monomials)',
+    difficulty: 3,
+    questionText: 'Divide: (9x² - 6x) ÷ 3x',
+    choices: ['3x - 2', '3x - 6', '3x + 2', '6x - 3'],
+    correctAnswer: '3x - 2',
+    solution: '9x² ÷ 3x = 3x; -6x ÷ 3x = -2.'
+  },
+  // Developmental Math II (MAT0028): Exponent Rules
+  {
+    id: 'mat0028-exponents-4',
+    gradeMin: 9,
+    gradeMax: 12,
+    domain: 'Developmental Math II (MAT0028): Exponent Rules (properties; zero/negative exponents) & Scientific Notation',
+    difficulty: 3,
+  questionText: 'Simplify: x⁰ + 2³',
+  choices: ['9', '8', '1', '0'],
+  correctAnswer: '9',
+  solution: 'x⁰ = 1 for any x ≠ 0; 2³ = 8; 1 + 8 = 9.'
+  },
+  {
+    id: 'mat0028-exponents-5',
+    gradeMin: 9,
+    gradeMax: 12,
+    domain: 'Developmental Math II (MAT0028): Exponent Rules (properties; zero/negative exponents) & Scientific Notation',
+    difficulty: 3,
+  questionText: 'Express 5,600,000 in scientific notation.',
+  choices: ['5.6 × 10⁶', '56 × 10⁵', '5.6 × 10⁵', '560 × 10⁴'],
+  correctAnswer: '5.6 × 10⁶',
+  solution: 'Move decimal 6 places: 5.6 × 10⁶.'
+  },
+  // Developmental Math II (MAT0028): Factoring Lvl. 1
+  {
+    id: 'mat0028-factoring-1-4',
+    gradeMin: 9,
+    gradeMax: 12,
+    domain: 'Developmental Math II (MAT0028): Factoring Lvl. 1 (GCF; grouping; trinomials a=1 and a>1; perfect squares; difference of squares)',
+    difficulty: 3,
+    questionText: 'Factor: x² - 16',
+    choices: ['(x - 4)(x + 4)', '(x - 8)(x + 2)', '(x - 2)(x + 8)', '(x - 4)(x - 4)'],
+    correctAnswer: '(x - 4)(x + 4)',
+    solution: 'Difference of squares: x² - 16 = (x - 4)(x + 4).'
+  },
+  {
+    id: 'mat0028-factoring-1-5',
+    gradeMin: 9,
+    gradeMax: 12,
+    domain: 'Developmental Math II (MAT0028): Factoring Lvl. 1 (GCF; grouping; trinomials a=1 and a>1; perfect squares; difference of squares)',
+    difficulty: 3,
+    questionText: 'Factor: 2x² + 8x',
+    choices: ['2x(x + 4)', '2(x + 4)', 'x(x + 4)', '2x(x - 4)'],
+    correctAnswer: '2x(x + 4)',
+    solution: 'GCF is 2x: 2x² + 8x = 2x(x + 4).'
+  },
+  // Developmental Math II (MAT0028): Solving Equations Lvl. 2
+  {
+    id: 'mat0028-eq-2-4',
+    gradeMin: 9,
+    gradeMax: 12,
+    domain: 'Developmental Math II (MAT0028): Solving Equations Lvl. 2 (inequalities; literal equations; quadratics)',
+    difficulty: 3,
+    questionText: 'Solve: x² = 49',
+    choices: ['x = 7', 'x = -7', 'x = 7 or x = -7', 'x = 0'],
+    correctAnswer: 'x = 7 or x = -7',
+    solution: 'x² = 49 ⇒ x = ±7.'
+  },
+  {
+    id: 'mat0028-eq-2-5',
+    gradeMin: 9,
+    gradeMax: 12,
+    domain: 'Developmental Math II (MAT0028): Solving Equations Lvl. 2 (inequalities; literal equations; quadratics)',
+    difficulty: 3,
+    questionText: 'Solve for a: 2a + 3b = 12',
+    choices: ['a = (12 - 3b)/2', 'a = (12 + 3b)/2', 'a = 12/2 - 3b', 'a = 6 - 3b'],
+    correctAnswer: 'a = (12 - 3b)/2',
+    solution: '2a = 12 - 3b ⇒ a = (12 - 3b)/2.'
+  },
+  // Developmental Math II (MAT0028): Radicals Lvl. 1
+  {
+    id: 'mat0028-radicals-1-4',
+    gradeMin: 9,
+    gradeMax: 12,
+    domain: 'Developmental Math II (MAT0028): Radicals Lvl. 1 (simplify roots; combine; multiply; rationalize denominator)',
+    difficulty: 3,
+    questionText: 'Simplify: √(49) + √(25)',
+    choices: ['12', '14', '7', '5'],
+    correctAnswer: '12',
+    solution: '√(49) = 7; √(25) = 5; 7 + 5 = 12.'
+  },
+  {
+    id: 'mat0028-radicals-1-5',
+    gradeMin: 9,
+    gradeMax: 12,
+    domain: 'Developmental Math II (MAT0028): Radicals Lvl. 1 (simplify roots; combine; multiply; rationalize denominator)',
+    difficulty: 3,
+    questionText: 'Rationalize: 1/√(3)',
+    choices: ['√(3)/3', '1/3', '3/√(3)', '√(3)'],
+    correctAnswer: '√(3)/3',
+    solution: 'Multiply numerator and denominator by √(3): 1/√(3) × √(3)/√(3) = √(3)/3.'
+  },
+  // Developmental Math II (MAT0028): Graphing Lvl. 1
+  {
+    id: 'mat0028-graphing-1-4',
+    gradeMin: 9,
+    gradeMax: 12,
+    domain: 'Developmental Math II (MAT0028): Graphing Lvl. 1 (quadrants, ordered pairs, slope, intercepts)',
+    difficulty: 3,
+    questionText: 'What is the y-intercept of y = 2x + 5?',
+    choices: ['2', '5', '-2', '-5'],
+    correctAnswer: '5',
+    solution: 'y-intercept is the constant term: 5.'
+  },
+  {
+    id: 'mat0028-graphing-1-5',
+    gradeMin: 9,
+    gradeMax: 12,
+    domain: 'Developmental Math II (MAT0028): Graphing Lvl. 1 (quadrants, ordered pairs, slope, intercepts)',
+    difficulty: 3,
+    questionText: 'Which quadrant is the point (5, -2) in?',
+    choices: ['I', 'II', 'III', 'IV'],
+    correctAnswer: 'IV',
+    solution: 'x > 0, y < 0 ⇒ Quadrant IV.'
+  },
+  // Intermediate Algebra (MAT1033): Graphing Lvl. 2
+  {
+    id: 'mat1033-graphing-2-4',
+    gradeMin: 9,
+    gradeMax: 12,
+    domain: 'Intermediate Algebra (MAT1033): Graphing Lvl. 2 (analyzing function graphs; linear inequalities in two variables; graphing quadratics)',
+    difficulty: 3,
+    questionText: 'What is the axis of symmetry for f(x) = 2x² - 4x + 1?',
+    choices: ['x = 1', 'x = 2', 'x = -1', 'x = -2'],
+    correctAnswer: 'x = 1',
+    solution: 'Axis: x = -b/(2a) = 4/(2×2) = 1.'
+  },
+  {
+    id: 'mat1033-graphing-2-5',
+    gradeMin: 9,
+    gradeMax: 12,
+    domain: 'Intermediate Algebra (MAT1033): Graphing Lvl. 2 (analyzing function graphs; linear inequalities in two variables; graphing quadratics)',
+    difficulty: 3,
+    questionText: 'Which of the following is a solution to y < -x + 2?',
+    choices: ['(1, 0)', '(0, 2)', '(2, 0)', '(0, 3)'],
+    correctAnswer: '(1, 0)',
+    solution: 'For (1, 0): 0 < -1 + 2 = 1, which is true. For (0, 2): 2 < 2 is false. For (2, 0): 0 < 0 is false. For (0, 3): 3 < 2 is false.'
+  },
+  // Intermediate Algebra (MAT1033): Polynomials Lvl. 3
+  {
+    id: 'mat1033-poly-3-4',
+    gradeMin: 9,
+    gradeMax: 12,
+    domain: 'Intermediate Algebra (MAT1033): Polynomials Lvl. 3 (long/synthetic division; rational expressions; complex fractions)',
+    difficulty: 3,
+    questionText: 'Simplify: (x² - 4)/(x - 2)',
+    choices: ['x + 2', 'x - 2', 'x² - 2', 'x + 4'],
+    correctAnswer: 'x + 2',
+    solution: 'x² - 4 = (x - 2)(x + 2); cancel x - 2.'
+  },
+  {
+    id: 'mat1033-poly-3-5',
+    gradeMin: 9,
+    gradeMax: 12,
+    domain: 'Intermediate Algebra (MAT1033): Polynomials Lvl. 3 (long/synthetic division; rational expressions; complex fractions)',
+    difficulty: 3,
+    questionText: 'Divide: (x³ + 8) ÷ (x + 2)',
+    choices: ['x² - 2x + 4', 'x² + 2x + 4', 'x² - 2x - 4', 'x² + 2x - 4'],
+    correctAnswer: 'x² - 2x + 4',
+    solution: 'x³ + 8 = (x + 2)(x² - 2x + 4).'
+  },
+  // Intermediate Algebra (MAT1033): Factoring Lvl. 2
+  {
+    id: 'mat1033-factoring-2-4',
+    gradeMin: 9,
+    gradeMax: 12,
+    domain: 'Intermediate Algebra (MAT1033): Factoring Lvl. 2 (sum/diff of cubes; completing the square; grouping 4 terms)',
+    difficulty: 3,
+    questionText: 'Factor: x³ - 8',
+    choices: ['(x - 2)(x² + 2x + 4)', '(x + 2)(x² - 2x + 4)', '(x - 2)(x² - 2x + 4)', '(x + 2)(x² + 2x + 4)'],
+    correctAnswer: '(x - 2)(x² + 2x + 4)',
+    solution: 'x³ - 8 = (x - 2)(x² + 2x + 4).'
+  },
+  {
+    id: 'mat1033-factoring-2-5',
+    gradeMin: 9,
+    gradeMax: 12,
+    domain: 'Intermediate Algebra (MAT1033): Factoring Lvl. 2 (sum/diff of cubes; completing the square; grouping 4 terms)',
+    difficulty: 3,
+    questionText: 'Complete the square: x² + 4x + 1',
+    choices: ['(x + 2)² - 3', '(x - 2)² + 3', '(x + 2)² + 3', '(x - 2)² - 3'],
+    correctAnswer: '(x + 2)² - 3',
+    solution: 'x² + 4x + 1 = (x + 2)² - 4 + 1 = (x + 2)² - 3.'
+  },
+  // Intermediate Algebra (MAT1033): Solving Equations Lvl. 3
+  {
+    id: 'mat1033-eq-3-4',
+    gradeMin: 9,
+    gradeMax: 12,
+    domain: 'Intermediate Algebra (MAT1033): Solving Equations Lvl. 3 (linear systems: graphing, substitution, elimination)',
+    difficulty: 3,
+    questionText: 'Solve: x - y = 4, x + y = 10',
+    choices: ['x = 7, y = 3', 'x = 6, y = 4', 'x = 8, y = 2', 'x = 5, y = 5'],
+    correctAnswer: 'x = 7, y = 3',
+    solution: 'Add: 2x = 14 ⇒ x = 7; y = 10 - 7 = 3.'
+  },
+  {
+    id: 'mat1033-eq-3-5',
+    gradeMin: 9,
+    gradeMax: 12,
+    domain: 'Intermediate Algebra (MAT1033): Solving Equations Lvl. 3 (linear systems: graphing, substitution, elimination)',
+    difficulty: 3,
+    questionText: 'Solve: 2x + y = 9, x - y = 1',
+    choices: ['x = 10/3, y = 7/3', 'x = 4, y = 1', 'x = 5, y = -1', 'x = 2, y = 5'],
+    correctAnswer: 'x = 10/3, y = 7/3',
+    solution: 'Add equations: 3x = 10 ⇒ x = 10/3; y = 9 - 2x = 9 - 20/3 = 27/3 - 20/3 = 7/3.'
+  },
+  // Intermediate Algebra (MAT1033): Radicals Lvl. 2
+  {
+    id: 'mat1033-radicals-2-4',
+    gradeMin: 9,
+    gradeMax: 12,
+    domain: 'Intermediate Algebra (MAT1033): Radicals Lvl. 2 (higher-order roots; conjugates; radical equations; extraneous solutions)',
+    difficulty: 3,
+    questionText: 'Solve: x² = 25',
+    choices: ['x = 5', 'x = -5', 'x = 5 or x = -5', 'x = 0'],
+    correctAnswer: 'x = 5 or x = -5',
+    solution: 'x² = 25 ⇒ x = ±5.'
+  },
+  {
+    id: 'mat1033-radicals-2-5',
+    gradeMin: 9,
+    gradeMax: 12,
+    domain: 'Intermediate Algebra (MAT1033): Radicals Lvl. 2 (higher-order roots; conjugates; radical equations; extraneous solutions)',
+    difficulty: 3,
+    questionText: 'Simplify: ⁴√(16)',
+    choices: ['2', '4', '8', '16'],
+    correctAnswer: '2',
+    solution: '2⁴ = 16 ⇒ ⁴√(16) = 2.'
+  },
+  // Intermediate Algebra (MAT1033): Complex Numbers
+  {
+    id: 'mat1033-complex-4',
+    gradeMin: 9,
+    gradeMax: 12,
+    domain: 'Intermediate Algebra (MAT1033): Complex Numbers (intro to i; add/subtract/multiply/divide)',
+    difficulty: 3,
+  questionText: 'What is i⁸?',
+  choices: ['1', '-1', 'i', '-i'],
+  correctAnswer: '1',
+  solution: 'i⁴ = 1, so i⁸ = (i⁴)² = 1.'
+  },
+  {
+    id: 'mat1033-complex-5',
+    gradeMin: 9,
+    gradeMax: 12,
+    domain: 'Intermediate Algebra (MAT1033): Complex Numbers (intro to i; add/subtract/multiply/divide)',
+    difficulty: 3,
+    questionText: 'Simplify: (2 + 3i) + (4 - 5i)',
+    choices: ['6 - 2i', '2 + 8i', '6 + 2i', '2 - 2i'],
+    correctAnswer: '6 - 2i',
+    solution: 'Add real and imaginary parts: 2 + 4 = 6; 3i - 5i = -2i.'
   }
 ];
