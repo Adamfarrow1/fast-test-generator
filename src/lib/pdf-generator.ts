@@ -5,65 +5,8 @@ import path from 'path';
 import sharp from 'sharp';
 import { FormattedQuestion, MathDomain } from './types';
 
-// Flag to track if we're using Unicode-capable fonts
-let usingUnicodeFonts = false;
-
-/**
- * Formats mathematical expressions to look more like proper math notation
- * DISABLED: This function now just returns text as-is to avoid interfering with Unicode characters
- */
-const formatMathExpression = (text: string): string => {
-  // Return text exactly as provided without any formatting to preserve Unicode characters
-  return text;
-};
-
-/**
- * Helper function to detect if text is likely a mathematical expression
- * DISABLED: Always returns false to avoid any math formatting
- */
-const isMathExpression = (text: string): boolean => {
-  // Always return false to disable math expression formatting
-  return false;
-};
-
-// Function that now simply returns the text as is, without formatting
-const formatWithSuperscripts = (text: string): string => {
-  // Return the text exactly as provided, no formatting
-  return text;
-};
-
-/**
- * Helper function to split text into segments based on whether they contain math symbols
- * Returns an array of {text, useMathFont} objects
- */
-const splitTextByMathSymbols = (text: string): Array<{text: string, useMathFont: boolean}> => {
-  const mathSymbols = /[√∛∜×÷±∓≤≥≠≈∞∑∏∫∂∆°π]/;
-  const superscripts = /[⁰¹²³⁴⁵⁶⁷⁸⁹⁺⁻⁼⁽⁾ⁿ]/;
-  const subscripts = /[₀₁₂₃₄₅₆₇₈₉₊₋₌₍₎]/;
-  
-  const segments: Array<{text: string, useMathFont: boolean}> = [];
-  let currentSegment = '';
-  let currentUseMathFont = false;
-  
-  for (let i = 0; i < text.length; i++) {
-    const char = text[i];
-    const needsMathFont = mathSymbols.test(char) || superscripts.test(char) || subscripts.test(char);
-    
-    if (needsMathFont !== currentUseMathFont && currentSegment) {
-      segments.push({ text: currentSegment, useMathFont: currentUseMathFont });
-      currentSegment = '';
-    }
-    
-    currentSegment += char;
-    currentUseMathFont = needsMathFont;
-  }
-  
-  if (currentSegment) {
-    segments.push({ text: currentSegment, useMathFont: currentUseMathFont });
-  }
-  
-  return segments.length > 0 ? segments : [{ text, useMathFont: false }];
-};
+// Note: math-formatting helpers removed because PDF output writes text verbatim and these helpers
+// were unused; removing them clears linter warnings.
 
 export async function generateTestPDF(
   questions: FormattedQuestion[], 
@@ -83,8 +26,8 @@ export async function generateTestPDF(
     
     console.log('PDF Generator: Embedding fonts');
     
-    // Load font files
-    let font, boldFont, mathFont;
+  // Load font files
+  let font, boldFont;
     
     // Try to use DejaVu Sans for excellent Unicode support including mathematical symbols
     try {
@@ -99,18 +42,13 @@ export async function generateTestPDF(
       // Embed the fonts - TTF fonts handle Unicode better in pdf-lib
       font = await pdfDoc.embedFont(dejaVuSansRegular);
       boldFont = await pdfDoc.embedFont(dejaVuSansBold);
-      mathFont = await pdfDoc.embedFont(dejaVuSansRegular);
-      
-      // Set flag to indicate we're using Unicode-capable fonts
-      usingUnicodeFonts = true;
       console.log('PDF Generator: Successfully embedded DejaVu Sans TTF fonts with full Unicode support');
-    } catch (error: any) {
-      // Fallback to standard fonts if Noto Sans can't be loaded
-      console.log('PDF Generator: Falling back to standard fonts:', error?.message || 'Unknown error');
+  } catch (error: unknown) {
+      // Fallback to standard fonts if DejaVu can't be loaded
+      const message = error instanceof Error ? error.message : String(error);
+      console.log('PDF Generator: Falling back to standard fonts:', message);
       font = await pdfDoc.embedFont(StandardFonts.Helvetica);
       boldFont = await pdfDoc.embedFont(StandardFonts.HelveticaBold);
-      mathFont = font; // Use regular font as fallback
-      usingUnicodeFonts = false;
       console.log('PDF Generator: Using standard fonts (Unicode superscripts will be converted to regular notation)');
     }
 

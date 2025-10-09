@@ -4488,4 +4488,4 @@ export const mockQuestions: Question[] = [
     solution: 'Students at tables: 3 x 5 = 15 students. Total with 2 more: 15 + 2 = 17 students.' }
 ];
 
-import { pertQuestions } from './pert-questions';
+// removed unused import: pertQuestions
