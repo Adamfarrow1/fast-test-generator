@@ -102,7 +102,7 @@ export const pertQuestions: Question[] = [
     correctAnswer: 'How much the data varies from the mean',
     solution: 'Standard deviation measures the average distance between data points and the mean, indicating how spread out or dispersed the data is from the mean value'
   },
-  
+
   // Developmental Math I (MAT0018) domains
   {
     id: 'mat0018-signed-1',
@@ -302,7 +302,7 @@ export const pertQuestions: Question[] = [
     correctAnswer: 'z = -2',
     solution: '2(z + 3) = 5z - 4(z - 1) -> 2z + 6 = 5z - 4z + 4 -> 2z + 6 = z + 4 -> z = -2'
   },
-  
+
   // Developmental Math II (MAT0028) domains
   {
     id: 'mat0028-poly-2-1',
@@ -365,10 +365,10 @@ export const pertQuestions: Question[] = [
     gradeMax: 12,
     domain: 'Developmental Math II (MAT0028): Exponent Rules (properties; zero/negative exponents) & Scientific Notation',
     difficulty: 3,
-  questionText: 'Simplify: (a⁴b²)/(a⁻³b⁵)',
-  choices: ['a⁷b⁻³', 'ab⁻³', 'a⁷b⁻⁷', 'a⁷b³'],
-  correctAnswer: 'a⁷b⁻³',
-  solution: '(a⁴b²)/(a⁻³b⁵) = a⁴⁻⁻³b²⁻⁵ = a⁷b⁻³'
+    questionText: 'Simplify: (a⁴b²)/(a⁻³b⁵)',
+    choices: ['a⁷b⁻³', 'ab⁻³', 'a⁷b⁻⁷', 'a⁷b³'],
+    correctAnswer: 'a⁷b⁻³',
+    solution: '(a⁴b²)/(a⁻³b⁵) = a⁴⁻⁻³b²⁻⁵ = a⁷b⁻³'
   },
   {
     id: 'mat0028-factoring-1-1',
@@ -502,7 +502,7 @@ export const pertQuestions: Question[] = [
     correctAnswer: 'Quadrant II',
     solution: 'Point (-3, 4) has a negative x-coordinate and a positive y-coordinate, which places it in Quadrant II.'
   },
-  
+
   // Intermediate Algebra (MAT1033) domains
   {
     id: 'mat1033-graphing-2-1',
@@ -637,38 +637,38 @@ export const pertQuestions: Question[] = [
     solution: 'Adding the two equations: 2x = 6, so x = 3. Substitute into first equation: 3 + y = 5, so y = 2. Solution is x = 3, y = 2.'
   },
   {
-  id: 'mat1033-radicals-2-1',
-  gradeMin: 9,
-  gradeMax: 12,
-  domain: 'Intermediate Algebra (MAT1033): Radicals Lvl. 2 (higher-order roots; conjugates; radical equations; extraneous solutions)',
-  difficulty: 3,
-  questionText: 'Solve the radical equation: √(x) + 5 = x',
-  choices: ['x = (11 + √(21))/2', 'x = 6', 'x = 4', 'x = 25'],
-  correctAnswer: 'x = (11 + √(21))/2',
-  solution: 'Isolate √(x) = x - 5, so x >= 5. Square: x = (x - 5)² = x² - 10x + 25 -> x² - 11x + 25 = 0. Quadratic formula: x = [11 ± √(121 - 100)]/2 = (11 ± √(21))/2. Only x >= 5 is valid, so x = (11 + √(21))/2 aprox =  7.79. Check: √(7.79) + 5 aprox =  7.79, valid; the other root is extraneous.'
-},
+    id: 'mat1033-radicals-2-1',
+    gradeMin: 9,
+    gradeMax: 12,
+    domain: 'Intermediate Algebra (MAT1033): Radicals Lvl. 2 (higher-order roots; conjugates; radical equations; extraneous solutions)',
+    difficulty: 3,
+    questionText: 'Solve the radical equation: √(x) + 5 = x',
+    choices: ['x = (11 + √(21))/2', 'x = 6', 'x = 4', 'x = 25'],
+    correctAnswer: 'x = (11 + √(21))/2',
+    solution: 'Isolate √(x) = x - 5, so x >= 5. Square: x = (x - 5)² = x² - 10x + 25 -> x² - 11x + 25 = 0. Quadratic formula: x = [11 ± √(121 - 100)]/2 = (11 ± √(21))/2. Only x >= 5 is valid, so x = (11 + √(21))/2 aprox =  7.79. Check: √(7.79) + 5 aprox =  7.79, valid; the other root is extraneous.'
+  },
   {
-  id: 'mat1033-radicals-2-2',
-  gradeMin: 9,
-  gradeMax: 12,
-  domain: 'Intermediate Algebra (MAT1033): Radicals Lvl. 2 (higher-order roots; conjugates; radical equations; extraneous solutions)',
-  difficulty: 3,
-  questionText: 'Simplify the radical expression: ³√16x¹²',
-  choices: ['2x⁴³√2', '2x⁴', '4x⁴³√2', '2³√2x⁴'],
-  correctAnswer: '2x⁴³√2',
-  solution: '³√16x¹² = ³√(2⁴) × ³√x¹² = ³√(8 × 2) × x⁴ = ³√8 × ³√2 × x⁴ = 2³√2 × x⁴ = 2x⁴³√2'
-},
+    id: 'mat1033-radicals-2-2',
+    gradeMin: 9,
+    gradeMax: 12,
+    domain: 'Intermediate Algebra (MAT1033): Radicals Lvl. 2 (higher-order roots; conjugates; radical equations; extraneous solutions)',
+    difficulty: 3,
+    questionText: 'Simplify the radical expression: ³√16x¹²',
+    choices: ['2x⁴³√2', '2x⁴', '4x⁴³√2', '2³√2x⁴'],
+    correctAnswer: '2x⁴³√2',
+    solution: '³√16x¹² = ³√(2⁴) × ³√x¹² = ³√(8 × 2) × x⁴ = ³√8 × ³√2 × x⁴ = 2³√2 × x⁴ = 2x⁴³√2'
+  },
   {
-  id: 'mat1033-radicals-2-3',
-  gradeMin: 9,
-  gradeMax: 12,
-  domain: 'Intermediate Algebra (MAT1033): Radicals Lvl. 2 (higher-order roots; conjugates; radical equations; extraneous solutions)',
-  difficulty: 3,
-  questionText: 'Multiply using conjugates: (√(5) + 2)(√(5) - 2)',
-  choices: ['1', '5 - 4 = 1', '5 + 4 = 9', '√(5) - 4'],
-  correctAnswer: '5 - 4 = 1',
-  solution: '(√(5) + 2)(√(5) - 2) = (√(5))² - 2² = 5 - 4 = 1'
-},
+    id: 'mat1033-radicals-2-3',
+    gradeMin: 9,
+    gradeMax: 12,
+    domain: 'Intermediate Algebra (MAT1033): Radicals Lvl. 2 (higher-order roots; conjugates; radical equations; extraneous solutions)',
+    difficulty: 3,
+    questionText: 'Multiply using conjugates: (√(5) + 2)(√(5) - 2)',
+    choices: ['1', '5 - 4 = 1', '5 + 4 = 9', '√(5) - 4'],
+    correctAnswer: '5 - 4 = 1',
+    solution: '(√(5) + 2)(√(5) - 2) = (√(5))² - 2² = 5 - 4 = 1'
+  },
   {
     id: 'mat1033-complex-1',
     gradeMin: 9,
@@ -940,10 +940,10 @@ export const pertQuestions: Question[] = [
     gradeMax: 12,
     domain: 'Developmental Math II (MAT0028): Exponent Rules (properties; zero/negative exponents) & Scientific Notation',
     difficulty: 3,
-  questionText: 'Simplify: x⁰ + 2³',
-  choices: ['9', '8', '1', '0'],
-  correctAnswer: '9',
-  solution: 'x⁰ = 1 for any x ≠ 0; 2³ = 8; 1 + 8 = 9.'
+    questionText: 'Simplify: x⁰ + 2³',
+    choices: ['9', '8', '1', '0'],
+    correctAnswer: '9',
+    solution: 'x⁰ = 1 for any x ≠ 0; 2³ = 8; 1 + 8 = 9.'
   },
   {
     id: 'mat0028-exponents-5',
@@ -951,10 +951,10 @@ export const pertQuestions: Question[] = [
     gradeMax: 12,
     domain: 'Developmental Math II (MAT0028): Exponent Rules (properties; zero/negative exponents) & Scientific Notation',
     difficulty: 3,
-  questionText: 'Express 5,600,000 in scientific notation.',
-  choices: ['5.6 × 10⁶', '56 × 10⁵', '5.6 × 10⁵', '560 × 10⁴'],
-  correctAnswer: '5.6 × 10⁶',
-  solution: 'Move decimal 6 places: 5.6 × 10⁶.'
+    questionText: 'Express 5,600,000 in scientific notation.',
+    choices: ['5.6 × 10⁶', '56 × 10⁵', '5.6 × 10⁵', '560 × 10⁴'],
+    correctAnswer: '5.6 × 10⁶',
+    solution: 'Move decimal 6 places: 5.6 × 10⁶.'
   },
   // Developmental Math II (MAT0028): Factoring Lvl. 1
   {

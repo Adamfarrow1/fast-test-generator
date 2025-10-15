@@ -2,193 +2,193 @@ import { Question } from './types';
 
 
 
-//TODO add more fun questions
+//TODO: replace shape based questions with more diverse image-based questions
 export const mockQuestions: Question[] = [
   // Number Sense Questions (Grades 1-3)
-    // Grade 5 Questions
-    {
-      id: '5-1',
-      gradeMin: 5,
-      gradeMax: 5,
-      domain: 'Fractions',
-      difficulty: 2,
-       questionText: 'Maria is making trail mix for her camping trip. She uses 3/4 cup of nuts and 1/8 cup of dried fruit. How many cups of ingredients has she used so far for her trail mix?',
-      choices: ['7/8 cup', '5/8 cup', '1 cup', '3/8 cup'],
-      correctAnswer: '7/8 cup',
-      solution: 'To add fractions, find common denominator: 3/4 = 6/8, so 6/8 + 1/8 = 7/8 cup.'
-    },
-    {
-      id: '5-2',
-      gradeMin: 5,
-      gradeMax: 5,
-      domain: 'Decimals & Percents',
-      difficulty: 2,
-      questionText: 'The Jefferson Elementary School has 60 fifth-grade students. During a survey about favorite subjects, exactly 25% of the students said mathematics was their favorite. How many fifth-grade students chose mathematics as their favorite subject?',
-      choices: ['15 students', '12 students', '20 students', '30 students'],
-      correctAnswer: '15 students',
-      solution: '25% of 60 = 0.25 x 60 = 15 students.'
-    },
-    {
-      id: '5-3',
-      gradeMin: 5,
-      gradeMax: 5,
-      domain: 'Measurement',
-      difficulty: 2,
-      questionText: 'Dr. Rodriguez is studying insects in her laboratory. She needs to measure a beetle that is exactly 5 centimeters long. Her measuring tool only shows millimeters. How many millimeters long is the beetle?',
-      choices: ['50 mm', '5 mm', '500 mm', '25 mm'],
-      correctAnswer: '50 mm',
-      solution: 'Convert centimeters to millimeters: 1 cm = 10 mm, so 5 x 10 = 50 mm.'
-    },
-    {
-      id: '5-4',
-      gradeMin: 5,
-      gradeMax: 5,
-      domain: 'Geometry',
-      difficulty: 2,
-      questionText: 'Mrs. Chen is designing a rectangular flower garden for the school courtyard. The garden will be 8 centimeters long and 3 centimeters wide on her scale drawing. She needs to calculate the perimeter to determine how much decorative border material to order. What is the perimeter of the rectangular garden on her drawing?',
-      choices: ['22 cm', '24 cm', '11 cm', '16 cm'],
-      correctAnswer: '22 cm',
-      solution: 'Perimeter of rectangle = 2 x (length + width) = 2 x (8 + 3) = 2 x 11 = 22 cm.'
-    },
-    {
-      id: '5-5',
-      gradeMin: 5,
-      gradeMax: 5,
-      domain: 'Number Sense',
-      difficulty: 2,
-      questionText: 'In mathematics class, students are learning about perfect squares and the Pythagorean theorem. Tommy needs to calculate 3^2 + 4^2 for a special right triangle problem. What is the value of this expression?',
-      choices: ['25', '12', '7', '16'],
-      correctAnswer: '25',
-      solution: 'Calculate each square: 3^2 = 3 x 3 = 9, and 4^2 = 4 x 4 = 16. Then add: 9 + 16 = 25.'
-    },
-      // Additional Grade 5 Questions
-      {
-        id: '5-6', gradeMin: 5, gradeMax: 5, domain: 'Number Sense', difficulty: 2,
-        questionText: 'The art teacher ordered 125 colored pencils for her fifth-grade classes. She wants to distribute them equally among 5 different classrooms so each room gets the same number of pencils. How many colored pencils will each classroom receive?', choices: ['20', '25', '30', '15'], correctAnswer: '25', solution: 'Divide the total by the number of classrooms: 125 / 5 = 25 pencils per classroom.'
-      },
-      {
-        id: '5-7', gradeMin: 5, gradeMax: 5, domain: 'Fractions', difficulty: 2,
-        questionText: 'Sarah and Jessica are comparing how much of their homework they completed last night. Sarah finished 2/3 of her assignments, while Jessica completed 3/5 of hers. Who completed a greater fraction of their homework?', choices: ['Sarah (2/3)', 'Jessica (3/5)', 'They completed equal amounts', 'Cannot determine'], correctAnswer: 'Sarah (2/3)', solution: 'Convert to decimals to compare: 2/3 = 0.667 and 3/5 = 0.6. Since 0.667 > 0.6, Sarah completed more.'
-      },
-      {
-        id: '5-8', gradeMin: 5, gradeMax: 5, domain: 'Decimals & Percents', difficulty: 2,
-        questionText: 'During a basketball game, the home team made 0.75 of their free throw attempts. The sports announcer wants to report this statistic as a percentage for the audience. What percentage of free throws did the home team make?', choices: ['7.5%', '75%', '0.75%', '750%'], correctAnswer: '75%', solution: 'To convert decimal to percent, multiply by 100: 0.75 x 100 = 75%.'
-      },
-      {
-        id: '5-9', gradeMin: 5, gradeMax: 5, domain: 'Measurement', difficulty: 2,
-        questionText: 'A chemistry teacher is preparing an experiment that requires precise measurements. She needs to measure 2 kilograms of a special compound, but her digital scale only displays weights in grams. How many grams should the scale show when she has the correct amount?', choices: ['200 g', '2000 g', '20 g', '2 g'], correctAnswer: '2000 g', solution: 'Convert kilograms to grams: 1 kg = 1000 g, so 2 kg = 2 x 1000 = 2000 g.'
-      },
-      {
-        id: '5-10', gradeMin: 5, gradeMax: 5, domain: 'Geometry', difficulty: 2,
-        questionText: 'The school custodian needs to order new carpet tiles for a rectangular section of the library. The area measures 7 centimeters long and 4 centimeters wide on the architectural blueprint. What is the area of this rectangular section on the blueprint?', choices: ['28 sq cm', '11 sq cm', '14 sq cm', '21 sq cm'], correctAnswer: '28 sq cm', solution: 'Area of rectangle = length x width = 7 cm x 4 cm = 28 sq cm.'
-      },
-      {
-        id: '5-11', gradeMin: 5, gradeMax: 5, domain: 'Number Sense', difficulty: 2,
-        questionText: 'At the school fundraiser, each student volunteer worked for 6 hours on Saturday and 3 hours on Sunday. If there were 2 student volunteers, what was the total number of hours worked by all volunteers combined?', choices: ['18 hours', '12 hours', '9 hours', '15 hours'], correctAnswer: '18 hours', solution: 'First find hours per volunteer: 6 + 3 = 9 hours. Then multiply by number of volunteers: 2 x 9 = 18 hours.'
-      },
-      {
-        id: '5-12', gradeMin: 5, gradeMax: 5, domain: 'Fractions', difficulty: 2,
-        questionText: 'The cafeteria staff prepared 36 sandwiches for the field trip. Due to dietary restrictions, exactly half of the sandwiches needed to be vegetarian options. How many vegetarian sandwiches did the cafeteria staff need to prepare?', choices: ['18 sandwiches', '12 sandwiches', '24 sandwiches', '36 sandwiches'], correctAnswer: '18 sandwiches', solution: 'Find 1/2 of 36: 36 / 2 = 18 vegetarian sandwiches.'
-      },
-      {
-        id: '5-13', gradeMin: 5, gradeMax: 5, domain: 'Decimals & Percents', difficulty: 2,
-        questionText: 'A local grocery store is offering a special discount where customers save 0.2 times the original price on bulk purchases. If a family is buying $50 worth of groceries in bulk, how much money will they save with this discount?', choices: ['$10', '$20', '$5', '$15'], correctAnswer: '$10', solution: 'Calculate the savings: 0.2 x $50 = $10.'
-      },
-      {
-        id: '5-14', gradeMin: 5, gradeMax: 5, domain: 'Measurement', difficulty: 2,
-        questionText: 'The school track team is measuring the distance for their new running course. The coach measured 3 meters for one section, but the official record sheet requires all measurements to be recorded in centimeters. How many centimeters should be recorded for this section?', choices: ['30 cm', '300 cm', '3 cm', '100 cm'], correctAnswer: '300 cm', solution: 'Convert meters to centimeters: 1 m = 100 cm, so 3 m = 3 x 100 = 300 cm.'
-      },
-      {
-        id: '5-15', gradeMin: 5, gradeMax: 5, domain: 'Geometry', difficulty: 2,
-        questionText: 'The art class is creating geometric patterns using polygon shapes. Jennifer is working on a design that requires a polygon with exactly 6 equal sides and 6 equal angles. What type of polygon should Jennifer use for her design?', choices: ['Pentagon (5 sides)', 'Hexagon (6 sides)', 'Heptagon (7 sides)', 'Octagon (8 sides)'], correctAnswer: 'Hexagon (6 sides)', solution: 'A hexagon is a polygon with exactly 6 sides and 6 angles.'
-      },
-      {
-        id: '5-16', gradeMin: 5, gradeMax: 5, domain: 'Number Sense', difficulty: 2,
-        questionText: 'The school library is organizing books into sections. The librarian needs to arrange 9 rows of bookshelves, with exactly 7 books on each shelf. How many books will be displayed in total across all the shelves?', choices: ['63 books', '56 books', '72 books', '49 books'], correctAnswer: '63 books', solution: 'Multiply the number of rows by books per shelf: 9 x 7 = 63 books.'
-      },
-      {
-        id: '5-17', gradeMin: 5, gradeMax: 5, domain: 'Fractions', difficulty: 2,
-        questionText: 'During the school bake sale, the parent volunteers sold 25 cupcakes total. At the end of the event, they discovered that exactly 2/5 of the cupcakes sold were chocolate flavor. How many chocolate cupcakes were sold?', choices: ['10 cupcakes', '5 cupcakes', '15 cupcakes', '20 cupcakes'], correctAnswer: '10 cupcakes', solution: 'Find 2/5 of 25: (2/5) x 25 = (2 x 25) / 5 = 50 / 5 = 10 cupcakes.'
-      },
-      {
-        id: '5-18', gradeMin: 5, gradeMax: 5, domain: 'Decimals & Percents', difficulty: 2,
-        questionText: 'Washington Elementary School has 120 students in the fifth grade. During the annual reading challenge, exactly 10% of these students earned the "Super Reader" award for reading more than 20 books. How many fifth-grade students earned the Super Reader award?', choices: ['12 students', '10 students', '120 students', '20 students'], correctAnswer: '12 students', solution: 'Calculate 10% of 120: 10% = 0.1, so 0.1 x 120 = 12 students.'
-      },
-      {
-        id: '5-19', gradeMin: 5, gradeMax: 5, domain: 'Measurement', difficulty: 2,
-        questionText: 'The science teacher is preparing a chemistry demonstration that requires exactly 2 liters of distilled water. However, her measuring tools are marked only in milliliters. How many milliliters of distilled water does she need for the demonstration?', choices: ['200 mL', '2000 mL', '20 mL', '2 mL'], correctAnswer: '2000 mL', solution: 'Convert liters to milliliters: 1 L = 1000 mL, so 2 L = 2 x 1000 = 2000 mL.'
-      },
-      {
-        id: '5-20', gradeMin: 5, gradeMax: 5, domain: 'Geometry', difficulty: 2,
-        questionText: 'In geometry class, students are learning about the properties of triangles. Marcus needs to find the total measure of all three interior angles in any triangle for his homework assignment. What is the sum of all interior angles in a triangle?', choices: ['180 degrees', '90 degrees', '360 degrees', '270 degrees'], correctAnswer: '180 degrees', solution: 'The sum of all interior angles in any triangle is always 180 degrees.'
-      },
-      {
-        id: '5-21', gradeMin: 5, gradeMax: 5, domain: 'Number Sense', difficulty: 2,
-        questionText: 'The school chess club is setting up for their annual tournament. They need to arrange the tables in a perfect square formation with 8 tables along each side. How many tables will they need in total for this square arrangement?', choices: ['64 tables', '56 tables', '72 tables', '48 tables'], correctAnswer: '64 tables', solution: 'For a square arrangement: 8 x 8 = 64 tables total.'
-      },
-      {
-        id: '5-22', gradeMin: 5, gradeMax: 5, domain: 'Fractions', difficulty: 2,
-        questionText: 'The school fundraising committee collected 40 prizes for their raffle drawing. They decided that 3/4 of these prizes should be gift cards, while the rest would be physical items. How many gift card prizes did they designate for the raffle?', choices: ['30 prizes', '10 prizes', '20 prizes', '40 prizes'], correctAnswer: '30 prizes', solution: 'Find 3/4 of 40: (3/4) x 40 = (3 x 40) / 4 = 120 / 4 = 30 gift cards.'
-      },
-      {
-        id: '5-23', gradeMin: 5, gradeMax: 5, domain: 'Decimals & Percents', difficulty: 2,
-        questionText: 'During a math competition, students earn points based on their accuracy. Emily scored 0.6 points for each correct answer, and she answered exactly 100 questions correctly. What was Emily\'s total score in the competition?', choices: ['60 points', '6 points', '600 points', '10 points'], correctAnswer: '60 points', solution: 'Multiply the points per question by number of correct answers: 0.6 x 100 = 60 points.'
-      },
-      {
-        id: '5-24', gradeMin: 5, gradeMax: 5, domain: 'Measurement', difficulty: 2,
-        questionText: 'The school maintenance crew needs to install a new bulletin board that is exactly 2 feet wide. The hardware store measures materials in inches, so they need to convert this measurement. How many inches wide should the bulletin board be?', choices: ['24 inches', '12 inches', '6 inches', '18 inches'], correctAnswer: '24 inches', solution: 'Convert feet to inches: 1 foot = 12 inches, so 2 feet = 2 x 12 = 24 inches.'
-      },
-      {
-        id: '5-25', gradeMin: 5, gradeMax: 5, domain: 'Geometry', difficulty: 2,
-        questionText: 'A toy company is designing a new puzzle cube where each edge measures exactly 3 centimeters. The packaging department needs to know the total volume of space inside each cube to determine shipping costs. What is the volume of this cube?', choices: ['27 cm³', '9 cm³', '18 cm³', '12 cm³'], correctAnswer: '27 cm³', solution: 'Volume of cube = side x side x side = 3 x 3 x 3 = 27 cm³.'
-      },
-      {
-        id: '5-26', gradeMin: 5, gradeMax: 5, domain: 'Number Sense', difficulty: 2,
-        questionText: 'At the beginning of the school year, the supply closet contained 100 notebooks. Throughout the first semester, teachers distributed 37 notebooks to students who needed them. How many notebooks remain in the supply closet?', choices: ['63 notebooks', '73 notebooks', '67 notebooks', '57 notebooks'], correctAnswer: '63 notebooks', solution: 'Subtract notebooks distributed from the original amount: 100 - 37 = 63 notebooks.'
-      },
-      {
-        id: '5-27', gradeMin: 5, gradeMax: 5, domain: 'Fractions', difficulty: 2,
-        questionText: 'The fifth-grade class collected 21 canned goods for the food drive. Their teacher announced that exactly 1/3 of these donations would be given to the local shelter, while the remaining cans would go to the community food bank. How many canned goods will be donated to the local shelter?', choices: ['7 cans', '3 cans', '14 cans', '21 cans'], correctAnswer: '7 cans', solution: 'Find 1/3 of 21: 21 x (1/3) = 21 ÷ 3 = 7 canned goods.'
-      },
-{
-  id: '5-28',
-  gradeMin: 5,
-  gradeMax: 5,
-  domain: 'Decimals & Percents',
-  difficulty: 2,
-  questionText: 'Lincoln Middle School ordered 80 new tablets for their computer lab. Due to a special educational discount, they received 50% off the regular price. If the regular price was the full amount, how much did they actually pay in comparison to the original price?',
-  choices: ['50% of original price', '80% of original price', '20% of original price', '60% of original price'],
-  correctAnswer: '50% of original price',
-  solution: 'With 50% off, they pay 50% of the original price (i.e., half).'
-},
-      {
-        id: '5-29', gradeMin: 5, gradeMax: 5, domain: 'Measurement', difficulty: 2,
-        questionText: 'The school play rehearsals are scheduled to run for exactly 3 weeks before the performance. The drama teacher wants to tell parents how many days their children will be involved in rehearsals. How many days will the rehearsal period last?', choices: ['21 days', '14 days', '7 days', '28 days'], correctAnswer: '21 days', solution: 'Convert weeks to days: 1 week = 7 days, so 3 weeks = 3 x 7 = 21 days.'
-      },
-      {
-        id: '5-30', gradeMin: 5, gradeMax: 5, domain: 'Geometry', difficulty: 2,
-        questionText: 'The art class is studying three-dimensional shapes by examining dice and building blocks. Students need to count all the flat surfaces on a standard cube to complete their geometry worksheet. How many flat faces does a cube have?', choices: ['6 faces', '8 faces', '12 faces', '4 faces'], correctAnswer: '6 faces', solution: 'A cube has 6 flat faces: top, bottom, front, back, left side, and right side.'
-      },
-      {
-        id: '5-31', gradeMin: 5, gradeMax: 5, domain: 'Number Sense', difficulty: 2,
-        questionText: 'The school cafeteria received a shipment of 45 apples that need to be distributed equally among 9 lunch tables. Each table should receive the same number of apples for the daily fruit serving. How many apples will each table receive?', choices: ['5 apples', '4 apples', '6 apples', '9 apples'], correctAnswer: '5 apples', solution: 'Divide the total apples by the number of tables: 45 ÷ 9 = 5 apples per table.'
-      },
-      {
-        id: '5-32', gradeMin: 5, gradeMax: 5, domain: 'Fractions', difficulty: 2,
-        questionText: 'The school band has 12 members preparing for their spring concert. The band director determined that 5/6 of the band members need to attend the extra practice session this Saturday. How many band members must attend the Saturday practice?', choices: ['10 members', '6 members', '8 members', '12 members'], correctAnswer: '10 members', solution: 'Find 5/6 of 12: (5/6) x 12 = (5 x 12) ÷ 6 = 60 ÷ 6 = 10 members.'
-      },
-      {
-        id: '5-33', gradeMin: 5, gradeMax: 5, domain: 'Decimals & Percents', difficulty: 2,
-        questionText: 'A local bookstore is having a clearance sale where all books are priced at 0.4 times their original cost. If a popular children\'s book originally cost $25, what is the sale price that customers will pay?', choices: ['$10', '$4', '$25', '$8'], correctAnswer: '$10', solution: 'Calculate the sale price: 0.4 x $25 = $10.'
-      },
-      {
-        id: '5-34', gradeMin: 5, gradeMax: 5, domain: 'Measurement', difficulty: 2,
-        questionText: 'The school science fair will run continuously for 3 full days, from Friday morning until Sunday evening. The event coordinator needs to calculate the total number of hours for staffing purposes. How many hours will the science fair last?', choices: ['72 hours', '24 hours', '36 hours', '48 hours'], correctAnswer: '72 hours', solution: 'Convert days to hours: 1 day = 24 hours, so 3 days = 3 x 24 = 72 hours.'
-      },
-      {
-        id: '5-35', gradeMin: 5, gradeMax: 5, domain: 'Geometry', difficulty: 2,
-        questionText: 'The school garden club is designing a triangular flower bed for the front entrance. On their blueprint, the triangle has a base of 10 centimeters and a height of 6 centimeters. What is the area of this triangular flower bed on the blueprint?', choices: ['30 cm²', '60 cm²', '16 cm²', '36 cm²'], correctAnswer: '30 cm²', solution: 'Area of triangle = (1/2) x base x height = (1/2) x 10 x 6 = 30 cm².'
-      },
+  // Grade 5 Questions
+  {
+    id: '5-1',
+    gradeMin: 5,
+    gradeMax: 5,
+    domain: 'Fractions',
+    difficulty: 2,
+    questionText: 'Maria is making trail mix for her camping trip. She uses 3/4 cup of nuts and 1/8 cup of dried fruit. How many cups of ingredients has she used so far for her trail mix?',
+    choices: ['7/8 cup', '5/8 cup', '1 cup', '3/8 cup'],
+    correctAnswer: '7/8 cup',
+    solution: 'To add fractions, find common denominator: 3/4 = 6/8, so 6/8 + 1/8 = 7/8 cup.'
+  },
+  {
+    id: '5-2',
+    gradeMin: 5,
+    gradeMax: 5,
+    domain: 'Decimals & Percents',
+    difficulty: 2,
+    questionText: 'The Jefferson Elementary School has 60 fifth-grade students. During a survey about favorite subjects, exactly 25% of the students said mathematics was their favorite. How many fifth-grade students chose mathematics as their favorite subject?',
+    choices: ['15 students', '12 students', '20 students', '30 students'],
+    correctAnswer: '15 students',
+    solution: '25% of 60 = 0.25 x 60 = 15 students.'
+  },
+  {
+    id: '5-3',
+    gradeMin: 5,
+    gradeMax: 5,
+    domain: 'Measurement',
+    difficulty: 2,
+    questionText: 'Dr. Rodriguez is studying insects in her laboratory. She needs to measure a beetle that is exactly 5 centimeters long. Her measuring tool only shows millimeters. How many millimeters long is the beetle?',
+    choices: ['50 mm', '5 mm', '500 mm', '25 mm'],
+    correctAnswer: '50 mm',
+    solution: 'Convert centimeters to millimeters: 1 cm = 10 mm, so 5 x 10 = 50 mm.'
+  },
+  {
+    id: '5-4',
+    gradeMin: 5,
+    gradeMax: 5,
+    domain: 'Geometry',
+    difficulty: 2,
+    questionText: 'Mrs. Chen is designing a rectangular flower garden for the school courtyard. The garden will be 8 centimeters long and 3 centimeters wide on her scale drawing. She needs to calculate the perimeter to determine how much decorative border material to order. What is the perimeter of the rectangular garden on her drawing?',
+    choices: ['22 cm', '24 cm', '11 cm', '16 cm'],
+    correctAnswer: '22 cm',
+    solution: 'Perimeter of rectangle = 2 x (length + width) = 2 x (8 + 3) = 2 x 11 = 22 cm.'
+  },
+  {
+    id: '5-5',
+    gradeMin: 5,
+    gradeMax: 5,
+    domain: 'Number Sense',
+    difficulty: 2,
+    questionText: 'In mathematics class, students are learning about perfect squares and the Pythagorean theorem. Tommy needs to calculate 3^2 + 4^2 for a special right triangle problem. What is the value of this expression?',
+    choices: ['25', '12', '7', '16'],
+    correctAnswer: '25',
+    solution: 'Calculate each square: 3^2 = 3 x 3 = 9, and 4^2 = 4 x 4 = 16. Then add: 9 + 16 = 25.'
+  },
+  // Additional Grade 5 Questions
+  {
+    id: '5-6', gradeMin: 5, gradeMax: 5, domain: 'Number Sense', difficulty: 2,
+    questionText: 'The art teacher ordered 125 colored pencils for her fifth-grade classes. She wants to distribute them equally among 5 different classrooms so each room gets the same number of pencils. How many colored pencils will each classroom receive?', choices: ['20', '25', '30', '15'], correctAnswer: '25', solution: 'Divide the total by the number of classrooms: 125 / 5 = 25 pencils per classroom.'
+  },
+  {
+    id: '5-7', gradeMin: 5, gradeMax: 5, domain: 'Fractions', difficulty: 2,
+    questionText: 'Sarah and Jessica are comparing how much of their homework they completed last night. Sarah finished 2/3 of her assignments, while Jessica completed 3/5 of hers. Who completed a greater fraction of their homework?', choices: ['Sarah (2/3)', 'Jessica (3/5)', 'They completed equal amounts', 'Cannot determine'], correctAnswer: 'Sarah (2/3)', solution: 'Convert to decimals to compare: 2/3 = 0.667 and 3/5 = 0.6. Since 0.667 > 0.6, Sarah completed more.'
+  },
+  {
+    id: '5-8', gradeMin: 5, gradeMax: 5, domain: 'Decimals & Percents', difficulty: 2,
+    questionText: 'During a basketball game, the home team made 0.75 of their free throw attempts. The sports announcer wants to report this statistic as a percentage for the audience. What percentage of free throws did the home team make?', choices: ['7.5%', '75%', '0.75%', '750%'], correctAnswer: '75%', solution: 'To convert decimal to percent, multiply by 100: 0.75 x 100 = 75%.'
+  },
+  {
+    id: '5-9', gradeMin: 5, gradeMax: 5, domain: 'Measurement', difficulty: 2,
+    questionText: 'A chemistry teacher is preparing an experiment that requires precise measurements. She needs to measure 2 kilograms of a special compound, but her digital scale only displays weights in grams. How many grams should the scale show when she has the correct amount?', choices: ['200 g', '2000 g', '20 g', '2 g'], correctAnswer: '2000 g', solution: 'Convert kilograms to grams: 1 kg = 1000 g, so 2 kg = 2 x 1000 = 2000 g.'
+  },
+  {
+    id: '5-10', gradeMin: 5, gradeMax: 5, domain: 'Geometry', difficulty: 2,
+    questionText: 'The school custodian needs to order new carpet tiles for a rectangular section of the library. The area measures 7 centimeters long and 4 centimeters wide on the architectural blueprint. What is the area of this rectangular section on the blueprint?', choices: ['28 sq cm', '11 sq cm', '14 sq cm', '21 sq cm'], correctAnswer: '28 sq cm', solution: 'Area of rectangle = length x width = 7 cm x 4 cm = 28 sq cm.'
+  },
+  {
+    id: '5-11', gradeMin: 5, gradeMax: 5, domain: 'Number Sense', difficulty: 2,
+    questionText: 'At the school fundraiser, each student volunteer worked for 6 hours on Saturday and 3 hours on Sunday. If there were 2 student volunteers, what was the total number of hours worked by all volunteers combined?', choices: ['18 hours', '12 hours', '9 hours', '15 hours'], correctAnswer: '18 hours', solution: 'First find hours per volunteer: 6 + 3 = 9 hours. Then multiply by number of volunteers: 2 x 9 = 18 hours.'
+  },
+  {
+    id: '5-12', gradeMin: 5, gradeMax: 5, domain: 'Fractions', difficulty: 2,
+    questionText: 'The cafeteria staff prepared 36 sandwiches for the field trip. Due to dietary restrictions, exactly half of the sandwiches needed to be vegetarian options. How many vegetarian sandwiches did the cafeteria staff need to prepare?', choices: ['18 sandwiches', '12 sandwiches', '24 sandwiches', '36 sandwiches'], correctAnswer: '18 sandwiches', solution: 'Find 1/2 of 36: 36 / 2 = 18 vegetarian sandwiches.'
+  },
+  {
+    id: '5-13', gradeMin: 5, gradeMax: 5, domain: 'Decimals & Percents', difficulty: 2,
+    questionText: 'A local grocery store is offering a special discount where customers save 0.2 times the original price on bulk purchases. If a family is buying $50 worth of groceries in bulk, how much money will they save with this discount?', choices: ['$10', '$20', '$5', '$15'], correctAnswer: '$10', solution: 'Calculate the savings: 0.2 x $50 = $10.'
+  },
+  {
+    id: '5-14', gradeMin: 5, gradeMax: 5, domain: 'Measurement', difficulty: 2,
+    questionText: 'The school track team is measuring the distance for their new running course. The coach measured 3 meters for one section, but the official record sheet requires all measurements to be recorded in centimeters. How many centimeters should be recorded for this section?', choices: ['30 cm', '300 cm', '3 cm', '100 cm'], correctAnswer: '300 cm', solution: 'Convert meters to centimeters: 1 m = 100 cm, so 3 m = 3 x 100 = 300 cm.'
+  },
+  {
+    id: '5-15', gradeMin: 5, gradeMax: 5, domain: 'Geometry', difficulty: 2,
+    questionText: 'The art class is creating geometric patterns using polygon shapes. Jennifer is working on a design that requires a polygon with exactly 6 equal sides and 6 equal angles. What type of polygon should Jennifer use for her design?', choices: ['Pentagon (5 sides)', 'Hexagon (6 sides)', 'Heptagon (7 sides)', 'Octagon (8 sides)'], correctAnswer: 'Hexagon (6 sides)', solution: 'A hexagon is a polygon with exactly 6 sides and 6 angles.'
+  },
+  {
+    id: '5-16', gradeMin: 5, gradeMax: 5, domain: 'Number Sense', difficulty: 2,
+    questionText: 'The school library is organizing books into sections. The librarian needs to arrange 9 rows of bookshelves, with exactly 7 books on each shelf. How many books will be displayed in total across all the shelves?', choices: ['63 books', '56 books', '72 books', '49 books'], correctAnswer: '63 books', solution: 'Multiply the number of rows by books per shelf: 9 x 7 = 63 books.'
+  },
+  {
+    id: '5-17', gradeMin: 5, gradeMax: 5, domain: 'Fractions', difficulty: 2,
+    questionText: 'During the school bake sale, the parent volunteers sold 25 cupcakes total. At the end of the event, they discovered that exactly 2/5 of the cupcakes sold were chocolate flavor. How many chocolate cupcakes were sold?', choices: ['10 cupcakes', '5 cupcakes', '15 cupcakes', '20 cupcakes'], correctAnswer: '10 cupcakes', solution: 'Find 2/5 of 25: (2/5) x 25 = (2 x 25) / 5 = 50 / 5 = 10 cupcakes.'
+  },
+  {
+    id: '5-18', gradeMin: 5, gradeMax: 5, domain: 'Decimals & Percents', difficulty: 2,
+    questionText: 'Washington Elementary School has 120 students in the fifth grade. During the annual reading challenge, exactly 10% of these students earned the "Super Reader" award for reading more than 20 books. How many fifth-grade students earned the Super Reader award?', choices: ['12 students', '10 students', '120 students', '20 students'], correctAnswer: '12 students', solution: 'Calculate 10% of 120: 10% = 0.1, so 0.1 x 120 = 12 students.'
+  },
+  {
+    id: '5-19', gradeMin: 5, gradeMax: 5, domain: 'Measurement', difficulty: 2,
+    questionText: 'The science teacher is preparing a chemistry demonstration that requires exactly 2 liters of distilled water. However, her measuring tools are marked only in milliliters. How many milliliters of distilled water does she need for the demonstration?', choices: ['200 mL', '2000 mL', '20 mL', '2 mL'], correctAnswer: '2000 mL', solution: 'Convert liters to milliliters: 1 L = 1000 mL, so 2 L = 2 x 1000 = 2000 mL.'
+  },
+  {
+    id: '5-20', gradeMin: 5, gradeMax: 5, domain: 'Geometry', difficulty: 2,
+    questionText: 'In geometry class, students are learning about the properties of triangles. Marcus needs to find the total measure of all three interior angles in any triangle for his homework assignment. What is the sum of all interior angles in a triangle?', choices: ['180 degrees', '90 degrees', '360 degrees', '270 degrees'], correctAnswer: '180 degrees', solution: 'The sum of all interior angles in any triangle is always 180 degrees.'
+  },
+  {
+    id: '5-21', gradeMin: 5, gradeMax: 5, domain: 'Number Sense', difficulty: 2,
+    questionText: 'The school chess club is setting up for their annual tournament. They need to arrange the tables in a perfect square formation with 8 tables along each side. How many tables will they need in total for this square arrangement?', choices: ['64 tables', '56 tables', '72 tables', '48 tables'], correctAnswer: '64 tables', solution: 'For a square arrangement: 8 x 8 = 64 tables total.'
+  },
+  {
+    id: '5-22', gradeMin: 5, gradeMax: 5, domain: 'Fractions', difficulty: 2,
+    questionText: 'The school fundraising committee collected 40 prizes for their raffle drawing. They decided that 3/4 of these prizes should be gift cards, while the rest would be physical items. How many gift card prizes did they designate for the raffle?', choices: ['30 prizes', '10 prizes', '20 prizes', '40 prizes'], correctAnswer: '30 prizes', solution: 'Find 3/4 of 40: (3/4) x 40 = (3 x 40) / 4 = 120 / 4 = 30 gift cards.'
+  },
+  {
+    id: '5-23', gradeMin: 5, gradeMax: 5, domain: 'Decimals & Percents', difficulty: 2,
+    questionText: 'During a math competition, students earn points based on their accuracy. Emily scored 0.6 points for each correct answer, and she answered exactly 100 questions correctly. What was Emily\'s total score in the competition?', choices: ['60 points', '6 points', '600 points', '10 points'], correctAnswer: '60 points', solution: 'Multiply the points per question by number of correct answers: 0.6 x 100 = 60 points.'
+  },
+  {
+    id: '5-24', gradeMin: 5, gradeMax: 5, domain: 'Measurement', difficulty: 2,
+    questionText: 'The school maintenance crew needs to install a new bulletin board that is exactly 2 feet wide. The hardware store measures materials in inches, so they need to convert this measurement. How many inches wide should the bulletin board be?', choices: ['24 inches', '12 inches', '6 inches', '18 inches'], correctAnswer: '24 inches', solution: 'Convert feet to inches: 1 foot = 12 inches, so 2 feet = 2 x 12 = 24 inches.'
+  },
+  {
+    id: '5-25', gradeMin: 5, gradeMax: 5, domain: 'Geometry', difficulty: 2,
+    questionText: 'A toy company is designing a new puzzle cube where each edge measures exactly 3 centimeters. The packaging department needs to know the total volume of space inside each cube to determine shipping costs. What is the volume of this cube?', choices: ['27 cm³', '9 cm³', '18 cm³', '12 cm³'], correctAnswer: '27 cm³', solution: 'Volume of cube = side x side x side = 3 x 3 x 3 = 27 cm³.'
+  },
+  {
+    id: '5-26', gradeMin: 5, gradeMax: 5, domain: 'Number Sense', difficulty: 2,
+    questionText: 'At the beginning of the school year, the supply closet contained 100 notebooks. Throughout the first semester, teachers distributed 37 notebooks to students who needed them. How many notebooks remain in the supply closet?', choices: ['63 notebooks', '73 notebooks', '67 notebooks', '57 notebooks'], correctAnswer: '63 notebooks', solution: 'Subtract notebooks distributed from the original amount: 100 - 37 = 63 notebooks.'
+  },
+  {
+    id: '5-27', gradeMin: 5, gradeMax: 5, domain: 'Fractions', difficulty: 2,
+    questionText: 'The fifth-grade class collected 21 canned goods for the food drive. Their teacher announced that exactly 1/3 of these donations would be given to the local shelter, while the remaining cans would go to the community food bank. How many canned goods will be donated to the local shelter?', choices: ['7 cans', '3 cans', '14 cans', '21 cans'], correctAnswer: '7 cans', solution: 'Find 1/3 of 21: 21 x (1/3) = 21 ÷ 3 = 7 canned goods.'
+  },
+  {
+    id: '5-28',
+    gradeMin: 5,
+    gradeMax: 5,
+    domain: 'Decimals & Percents',
+    difficulty: 2,
+    questionText: 'Lincoln Middle School ordered 80 new tablets for their computer lab. Due to a special educational discount, they received 50% off the regular price. If the regular price was the full amount, how much did they actually pay in comparison to the original price?',
+    choices: ['50% of original price', '80% of original price', '20% of original price', '60% of original price'],
+    correctAnswer: '50% of original price',
+    solution: 'With 50% off, they pay 50% of the original price (i.e., half).'
+  },
+  {
+    id: '5-29', gradeMin: 5, gradeMax: 5, domain: 'Measurement', difficulty: 2,
+    questionText: 'The school play rehearsals are scheduled to run for exactly 3 weeks before the performance. The drama teacher wants to tell parents how many days their children will be involved in rehearsals. How many days will the rehearsal period last?', choices: ['21 days', '14 days', '7 days', '28 days'], correctAnswer: '21 days', solution: 'Convert weeks to days: 1 week = 7 days, so 3 weeks = 3 x 7 = 21 days.'
+  },
+  {
+    id: '5-30', gradeMin: 5, gradeMax: 5, domain: 'Geometry', difficulty: 2,
+    questionText: 'The art class is studying three-dimensional shapes by examining dice and building blocks. Students need to count all the flat surfaces on a standard cube to complete their geometry worksheet. How many flat faces does a cube have?', choices: ['6 faces', '8 faces', '12 faces', '4 faces'], correctAnswer: '6 faces', solution: 'A cube has 6 flat faces: top, bottom, front, back, left side, and right side.'
+  },
+  {
+    id: '5-31', gradeMin: 5, gradeMax: 5, domain: 'Number Sense', difficulty: 2,
+    questionText: 'The school cafeteria received a shipment of 45 apples that need to be distributed equally among 9 lunch tables. Each table should receive the same number of apples for the daily fruit serving. How many apples will each table receive?', choices: ['5 apples', '4 apples', '6 apples', '9 apples'], correctAnswer: '5 apples', solution: 'Divide the total apples by the number of tables: 45 ÷ 9 = 5 apples per table.'
+  },
+  {
+    id: '5-32', gradeMin: 5, gradeMax: 5, domain: 'Fractions', difficulty: 2,
+    questionText: 'The school band has 12 members preparing for their spring concert. The band director determined that 5/6 of the band members need to attend the extra practice session this Saturday. How many band members must attend the Saturday practice?', choices: ['10 members', '6 members', '8 members', '12 members'], correctAnswer: '10 members', solution: 'Find 5/6 of 12: (5/6) x 12 = (5 x 12) ÷ 6 = 60 ÷ 6 = 10 members.'
+  },
+  {
+    id: '5-33', gradeMin: 5, gradeMax: 5, domain: 'Decimals & Percents', difficulty: 2,
+    questionText: 'A local bookstore is having a clearance sale where all books are priced at 0.4 times their original cost. If a popular children\'s book originally cost $25, what is the sale price that customers will pay?', choices: ['$10', '$4', '$25', '$8'], correctAnswer: '$10', solution: 'Calculate the sale price: 0.4 x $25 = $10.'
+  },
+  {
+    id: '5-34', gradeMin: 5, gradeMax: 5, domain: 'Measurement', difficulty: 2,
+    questionText: 'The school science fair will run continuously for 3 full days, from Friday morning until Sunday evening. The event coordinator needs to calculate the total number of hours for staffing purposes. How many hours will the science fair last?', choices: ['72 hours', '24 hours', '36 hours', '48 hours'], correctAnswer: '72 hours', solution: 'Convert days to hours: 1 day = 24 hours, so 3 days = 3 x 24 = 72 hours.'
+  },
+  {
+    id: '5-35', gradeMin: 5, gradeMax: 5, domain: 'Geometry', difficulty: 2,
+    questionText: 'The school garden club is designing a triangular flower bed for the front entrance. On their blueprint, the triangle has a base of 10 centimeters and a height of 6 centimeters. What is the area of this triangular flower bed on the blueprint?', choices: ['30 cm²', '60 cm²', '16 cm²', '36 cm²'], correctAnswer: '30 cm²', solution: 'Area of triangle = (1/2) x base x height = (1/2) x 10 x 6 = 30 cm².'
+  },
   {
     id: '1',
     gradeMin: 1,
@@ -200,97 +200,97 @@ export const mockQuestions: Question[] = [
     correctAnswer: '12',
     solution: '5 + 7 = 12'
   },
-    // Grade 1 Image-Based Shape Questions
-    {
-      id: 'img-1',
-      gradeMin: 1,
-      gradeMax: 1,
-      domain: 'Shapes',
-      difficulty: 1,
-      questionText: 'Emma is building with blocks. She wants to use a shape that has 3 corners. Which shape should she pick?',
-      choices: [
-        { type: 'image', src: '/triangle.png', alt: 'Triangle' },
-        { type: 'image', src: '/square.png', alt: 'Square' },
-        { type: 'image', src: '/circle.png', alt: 'Circle' }
-      ],
-      correctAnswer: 'A',
-      solution: 'A triangle has 3 corners and 3 sides.'
-    },
-    {
-      id: 'img-2',
-      gradeMin: 1,
-      gradeMax: 1,
-      domain: 'Shapes',
-      difficulty: 1,
-      questionText: 'Tommy is looking for a shape that looks like a window. All 4 sides are the same length. Which shape is he looking for?',
-      choices: [
-        { type: 'image', src: '/circle.png', alt: 'Circle' },
-        { type: 'image', src: '/square.png', alt: 'Square' },
-        { type: 'image', src: '/triangle.png', alt: 'Triangle' }
-      ],
-      correctAnswer: 'B',
-      solution: 'A square has 4 equal sides, just like many windows.'
-    },
-    {
-      id: 'img-3',
-      gradeMin: 1,
-      gradeMax: 1,
-      domain: 'Shapes',
-      difficulty: 1,
-      questionText: 'Sarah is drawing the sun. She wants to use a shape that rolls and has no corners. Which shape should she choose?',
-      choices: [
-        { type: 'image', src: '/square.png', alt: 'Square' },
-        { type: 'image', src: '/triangle.png', alt: 'Triangle' },
-        { type: 'image', src: '/circle.png', alt: 'Circle' }
-      ],
-      correctAnswer: 'C',
-      solution: 'A circle is round like the sun and has no corners.'
-    },
-    {
-      id: 'img-4',
-      gradeMin: 1,
-      gradeMax: 1,
-      domain: 'Shapes',
-      difficulty: 1,
-      questionText: 'Mike is making a pizza slice for his pretend restaurant. The slice has a pointy end and 3 straight edges. Which shape is his pizza slice?',
-      choices: [
-        { type: 'image', src: '/triangle.png', alt: 'Triangle' },
-        { type: 'image', src: '/circle.png', alt: 'Circle' },
-        { type: 'image', src: '/square.png', alt: 'Square' }
-      ],
-      correctAnswer: 'A',
-      solution: 'A pizza slice is shaped like a triangle with 3 sides and 3 corners.'
-    },
-    {
-      id: 'img-5',
-      gradeMin: 1,
-      gradeMax: 1,
-      domain: 'Shapes',
-      difficulty: 1,
-      questionText: 'Anna is making a house with blocks. She needs a shape for the roof that has a point at the top. Which shape should she use?',
-      choices: [
-        { type: 'image', src: '/circle.png', alt: 'Circle' },
-        { type: 'image', src: '/triangle.png', alt: 'Triangle' },
-        { type: 'image', src: '/square.png', alt: 'Square' }
-      ],
-      correctAnswer: 'B',
-      solution: 'A triangle has a point at the top, perfect for a roof.'
-    },
-    {
-      id: 'img-6',
-      gradeMin: 1,
-      gradeMax: 1,
-      domain: 'Shapes',
-      difficulty: 1,
-      questionText: 'Ben is looking for a shape that looks like a ball or a wheel. It can roll in any direction. Which shape is he thinking of?',
-      choices: [
-        { type: 'image', src: '/square.png', alt: 'Square' },
-        { type: 'image', src: '/circle.png', alt: 'Circle' },
-        { type: 'image', src: '/triangle.png', alt: 'Triangle' }
-      ],
-      correctAnswer: 'B',
-      solution: 'A circle is round like a ball or wheel and can roll.'
-    },
+  // Grade 1 Image-Based Shape Questions
+  {
+    id: 'img-1',
+    gradeMin: 1,
+    gradeMax: 1,
+    domain: 'Shapes',
+    difficulty: 1,
+    questionText: 'Emma is building with blocks. She wants to use a shape that has 3 corners. Which shape should she pick?',
+    choices: [
+      { type: 'image', src: '/triangle.png', alt: 'Triangle' },
+      { type: 'image', src: '/square.png', alt: 'Square' },
+      { type: 'image', src: '/circle.png', alt: 'Circle' }
+    ],
+    correctAnswer: 'A',
+    solution: 'A triangle has 3 corners and 3 sides.'
+  },
+  {
+    id: 'img-2',
+    gradeMin: 1,
+    gradeMax: 1,
+    domain: 'Shapes',
+    difficulty: 1,
+    questionText: 'Tommy is looking for a shape that looks like a window. All 4 sides are the same length. Which shape is he looking for?',
+    choices: [
+      { type: 'image', src: '/circle.png', alt: 'Circle' },
+      { type: 'image', src: '/square.png', alt: 'Square' },
+      { type: 'image', src: '/triangle.png', alt: 'Triangle' }
+    ],
+    correctAnswer: 'B',
+    solution: 'A square has 4 equal sides, just like many windows.'
+  },
+  {
+    id: 'img-3',
+    gradeMin: 1,
+    gradeMax: 1,
+    domain: 'Shapes',
+    difficulty: 1,
+    questionText: 'Sarah is drawing the sun. She wants to use a shape that rolls and has no corners. Which shape should she choose?',
+    choices: [
+      { type: 'image', src: '/square.png', alt: 'Square' },
+      { type: 'image', src: '/triangle.png', alt: 'Triangle' },
+      { type: 'image', src: '/circle.png', alt: 'Circle' }
+    ],
+    correctAnswer: 'C',
+    solution: 'A circle is round like the sun and has no corners.'
+  },
+  {
+    id: 'img-4',
+    gradeMin: 1,
+    gradeMax: 1,
+    domain: 'Shapes',
+    difficulty: 1,
+    questionText: 'Mike is making a pizza slice for his pretend restaurant. The slice has a pointy end and 3 straight edges. Which shape is his pizza slice?',
+    choices: [
+      { type: 'image', src: '/triangle.png', alt: 'Triangle' },
+      { type: 'image', src: '/circle.png', alt: 'Circle' },
+      { type: 'image', src: '/square.png', alt: 'Square' }
+    ],
+    correctAnswer: 'A',
+    solution: 'A pizza slice is shaped like a triangle with 3 sides and 3 corners.'
+  },
+  {
+    id: 'img-5',
+    gradeMin: 1,
+    gradeMax: 1,
+    domain: 'Shapes',
+    difficulty: 1,
+    questionText: 'Anna is making a house with blocks. She needs a shape for the roof that has a point at the top. Which shape should she use?',
+    choices: [
+      { type: 'image', src: '/circle.png', alt: 'Circle' },
+      { type: 'image', src: '/triangle.png', alt: 'Triangle' },
+      { type: 'image', src: '/square.png', alt: 'Square' }
+    ],
+    correctAnswer: 'B',
+    solution: 'A triangle has a point at the top, perfect for a roof.'
+  },
+  {
+    id: 'img-6',
+    gradeMin: 1,
+    gradeMax: 1,
+    domain: 'Shapes',
+    difficulty: 1,
+    questionText: 'Ben is looking for a shape that looks like a ball or a wheel. It can roll in any direction. Which shape is he thinking of?',
+    choices: [
+      { type: 'image', src: '/square.png', alt: 'Square' },
+      { type: 'image', src: '/circle.png', alt: 'Circle' },
+      { type: 'image', src: '/triangle.png', alt: 'Triangle' }
+    ],
+    correctAnswer: 'B',
+    solution: 'A circle is round like a ball or wheel and can roll.'
+  },
   {
     id: '2',
     gradeMin: 1,
@@ -315,39 +315,39 @@ export const mockQuestions: Question[] = [
   },
 
   // Fractions Questions (Grades 3-5)
-{
-  id: '4',
-  gradeMin: 3,
-  gradeMax: 5,
-  domain: 'Fractions',
-  difficulty: 2,
-  questionText: 'What is 1/4 + 1/2?',
-  choices: ['2/6', '3/4', '6/8', '1'],
-  correctAnswer: '3/4',
-  solution: '1/4 + 1/2 = 1/4 + 2/4 = 3/4'
-},
-{
-  id: '5',
-  gradeMin: 4,
-  gradeMax: 5,
-  domain: 'Fractions',
-  difficulty: 2,
-  questionText: 'Which fraction is equivalent to 2/4?',
-  choices: ['1/3', '1/2', '3/5', '2/5'],
-  correctAnswer: '1/2',
-  solution: '(2 ÷ 2) / (4 ÷ 2) = 1/2'
-},
-{
-  id: '6',
-  gradeMin: 5,
-  gradeMax: 6,
-  domain: 'Fractions',
-  difficulty: 3,
-  questionText: 'What is 2/3 x 3/4?',
-  choices: ['1/2', '3/8', '5/8', '2/5'],
-  correctAnswer: '1/2',
-  solution: '2/3 x 3/4 = 6/12 = 1/2'
-},
+  {
+    id: '4',
+    gradeMin: 3,
+    gradeMax: 5,
+    domain: 'Fractions',
+    difficulty: 2,
+    questionText: 'What is 1/4 + 1/2?',
+    choices: ['2/6', '3/4', '6/8', '1'],
+    correctAnswer: '3/4',
+    solution: '1/4 + 1/2 = 1/4 + 2/4 = 3/4'
+  },
+  {
+    id: '5',
+    gradeMin: 4,
+    gradeMax: 5,
+    domain: 'Fractions',
+    difficulty: 2,
+    questionText: 'Which fraction is equivalent to 2/4?',
+    choices: ['1/3', '1/2', '3/5', '2/5'],
+    correctAnswer: '1/2',
+    solution: '(2 ÷ 2) / (4 ÷ 2) = 1/2'
+  },
+  {
+    id: '6',
+    gradeMin: 5,
+    gradeMax: 6,
+    domain: 'Fractions',
+    difficulty: 3,
+    questionText: 'What is 2/3 x 3/4?',
+    choices: ['1/2', '3/8', '5/8', '2/5'],
+    correctAnswer: '1/2',
+    solution: '2/3 x 3/4 = 6/12 = 1/2'
+  },
 
   // Algebra Questions (Grades 6-8)
   {
@@ -407,18 +407,18 @@ export const mockQuestions: Question[] = [
     correctAnswer: '40',
     solution: 'Area = length x width = 8 x 5 = 40'
   },
-{
-  id: '12',
-  gradeMin: 7,
-  gradeMax: 8,
-  domain: 'Geometry',
-  difficulty: 4,
-  questionText: 'In a right triangle, if one acute angle is 30°, what is the measure of the other acute angle?',
-  choices: ['30°', '45°', '60°', '75°'],
-  correctAnswer: '60°',
-  solution: 'Angles sum to 180°. With a 90° right angle and a 30° acute angle, the remaining acute angle is 60°.'
-}
-,
+  {
+    id: '12',
+    gradeMin: 7,
+    gradeMax: 8,
+    domain: 'Geometry',
+    difficulty: 4,
+    questionText: 'In a right triangle, if one acute angle is 30°, what is the measure of the other acute angle?',
+    choices: ['30°', '45°', '60°', '75°'],
+    correctAnswer: '60°',
+    solution: 'Angles sum to 180°. With a 90° right angle and a 30° acute angle, the remaining acute angle is 60°.'
+  }
+  ,
 
   // Measurement Questions
   {
@@ -647,14 +647,14 @@ export const mockQuestions: Question[] = [
     solution: 'Even numbers on a die: 2,4,6 (3 numbers). Total outcomes: 6. Probability = 3/6 = 1/2'
   },
   {
-  id: '32',
-  gradeMin: 7, gradeMax: 8,
-  domain: 'Probability', difficulty: 3,
-  questionText: 'What is the probability of drawing a red card from a standard deck of 52 cards?',
-  choices: ['13/52', '24/52', '1/2', '1/4'],
-  correctAnswer: '1/2',
-  solution: 'There are 26 red cards out of 52 total, so 26/52 = 1/2.'
-},
+    id: '32',
+    gradeMin: 7, gradeMax: 8,
+    domain: 'Probability', difficulty: 3,
+    questionText: 'What is the probability of drawing a red card from a standard deck of 52 cards?',
+    choices: ['13/52', '24/52', '1/2', '1/4'],
+    correctAnswer: '1/2',
+    solution: 'There are 26 red cards out of 52 total, so 26/52 = 1/2.'
+  },
 
   // Functions
   {
@@ -716,15 +716,15 @@ export const mockQuestions: Question[] = [
     correctAnswer: 'Translation',
     solution: 'Translation is sliding a figure without changing its size or shape'
   },
-{
-  id: '38',
-  gradeMin: 8, gradeMax: 8,
-  domain: 'Geometry Transformations', difficulty: 4,
-  questionText: 'A dilation with scale factor 2 will make the shape’s **area** how many times larger?',
-  choices: ['2 times', '3 times', '4 times', '8 times'],
-  correctAnswer: '4 times',
-  solution: 'Area scales by the square of the scale factor: 2² = 4.'
-},
+  {
+    id: '38',
+    gradeMin: 8, gradeMax: 8,
+    domain: 'Geometry Transformations', difficulty: 4,
+    questionText: 'A dilation with scale factor 2 will make the shape’s **area** how many times larger?',
+    choices: ['2 times', '3 times', '4 times', '8 times'],
+    correctAnswer: '4 times',
+    solution: 'Area scales by the square of the scale factor: 2² = 4.'
+  },
 
   // Trigonometry
   {
@@ -760,407 +760,607 @@ export const mockQuestions: Question[] = [
 
 
 
-  { id: '41', gradeMin: 1, gradeMax: 2, domain: 'Number Sense', difficulty: 1,
-    questionText: 'What is 9 + 8?', choices: ['15','16','17','18'], correctAnswer: '17',
-    solution: '9 + 8 = 17' },
-  { id: '42', gradeMin: 2, gradeMax: 3, domain: 'Place Value', difficulty: 1,
-    questionText: 'What is the value of the 7 in 7,452?', choices: ['7','70','700','7,000'], correctAnswer: '7,000',
-    solution: 'The 7 is in the thousands place.' },
-  { id: '43', gradeMin: 3, gradeMax: 4, domain: 'Number Sense', difficulty: 2,
-    questionText: 'What is 402 - 178?', choices: ['214','222','224','232'], correctAnswer: '224',
-    solution: 'Borrow and subtract: 402 - 178 = 224.' },
-  { id: '44', gradeMin: 3, gradeMax: 4, domain: 'Operations & Algebraic Thinking', difficulty: 1,
-    questionText: 'What is 7 x 6?', choices: ['36','40','42','48'], correctAnswer: '42',
-    solution: '7 x 6 = 42.' },
+  {
+    id: '41', gradeMin: 1, gradeMax: 2, domain: 'Number Sense', difficulty: 1,
+    questionText: 'What is 9 + 8?', choices: ['15', '16', '17', '18'], correctAnswer: '17',
+    solution: '9 + 8 = 17'
+  },
+  {
+    id: '42', gradeMin: 2, gradeMax: 3, domain: 'Place Value', difficulty: 1,
+    questionText: 'What is the value of the 7 in 7,452?', choices: ['7', '70', '700', '7,000'], correctAnswer: '7,000',
+    solution: 'The 7 is in the thousands place.'
+  },
+  {
+    id: '43', gradeMin: 3, gradeMax: 4, domain: 'Number Sense', difficulty: 2,
+    questionText: 'What is 402 - 178?', choices: ['214', '222', '224', '232'], correctAnswer: '224',
+    solution: 'Borrow and subtract: 402 - 178 = 224.'
+  },
+  {
+    id: '44', gradeMin: 3, gradeMax: 4, domain: 'Operations & Algebraic Thinking', difficulty: 1,
+    questionText: 'What is 7 x 6?', choices: ['36', '40', '42', '48'], correctAnswer: '42',
+    solution: '7 x 6 = 42.'
+  },
 
   // Fractions (G3–G6)
-  { id: '45', gradeMin: 4, gradeMax: 5, domain: 'Fractions', difficulty: 2,
-    questionText: 'Which is greater?', choices: ['3/5','2/3','They are equal','1/2'], correctAnswer: '2/3',
-    solution: '3/5 = 0.6, 2/3 = 0.666… so 2/3 is greater.' },
-  { id: '46', gradeMin: 3, gradeMax: 5, domain: 'Fractions', difficulty: 1,
-    questionText: 'What is 5/8 + 1/8?', choices: ['3/8','6/8','5/16','7/8'], correctAnswer: '6/8',
-    solution: 'Like denominators: 5/8 + 1/8 = 6/8 = 3/4.' },
-  { id: '47', gradeMin: 3, gradeMax: 5, domain: 'Fractions', difficulty: 1,
-    questionText: 'Simplify 9/12.', choices: ['3/4','2/3','1/3','4/9'], correctAnswer: '3/4',
-    solution: 'Divide numerator and denominator by 3.' },
-  { id: '80', gradeMin: 5, gradeMax: 6, domain: 'Fractions', difficulty: 3,
-    questionText: 'What is 3/4 ÷ 1/2?', choices: ['3/8','3/2','2/3','1/2'], correctAnswer: '3/2',
-    solution: 'Divide by a fraction = multiply by its reciprocal: 3/4 x 2 = 3/2.' },
+  {
+    id: '45', gradeMin: 4, gradeMax: 5, domain: 'Fractions', difficulty: 2,
+    questionText: 'Which is greater?', choices: ['3/5', '2/3', 'They are equal', '1/2'], correctAnswer: '2/3',
+    solution: '3/5 = 0.6, 2/3 = 0.666… so 2/3 is greater.'
+  },
+  {
+    id: '46', gradeMin: 3, gradeMax: 5, domain: 'Fractions', difficulty: 1,
+    questionText: 'What is 5/8 + 1/8?', choices: ['3/8', '6/8', '5/16', '7/8'], correctAnswer: '6/8',
+    solution: 'Like denominators: 5/8 + 1/8 = 6/8 = 3/4.'
+  },
+  {
+    id: '47', gradeMin: 3, gradeMax: 5, domain: 'Fractions', difficulty: 1,
+    questionText: 'Simplify 9/12.', choices: ['3/4', '2/3', '1/3', '4/9'], correctAnswer: '3/4',
+    solution: 'Divide numerator and denominator by 3.'
+  },
+  {
+    id: '80', gradeMin: 5, gradeMax: 6, domain: 'Fractions', difficulty: 3,
+    questionText: 'What is 3/4 ÷ 1/2?', choices: ['3/8', '3/2', '2/3', '1/2'], correctAnswer: '3/2',
+    solution: 'Divide by a fraction = multiply by its reciprocal: 3/4 x 2 = 3/2.'
+  },
 
   // Decimals & Percents (G4–G7)
-  { id: '48', gradeMin: 4, gradeMax: 5, domain: 'Decimals & Percents', difficulty: 1,
-    questionText: 'Convert 45% to a decimal.', choices: ['0.45','4.5','0.045','45.0'], correctAnswer: '0.45',
-    solution: 'Move the decimal two places left.' },
-  { id: '49', gradeMin: 4, gradeMax: 6, domain: 'Decimals & Percents', difficulty: 2,
-    questionText: 'What is 3.60 + 0.75?', choices: ['3.75','4.25','4.35','4.45'], correctAnswer: '4.35',
-    solution: '3.60 + 0.75 = 4.35.' },
-  { id: '50', gradeMin: 4, gradeMax: 6, domain: 'Decimals & Percents', difficulty: 2,
-    questionText: 'Round 8.746 to the nearest tenth.', choices: ['8.7','8.8','8.74','8.75'], correctAnswer: '8.7',
-    solution: 'Hundredths digit is 4, so round down to 8.7.' },
-  { id: '76', gradeMin: 6, gradeMax: 7, domain: 'Decimals & Percents', difficulty: 2,
-    questionText: 'A $50 item is discounted by 20%. What is the sale price?', choices: ['$10','$30','$40','$45'], correctAnswer: '$40',
-    solution: '20% of $50 is $10; $50 - $10 = $40.' },
+  {
+    id: '48', gradeMin: 4, gradeMax: 5, domain: 'Decimals & Percents', difficulty: 1,
+    questionText: 'Convert 45% to a decimal.', choices: ['0.45', '4.5', '0.045', '45.0'], correctAnswer: '0.45',
+    solution: 'Move the decimal two places left.'
+  },
+  {
+    id: '49', gradeMin: 4, gradeMax: 6, domain: 'Decimals & Percents', difficulty: 2,
+    questionText: 'What is 3.60 + 0.75?', choices: ['3.75', '4.25', '4.35', '4.45'], correctAnswer: '4.35',
+    solution: '3.60 + 0.75 = 4.35.'
+  },
+  {
+    id: '50', gradeMin: 4, gradeMax: 6, domain: 'Decimals & Percents', difficulty: 2,
+    questionText: 'Round 8.746 to the nearest tenth.', choices: ['8.7', '8.8', '8.74', '8.75'], correctAnswer: '8.7',
+    solution: 'Hundredths digit is 4, so round down to 8.7.'
+  },
+  {
+    id: '76', gradeMin: 6, gradeMax: 7, domain: 'Decimals & Percents', difficulty: 2,
+    questionText: 'A $50 item is discounted by 20%. What is the sale price?', choices: ['$10', '$30', '$40', '$45'], correctAnswer: '$40',
+    solution: '20% of $50 is $10; $50 - $10 = $40.'
+  },
 
   // Ratios & Proportions / Unit Rate (G6–G7)
-  { id: '51', gradeMin: 6, gradeMax: 7, domain: 'Ratios & Proportions', difficulty: 2,
-    questionText: 'A car travels 120 miles in 3 hours. What is the unit rate in mph?', choices: ['30','35','40','45'], correctAnswer: '40',
-    solution: '120 ÷ 3 = 40 mph.' },
-  { id: '52', gradeMin: 6, gradeMax: 7, domain: 'Ratios & Proportions', difficulty: 2,
-    questionText: 'Solve: x/5 = 18/15', choices: ['4','5','6','9'], correctAnswer: '6',
-    solution: 'x = 5 x 18 ÷ 15 = 6.' },
+  {
+    id: '51', gradeMin: 6, gradeMax: 7, domain: 'Ratios & Proportions', difficulty: 2,
+    questionText: 'A car travels 120 miles in 3 hours. What is the unit rate in mph?', choices: ['30', '35', '40', '45'], correctAnswer: '40',
+    solution: '120 ÷ 3 = 40 mph.'
+  },
+  {
+    id: '52', gradeMin: 6, gradeMax: 7, domain: 'Ratios & Proportions', difficulty: 2,
+    questionText: 'Solve: x/5 = 18/15', choices: ['4', '5', '6', '9'], correctAnswer: '6',
+    solution: 'x = 5 x 18 ÷ 15 = 6.'
+  },
 
   // Integers / Order of Operations / Exponents (G6–G8)
-  { id: '53', gradeMin: 6, gradeMax: 7, domain: 'Integers & Rational Numbers', difficulty: 1,
-    questionText: 'Evaluate: -7 + 12', choices: ['-19','5','-5','19'], correctAnswer: '5',
-    solution: '-7 + 12 = 5.' },
-  { id: '54', gradeMin: 6, gradeMax: 7, domain: 'Integers & Rational Numbers', difficulty: 1,
-    questionText: 'What is |-3| + |-5|?', choices: ['-8','0','8','2'], correctAnswer: '8',
-    solution: 'Absolute values: 3 + 5 = 8.' },
-  { id: '55', gradeMin: 6, gradeMax: 7, domain: 'Exponents & Roots', difficulty: 2,
-    questionText: 'Evaluate: 2^3 x 3^2', choices: ['24','48','72','96'], correctAnswer: '72',
-    solution: '2^3=8, 3^2=9, 8x9=72.' },
-  { id: '78', gradeMin: 7, gradeMax: 8, domain: 'Exponents & Roots', difficulty: 2,
-    questionText: 'What is (-5)^2?', choices: ['-25','0','5','25'], correctAnswer: '25',
-    solution: 'Square of -5 is positive 25.' },
-  { id: '79', gradeMin: 7, gradeMax: 8, domain: 'Operations & Algebraic Thinking', difficulty: 3,
-    questionText: 'Evaluate: 8 - 2^3 + 4', choices: ['0','2','4','8'], correctAnswer: '4',
-    solution: 'Exponent first: 2^3=8 -> 8-8+4=4.' },
+  {
+    id: '53', gradeMin: 6, gradeMax: 7, domain: 'Integers & Rational Numbers', difficulty: 1,
+    questionText: 'Evaluate: -7 + 12', choices: ['-19', '5', '-5', '19'], correctAnswer: '5',
+    solution: '-7 + 12 = 5.'
+  },
+  {
+    id: '54', gradeMin: 6, gradeMax: 7, domain: 'Integers & Rational Numbers', difficulty: 1,
+    questionText: 'What is |-3| + |-5|?', choices: ['-8', '0', '8', '2'], correctAnswer: '8',
+    solution: 'Absolute values: 3 + 5 = 8.'
+  },
+  {
+    id: '55', gradeMin: 6, gradeMax: 7, domain: 'Exponents & Roots', difficulty: 2,
+    questionText: 'Evaluate: 2^3 x 3^2', choices: ['24', '48', '72', '96'], correctAnswer: '72',
+    solution: '2^3=8, 3^2=9, 8x9=72.'
+  },
+  {
+    id: '78', gradeMin: 7, gradeMax: 8, domain: 'Exponents & Roots', difficulty: 2,
+    questionText: 'What is (-5)^2?', choices: ['-25', '0', '5', '25'], correctAnswer: '25',
+    solution: 'Square of -5 is positive 25.'
+  },
+  {
+    id: '79', gradeMin: 7, gradeMax: 8, domain: 'Operations & Algebraic Thinking', difficulty: 3,
+    questionText: 'Evaluate: 8 - 2^3 + 4', choices: ['0', '2', '4', '8'], correctAnswer: '4',
+    solution: 'Exponent first: 2^3=8 -> 8-8+4=4.'
+  },
 
   // Algebra: equations/inequalities/slope (G6–G8)
-  { id: '56', gradeMin: 6, gradeMax: 7, domain: 'Algebra', difficulty: 2,
-    questionText: 'Solve for x: 5x - 9 = 16', choices: ['3','4','5','6'], correctAnswer: '5',
-    solution: '5x=25 -> x=5.' },
-  { id: '57', gradeMin: 6, gradeMax: 7, domain: 'Algebra', difficulty: 2,
-    questionText: 'Solve: 3(x + 4) = 27', choices: ['3','5','7','9'], correctAnswer: '5',
-    solution: 'x+4=9 -> x=5.' },
-  { id: '58', gradeMin: 8, gradeMax: 8, domain: 'Algebra', difficulty: 3,
-    questionText: 'Find the slope between (1, 3) and (5, 11).', choices: ['1','2','3','4'], correctAnswer: '2',
-    solution: 'Δy/Δx = (11-3)/(5-1) = 8/4 = 2.' },
-  { id: '59', gradeMin: 7, gradeMax: 8, domain: 'Functions', difficulty: 2,
-    questionText: 'For y = 2x - 3, what is y when x = 4?', choices: ['3','5','7','11'], correctAnswer: '5',
-    solution: '2(4) - 3 = 5.' },
-  { id: '60', gradeMin: 7, gradeMax: 8, domain: 'Algebra', difficulty: 2,
-    questionText: 'Solve the inequality: x + 7 < 12', choices: ['x < 5','x > 5','x < -5','x > -5'], correctAnswer: 'x < 5',
-    solution: 'Subtract 7 from both sides.' },
+  {
+    id: '56', gradeMin: 6, gradeMax: 7, domain: 'Algebra', difficulty: 2,
+    questionText: 'Solve for x: 5x - 9 = 16', choices: ['3', '4', '5', '6'], correctAnswer: '5',
+    solution: '5x=25 -> x=5.'
+  },
+  {
+    id: '57', gradeMin: 6, gradeMax: 7, domain: 'Algebra', difficulty: 2,
+    questionText: 'Solve: 3(x + 4) = 27', choices: ['3', '5', '7', '9'], correctAnswer: '5',
+    solution: 'x+4=9 -> x=5.'
+  },
+  {
+    id: '58', gradeMin: 8, gradeMax: 8, domain: 'Algebra', difficulty: 3,
+    questionText: 'Find the slope between (1, 3) and (5, 11).', choices: ['1', '2', '3', '4'], correctAnswer: '2',
+    solution: 'Δy/Δx = (11-3)/(5-1) = 8/4 = 2.'
+  },
+  {
+    id: '59', gradeMin: 7, gradeMax: 8, domain: 'Functions', difficulty: 2,
+    questionText: 'For y = 2x - 3, what is y when x = 4?', choices: ['3', '5', '7', '11'], correctAnswer: '5',
+    solution: '2(4) - 3 = 5.'
+  },
+  {
+    id: '60', gradeMin: 7, gradeMax: 8, domain: 'Algebra', difficulty: 2,
+    questionText: 'Solve the inequality: x + 7 < 12', choices: ['x < 5', 'x > 5', 'x < -5', 'x > -5'], correctAnswer: 'x < 5',
+    solution: 'Subtract 7 from both sides.'
+  },
 
   // Geometry: area/volume/angles/circumference/Pythagorean (G5–G8)
-  { id: '61', gradeMin: 5, gradeMax: 6, domain: 'Geometry', difficulty: 2,
-    questionText: 'What is the area of a triangle with base 10 and height 6?', choices: ['16','20','30','60'], correctAnswer: '30',
-    solution: 'A = 1/2 x b x h = 30.' },
-  { id: '62', gradeMin: 7, gradeMax: 8, domain: 'Geometry', difficulty: 3,
-    questionText: 'Find the circumference of a circle with radius 7 (use pi = 3.14).', choices: ['21.98','43.96','49.00','153.86'], correctAnswer: '43.96',
-    solution: 'C = 2pir = 2 x 3.14 x 7 = 43.96.' },
-  { id: '63', gradeMin: 6, gradeMax: 7, domain: 'Geometry', difficulty: 2,
-    questionText: 'Volume of a rectangular prism with l=4, w=3, h=5?', choices: ['12','20','40','60'], correctAnswer: '60',
-    solution: 'V = lwh = 4x3x5 = 60.' },
-  { id: '64', gradeMin: 6, gradeMax: 7, domain: 'Geometry', difficulty: 1,
-    questionText: 'Sum of the interior angles of a quadrilateral?', choices: ['90°','180°','270°','360°'], correctAnswer: '360°',
-    solution: 'Quadrilateral can be split into two triangles: 2x180°.' },
-  { id: '65', gradeMin: 7, gradeMax: 8, domain: 'Geometry', difficulty: 3,
-    questionText: 'In a right triangle with legs 6 and 8, what is the hypotenuse?', choices: ['7','9','10','12'], correctAnswer: '10',
-    solution: 'c = √(6²+8²) = √(36+64) = √100 = 10.' },
-// === Additional Grade 5 Questions (5th-1 to 5th-60) ===
-// Number Sense (5th-1 to 5th-15)
-{ id: '5th-1', gradeMin: 5, gradeMax: 5, domain: 'Number Sense', difficulty: 1,
-  questionText: 'The school library has 1,250 books. If 375 are checked out, how many are left?',
-  choices: ['875', '885', '895', '905'], correctAnswer: '875',
-  solution: '1,250 - 375 = 875' },
-{ id: '5th-2', gradeMin: 5, gradeMax: 5, domain: 'Number Sense', difficulty: 1,
-  questionText: 'What is the value of 12 x 8?',
-  choices: ['86', '92', '96', '104'], correctAnswer: '96',
-  solution: '12 x 8 = 96' },
-{ id: '5th-3', gradeMin: 5, gradeMax: 5, domain: 'Number Sense', difficulty: 1,
-  questionText: 'Round 4,678 to the nearest hundred.',
-  choices: ['4,600', '4,700', '4,800', '4,900'], correctAnswer: '4,700',
-  solution: 'Tens digit is 7 (>=5), round up to 4,700' },
-{ id: '5th-4', gradeMin: 5, gradeMax: 5, domain: 'Number Sense', difficulty: 2,
-  questionText: 'A store sold 2,345 pencils in March and 1,789 pencils in April. How many pencils did they sell in total?',
-  choices: ['4,034', '4,124', '4,134', '4,144'], correctAnswer: '4,134',
-  solution: '2,345 + 1,789 = 4,134' },
-{ id: '5th-5', gradeMin: 5, gradeMax: 5, domain: 'Number Sense', difficulty: 2,
-  questionText: 'What is 5,000 - 2,678?',
-  choices: ['2,222', '2,322', '2,332', '2,342'], correctAnswer: '2,322',
-  solution: '5,000 - 2,678 = 2,322' },
-{ id: '5th-6', gradeMin: 5, gradeMax: 5, domain: 'Number Sense', difficulty: 2,
-  questionText: 'Which is greater: 4,567 or 4,765?',
-  choices: ['4,567', '4,765'], correctAnswer: '4,765',
-  solution: '4,765 > 4,567' },
-{ id: '5th-7', gradeMin: 5, gradeMax: 5, domain: 'Number Sense', difficulty: 2,
-  questionText: 'What is the sum of 1,234 and 2,345?',
-  choices: ['3,579', '3,589', '3,599', '3,609'], correctAnswer: '3,579',
-  solution: '1,234 + 2,345 = 3,579' },
-{ id: '5th-8', gradeMin: 5, gradeMax: 5, domain: 'Number Sense', difficulty: 3,
-  questionText: 'A school has 2,345 students. If 1,234 are in grades 1-3, how many are in grades 4-5?',
-  choices: ['1,111', '1,121', '1,131', '1,141'], correctAnswer: '1,111',
-  solution: '2,345 - 1,234 = 1,111' },
-{ id: '5th-9', gradeMin: 5, gradeMax: 5, domain: 'Number Sense', difficulty: 3,
-  questionText: 'What is 3,600 divided by 36?',
-  choices: ['90', '95', '100', '105'], correctAnswer: '100',
-  solution: '3,600 ÷ 36 = 100' },
-{ id: '5th-10', gradeMin: 5, gradeMax: 5, domain: 'Number Sense', difficulty: 3,
-  questionText: 'A bus travels 1,800 miles in 6 days. How many miles does it travel per day?',
-  choices: ['200', '250', '300', '350'], correctAnswer: '300',
-  solution: '1,800 ÷ 6 = 300' },
-{ id: '5th-11', gradeMin: 5, gradeMax: 5, domain: 'Number Sense', difficulty: 3,
-  questionText: 'What is the product of 34 and 15?',
-  choices: ['490', '500', '510', '520'], correctAnswer: '510',
-  solution: '34 x 15 = 510' },
-{ id: '5th-12', gradeMin: 5, gradeMax: 5, domain: 'Number Sense', difficulty: 2,
-  questionText: 'What is the difference between 3,000 and 1,234?',
-  choices: ['1,766', '1,776', '1,786', '1,796'], correctAnswer: '1,766',
-  solution: '3,000 - 1,234 = 1,766' },
-{ id: '5th-13', gradeMin: 5, gradeMax: 5, domain: 'Number Sense', difficulty: 2,
-  questionText: 'Round 5,849 to the nearest thousand.',
-  choices: ['5,000', '6,000', '5,800', '5,900'], correctAnswer: '6,000',
-  solution: 'Hundreds digit is 8 (>=5), round up to 6,000' },
-{ id: '5th-14', gradeMin: 5, gradeMax: 5, domain: 'Number Sense', difficulty: 1,
-  questionText: 'What is 11 x 7?',
-  choices: ['67', '76', '77', '87'], correctAnswer: '77',
-  solution: '11 x 7 = 77' },
-{ id: '5th-15', gradeMin: 5, gradeMax: 5, domain: 'Number Sense', difficulty: 1,
-  questionText: 'What is 8 x 9?',
-  choices: ['64', '72', '80', '88'], correctAnswer: '72',
-  solution: '8 x 9 = 72' },
+  {
+    id: '61', gradeMin: 5, gradeMax: 6, domain: 'Geometry', difficulty: 2,
+    questionText: 'What is the area of a triangle with base 10 and height 6?', choices: ['16', '20', '30', '60'], correctAnswer: '30',
+    solution: 'A = 1/2 x b x h = 30.'
+  },
+  {
+    id: '62', gradeMin: 7, gradeMax: 8, domain: 'Geometry', difficulty: 3,
+    questionText: 'Find the circumference of a circle with radius 7 (use pi = 3.14).', choices: ['21.98', '43.96', '49.00', '153.86'], correctAnswer: '43.96',
+    solution: 'C = 2pir = 2 x 3.14 x 7 = 43.96.'
+  },
+  {
+    id: '63', gradeMin: 6, gradeMax: 7, domain: 'Geometry', difficulty: 2,
+    questionText: 'Volume of a rectangular prism with l=4, w=3, h=5?', choices: ['12', '20', '40', '60'], correctAnswer: '60',
+    solution: 'V = lwh = 4x3x5 = 60.'
+  },
+  {
+    id: '64', gradeMin: 6, gradeMax: 7, domain: 'Geometry', difficulty: 1,
+    questionText: 'Sum of the interior angles of a quadrilateral?', choices: ['90°', '180°', '270°', '360°'], correctAnswer: '360°',
+    solution: 'Quadrilateral can be split into two triangles: 2x180°.'
+  },
+  {
+    id: '65', gradeMin: 7, gradeMax: 8, domain: 'Geometry', difficulty: 3,
+    questionText: 'In a right triangle with legs 6 and 8, what is the hypotenuse?', choices: ['7', '9', '10', '12'], correctAnswer: '10',
+    solution: 'c = √(6²+8²) = √(36+64) = √100 = 10.'
+  },
+  // === Additional Grade 5 Questions (5th-1 to 5th-60) ===
+  // Number Sense (5th-1 to 5th-15)
+  {
+    id: '5th-1', gradeMin: 5, gradeMax: 5, domain: 'Number Sense', difficulty: 1,
+    questionText: 'The school library has 1,250 books. If 375 are checked out, how many are left?',
+    choices: ['875', '885', '895', '905'], correctAnswer: '875',
+    solution: '1,250 - 375 = 875'
+  },
+  {
+    id: '5th-2', gradeMin: 5, gradeMax: 5, domain: 'Number Sense', difficulty: 1,
+    questionText: 'What is the value of 12 x 8?',
+    choices: ['86', '92', '96', '104'], correctAnswer: '96',
+    solution: '12 x 8 = 96'
+  },
+  {
+    id: '5th-3', gradeMin: 5, gradeMax: 5, domain: 'Number Sense', difficulty: 1,
+    questionText: 'Round 4,678 to the nearest hundred.',
+    choices: ['4,600', '4,700', '4,800', '4,900'], correctAnswer: '4,700',
+    solution: 'Tens digit is 7 (>=5), round up to 4,700'
+  },
+  {
+    id: '5th-4', gradeMin: 5, gradeMax: 5, domain: 'Number Sense', difficulty: 2,
+    questionText: 'A store sold 2,345 pencils in March and 1,789 pencils in April. How many pencils did they sell in total?',
+    choices: ['4,034', '4,124', '4,134', '4,144'], correctAnswer: '4,134',
+    solution: '2,345 + 1,789 = 4,134'
+  },
+  {
+    id: '5th-5', gradeMin: 5, gradeMax: 5, domain: 'Number Sense', difficulty: 2,
+    questionText: 'What is 5,000 - 2,678?',
+    choices: ['2,222', '2,322', '2,332', '2,342'], correctAnswer: '2,322',
+    solution: '5,000 - 2,678 = 2,322'
+  },
+  {
+    id: '5th-6', gradeMin: 5, gradeMax: 5, domain: 'Number Sense', difficulty: 2,
+    questionText: 'Which is greater: 4,567 or 4,765?',
+    choices: ['4,567', '4,765'], correctAnswer: '4,765',
+    solution: '4,765 > 4,567'
+  },
+  {
+    id: '5th-7', gradeMin: 5, gradeMax: 5, domain: 'Number Sense', difficulty: 2,
+    questionText: 'What is the sum of 1,234 and 2,345?',
+    choices: ['3,579', '3,589', '3,599', '3,609'], correctAnswer: '3,579',
+    solution: '1,234 + 2,345 = 3,579'
+  },
+  {
+    id: '5th-8', gradeMin: 5, gradeMax: 5, domain: 'Number Sense', difficulty: 3,
+    questionText: 'A school has 2,345 students. If 1,234 are in grades 1-3, how many are in grades 4-5?',
+    choices: ['1,111', '1,121', '1,131', '1,141'], correctAnswer: '1,111',
+    solution: '2,345 - 1,234 = 1,111'
+  },
+  {
+    id: '5th-9', gradeMin: 5, gradeMax: 5, domain: 'Number Sense', difficulty: 3,
+    questionText: 'What is 3,600 divided by 36?',
+    choices: ['90', '95', '100', '105'], correctAnswer: '100',
+    solution: '3,600 ÷ 36 = 100'
+  },
+  {
+    id: '5th-10', gradeMin: 5, gradeMax: 5, domain: 'Number Sense', difficulty: 3,
+    questionText: 'A bus travels 1,800 miles in 6 days. How many miles does it travel per day?',
+    choices: ['200', '250', '300', '350'], correctAnswer: '300',
+    solution: '1,800 ÷ 6 = 300'
+  },
+  {
+    id: '5th-11', gradeMin: 5, gradeMax: 5, domain: 'Number Sense', difficulty: 3,
+    questionText: 'What is the product of 34 and 15?',
+    choices: ['490', '500', '510', '520'], correctAnswer: '510',
+    solution: '34 x 15 = 510'
+  },
+  {
+    id: '5th-12', gradeMin: 5, gradeMax: 5, domain: 'Number Sense', difficulty: 2,
+    questionText: 'What is the difference between 3,000 and 1,234?',
+    choices: ['1,766', '1,776', '1,786', '1,796'], correctAnswer: '1,766',
+    solution: '3,000 - 1,234 = 1,766'
+  },
+  {
+    id: '5th-13', gradeMin: 5, gradeMax: 5, domain: 'Number Sense', difficulty: 2,
+    questionText: 'Round 5,849 to the nearest thousand.',
+    choices: ['5,000', '6,000', '5,800', '5,900'], correctAnswer: '6,000',
+    solution: 'Hundreds digit is 8 (>=5), round up to 6,000'
+  },
+  {
+    id: '5th-14', gradeMin: 5, gradeMax: 5, domain: 'Number Sense', difficulty: 1,
+    questionText: 'What is 11 x 7?',
+    choices: ['67', '76', '77', '87'], correctAnswer: '77',
+    solution: '11 x 7 = 77'
+  },
+  {
+    id: '5th-15', gradeMin: 5, gradeMax: 5, domain: 'Number Sense', difficulty: 1,
+    questionText: 'What is 8 x 9?',
+    choices: ['64', '72', '80', '88'], correctAnswer: '72',
+    solution: '8 x 9 = 72'
+  },
 
-// Operations & Algebraic Thinking (5th-16 to 5th-25)
-{ id: '5th-16', gradeMin: 5, gradeMax: 5, domain: 'Operations & Algebraic Thinking', difficulty: 1,
-  questionText: 'A baker made 72 cupcakes and wants to put them equally into 9 boxes. How many cupcakes will go in each box?',
-  choices: ['6', '7', '8', '9'], correctAnswer: '8',
-  solution: '72 ÷ 9 = 8' },
-{ id: '5th-17', gradeMin: 5, gradeMax: 5, domain: 'Operations & Algebraic Thinking', difficulty: 1,
-  questionText: 'What is the value of 6 x 12?',
-  choices: ['62', '72', '82', '92'], correctAnswer: '72',
-  solution: '6 x 12 = 72' },
-{ id: '5th-18', gradeMin: 5, gradeMax: 5, domain: 'Operations & Algebraic Thinking', difficulty: 2,
-  questionText: 'Fill in the blank: 8 x ___ = 96',
-  choices: ['10', '11', '12', '13'], correctAnswer: '12',
-  solution: '8 x 12 = 96' },
-{ id: '5th-19', gradeMin: 5, gradeMax: 5, domain: 'Operations & Algebraic Thinking', difficulty: 2,
-  questionText: 'A class has 45 students. If they are divided into 5 equal groups, how many students are in each group?',
-  choices: ['7', '8', '9', '10'], correctAnswer: '9',
-  solution: '45 ÷ 5 = 9' },
-{ id: '5th-20', gradeMin: 5, gradeMax: 5, domain: 'Operations & Algebraic Thinking', difficulty: 2,
-  questionText: 'What is 81 ÷ 9?',
-  choices: ['7', '8', '9', '10'], correctAnswer: '9',
-  solution: '81 ÷ 9 = 9' },
-{ id: '5th-21', gradeMin: 5, gradeMax: 5, domain: 'Operations & Algebraic Thinking', difficulty: 2,
-  questionText: 'If 7 x 8 = 56, what does 8 x 7 equal?',
-  choices: ['56', '64', '72', '80'], correctAnswer: '56',
-  solution: 'Multiplication is commutative: 8 x 7 = 7 x 8 = 56' },
-{ id: '5th-22', gradeMin: 5, gradeMax: 5, domain: 'Operations & Algebraic Thinking', difficulty: 3,
-  questionText: 'A school has 6 classes with 25 students each. How many students are there in total?',
-  choices: ['130', '140', '150', '160'], correctAnswer: '150',
-  solution: '6 x 25 = 150' },
-{ id: '5th-23', gradeMin: 5, gradeMax: 5, domain: 'Operations & Algebraic Thinking', difficulty: 3,
-  questionText: 'What is the missing number: ___ ÷ 8 = 7',
-  choices: ['48', '54', '56', '64'], correctAnswer: '56',
-  solution: '56 ÷ 8 = 7' },
-{ id: '5th-24', gradeMin: 5, gradeMax: 5, domain: 'Operations & Algebraic Thinking', difficulty: 3,
-  questionText: 'A store sold 108 apples in 9 days. How many apples did they sell per day?',
-  choices: ['10', '11', '12', '13'], correctAnswer: '12',
-  solution: '108 ÷ 9 = 12' },
-{ id: '5th-25', gradeMin: 5, gradeMax: 5, domain: 'Operations & Algebraic Thinking', difficulty: 3,
-  questionText: 'What is 156 divided by 12?',
-  choices: ['10', '11', '12', '13'], correctAnswer: '13',
-  solution: '156 ÷ 12 = 13' },
+  // Operations & Algebraic Thinking (5th-16 to 5th-25)
+  {
+    id: '5th-16', gradeMin: 5, gradeMax: 5, domain: 'Operations & Algebraic Thinking', difficulty: 1,
+    questionText: 'A baker made 72 cupcakes and wants to put them equally into 9 boxes. How many cupcakes will go in each box?',
+    choices: ['6', '7', '8', '9'], correctAnswer: '8',
+    solution: '72 ÷ 9 = 8'
+  },
+  {
+    id: '5th-17', gradeMin: 5, gradeMax: 5, domain: 'Operations & Algebraic Thinking', difficulty: 1,
+    questionText: 'What is the value of 6 x 12?',
+    choices: ['62', '72', '82', '92'], correctAnswer: '72',
+    solution: '6 x 12 = 72'
+  },
+  {
+    id: '5th-18', gradeMin: 5, gradeMax: 5, domain: 'Operations & Algebraic Thinking', difficulty: 2,
+    questionText: 'Fill in the blank: 8 x ___ = 96',
+    choices: ['10', '11', '12', '13'], correctAnswer: '12',
+    solution: '8 x 12 = 96'
+  },
+  {
+    id: '5th-19', gradeMin: 5, gradeMax: 5, domain: 'Operations & Algebraic Thinking', difficulty: 2,
+    questionText: 'A class has 45 students. If they are divided into 5 equal groups, how many students are in each group?',
+    choices: ['7', '8', '9', '10'], correctAnswer: '9',
+    solution: '45 ÷ 5 = 9'
+  },
+  {
+    id: '5th-20', gradeMin: 5, gradeMax: 5, domain: 'Operations & Algebraic Thinking', difficulty: 2,
+    questionText: 'What is 81 ÷ 9?',
+    choices: ['7', '8', '9', '10'], correctAnswer: '9',
+    solution: '81 ÷ 9 = 9'
+  },
+  {
+    id: '5th-21', gradeMin: 5, gradeMax: 5, domain: 'Operations & Algebraic Thinking', difficulty: 2,
+    questionText: 'If 7 x 8 = 56, what does 8 x 7 equal?',
+    choices: ['56', '64', '72', '80'], correctAnswer: '56',
+    solution: 'Multiplication is commutative: 8 x 7 = 7 x 8 = 56'
+  },
+  {
+    id: '5th-22', gradeMin: 5, gradeMax: 5, domain: 'Operations & Algebraic Thinking', difficulty: 3,
+    questionText: 'A school has 6 classes with 25 students each. How many students are there in total?',
+    choices: ['130', '140', '150', '160'], correctAnswer: '150',
+    solution: '6 x 25 = 150'
+  },
+  {
+    id: '5th-23', gradeMin: 5, gradeMax: 5, domain: 'Operations & Algebraic Thinking', difficulty: 3,
+    questionText: 'What is the missing number: ___ ÷ 8 = 7',
+    choices: ['48', '54', '56', '64'], correctAnswer: '56',
+    solution: '56 ÷ 8 = 7'
+  },
+  {
+    id: '5th-24', gradeMin: 5, gradeMax: 5, domain: 'Operations & Algebraic Thinking', difficulty: 3,
+    questionText: 'A store sold 108 apples in 9 days. How many apples did they sell per day?',
+    choices: ['10', '11', '12', '13'], correctAnswer: '12',
+    solution: '108 ÷ 9 = 12'
+  },
+  {
+    id: '5th-25', gradeMin: 5, gradeMax: 5, domain: 'Operations & Algebraic Thinking', difficulty: 3,
+    questionText: 'What is 156 divided by 12?',
+    choices: ['10', '11', '12', '13'], correctAnswer: '13',
+    solution: '156 ÷ 12 = 13'
+  },
 
-// Place Value (5th-26 to 5th-30)
-{ id: '5th-26', gradeMin: 5, gradeMax: 5, domain: 'Place Value', difficulty: 1,
-  questionText: 'What is the value of the 6 in 6,432?',
-  choices: ['6', '60', '600', '6,000'], correctAnswer: '6,000',
-  solution: '6 is in the thousands place' },
-{ id: '5th-27', gradeMin: 5, gradeMax: 5, domain: 'Place Value', difficulty: 1,
-  questionText: 'What is 4,210 written in expanded form?',
-  choices: ['4,000+200+10', '4,000+200+10+0', '4,000+100+10', '4,000+100+20'], correctAnswer: '4,000+200+10',
-  solution: '4,210 = 4,000 + 200 + 10' },
-{ id: '5th-28', gradeMin: 5, gradeMax: 5, domain: 'Place Value', difficulty: 2,
-  questionText: 'Round 8,489 to the nearest thousand.',
-  choices: ['8,000', '8,500', '9,000', '9,500'], correctAnswer: '8,000',
-  solution: 'Hundreds digit is 4 (<5), round down to 8,000' },
-{ id: '5th-29', gradeMin: 5, gradeMax: 5, domain: 'Place Value', difficulty: 2,
-  questionText: 'Which digit is in the hundreds place of 7,482?',
-  choices: ['4', '6', '8', '2'], correctAnswer: '4',
-  solution: 'Hundreds place is 4' },
-{ id: '5th-30', gradeMin: 5, gradeMax: 5, domain: 'Place Value', difficulty: 3,
-  questionText: 'What is the largest 5-digit number?',
-  choices: ['99,999', '99,900', '99,990', '99,909'], correctAnswer: '99,999',
-  solution: '99,999 is the largest 5-digit number' },
+  // Place Value (5th-26 to 5th-30)
+  {
+    id: '5th-26', gradeMin: 5, gradeMax: 5, domain: 'Place Value', difficulty: 1,
+    questionText: 'What is the value of the 6 in 6,432?',
+    choices: ['6', '60', '600', '6,000'], correctAnswer: '6,000',
+    solution: '6 is in the thousands place'
+  },
+  {
+    id: '5th-27', gradeMin: 5, gradeMax: 5, domain: 'Place Value', difficulty: 1,
+    questionText: 'What is 4,210 written in expanded form?',
+    choices: ['4,000+200+10', '4,000+200+10+0', '4,000+100+10', '4,000+100+20'], correctAnswer: '4,000+200+10',
+    solution: '4,210 = 4,000 + 200 + 10'
+  },
+  {
+    id: '5th-28', gradeMin: 5, gradeMax: 5, domain: 'Place Value', difficulty: 2,
+    questionText: 'Round 8,489 to the nearest thousand.',
+    choices: ['8,000', '8,500', '9,000', '9,500'], correctAnswer: '8,000',
+    solution: 'Hundreds digit is 4 (<5), round down to 8,000'
+  },
+  {
+    id: '5th-29', gradeMin: 5, gradeMax: 5, domain: 'Place Value', difficulty: 2,
+    questionText: 'Which digit is in the hundreds place of 7,482?',
+    choices: ['4', '6', '8', '2'], correctAnswer: '4',
+    solution: 'Hundreds place is 4'
+  },
+  {
+    id: '5th-30', gradeMin: 5, gradeMax: 5, domain: 'Place Value', difficulty: 3,
+    questionText: 'What is the largest 5-digit number?',
+    choices: ['99,999', '99,900', '99,990', '99,909'], correctAnswer: '99,999',
+    solution: '99,999 is the largest 5-digit number'
+  },
 
-// Fractions (5th-31 to 5th-35)
-{ id: '5th-31', gradeMin: 5, gradeMax: 5, domain: 'Fractions', difficulty: 1,
-  questionText: 'What is 1/3 + 1/6?',
-  choices: ['1/4', '1/2', '2/3', '5/6'], correctAnswer: '1/2',
-  solution: '1/3 = 2/6, so 2/6 + 1/6 = 3/6 = 1/2' },
-{ id: '5th-32', gradeMin: 5, gradeMax: 5, domain: 'Fractions', difficulty: 1,
-  questionText: 'Which fraction is equivalent to 4/8?',
-  choices: ['1/2', '2/3', '3/4', '1/3'], correctAnswer: '1/2',
-  solution: '4/8 = 1/2' },
-{ id: '5th-33', gradeMin: 5, gradeMax: 5, domain: 'Fractions', difficulty: 2,
-  questionText: 'What is 3/4 - 1/8?',
-  choices: ['1/4', '1/2', '5/8', '7/8'], correctAnswer: '5/8',
-  solution: '3/4 = 6/8, so 6/8 - 1/8 = 5/8' },
-{ id: '5th-34', gradeMin: 5, gradeMax: 5, domain: 'Fractions', difficulty: 2,
-  questionText: 'Simplify 12/18.',
-  choices: ['2/3', '3/4', '1/2', '4/6'], correctAnswer: '2/3',
-  solution: '12/18 = 2/3' },
-{ id: '5th-35', gradeMin: 5, gradeMax: 5, domain: 'Fractions', difficulty: 3,
-  questionText: 'What is 5/6 x 3/5?',
-  choices: ['1/2', '1/3', '1/4', '2/3'], correctAnswer: '1/2',
-  solution: '5/6 x 3/5 = 15/30 = 1/2' },
+  // Fractions (5th-31 to 5th-35)
+  {
+    id: '5th-31', gradeMin: 5, gradeMax: 5, domain: 'Fractions', difficulty: 1,
+    questionText: 'What is 1/3 + 1/6?',
+    choices: ['1/4', '1/2', '2/3', '5/6'], correctAnswer: '1/2',
+    solution: '1/3 = 2/6, so 2/6 + 1/6 = 3/6 = 1/2'
+  },
+  {
+    id: '5th-32', gradeMin: 5, gradeMax: 5, domain: 'Fractions', difficulty: 1,
+    questionText: 'Which fraction is equivalent to 4/8?',
+    choices: ['1/2', '2/3', '3/4', '1/3'], correctAnswer: '1/2',
+    solution: '4/8 = 1/2'
+  },
+  {
+    id: '5th-33', gradeMin: 5, gradeMax: 5, domain: 'Fractions', difficulty: 2,
+    questionText: 'What is 3/4 - 1/8?',
+    choices: ['1/4', '1/2', '5/8', '7/8'], correctAnswer: '5/8',
+    solution: '3/4 = 6/8, so 6/8 - 1/8 = 5/8'
+  },
+  {
+    id: '5th-34', gradeMin: 5, gradeMax: 5, domain: 'Fractions', difficulty: 2,
+    questionText: 'Simplify 12/18.',
+    choices: ['2/3', '3/4', '1/2', '4/6'], correctAnswer: '2/3',
+    solution: '12/18 = 2/3'
+  },
+  {
+    id: '5th-35', gradeMin: 5, gradeMax: 5, domain: 'Fractions', difficulty: 3,
+    questionText: 'What is 5/6 x 3/5?',
+    choices: ['1/2', '1/3', '1/4', '2/3'], correctAnswer: '1/2',
+    solution: '5/6 x 3/5 = 15/30 = 1/2'
+  },
 
-// Decimals & Percents (5th-36 to 5th-40)
-{ id: '5th-36', gradeMin: 5, gradeMax: 5, domain: 'Decimals & Percents', difficulty: 1,
-  questionText: 'Convert 0.6 to a percent.',
-  choices: ['6%', '60%', '0.6%', '600%'], correctAnswer: '60%',
-  solution: '0.6 = 60%' },
-{ id: '5th-37', gradeMin: 5, gradeMax: 5, domain: 'Decimals & Percents', difficulty: 1,
-  questionText: 'What is 30% of 90?',
-  choices: ['18', '24', '27', '30'], correctAnswer: '27',
-  solution: '0.3 x 90 = 27' },
-{ id: '5th-38', gradeMin: 5, gradeMax: 5, domain: 'Decimals & Percents', difficulty: 2,
-  questionText: 'Convert 0.12 to a fraction.',
-  choices: ['1/12', '3/25', '12/100', '1/8'], correctAnswer: '12/100',
-  solution: '0.12 = 12/100' },
-{ id: '5th-39', gradeMin: 5, gradeMax: 5, domain: 'Decimals & Percents', difficulty: 2,
-  questionText: 'What is 15% of 200?',
-  choices: ['20', '25', '30', '35'], correctAnswer: '30',
-  solution: '0.15 x 200 = 30' },
-{ id: '5th-40', gradeMin: 5, gradeMax: 5, domain: 'Decimals & Percents', difficulty: 3,
-  questionText: 'A $80 item is discounted by 25%. What is the sale price?',
-  choices: ['$50', '$55', '$60', '$65'], correctAnswer: '$60',
-  solution: '25% of $80 is $20; $80 - $20 = $60' },
+  // Decimals & Percents (5th-36 to 5th-40)
+  {
+    id: '5th-36', gradeMin: 5, gradeMax: 5, domain: 'Decimals & Percents', difficulty: 1,
+    questionText: 'Convert 0.6 to a percent.',
+    choices: ['6%', '60%', '0.6%', '600%'], correctAnswer: '60%',
+    solution: '0.6 = 60%'
+  },
+  {
+    id: '5th-37', gradeMin: 5, gradeMax: 5, domain: 'Decimals & Percents', difficulty: 1,
+    questionText: 'What is 30% of 90?',
+    choices: ['18', '24', '27', '30'], correctAnswer: '27',
+    solution: '0.3 x 90 = 27'
+  },
+  {
+    id: '5th-38', gradeMin: 5, gradeMax: 5, domain: 'Decimals & Percents', difficulty: 2,
+    questionText: 'Convert 0.12 to a fraction.',
+    choices: ['1/12', '3/25', '12/100', '1/8'], correctAnswer: '12/100',
+    solution: '0.12 = 12/100'
+  },
+  {
+    id: '5th-39', gradeMin: 5, gradeMax: 5, domain: 'Decimals & Percents', difficulty: 2,
+    questionText: 'What is 15% of 200?',
+    choices: ['20', '25', '30', '35'], correctAnswer: '30',
+    solution: '0.15 x 200 = 30'
+  },
+  {
+    id: '5th-40', gradeMin: 5, gradeMax: 5, domain: 'Decimals & Percents', difficulty: 3,
+    questionText: 'A $80 item is discounted by 25%. What is the sale price?',
+    choices: ['$50', '$55', '$60', '$65'], correctAnswer: '$60',
+    solution: '25% of $80 is $20; $80 - $20 = $60'
+  },
 
-// Geometry (5th-41 to 5th-45)
-{ id: '5th-41', gradeMin: 5, gradeMax: 5, domain: 'Geometry', difficulty: 1,
-  questionText: 'How many sides does a dodecagon have?',
-  choices: ['10', '11', '12', '13'], correctAnswer: '12',
-  solution: 'A dodecagon has 12 sides' },
-{ id: '5th-42', gradeMin: 5, gradeMax: 5, domain: 'Geometry', difficulty: 1,
-  questionText: 'How many right angles does a square have?',
-  choices: ['2', '3', '4', '5'], correctAnswer: '4',
-  solution: 'A square has 4 right angles' },
-{ id: '5th-43', gradeMin: 5, gradeMax: 5, domain: 'Geometry', difficulty: 2,
-  questionText: 'A square has a side length of 13 cm. What is its area?',
-  choices: ['143 cm²', '153 cm²', '163 cm²', '169 cm²'], correctAnswer: '169 cm²',
-  solution: 'Area = 13 x 13 = 169 cm²' },
-{ id: '5th-44', gradeMin: 5, gradeMax: 5, domain: 'Geometry', difficulty: 2,
-  questionText: 'A triangle has angles of 90°, 45°, and ___. What is the missing angle?',
-  choices: ['35°', '45°', '55°', '65°'], correctAnswer: '45°',
-  solution: 'Sum of angles in triangle = 180°. 180 - 90 - 45 = 45°' },
-{ id: '5th-45', gradeMin: 5, gradeMax: 5, domain: 'Geometry', difficulty: 3,
-  questionText: 'A rectangle is 16 cm long and 7 cm wide. What is its perimeter?',
-  choices: ['40 cm', '42 cm', '44 cm', '46 cm'], correctAnswer: '46 cm',
-  solution: 'Perimeter = 2 x (16 + 7) = 2 x 23 = 46 cm' },
+  // Geometry (5th-41 to 5th-45)
+  {
+    id: '5th-41', gradeMin: 5, gradeMax: 5, domain: 'Geometry', difficulty: 1,
+    questionText: 'How many sides does a dodecagon have?',
+    choices: ['10', '11', '12', '13'], correctAnswer: '12',
+    solution: 'A dodecagon has 12 sides'
+  },
+  {
+    id: '5th-42', gradeMin: 5, gradeMax: 5, domain: 'Geometry', difficulty: 1,
+    questionText: 'How many right angles does a square have?',
+    choices: ['2', '3', '4', '5'], correctAnswer: '4',
+    solution: 'A square has 4 right angles'
+  },
+  {
+    id: '5th-43', gradeMin: 5, gradeMax: 5, domain: 'Geometry', difficulty: 2,
+    questionText: 'A square has a side length of 13 cm. What is its area?',
+    choices: ['143 cm²', '153 cm²', '163 cm²', '169 cm²'], correctAnswer: '169 cm²',
+    solution: 'Area = 13 x 13 = 169 cm²'
+  },
+  {
+    id: '5th-44', gradeMin: 5, gradeMax: 5, domain: 'Geometry', difficulty: 2,
+    questionText: 'A triangle has angles of 90°, 45°, and ___. What is the missing angle?',
+    choices: ['35°', '45°', '55°', '65°'], correctAnswer: '45°',
+    solution: 'Sum of angles in triangle = 180°. 180 - 90 - 45 = 45°'
+  },
+  {
+    id: '5th-45', gradeMin: 5, gradeMax: 5, domain: 'Geometry', difficulty: 3,
+    questionText: 'A rectangle is 16 cm long and 7 cm wide. What is its perimeter?',
+    choices: ['40 cm', '42 cm', '44 cm', '46 cm'], correctAnswer: '46 cm',
+    solution: 'Perimeter = 2 x (16 + 7) = 2 x 23 = 46 cm'
+  },
 
-// Measurement (5th-46 to 5th-50)
-{ id: '5th-46', gradeMin: 5, gradeMax: 5, domain: 'Measurement', difficulty: 1,
-  questionText: 'How many centimeters are in 5 meters?',
-  choices: ['50', '500', '5,000', '50,000'], correctAnswer: '500',
-  solution: '1 meter = 100 cm, so 5 x 100 = 500' },
-{ id: '5th-47', gradeMin: 5, gradeMax: 5, domain: 'Measurement', difficulty: 1,
-  questionText: 'How many minutes are in 5 hours?',
-  choices: ['200', '250', '300', '350'], correctAnswer: '300',
-  solution: '5 x 60 = 300' },
-{ id: '5th-48', gradeMin: 5, gradeMax: 5, domain: 'Measurement', difficulty: 2,
-  questionText: 'A swimming pool is 50 meters long. How many centimeters is that?',
-  choices: ['500', '5,000', '50,000', '500,000'], correctAnswer: '5,000',
-  solution: '50 x 100 = 5,000' },
-{ id: '5th-49', gradeMin: 5, gradeMax: 5, domain: 'Measurement', difficulty: 2,
-  questionText: 'How many grams are in 7 kilograms?',
-  choices: ['700', '7,000', '70,000', '700,000'], correctAnswer: '7,000',
-  solution: '7 x 1,000 = 7,000' },
-{ id: '5th-50', gradeMin: 5, gradeMax: 5, domain: 'Measurement', difficulty: 3,
-  questionText: 'A car travels 480 kilometers in 8 hours. What is its average speed in km/h?',
-  choices: ['50', '55', '60', '65'], correctAnswer: '60',
-  solution: '480 ÷ 8 = 60 km/h' },
+  // Measurement (5th-46 to 5th-50)
+  {
+    id: '5th-46', gradeMin: 5, gradeMax: 5, domain: 'Measurement', difficulty: 1,
+    questionText: 'How many centimeters are in 5 meters?',
+    choices: ['50', '500', '5,000', '50,000'], correctAnswer: '500',
+    solution: '1 meter = 100 cm, so 5 x 100 = 500'
+  },
+  {
+    id: '5th-47', gradeMin: 5, gradeMax: 5, domain: 'Measurement', difficulty: 1,
+    questionText: 'How many minutes are in 5 hours?',
+    choices: ['200', '250', '300', '350'], correctAnswer: '300',
+    solution: '5 x 60 = 300'
+  },
+  {
+    id: '5th-48', gradeMin: 5, gradeMax: 5, domain: 'Measurement', difficulty: 2,
+    questionText: 'A swimming pool is 50 meters long. How many centimeters is that?',
+    choices: ['500', '5,000', '50,000', '500,000'], correctAnswer: '5,000',
+    solution: '50 x 100 = 5,000'
+  },
+  {
+    id: '5th-49', gradeMin: 5, gradeMax: 5, domain: 'Measurement', difficulty: 2,
+    questionText: 'How many grams are in 7 kilograms?',
+    choices: ['700', '7,000', '70,000', '700,000'], correctAnswer: '7,000',
+    solution: '7 x 1,000 = 7,000'
+  },
+  {
+    id: '5th-50', gradeMin: 5, gradeMax: 5, domain: 'Measurement', difficulty: 3,
+    questionText: 'A car travels 480 kilometers in 8 hours. What is its average speed in km/h?',
+    choices: ['50', '55', '60', '65'], correctAnswer: '60',
+    solution: '480 ÷ 8 = 60 km/h'
+  },
 
-// Statistics (5th-51 to 5th-55)
-{ id: '5th-51', gradeMin: 5, gradeMax: 5, domain: 'Statistics', difficulty: 1,
-  questionText: 'What is the mean of 10, 14, and 18?',
-  choices: ['12', '14', '16', '18'], correctAnswer: '14',
-  solution: '(10 + 14 + 18) ÷ 3 = 42 ÷ 3 = 14' },
-{ id: '5th-52', gradeMin: 5, gradeMax: 5, domain: 'Statistics', difficulty: 1,
-  questionText: 'What is the median of 5, 9, 13, 17, 21?',
-  choices: ['9', '13', '15', '17'], correctAnswer: '13',
-  solution: 'The middle number is 13' },
-{ id: '5th-53', gradeMin: 5, gradeMax: 5, domain: 'Statistics', difficulty: 2,
-  questionText: 'What is the mode of 3, 5, 5, 7, 9?',
-  choices: ['3', '5', '7', '9'], correctAnswer: '5',
-  solution: '5 appears most often' },
-{ id: '5th-54', gradeMin: 5, gradeMax: 5, domain: 'Statistics', difficulty: 2,
-  questionText: 'What is the range of 8, 12, 15, 19, 24?',
-  choices: ['12', '13', '14', '16'], correctAnswer: '16',
-  solution: '24 - 8 = 16' },
-{ id: '5th-55', gradeMin: 5, gradeMax: 5, domain: 'Statistics', difficulty: 3,
-  questionText: 'The scores on a test are 82, 88, 95, 88, 90. What is the mode?',
-  choices: ['82', '88', '90', '95'], correctAnswer: '88',
-  solution: '88 appears most often' },
+  // Statistics (5th-51 to 5th-55)
+  {
+    id: '5th-51', gradeMin: 5, gradeMax: 5, domain: 'Statistics', difficulty: 1,
+    questionText: 'What is the mean of 10, 14, and 18?',
+    choices: ['12', '14', '16', '18'], correctAnswer: '14',
+    solution: '(10 + 14 + 18) ÷ 3 = 42 ÷ 3 = 14'
+  },
+  {
+    id: '5th-52', gradeMin: 5, gradeMax: 5, domain: 'Statistics', difficulty: 1,
+    questionText: 'What is the median of 5, 9, 13, 17, 21?',
+    choices: ['9', '13', '15', '17'], correctAnswer: '13',
+    solution: 'The middle number is 13'
+  },
+  {
+    id: '5th-53', gradeMin: 5, gradeMax: 5, domain: 'Statistics', difficulty: 2,
+    questionText: 'What is the mode of 3, 5, 5, 7, 9?',
+    choices: ['3', '5', '7', '9'], correctAnswer: '5',
+    solution: '5 appears most often'
+  },
+  {
+    id: '5th-54', gradeMin: 5, gradeMax: 5, domain: 'Statistics', difficulty: 2,
+    questionText: 'What is the range of 8, 12, 15, 19, 24?',
+    choices: ['12', '13', '14', '16'], correctAnswer: '16',
+    solution: '24 - 8 = 16'
+  },
+  {
+    id: '5th-55', gradeMin: 5, gradeMax: 5, domain: 'Statistics', difficulty: 3,
+    questionText: 'The scores on a test are 82, 88, 95, 88, 90. What is the mode?',
+    choices: ['82', '88', '90', '95'], correctAnswer: '88',
+    solution: '88 appears most often'
+  },
 
-// Mixed Review & Word Problems (5th-56 to 5th-60)
-{ id: '5th-56', gradeMin: 5, gradeMax: 5, domain: 'Number Sense', difficulty: 2,
-  questionText: 'A school bus has 50 seats. If 37 are occupied, how many are empty?',
-  choices: ['11', '12', '13', '14'], correctAnswer: '13',
-  solution: '50 - 37 = 13' },
-{ id: '5th-57', gradeMin: 5, gradeMax: 5, domain: 'Measurement', difficulty: 2,
-  questionText: 'A water bottle holds 900 milliliters. How many liters is that?',
-  choices: ['0.9', '9', '90', '900'], correctAnswer: '0.9',
-  solution: '1 liter = 1,000 mL, so 900 ÷ 1,000 = 0.9 L' },
-{ id: '5th-58', gradeMin: 5, gradeMax: 5, domain: 'Geometry', difficulty: 2,
-  questionText: 'How many faces does a rectangular prism have?',
-  choices: ['4', '6', '8', '12'], correctAnswer: '6',
-  solution: 'A rectangular prism has 6 faces' },
-{ id: '5th-59', gradeMin: 5, gradeMax: 5, domain: 'Decimals & Percents', difficulty: 2,
-  questionText: 'What is 20% of 250?',
-  choices: ['20', '25', '30', '50'], correctAnswer: '50',
-  solution: '0.20 x 250 = 50' },
-{ id: '5th-60', gradeMin: 5, gradeMax: 5, domain: 'Fractions', difficulty: 2,
-  questionText: 'What is 3/7 + 2/7?',
-  choices: ['3/7', '4/7', '5/7', '1'], correctAnswer: '5/7',
-  solution: '3/7 + 2/7 = 5/7' },
+  // Mixed Review & Word Problems (5th-56 to 5th-60)
+  {
+    id: '5th-56', gradeMin: 5, gradeMax: 5, domain: 'Number Sense', difficulty: 2,
+    questionText: 'A school bus has 50 seats. If 37 are occupied, how many are empty?',
+    choices: ['11', '12', '13', '14'], correctAnswer: '13',
+    solution: '50 - 37 = 13'
+  },
+  {
+    id: '5th-57', gradeMin: 5, gradeMax: 5, domain: 'Measurement', difficulty: 2,
+    questionText: 'A water bottle holds 900 milliliters. How many liters is that?',
+    choices: ['0.9', '9', '90', '900'], correctAnswer: '0.9',
+    solution: '1 liter = 1,000 mL, so 900 ÷ 1,000 = 0.9 L'
+  },
+  {
+    id: '5th-58', gradeMin: 5, gradeMax: 5, domain: 'Geometry', difficulty: 2,
+    questionText: 'How many faces does a rectangular prism have?',
+    choices: ['4', '6', '8', '12'], correctAnswer: '6',
+    solution: 'A rectangular prism has 6 faces'
+  },
+  {
+    id: '5th-59', gradeMin: 5, gradeMax: 5, domain: 'Decimals & Percents', difficulty: 2,
+    questionText: 'What is 20% of 250?',
+    choices: ['20', '25', '30', '50'], correctAnswer: '50',
+    solution: '0.20 x 250 = 50'
+  },
+  {
+    id: '5th-60', gradeMin: 5, gradeMax: 5, domain: 'Fractions', difficulty: 2,
+    questionText: 'What is 3/7 + 2/7?',
+    choices: ['3/7', '4/7', '5/7', '1'], correctAnswer: '5/7',
+    solution: '3/7 + 2/7 = 5/7'
+  },
 
   // Measurement / Conversions (G3–G7)
-  { id: '66', gradeMin: 6, gradeMax: 7, domain: 'Measurement', difficulty: 2,
-    questionText: 'Convert 3.5 kilograms to grams.', choices: ['350 g','3,500 g','35,000 g','0.35 g'], correctAnswer: '3,500 g',
-    solution: '1 kg = 1000 g -> 3.5 kg = 3500 g.' },
-  { id: '67', gradeMin: 5, gradeMax: 6, domain: 'Measurement', difficulty: 2,
-    questionText: 'Convert 30 inches to feet.', choices: ['2 ft','2.5 ft','3 ft','3.5 ft'], correctAnswer: '2.5 ft',
-    solution: '12 in = 1 ft -> 30 ÷ 12 = 2.5 ft.' },
+  {
+    id: '66', gradeMin: 6, gradeMax: 7, domain: 'Measurement', difficulty: 2,
+    questionText: 'Convert 3.5 kilograms to grams.', choices: ['350 g', '3,500 g', '35,000 g', '0.35 g'], correctAnswer: '3,500 g',
+    solution: '1 kg = 1000 g -> 3.5 kg = 3500 g.'
+  },
+  {
+    id: '67', gradeMin: 5, gradeMax: 6, domain: 'Measurement', difficulty: 2,
+    questionText: 'Convert 30 inches to feet.', choices: ['2 ft', '2.5 ft', '3 ft', '3.5 ft'], correctAnswer: '2.5 ft',
+    solution: '12 in = 1 ft -> 30 ÷ 12 = 2.5 ft.'
+  },
 
   // Statistics & Data (G4–G8)
-  { id: '68', gradeMin: 4, gradeMax: 6, domain: 'Statistics', difficulty: 1,
-    questionText: 'What is the range of 5, 9, 2, 7?', choices: ['2','4','7','9'], correctAnswer: '7',
-    solution: 'Max - min = 9 - 2 = 7.' },
-  { id: '69', gradeMin: 6, gradeMax: 7, domain: 'Probability', difficulty: 2,
-    questionText: 'Flip a fair coin twice. P(Heads then Tails)?', choices: ['1/2','1/3','1/4','1/8'], correctAnswer: '1/4',
-    solution: 'Independent events: 1/2 x 1/2 = 1/4.' },
-  { id: '70', gradeMin: 4, gradeMax: 6, domain: 'Statistics', difficulty: 1,
-    questionText: 'Mean of 10, 12, 14?', choices: ['11','12','13','14'], correctAnswer: '12',
-    solution: '(10+12+14)/3 = 12.' },
+  {
+    id: '68', gradeMin: 4, gradeMax: 6, domain: 'Statistics', difficulty: 1,
+    questionText: 'What is the range of 5, 9, 2, 7?', choices: ['2', '4', '7', '9'], correctAnswer: '7',
+    solution: 'Max - min = 9 - 2 = 7.'
+  },
+  {
+    id: '69', gradeMin: 6, gradeMax: 7, domain: 'Probability', difficulty: 2,
+    questionText: 'Flip a fair coin twice. P(Heads then Tails)?', choices: ['1/2', '1/3', '1/4', '1/8'], correctAnswer: '1/4',
+    solution: 'Independent events: 1/2 x 1/2 = 1/4.'
+  },
+  {
+    id: '70', gradeMin: 4, gradeMax: 6, domain: 'Statistics', difficulty: 1,
+    questionText: 'Mean of 10, 12, 14?', choices: ['11', '12', '13', '14'], correctAnswer: '12',
+    solution: '(10+12+14)/3 = 12.'
+  },
 
   // Functions (G7–G8)
-  { id: '71', gradeMin: 7, gradeMax: 8, domain: 'Functions', difficulty: 2,
-    questionText: 'What is the y-intercept of y = -3x + 4?', choices: ['-3','4','(-3, 0)','(0, -3)'], correctAnswer: '4',
-    solution: 'In y = mx + b, b = 4 is the y-intercept.' },
-  { id: '72', gradeMin: 7, gradeMax: 8, domain: 'Functions', difficulty: 2,
-    questionText: 'If f(x) = x² - 5x + 6, find f(3).', choices: ['0','2','3','6'], correctAnswer: '0',
-    solution: '9 - 15 + 6 = 0.' },
-  { id: '73', gradeMin: 7, gradeMax: 8, domain: 'Functions', difficulty: 2,
-    questionText: 'If g(x) = 3x, and g(x) = 24, what is x?', choices: ['6','7','8','9'], correctAnswer: '8',
-    solution: '3x = 24 -> x = 8.' },
+  {
+    id: '71', gradeMin: 7, gradeMax: 8, domain: 'Functions', difficulty: 2,
+    questionText: 'What is the y-intercept of y = -3x + 4?', choices: ['-3', '4', '(-3, 0)', '(0, -3)'], correctAnswer: '4',
+    solution: 'In y = mx + b, b = 4 is the y-intercept.'
+  },
+  {
+    id: '72', gradeMin: 7, gradeMax: 8, domain: 'Functions', difficulty: 2,
+    questionText: 'If f(x) = x² - 5x + 6, find f(3).', choices: ['0', '2', '3', '6'], correctAnswer: '0',
+    solution: '9 - 15 + 6 = 0.'
+  },
+  {
+    id: '73', gradeMin: 7, gradeMax: 8, domain: 'Functions', difficulty: 2,
+    questionText: 'If g(x) = 3x, and g(x) = 24, what is x?', choices: ['6', '7', '8', '9'], correctAnswer: '8',
+    solution: '3x = 24 -> x = 8.'
+  },
 
   // Exponents & Roots / Scientific Notation (G7–G8)
-  { id: '74', gradeMin: 7, gradeMax: 8, domain: 'Exponents & Roots', difficulty: 1,
-    questionText: 'What is √81?', choices: ['6','8','9','12'], correctAnswer: '9',
-    solution: '9 x 9 = 81.' },
-  { id: '75', gradeMin: 7, gradeMax: 8, domain: 'Exponents & Roots', difficulty: 3,
-    questionText: 'Write 0.006 in scientific notation.', choices: ['6 x 10^3','6 x 10^-3','6 x 10^-2','6 x 10^-4'], correctAnswer: '6 x 10^-3',
-    solution: 'Move decimal 3 places to the right -> 10^-3.' },
+  {
+    id: '74', gradeMin: 7, gradeMax: 8, domain: 'Exponents & Roots', difficulty: 1,
+    questionText: 'What is √81?', choices: ['6', '8', '9', '12'], correctAnswer: '9',
+    solution: '9 x 9 = 81.'
+  },
+  {
+    id: '75', gradeMin: 7, gradeMax: 8, domain: 'Exponents & Roots', difficulty: 3,
+    questionText: 'Write 0.006 in scientific notation.', choices: ['6 x 10^3', '6 x 10^-3', '6 x 10^-2', '6 x 10^-4'], correctAnswer: '6 x 10^-3',
+    solution: 'Move decimal 3 places to the right -> 10^-3.'
+  },
 
   // Probability (cards) (G7–G8)
-  { id: '77', gradeMin: 7, gradeMax: 8, domain: 'Probability', difficulty: 3,
-    questionText: 'Probability of drawing a queen from a standard deck?', choices: ['1/52','1/26','1/13','1/4'], correctAnswer: '1/13',
-    solution: '4 queens out of 52 cards: 4/52 = 1/13.' },
-     {
+  {
+    id: '77', gradeMin: 7, gradeMax: 8, domain: 'Probability', difficulty: 3,
+    questionText: 'Probability of drawing a queen from a standard deck?', choices: ['1/52', '1/26', '1/13', '1/4'], correctAnswer: '1/13',
+    solution: '4 queens out of 52 cards: 4/52 = 1/13.'
+  },
+  {
     id: '101',
     gradeMin: 1,
     gradeMax: 1,
@@ -1325,7 +1525,7 @@ export const mockQuestions: Question[] = [
     correctAnswer: '8',
     solution: '16 - 8 = 8'
   },
-   {
+  {
     id: '116',
     gradeMin: 1,
     gradeMax: 1,
@@ -1552,71 +1752,71 @@ export const mockQuestions: Question[] = [
   //2nd grade questions 
 
 
-   {
+  {
     id: '201', gradeMin: 2, gradeMax: 2, domain: 'Number Sense', difficulty: 1,
-    questionText: 'Emma collected 25 seashells at the beach in the morning. In the afternoon, she found 16 more seashells. How many seashells does Emma have in total?', choices: ['31','39','40','41'], correctAnswer: '41',
+    questionText: 'Emma collected 25 seashells at the beach in the morning. In the afternoon, she found 16 more seashells. How many seashells does Emma have in total?', choices: ['31', '39', '40', '41'], correctAnswer: '41',
     solution: 'Total seashells = 25 + 16 = 41'
   },
   {
     id: '202', gradeMin: 2, gradeMax: 2, domain: 'Number Sense', difficulty: 1,
-    questionText: 'Jake had 40 stickers in his collection. He gave 27 stickers to his friends. How many stickers does Jake have left?', choices: ['11','12','13','14'], correctAnswer: '13',
+    questionText: 'Jake had 40 stickers in his collection. He gave 27 stickers to his friends. How many stickers does Jake have left?', choices: ['11', '12', '13', '14'], correctAnswer: '13',
     solution: 'Remaining stickers = 40 - 27 = 13'
   },
   {
     id: '203', gradeMin: 2, gradeMax: 2, domain: 'Number Sense', difficulty: 1,
-    questionText: 'What number comes right after 199?', choices: ['198','199','200','201'],
+    questionText: 'What number comes right after 199?', choices: ['198', '199', '200', '201'],
     correctAnswer: '200',
     solution: '199 + 1 = 200'
   },
   {
     id: '204', gradeMin: 2, gradeMax: 2, domain: 'Number Sense', difficulty: 1,
-    questionText: 'Which is greater: 84 or 48?', choices: ['84','48'],
+    questionText: 'Which is greater: 84 or 48?', choices: ['84', '48'],
     correctAnswer: '84',
     solution: '84 is greater than 48'
   },
   {
     id: '205', gradeMin: 2, gradeMax: 2, domain: 'Number Sense', difficulty: 2,
-    questionText: 'At the library, there were 36 books on the shelf. Mrs. Wilson added 29 more books. How many books are on the shelf now?', choices: ['55','64','65','66'], correctAnswer: '65',
+    questionText: 'At the library, there were 36 books on the shelf. Mrs. Wilson added 29 more books. How many books are on the shelf now?', choices: ['55', '64', '65', '66'], correctAnswer: '65',
     solution: 'Total books = 36 + 29 = 65'
   },
   {
     id: '206', gradeMin: 2, gradeMax: 2, domain: 'Number Sense', difficulty: 2,
-    questionText: 'The school cafeteria started with 73 apples. During lunch, students ate 58 apples. How many apples are left?', choices: ['14','15','16','17'], correctAnswer: '15',
+    questionText: 'The school cafeteria started with 73 apples. During lunch, students ate 58 apples. How many apples are left?', choices: ['14', '15', '16', '17'], correctAnswer: '15',
     solution: 'Remaining apples = 73 - 58 = 15'
   },
   {
     id: '207', gradeMin: 2, gradeMax: 2, domain: 'Number Sense', difficulty: 2,
-    questionText: 'Which is even?', choices: ['35','42','57','63'],
+    questionText: 'Which is even?', choices: ['35', '42', '57', '63'],
     correctAnswer: '42',
     solution: 'Even numbers are divisible by 2; 42 ÷ 2 = 21'
   },
   {
     id: '208', gradeMin: 2, gradeMax: 2, domain: 'Number Sense', difficulty: 2,
-    questionText: 'Tom saved 18 pennies last week and 25 pennies this week. How many pennies does Tom have altogether?', choices: ['42','43','44','45'],
+    questionText: 'Tom saved 18 pennies last week and 25 pennies this week. How many pennies does Tom have altogether?', choices: ['42', '43', '44', '45'],
     correctAnswer: '43',
     solution: 'Total pennies = 18 + 25 = 43'
   },
   {
     id: '209', gradeMin: 2, gradeMax: 2, domain: 'Number Sense', difficulty: 2,
-    questionText: 'There were 90 birds sitting on a tree. When a dog barked, 47 birds flew away. How many birds are still on the tree?', choices: ['42','43','44','45'],
+    questionText: 'There were 90 birds sitting on a tree. When a dog barked, 47 birds flew away. How many birds are still on the tree?', choices: ['42', '43', '44', '45'],
     correctAnswer: '43',
     solution: 'Birds remaining = 90 - 47 = 43'
   },
   {
     id: '210', gradeMin: 2, gradeMax: 2, domain: 'Number Sense', difficulty: 2,
-    questionText: 'Which is less: 128 or 182?', choices: ['128','182'],
+    questionText: 'Which is less: 128 or 182?', choices: ['128', '182'],
     correctAnswer: '128',
     solution: '128 is less than 182'
   },
   {
     id: '211', gradeMin: 2, gradeMax: 2, domain: 'Number Sense', difficulty: 3,
-    questionText: 'The toy store had 125 teddy bears. They received a shipment of 38 more teddy bears. How many teddy bears does the store have now?', choices: ['152','163','164','165'],
+    questionText: 'The toy store had 125 teddy bears. They received a shipment of 38 more teddy bears. How many teddy bears does the store have now?', choices: ['152', '163', '164', '165'],
     correctAnswer: '163',
     solution: 'Total teddy bears = 125 + 38 = 163'
   },
   {
     id: '212', gradeMin: 2, gradeMax: 2, domain: 'Number Sense', difficulty: 3,
-    questionText: 'A farmer had 200 carrots in his garden. He harvested 76 carrots for the market. How many carrots are still in the garden?', choices: ['122','123','124','125'],
+    questionText: 'A farmer had 200 carrots in his garden. He harvested 76 carrots for the market. How many carrots are still in the garden?', choices: ['122', '123', '124', '125'],
     correctAnswer: '124',
     solution: 'Carrots remaining = 200 - 76 = 124'
   },
@@ -1624,73 +1824,73 @@ export const mockQuestions: Question[] = [
   // === Operations & Algebraic Thinking (213–225) ===
   {
     id: '213', gradeMin: 2, gradeMax: 2, domain: 'Operations & Algebraic Thinking', difficulty: 1,
-    questionText: 'Sarah is making rows of cookies. She puts 6 cookies in each of 2 rows. How many cookies did Sarah use?', choices: ['10','11','12','14'], correctAnswer: '12',
+    questionText: 'Sarah is making rows of cookies. She puts 6 cookies in each of 2 rows. How many cookies did Sarah use?', choices: ['10', '11', '12', '14'], correctAnswer: '12',
     solution: 'Total cookies = 6 x 2 = 12'
   },
   {
     id: '214', gradeMin: 2, gradeMax: 2, domain: 'Operations & Algebraic Thinking', difficulty: 1,
-    questionText: 'Mom bought 15 candies to share equally among 3 children. How many candies will each child get?', choices: ['4','5','6','7'], correctAnswer: '5',
+    questionText: 'Mom bought 15 candies to share equally among 3 children. How many candies will each child get?', choices: ['4', '5', '6', '7'], correctAnswer: '5',
     solution: 'Candies per child = 15 ÷ 3 = 5'
   },
   {
     id: '215', gradeMin: 2, gradeMax: 2, domain: 'Operations & Algebraic Thinking', difficulty: 1,
-    questionText: 'Fill in the blank: 7 + ___ = 15', choices: ['6','7','8','9'],
+    questionText: 'Fill in the blank: 7 + ___ = 15', choices: ['6', '7', '8', '9'],
     correctAnswer: '8',
     solution: '7 + 8 = 15'
   },
   {
     id: '216', gradeMin: 2, gradeMax: 2, domain: 'Operations & Algebraic Thinking', difficulty: 1,
-    questionText: 'Fill in the blank: ___ - 9 = 4', choices: ['11','12','13','14'],
+    questionText: 'Fill in the blank: ___ - 9 = 4', choices: ['11', '12', '13', '14'],
     correctAnswer: '13',
     solution: '13 - 9 = 4'
   },
   {
     id: '217', gradeMin: 2, gradeMax: 2, domain: 'Operations & Algebraic Thinking', difficulty: 2,
-    questionText: 'Alex is planting flowers in his garden. He plants 3 flowers in each of 4 rows. How many flowers did Alex plant in total?', choices: ['10','11','12','13'], correctAnswer: '12',
+    questionText: 'Alex is planting flowers in his garden. He plants 3 flowers in each of 4 rows. How many flowers did Alex plant in total?', choices: ['10', '11', '12', '13'], correctAnswer: '12',
     solution: 'Total flowers = 3 x 4 = 12'
   },
   {
     id: '218', gradeMin: 2, gradeMax: 2, domain: 'Operations & Algebraic Thinking', difficulty: 2,
-    questionText: 'The teacher has 20 pencils to give equally to 5 students. How many pencils will each student receive?', choices: ['3','4','5','6'], correctAnswer: '4',
+    questionText: 'The teacher has 20 pencils to give equally to 5 students. How many pencils will each student receive?', choices: ['3', '4', '5', '6'], correctAnswer: '4',
     solution: 'Pencils per student = 20 ÷ 5 = 4'
   },
   {
     id: '219', gradeMin: 2, gradeMax: 2, domain: 'Operations & Algebraic Thinking', difficulty: 2,
-    questionText: 'At the zoo, there are 9 cages with 5 animals in each cage. How many animals are there in total?', choices: ['40','42','45','50'],
+    questionText: 'At the zoo, there are 9 cages with 5 animals in each cage. How many animals are there in total?', choices: ['40', '42', '45', '50'],
     correctAnswer: '45',
     solution: 'Total animals = 9 x 5 = 45'
   },
   {
     id: '220', gradeMin: 2, gradeMax: 2, domain: 'Operations & Algebraic Thinking', difficulty: 2,
-    questionText: 'A baker made 36 muffins and wants to put them equally into 6 boxes. How many muffins will go in each box?', choices: ['4','5','6','7'], correctAnswer: '6',
+    questionText: 'A baker made 36 muffins and wants to put them equally into 6 boxes. How many muffins will go in each box?', choices: ['4', '5', '6', '7'], correctAnswer: '6',
     solution: 'Muffins per box = 36 ÷ 6 = 6'
   },
   {
     id: '221', gradeMin: 2, gradeMax: 2, domain: 'Operations & Algebraic Thinking', difficulty: 2,
-    questionText: 'Fill in the blank: 5 x ___ = 35', choices: ['5','6','7','8'],
+    questionText: 'Fill in the blank: 5 x ___ = 35', choices: ['5', '6', '7', '8'],
     correctAnswer: '7',
     solution: '5 x 7 = 35'
   },
   {
     id: '222', gradeMin: 2, gradeMax: 2, domain: 'Operations & Algebraic Thinking', difficulty: 2,
-    questionText: 'Fill in the blank: ___ ÷ 4 = 9', choices: ['32','36','40','44'],
+    questionText: 'Fill in the blank: ___ ÷ 4 = 9', choices: ['32', '36', '40', '44'],
     correctAnswer: '36',
     solution: '36 ÷ 4 = 9'
   },
   {
     id: '223', gradeMin: 2, gradeMax: 2, domain: 'Operations & Algebraic Thinking', difficulty: 3,
-    questionText: 'What is 8 x 7?', choices: ['54','55','56','57'],
+    questionText: 'What is 8 x 7?', choices: ['54', '55', '56', '57'],
     correctAnswer: '56',
     solution: '8 x 7 = 56'
   },
   {
     id: '224', gradeMin: 2, gradeMax: 2, domain: 'Operations & Algebraic Thinking', difficulty: 3,
-    questionText: 'What is 72 ÷ 8?', choices: ['8','9','10','11'], correctAnswer: '9',
+    questionText: 'What is 72 ÷ 8?', choices: ['8', '9', '10', '11'], correctAnswer: '9',
     solution: '72 ÷ 8 = 9'
   },
   {
     id: '225', gradeMin: 2, gradeMax: 2, domain: 'Operations & Algebraic Thinking', difficulty: 3,
-    questionText: 'What is 6 x 9?', choices: ['52','53','54','55'],
+    questionText: 'What is 6 x 9?', choices: ['52', '53', '54', '55'],
     correctAnswer: '54',
     solution: '6 x 9 = 54'
   },
@@ -1698,73 +1898,73 @@ export const mockQuestions: Question[] = [
   // === Place Value (226–237) ===
   {
     id: '226', gradeMin: 2, gradeMax: 2, domain: 'Place Value', difficulty: 1,
-    questionText: 'What is the value of the 3 in 348?', choices: ['3','30','300','3,000'],
+    questionText: 'What is the value of the 3 in 348?', choices: ['3', '30', '300', '3,000'],
     correctAnswer: '300',
     solution: '3 is in the hundreds place'
   },
   {
     id: '227', gradeMin: 2, gradeMax: 2, domain: 'Place Value', difficulty: 1,
-    questionText: 'What is the value of the 7 in 572?', choices: ['7','70','700','7,000'],
+    questionText: 'What is the value of the 7 in 572?', choices: ['7', '70', '700', '7,000'],
     correctAnswer: '70',
     solution: '7 is in the tens place'
   },
   {
     id: '228', gradeMin: 2, gradeMax: 2, domain: 'Place Value', difficulty: 1,
-    questionText: 'Round 246 to the nearest ten.', choices: ['240','245','246','250'],
+    questionText: 'Round 246 to the nearest ten.', choices: ['240', '245', '246', '250'],
     correctAnswer: '250',
     solution: 'Ones digit is 6, so round up'
   },
   {
     id: '229', gradeMin: 2, gradeMax: 2, domain: 'Place Value', difficulty: 1,
-    questionText: 'Round 572 to the nearest hundred.', choices: ['500','600','570','580'],
+    questionText: 'Round 572 to the nearest hundred.', choices: ['500', '600', '570', '580'],
     correctAnswer: '600',
     solution: 'Tens digit is 7 (>=5), so round up'
   },
   {
     id: '230', gradeMin: 2, gradeMax: 2, domain: 'Place Value', difficulty: 1,
-    questionText: 'Which number has a 9 in the tens place?', choices: ['391','912','498','729'],
+    questionText: 'Which number has a 9 in the tens place?', choices: ['391', '912', '498', '729'],
     correctAnswer: '498',
     solution: 'In 498, 9 is in the tens place'
   },
   {
     id: '231', gradeMin: 2, gradeMax: 2, domain: 'Place Value', difficulty: 2,
-    questionText: 'Write 427 in expanded form.', choices: ['400+20+7','40+27','427','4+2+7'],
+    questionText: 'Write 427 in expanded form.', choices: ['400+20+7', '40+27', '427', '4+2+7'],
     correctAnswer: '400+20+7',
     solution: '427 = 400 + 20 + 7'
   },
   {
     id: '232', gradeMin: 2, gradeMax: 2, domain: 'Place Value', difficulty: 2,
-    questionText: 'Which is greater: 389 or 398?', choices: ['389','398'],
+    questionText: 'Which is greater: 389 or 398?', choices: ['389', '398'],
     correctAnswer: '398',
     solution: '398 is greater than 389'
   },
   {
     id: '233', gradeMin: 2, gradeMax: 2, domain: 'Place Value', difficulty: 2,
-    questionText: 'Round 843 to the nearest ten.', choices: ['840','843','850','800'],
+    questionText: 'Round 843 to the nearest ten.', choices: ['840', '843', '850', '800'],
     correctAnswer: '840',
     solution: 'Ones digit is 3 (<5), round down'
   },
   {
     id: '234', gradeMin: 2, gradeMax: 2, domain: 'Place Value', difficulty: 2,
-    questionText: 'Round 843 to the nearest hundred.', choices: ['800','840','850','900'],
+    questionText: 'Round 843 to the nearest hundred.', choices: ['800', '840', '850', '900'],
     correctAnswer: '800',
     solution: 'Tens digit is 4 (<5), so round down to 800'
   },
   {
     id: '235', gradeMin: 2, gradeMax: 2, domain: 'Place Value', difficulty: 3,
-    questionText: 'What is the smallest 3-digit number?', choices: ['100','101','110','111'],
+    questionText: 'What is the smallest 3-digit number?', choices: ['100', '101', '110', '111'],
     correctAnswer: '100',
     solution: '100 is the smallest 3-digit number'
   },
   {
     id: '236', gradeMin: 2, gradeMax: 2, domain: 'Place Value', difficulty: 3,
-    questionText: 'What is the largest 2-digit number?', choices: ['98','99','100','101'],
+    questionText: 'What is the largest 2-digit number?', choices: ['98', '99', '100', '101'],
     correctAnswer: '99',
     solution: '99 is the largest 2-digit number'
   },
   {
     id: '237', gradeMin: 2, gradeMax: 2, domain: 'Place Value', difficulty: 3,
-    questionText: 'Which digit is in the tens place of 762?', choices: ['6','2','7','0'],
+    questionText: 'Which digit is in the tens place of 762?', choices: ['6', '2', '7', '0'],
     correctAnswer: '6',
     solution: '762 has 7 in hundreds, 6 in tens, 2 in ones'
   },
@@ -1772,2770 +1972,3915 @@ export const mockQuestions: Question[] = [
   // === Measurement (238–250) ===
   {
     id: '238', gradeMin: 2, gradeMax: 2, domain: 'Measurement', difficulty: 1,
-    questionText: 'How many minutes are in 1 hour?', choices: ['30','45','60','90'],
+    questionText: 'How many minutes are in 1 hour?', choices: ['30', '45', '60', '90'],
     correctAnswer: '60',
     solution: '1 hour = 60 minutes'
   },
   {
     id: '239', gradeMin: 2, gradeMax: 2, domain: 'Measurement', difficulty: 1,
-    questionText: 'How many days are in a week?', choices: ['5','6','7','8'],
+    questionText: 'How many days are in a week?', choices: ['5', '6', '7', '8'],
     correctAnswer: '7',
     solution: 'There are 7 days in a week'
   },
   {
     id: '240', gradeMin: 2, gradeMax: 2, domain: 'Measurement', difficulty: 1,
-    questionText: 'How many inches are in a foot?', choices: ['10','11','12','13'],
+    questionText: 'How many inches are in a foot?', choices: ['10', '11', '12', '13'],
     correctAnswer: '12',
     solution: '1 foot = 12 inches'
   },
   {
     id: '241', gradeMin: 2, gradeMax: 2, domain: 'Measurement', difficulty: 1,
-    questionText: 'How many feet are in a yard?', choices: ['2','3','4','5'],
+    questionText: 'How many feet are in a yard?', choices: ['2', '3', '4', '5'],
     correctAnswer: '3',
     solution: '1 yard = 3 feet'
   },
   {
     id: '242', gradeMin: 2, gradeMax: 2, domain: 'Measurement', difficulty: 1,
-    questionText: 'How many cents are in a dollar?', choices: ['25','50','75','100'],
+    questionText: 'How many cents are in a dollar?', choices: ['25', '50', '75', '100'],
     correctAnswer: '100',
     solution: '100 cents = 1 dollar'
   },
   {
     id: '243', gradeMin: 2, gradeMax: 2, domain: 'Measurement', difficulty: 2,
-    questionText: 'Maya is planning a sleepover that will last for 2 days. How many hours will her sleepover last?', choices: ['24','36','48','72'],
+    questionText: 'Maya is planning a sleepover that will last for 2 days. How many hours will her sleepover last?', choices: ['24', '36', '48', '72'],
     correctAnswer: '48',
     solution: 'Hours in sleepover = 2 days x 24 hours = 48 hours'
   },
   {
     id: '244', gradeMin: 2, gradeMax: 2, domain: 'Measurement', difficulty: 2,
-    questionText: 'How many centimeters are in 1 meter?', choices: ['10','100','1,000','10,000'],
+    questionText: 'How many centimeters are in 1 meter?', choices: ['10', '100', '1,000', '10,000'],
     correctAnswer: '100',
     solution: '1 meter = 100 centimeters'
   },
   {
     id: '245', gradeMin: 2, gradeMax: 2, domain: 'Measurement', difficulty: 2,
-    questionText: 'How many ounces are in a pound?', choices: ['8','12','16','20'],
+    questionText: 'How many ounces are in a pound?', choices: ['8', '12', '16', '20'],
     correctAnswer: '16',
     solution: '1 pound = 16 ounces'
   },
   {
     id: '246', gradeMin: 2, gradeMax: 2, domain: 'Measurement', difficulty: 2,
-    questionText: 'How many months are in a year?', choices: ['10','11','12','13'],
+    questionText: 'How many months are in a year?', choices: ['10', '11', '12', '13'],
     correctAnswer: '12',
     solution: '1 year = 12 months'
   },
   {
     id: '247', gradeMin: 2, gradeMax: 2, domain: 'Measurement', difficulty: 3,
-    questionText: 'David wants to buy a toy that costs $2. If he only has quarters, how many quarters does he need?', choices: ['4','6','8','10'],
+    questionText: 'David wants to buy a toy that costs $2. If he only has quarters, how many quarters does he need?', choices: ['4', '6', '8', '10'],
     correctAnswer: '8',
     solution: 'Each quarter = 25¢, $2 = 200¢, so 200 ÷ 25 = 8 quarters'
   },
   {
     id: '248', gradeMin: 2, gradeMax: 2, domain: 'Measurement', difficulty: 3,
-    questionText: 'The class camping trip will last for 3 days. How many hours will they be camping?', choices: ['48','60','72','84'],
+    questionText: 'The class camping trip will last for 3 days. How many hours will they be camping?', choices: ['48', '60', '72', '84'],
     correctAnswer: '72',
     solution: 'Hours camping = 3 days x 24 hours = 72 hours'
   },
   {
     id: '249', gradeMin: 2, gradeMax: 2, domain: 'Measurement', difficulty: 3,
-    questionText: 'Lisa is watching a movie that is 5 hours long. How many minutes will she spend watching the movie?', choices: ['200','240','300','360'],
+    questionText: 'Lisa is watching a movie that is 5 hours long. How many minutes will she spend watching the movie?', choices: ['200', '240', '300', '360'],
     correctAnswer: '300',
     solution: 'Movie length = 5 hours x 60 minutes = 300 minutes'
   },
   {
     id: '250', gradeMin: 2, gradeMax: 2, domain: 'Measurement', difficulty: 3,
-    questionText: 'The school play rehearsals will happen for 2 weeks. How many days will they rehearse?', choices: ['10','12','14','15'],
+    questionText: 'The school play rehearsals will happen for 2 weeks. How many days will they rehearse?', choices: ['10', '12', '14', '15'],
     correctAnswer: '14',
     solution: 'Rehearsal days = 2 weeks x 7 days = 14 days'
   },
 
   // === Additional Grade 2 Questions (2nd-59 to 2nd-90) ===
   // === Number Sense (2nd-59 to 2nd-68) ===
-  { id: '2nd-59', gradeMin: 2, gradeMax: 2, domain: 'Number Sense', difficulty: 1,
+  {
+    id: '2nd-59', gradeMin: 2, gradeMax: 2, domain: 'Number Sense', difficulty: 1,
     questionText: 'During the school field day, the second grade collected 47 plastic bottles for recycling in the morning and 38 more bottles in the afternoon. How many bottles did they collect altogether?',
     choices: ['83 bottles', '84 bottles', '85 bottles', '86 bottles'], correctAnswer: '85 bottles',
-    solution: 'Total bottles collected: 47 + 38 = 85 bottles.' },
+    solution: 'Total bottles collected: 47 + 38 = 85 bottles.'
+  },
 
-  { id: '2nd-60', gradeMin: 2, gradeMax: 2, domain: 'Number Sense', difficulty: 1,
+  {
+    id: '2nd-60', gradeMin: 2, gradeMax: 2, domain: 'Number Sense', difficulty: 1,
     questionText: 'The school cafeteria ordered 92 cartons of milk for the week. By Friday, students had consumed 67 cartons. How many cartons of milk were left over?',
     choices: ['24 cartons', '25 cartons', '26 cartons', '27 cartons'], correctAnswer: '25 cartons',
-    solution: 'Milk cartons remaining: 92 - 67 = 25 cartons.' },
+    solution: 'Milk cartons remaining: 92 - 67 = 25 cartons.'
+  },
 
-  { id: '2nd-61', gradeMin: 2, gradeMax: 2, domain: 'Number Sense', difficulty: 2,
+  {
+    id: '2nd-61', gradeMin: 2, gradeMax: 2, domain: 'Number Sense', difficulty: 2,
     questionText: 'Emma is counting her sticker collection by tens. She counts: 10, 20, 30, 40, 50, 60, 70. What number should she say next?',
     choices: ['75', '80', '85', '90'], correctAnswer: '80',
-    solution: 'When counting by tens, add 10 to the previous number: 70 + 10 = 80.' },
+    solution: 'When counting by tens, add 10 to the previous number: 70 + 10 = 80.'
+  },
 
-  { id: '2nd-62', gradeMin: 2, gradeMax: 2, domain: 'Number Sense', difficulty: 2,
+
+  {
+    id: '2nd-62', gradeMin: 2, gradeMax: 2, domain: 'Number Sense', difficulty: 2,
     questionText: 'The school playground has 3 basketball hoops, and each hoop has 12 basketballs nearby. How many basketballs are there altogether?',
     choices: ['34 basketballs', '35 basketballs', '36 basketballs', '37 basketballs'], correctAnswer: '36 basketballs',
-    solution: 'Total basketballs: 3 groups of 12 = 12 + 12 + 12 = 36 basketballs.' },
+    solution: 'Total basketballs: 3 groups of 12 = 12 + 12 + 12 = 36 basketballs.'
+  },
 
-  { id: '2nd-63', gradeMin: 2, gradeMax: 2, domain: 'Number Sense', difficulty: 2,
+  {
+    id: '2nd-63', gradeMin: 2, gradeMax: 2, domain: 'Number Sense', difficulty: 2,
     questionText: 'At the school book fair, Oliver bought 2 books for 15 dollars each and 1 bookmark for 3 dollars. How much money did Oliver spend in total?',
     choices: ['30 dollars', '31 dollars', '32 dollars', '33 dollars'], correctAnswer: '33 dollars',
-    solution: 'Books cost: 2 x 15 = 30 dollars. Total spent: 30 + 3 = 33 dollars.' },
+    solution: 'Books cost: 2 x 15 = 30 dollars. Total spent: 30 + 3 = 33 dollars.'
+  },
 
-  { id: '2nd-64', gradeMin: 2, gradeMax: 2, domain: 'Number Sense', difficulty: 2,
+  {
+    id: '2nd-64', gradeMin: 2, gradeMax: 2, domain: 'Number Sense', difficulty: 2,
     questionText: 'Which number is odd: 24, 36, 47, or 52?',
     choices: ['24', '36', '47', '52'], correctAnswer: '47',
-    solution: 'Odd numbers cannot be divided evenly by 2. Only 47 is odd among the choices.' },
+    solution: 'Odd numbers cannot be divided evenly by 2. Only 47 is odd among the choices.'
+  },
 
-  { id: '2nd-65', gradeMin: 2, gradeMax: 2, domain: 'Number Sense', difficulty: 3,
+  {
+    id: '2nd-65', gradeMin: 2, gradeMax: 2, domain: 'Number Sense', difficulty: 3,
     questionText: 'The second grade class is organizing a penny drive for charity. Room 201 collected 156 pennies, Room 202 collected 89 pennies, and Room 203 collected 127 pennies. How many pennies did all three rooms collect together?',
     choices: ['362 pennies', '372 pennies', '382 pennies', '392 pennies'], correctAnswer: '372 pennies',
-    solution: 'Total pennies: 156 + 89 + 127 = 372 pennies.' },
+    solution: 'Total pennies: 156 + 89 + 127 = 372 pennies.'
+  },
 
-  { id: '2nd-66', gradeMin: 2, gradeMax: 2, domain: 'Number Sense', difficulty: 3,
+  {
+    id: '2nd-66', gradeMin: 2, gradeMax: 2, domain: 'Number Sense', difficulty: 3,
     questionText: 'A toy store had 245 stuffed animals at the beginning of the month. During the month, they sold 178 stuffed animals and received 94 more from their supplier. How many stuffed animals does the store have now?',
     choices: ['151 animals', '161 animals', '171 animals', '181 animals'], correctAnswer: '161 animals',
-    solution: 'Animals remaining: 245 - 178 + 94 = 67 + 94 = 161 stuffed animals.' },
+    solution: 'Animals remaining: 245 - 178 + 94 = 67 + 94 = 161 stuffed animals.'
+  },
 
-  { id: '2nd-67', gradeMin: 2, gradeMax: 2, domain: 'Number Sense', difficulty: 3,
+  {
+    id: '2nd-67', gradeMin: 2, gradeMax: 2, domain: 'Number Sense', difficulty: 3,
     questionText: 'Compare these numbers and choose the correct statement: 189 and 198.',
     choices: ['189 > 198', '189 = 198', '189 < 198', 'Cannot determine'], correctAnswer: '189 < 198',
-    solution: '189 is less than 198 because when comparing hundreds (both 1), tens (8 vs 9), 8 < 9.' },
+    solution: '189 is less than 198 because when comparing hundreds (both 1), tens (8 vs 9), 8 < 9.'
+  },
 
-  { id: '2nd-68', gradeMin: 2, gradeMax: 2, domain: 'Number Sense', difficulty: 3,
+  {
+    id: '2nd-68', gradeMin: 2, gradeMax: 2, domain: 'Number Sense', difficulty: 3,
     questionText: 'The school garden has 4 rows of vegetables with 25 plants in each row. If 8 plants did not grow properly and need to be replanted, how many healthy plants are growing?',
     choices: ['90 plants', '92 plants', '94 plants', '96 plants'], correctAnswer: '92 plants',
-    solution: 'Total plants: 4 x 25 = 100. Healthy plants: 100 - 8 = 92 plants.' },
+    solution: 'Total plants: 4 x 25 = 100. Healthy plants: 100 - 8 = 92 plants.'
+  },
 
   // === Operations & Algebraic Thinking (2nd-69 to 2nd-76) ===
-  { id: '2nd-69', gradeMin: 2, gradeMax: 2, domain: 'Operations & Algebraic Thinking', difficulty: 1,
+  {
+    id: '2nd-69', gradeMin: 2, gradeMax: 2, domain: 'Operations & Algebraic Thinking', difficulty: 1,
     questionText: 'Mrs. Johnson is arranging chairs for parent night. She sets up 6 rows with 4 chairs in each row. How many chairs did she arrange?',
     choices: ['22 chairs', '23 chairs', '24 chairs', '25 chairs'], correctAnswer: '24 chairs',
-    solution: 'Total chairs: 6 rows x 4 chairs = 24 chairs.' },
+    solution: 'Total chairs: 6 rows x 4 chairs = 24 chairs.'
+  },
 
-  { id: '2nd-70', gradeMin: 2, gradeMax: 2, domain: 'Operations & Algebraic Thinking', difficulty: 1,
+  {
+    id: '2nd-70', gradeMin: 2, gradeMax: 2, domain: 'Operations & Algebraic Thinking', difficulty: 1,
     questionText: 'The art teacher has 28 paintbrushes to distribute equally among 7 students. How many paintbrushes will each student receive?',
     choices: ['3 brushes', '4 brushes', '5 brushes', '6 brushes'], correctAnswer: '4 brushes',
-    solution: 'Brushes per student: 28 ÷ 7 = 4 paintbrushes each.' },
+    solution: 'Brushes per student: 28 ÷ 7 = 4 paintbrushes each.'
+  },
 
-  { id: '2nd-71', gradeMin: 2, gradeMax: 2, domain: 'Operations & Algebraic Thinking', difficulty: 2,
+  {
+    id: '2nd-71', gradeMin: 2, gradeMax: 2, domain: 'Operations & Algebraic Thinking', difficulty: 2,
     questionText: 'Fill in the missing number: 9 x ___ = 63',
     choices: ['6', '7', '8', '9'], correctAnswer: '7',
-    solution: '9 x 7 = 63, so the missing number is 7.' },
+    solution: '9 x 7 = 63, so the missing number is 7.'
+  },
 
-  { id: '2nd-72', gradeMin: 2, gradeMax: 2, domain: 'Operations & Algebraic Thinking', difficulty: 2,
+  {
+    id: '2nd-72', gradeMin: 2, gradeMax: 2, domain: 'Operations & Algebraic Thinking', difficulty: 2,
     questionText: 'The school library has 42 books to put on shelves. If each shelf holds 6 books, how many shelves will be completely filled?',
     choices: ['6 shelves', '7 shelves', '8 shelves', '9 shelves'], correctAnswer: '7 shelves',
-    solution: 'Number of shelves: 42 ÷ 6 = 7 shelves will be completely filled.' },
+    solution: 'Number of shelves: 42 ÷ 6 = 7 shelves will be completely filled.'
+  },
 
-  { id: '2nd-73', gradeMin: 2, gradeMax: 2, domain: 'Operations & Algebraic Thinking', difficulty: 2,
+  {
+    id: '2nd-73', gradeMin: 2, gradeMax: 2, domain: 'Operations & Algebraic Thinking', difficulty: 2,
     questionText: 'What number makes this equation true: ___ - 17 = 26?',
     choices: ['43', '44', '45', '46'], correctAnswer: '43',
-    solution: 'To find the missing number: 26 + 17 = 43. Check: 43 - 17 = 26' },
+    solution: 'To find the missing number: 26 + 17 = 43. Check: 43 - 17 = 26'
+  },
 
-  { id: '2nd-74', gradeMin: 2, gradeMax: 2, domain: 'Operations & Algebraic Thinking', difficulty: 3,
+  {
+    id: '2nd-74', gradeMin: 2, gradeMax: 2, domain: 'Operations & Algebraic Thinking', difficulty: 3,
     questionText: 'The cafeteria serves pizza in square slices. Each whole pizza is cut into 8 equal slices. If they need to serve 56 slices for lunch, how many whole pizzas should they prepare?',
     choices: ['6 pizzas', '7 pizzas', '8 pizzas', '9 pizzas'], correctAnswer: '7 pizzas',
-    solution: 'Number of pizzas needed: 56 ÷ 8 = 7 whole pizzas.' },
+    solution: 'Number of pizzas needed: 56 ÷ 8 = 7 whole pizzas.'
+  },
 
-  { id: '2nd-75', gradeMin: 2, gradeMax: 2, domain: 'Operations & Algebraic Thinking', difficulty: 3,
+  {
+    id: '2nd-75', gradeMin: 2, gradeMax: 2, domain: 'Operations & Algebraic Thinking', difficulty: 3,
     questionText: 'What is the missing number in this pattern: 4, 8, 12, 16, ___, 24?',
     choices: ['18', '19', '20', '21'], correctAnswer: '20',
-    solution: 'The pattern increases by 4 each time: 16 + 4 = 20.' },
+    solution: 'The pattern increases by 4 each time: 16 + 4 = 20.'
+  },
 
-  { id: '2nd-76', gradeMin: 2, gradeMax: 2, domain: 'Operations & Algebraic Thinking', difficulty: 3,
+  {
+    id: '2nd-76', gradeMin: 2, gradeMax: 2, domain: 'Operations & Algebraic Thinking', difficulty: 3,
     questionText: 'If 8 x 9 = 72, then what does 9 x 8 equal?',
     choices: ['63', '71', '72', '81'], correctAnswer: '72',
-    solution: 'Multiplication is commutative, so 9 x 8 = 8 x 9 = 72.' },
+    solution: 'Multiplication is commutative, so 9 x 8 = 8 x 9 = 72.'
+  },
 
   // === Place Value (2nd-77 to 2nd-84) ===
-  { id: '2nd-77', gradeMin: 2, gradeMax: 2, domain: 'Place Value', difficulty: 1,
+  {
+    id: '2nd-77', gradeMin: 2, gradeMax: 2, domain: 'Place Value', difficulty: 1,
     questionText: 'In the number 456, what is the value of the digit 4?',
     choices: ['4', '40', '400', '4000'], correctAnswer: '400',
-    solution: 'The digit 4 is in the hundreds place, so its value is 400.' },
+    solution: 'The digit 4 is in the hundreds place, so its value is 400.'
+  },
 
-  { id: '2nd-78', gradeMin: 2, gradeMax: 2, domain: 'Place Value', difficulty: 1,
+  {
+    id: '2nd-78', gradeMin: 2, gradeMax: 2, domain: 'Place Value', difficulty: 1,
     questionText: 'Which number has a 7 in the ones place?',
     choices: ['372', '173', '731', '237'], correctAnswer: '237',
-    solution: 'In 237, the digit 7 is in the ones place (rightmost position).' },
+    solution: 'In 237, the digit 7 is in the ones place (rightmost position).'
+  },
 
-  { id: '2nd-79', gradeMin: 2, gradeMax: 2, domain: 'Place Value', difficulty: 2,
+  {
+    id: '2nd-79', gradeMin: 2, gradeMax: 2, domain: 'Place Value', difficulty: 2,
     questionText: 'Round 284 to the nearest ten.',
     choices: ['280', '285', '290', '300'], correctAnswer: '280',
-    solution: 'The ones digit is 4, which is less than 5, so round down to 280.' },
+    solution: 'The ones digit is 4, which is less than 5, so round down to 280.'
+  },
 
-  { id: '2nd-80', gradeMin: 2, gradeMax: 2, domain: 'Place Value', difficulty: 2,
+  {
+    id: '2nd-80', gradeMin: 2, gradeMax: 2, domain: 'Place Value', difficulty: 2,
     questionText: 'Write the number that is 10 more than 396.',
     choices: ['386', '397', '406', '486'], correctAnswer: '406',
-    solution: 'Adding 10 to 396: 396 + 10 = 406.' },
+    solution: 'Adding 10 to 396: 396 + 10 = 406.'
+  },
 
-  { id: '2nd-81', gradeMin: 2, gradeMax: 2, domain: 'Place Value', difficulty: 2,
+  {
+    id: '2nd-81', gradeMin: 2, gradeMax: 2, domain: 'Place Value', difficulty: 2,
     questionText: 'Which number is between 345 and 355?',
     choices: ['344', '349', '356', '360'], correctAnswer: '349',
-    solution: '349 is the only number that falls between 345 and 355.' },
+    solution: '349 is the only number that falls between 345 and 355.'
+  },
 
-  { id: '2nd-82', gradeMin: 2, gradeMax: 2, domain: 'Place Value', difficulty: 3,
+  {
+    id: '2nd-82', gradeMin: 2, gradeMax: 2, domain: 'Place Value', difficulty: 3,
     questionText: 'What is 627 written in expanded form?',
     choices: ['600 + 20 + 7', '60 + 27', '6 + 2 + 7', '627'], correctAnswer: '600 + 20 + 7',
-    solution: '627 = 600 (hundreds) + 20 (tens) + 7 (ones).' },
+    solution: '627 = 600 (hundreds) + 20 (tens) + 7 (ones).'
+  },
 
-  { id: '2nd-83', gradeMin: 2, gradeMax: 2, domain: 'Place Value', difficulty: 3,
+  {
+    id: '2nd-83', gradeMin: 2, gradeMax: 2, domain: 'Place Value', difficulty: 3,
     questionText: 'Round 538 to the nearest hundred.',
     choices: ['500', '540', '600', '530'], correctAnswer: '500',
-    solution: 'The tens digit is 3, which is less than 5, so round down to 500.' },
+    solution: 'The tens digit is 3, which is less than 5, so round down to 500.'
+  },
 
-  { id: '2nd-84', gradeMin: 2, gradeMax: 2, domain: 'Place Value', difficulty: 3,
+  {
+    id: '2nd-84', gradeMin: 2, gradeMax: 2, domain: 'Place Value', difficulty: 3,
     questionText: 'Which digit is in the tens place of the number 1,847?',
     choices: ['1', '8', '4', '7'], correctAnswer: '4',
-    solution: 'In 1,847: 1 is thousands, 8 is hundreds, 4 is tens, 7 is ones.' },
+    solution: 'In 1,847: 1 is thousands, 8 is hundreds, 4 is tens, 7 is ones.'
+  },
 
   // === Measurement (2nd-85 to 2nd-90) ===
-  { id: '2nd-85', gradeMin: 2, gradeMax: 2, domain: 'Measurement', difficulty: 1,
+  {
+    id: '2nd-85', gradeMin: 2, gradeMax: 2, domain: 'Measurement', difficulty: 1,
     questionText: 'The school assembly starts at 9:00 AM and lasts for 2 hours. What time does the assembly end?',
     choices: ['10:00 AM', '11:00 AM', '12:00 PM', '1:00 PM'], correctAnswer: '11:00 AM',
-    solution: 'Assembly end time: 9:00 AM + 2 hours = 11:00 AM.' },
+    solution: 'Assembly end time: 9:00 AM + 2 hours = 11:00 AM.'
+  },
 
-  { id: '2nd-86', gradeMin: 2, gradeMax: 2, domain: 'Measurement', difficulty: 2,
+  {
+    id: '2nd-86', gradeMin: 2, gradeMax: 2, domain: 'Measurement', difficulty: 2,
     questionText: 'Maya measured her pencil using paper clips. The pencil is 8 paper clips long. If each paper clip is 3 centimeters long, how long is the pencil?',
     choices: ['22 cm', '24 cm', '26 cm', '28 cm'], correctAnswer: '24 cm',
-    solution: 'Pencil length: 8 paper clips x 3 cm = 24 centimeters.' },
+    solution: 'Pencil length: 8 paper clips x 3 cm = 24 centimeters.'
+  },
 
-  { id: '2nd-87', gradeMin: 2, gradeMax: 2, domain: 'Measurement', difficulty: 2,
+  {
+    id: '2nd-87', gradeMin: 2, gradeMax: 2, domain: 'Measurement', difficulty: 2,
     questionText: 'The school garden measures 4 meters long and 3 meters wide. What is the perimeter of the garden?',
     choices: ['12 meters', '14 meters', '16 meters', '18 meters'], correctAnswer: '14 meters',
-    solution: 'Perimeter = 2 x (length + width) = 2 x (4 + 3) = 2 x 7 = 14 meters.' },
+    solution: 'Perimeter = 2 x (length + width) = 2 x (4 + 3) = 2 x 7 = 14 meters.'
+  },
 
-  { id: '2nd-88', gradeMin: 2, gradeMax: 2, domain: 'Measurement', difficulty: 2,
+  {
+    id: '2nd-88', gradeMin: 2, gradeMax: 2, domain: 'Measurement', difficulty: 2,
     questionText: 'Tommy has saved 3 quarters, 2 dimes, and 5 pennies. How much money does Tommy have?',
     choices: ['98 cents', '99 cents', '100 cents', '101 cents'], correctAnswer: '100 cents',
-    solution: 'Total money: (3 x 25¢) + (2 x 10¢) + (5 x 1¢) = 75¢ + 20¢ + 5¢ = 100 cents.' },
+    solution: 'Total money: (3 x 25¢) + (2 x 10¢) + (5 x 1¢) = 75¢ + 20¢ + 5¢ = 100 cents.'
+  },
 
-  { id: '2nd-89', gradeMin: 2, gradeMax: 2, domain: 'Measurement', difficulty: 3,
+  {
+    id: '2nd-89', gradeMin: 2, gradeMax: 2, domain: 'Measurement', difficulty: 3,
     questionText: 'The second grade field trip will last from 9:30 AM to 2:30 PM. How many hours long is the field trip?',
     choices: ['4 hours', '5 hours', '6 hours', '7 hours'], correctAnswer: '5 hours',
-    solution: 'Time duration: From 9:30 AM to 2:30 PM is 5 hours.' },
+    solution: 'Time duration: From 9:30 AM to 2:30 PM is 5 hours.'
+  },
 
-  { id: '2nd-90', gradeMin: 2, gradeMax: 2, domain: 'Measurement', difficulty: 3,
+  {
+    id: '2nd-90', gradeMin: 2, gradeMax: 2, domain: 'Measurement', difficulty: 3,
     questionText: 'Mrs. Chen is making a rectangular bulletin board that is 6 feet long and 4 feet wide. What is the area of the bulletin board?',
     choices: ['20 square feet', '22 square feet', '24 square feet', '26 square feet'], correctAnswer: '24 square feet',
-    solution: 'Area = length x width = 6 feet x 4 feet = 24 square feet.' },
+    solution: 'Area = length x width = 6 feet x 4 feet = 24 square feet.'
+  },
 
   // === Additional Grade 2 Questions (2nd-91 to 2nd-120) - Final Expansion ===
   // === Number Sense (2nd-91 to 2nd-98) ===
-  { id: '2nd-91', gradeMin: 2, gradeMax: 2, domain: 'Number Sense', difficulty: 1,
+  {
+    id: '2nd-91', gradeMin: 2, gradeMax: 2, domain: 'Number Sense', difficulty: 1,
     questionText: 'The school nurse counted the band-aids in her office. She has 3 boxes with 25 band-aids in each box, plus 14 loose band-aids. How many band-aids does she have in total?',
     choices: ['87 band-aids', '89 band-aids', '91 band-aids', '93 band-aids'], correctAnswer: '89 band-aids',
-    solution: 'Band-aids in boxes: 3 x 25 = 75. Total: 75 + 14 = 89 band-aids.' },
+    solution: 'Band-aids in boxes: 3 x 25 = 75. Total: 75 + 14 = 89 band-aids.'
+  },
 
-  { id: '2nd-92', gradeMin: 2, gradeMax: 2, domain: 'Number Sense', difficulty: 1,
+  {
+    id: '2nd-92', gradeMin: 2, gradeMax: 2, domain: 'Number Sense', difficulty: 1,
     questionText: 'During reading time, Jake counted 67 pages in his book. His friend Sam counted 45 pages in his book. How many pages did they count altogether?',
     choices: ['110 pages', '112 pages', '114 pages', '116 pages'], correctAnswer: '112 pages',
-    solution: 'Total pages: 67 + 45 = 112 pages.' },
+    solution: 'Total pages: 67 + 45 = 112 pages.'
+  },
 
-  { id: '2nd-93', gradeMin: 2, gradeMax: 2, domain: 'Number Sense', difficulty: 2,
+  {
+    id: '2nd-93', gradeMin: 2, gradeMax: 2, domain: 'Number Sense', difficulty: 2,
     questionText: 'The classroom has 156 crayons. If 78 crayons are broken and need to be thrown away, how many good crayons are left?',
     choices: ['76 crayons', '78 crayons', '80 crayons', '82 crayons'], correctAnswer: '78 crayons',
-    solution: 'Good crayons remaining: 156 - 78 = 78 crayons.' },
+    solution: 'Good crayons remaining: 156 - 78 = 78 crayons.'
+  },
 
-  { id: '2nd-94', gradeMin: 2, gradeMax: 2, domain: 'Number Sense', difficulty: 2,
+  {
+    id: '2nd-94', gradeMin: 2, gradeMax: 2, domain: 'Number Sense', difficulty: 2,
     questionText: 'Skip counting by fives: 5, 10, 15, 20, 25, 30, ___. What comes next?',
     choices: ['32', '33', '35', '37'], correctAnswer: '35',
-    solution: 'When skip counting by fives, add 5 to the previous number: 30 + 5 = 35.' },
+    solution: 'When skip counting by fives, add 5 to the previous number: 30 + 5 = 35.'
+  },
 
-  { id: '2nd-95', gradeMin: 2, gradeMax: 2, domain: 'Number Sense', difficulty: 2,
+  {
+    id: '2nd-95', gradeMin: 2, gradeMax: 2, domain: 'Number Sense', difficulty: 2,
     questionText: 'The second grade classes are collecting food cans for charity. Room A collected 89 cans, Room B collected 67 cans, and Room C collected 94 cans. How many cans did all three rooms collect?',
     choices: ['248 cans', '250 cans', '252 cans', '254 cans'], correctAnswer: '250 cans',
-    solution: 'Total cans: 89 + 67 + 94 = 250 cans.' },
+    solution: 'Total cans: 89 + 67 + 94 = 250 cans.'
+  },
 
-  { id: '2nd-96', gradeMin: 2, gradeMax: 2, domain: 'Number Sense', difficulty: 3,
+  {
+    id: '2nd-96', gradeMin: 2, gradeMax: 2, domain: 'Number Sense', difficulty: 3,
     questionText: 'Which number is even: 137, 248, 359, or 461?',
     choices: ['137', '248', '359', '461'], correctAnswer: '248',
-    solution: 'Even numbers end in 0, 2, 4, 6, or 8. Only 248 ends in 8, so it is even.' },
+    solution: 'Even numbers end in 0, 2, 4, 6, or 8. Only 248 ends in 8, so it is even.'
+  },
 
-  { id: '2nd-97', gradeMin: 2, gradeMax: 2, domain: 'Number Sense', difficulty: 3,
+  {
+    id: '2nd-97', gradeMin: 2, gradeMax: 2, domain: 'Number Sense', difficulty: 3,
     questionText: 'A toy store started the week with 324 puzzles. During the week, they sold 187 puzzles and received a shipment of 156 new puzzles. How many puzzles do they have now?',
     choices: ['291 puzzles', '293 puzzles', '295 puzzles', '297 puzzles'], correctAnswer: '293 puzzles',
-    solution: 'Puzzles remaining: 324 - 187 + 156 = 137 + 156 = 293 puzzles.' },
+    solution: 'Puzzles remaining: 324 - 187 + 156 = 137 + 156 = 293 puzzles.'
+  },
 
-  { id: '2nd-98', gradeMin: 2, gradeMax: 2, domain: 'Number Sense', difficulty: 3,
+  {
+    id: '2nd-98', gradeMin: 2, gradeMax: 2, domain: 'Number Sense', difficulty: 3,
     questionText: 'Compare these numbers: 276 and 267. Which statement is correct?',
     choices: ['276 < 267', '276 = 267', '276 > 267', 'Cannot compare'], correctAnswer: '276 > 267',
-    solution: 'Comparing hundreds (both 2), then tens: 7 > 6, so 276 > 267.' },
+    solution: 'Comparing hundreds (both 2), then tens: 7 > 6, so 276 > 267.'
+  },
 
   // === Operations & Algebraic Thinking (2nd-99 to 2nd-106) ===
-  { id: '2nd-99', gradeMin: 2, gradeMax: 2, domain: 'Operations & Algebraic Thinking', difficulty: 1,
+  {
+    id: '2nd-99', gradeMin: 2, gradeMax: 2, domain: 'Operations & Algebraic Thinking', difficulty: 1,
     questionText: 'The music teacher is arranging students for the concert. She puts them in 7 rows with 6 students in each row. How many students are performing?',
     choices: ['40 students', '41 students', '42 students', '43 students'], correctAnswer: '42 students',
-    solution: 'Total students: 7 rows x 6 students = 42 students.' },
+    solution: 'Total students: 7 rows x 6 students = 42 students.'
+  },
 
-  { id: '2nd-100', gradeMin: 2, gradeMax: 2, domain: 'Operations & Algebraic Thinking', difficulty: 1,
+  {
+    id: '2nd-100', gradeMin: 2, gradeMax: 2, domain: 'Operations & Algebraic Thinking', difficulty: 1,
     questionText: 'The gym teacher has 35 jump ropes to share equally among 5 classes. How many jump ropes will each class get?',
     choices: ['6 jump ropes', '7 jump ropes', '8 jump ropes', '9 jump ropes'], correctAnswer: '7 jump ropes',
-    solution: 'Jump ropes per class: 35 ÷ 5 = 7 jump ropes.' },
+    solution: 'Jump ropes per class: 35 ÷ 5 = 7 jump ropes.'
+  },
 
-  { id: '2nd-101', gradeMin: 2, gradeMax: 2, domain: 'Operations & Algebraic Thinking', difficulty: 2,
+  {
+    id: '2nd-101', gradeMin: 2, gradeMax: 2, domain: 'Operations & Algebraic Thinking', difficulty: 2,
     questionText: 'What number makes this equation true: 8 x ___ = 48?',
     choices: ['5', '6', '7', '8'], correctAnswer: '6',
-    solution: '8 x 6 = 48, so the missing number is 6.' },
+    solution: '8 x 6 = 48, so the missing number is 6.'
+  },
 
-  { id: '2nd-102', gradeMin: 2, gradeMax: 2, domain: 'Operations & Algebraic Thinking', difficulty: 2,
+  {
+    id: '2nd-102', gradeMin: 2, gradeMax: 2, domain: 'Operations & Algebraic Thinking', difficulty: 2,
     questionText: 'The school store has 54 pencils to put into packages. If each package holds 9 pencils, how many complete packages can they make?',
     choices: ['5 packages', '6 packages', '7 packages', '8 packages'], correctAnswer: '6 packages',
-    solution: 'Number of packages: 54 ÷ 9 = 6 complete packages.' },
+    solution: 'Number of packages: 54 ÷ 9 = 6 complete packages.'
+  },
 
-  { id: '2nd-103', gradeMin: 2, gradeMax: 2, domain: 'Operations & Algebraic Thinking', difficulty: 2,
+  {
+    id: '2nd-103', gradeMin: 2, gradeMax: 2, domain: 'Operations & Algebraic Thinking', difficulty: 2,
     questionText: 'Find the missing number: ___ + 29 = 65',
     choices: ['34', '35', '36', '37'], correctAnswer: '36',
-    solution: 'To find the missing number: 65 - 29 = 36. Check: 36 + 29 = 65' },
+    solution: 'To find the missing number: 65 - 29 = 36. Check: 36 + 29 = 65'
+  },
 
-  { id: '2nd-104', gradeMin: 2, gradeMax: 2, domain: 'Operations & Algebraic Thinking', difficulty: 3,
+  {
+    id: '2nd-104', gradeMin: 2, gradeMax: 2, domain: 'Operations & Algebraic Thinking', difficulty: 3,
     questionText: 'The school carnival game has prizes arranged in rows. There are 8 rows with 11 prizes in each row. How many prizes are there in total?',
     choices: ['86 prizes', '87 prizes', '88 prizes', '89 prizes'], correctAnswer: '88 prizes',
-    solution: 'Total prizes: 8 rows x 11 prizes = 88 prizes.' },
+    solution: 'Total prizes: 8 rows x 11 prizes = 88 prizes.'
+  },
 
-  { id: '2nd-105', gradeMin: 2, gradeMax: 2, domain: 'Operations & Algebraic Thinking', difficulty: 3,
+  {
+    id: '2nd-105', gradeMin: 2, gradeMax: 2, domain: 'Operations & Algebraic Thinking', difficulty: 3,
     questionText: 'What comes next in this pattern: 3, 6, 9, 12, 15, ___?',
     choices: ['16', '17', '18', '19'], correctAnswer: '18',
-    solution: 'The pattern increases by 3 each time: 15 + 3 = 18.' },
+    solution: 'The pattern increases by 3 each time: 15 + 3 = 18.'
+  },
 
-  { id: '2nd-106', gradeMin: 2, gradeMax: 2, domain: 'Operations & Algebraic Thinking', difficulty: 3,
+  {
+    id: '2nd-106', gradeMin: 2, gradeMax: 2, domain: 'Operations & Algebraic Thinking', difficulty: 3,
     questionText: 'If 7 x 8 = 56, then what does 8 x 7 equal?',
     choices: ['49', '54', '56', '63'], correctAnswer: '56',
-    solution: 'Multiplication is commutative, so 8 x 7 = 7 x 8 = 56.' },
+    solution: 'Multiplication is commutative, so 8 x 7 = 7 x 8 = 56.'
+  },
 
   // === Place Value (2nd-107 to 2nd-113) ===
-  { id: '2nd-107', gradeMin: 2, gradeMax: 2, domain: 'Place Value', difficulty: 1,
+  {
+    id: '2nd-107', gradeMin: 2, gradeMax: 2, domain: 'Place Value', difficulty: 1,
     questionText: 'In the number 683, what is the value of the digit 8?',
     choices: ['8', '80', '800', '8000'], correctAnswer: '80',
-    solution: 'The digit 8 is in the tens place, so its value is 80.' },
+    solution: 'The digit 8 is in the tens place, so its value is 80.'
+  },
 
-  { id: '2nd-108', gradeMin: 2, gradeMax: 2, domain: 'Place Value', difficulty: 1,
+  {
+    id: '2nd-108', gradeMin: 2, gradeMax: 2, domain: 'Place Value', difficulty: 1,
     questionText: 'Which number has a 9 in the hundreds place?',
     choices: ['291', '129', '921', '912'], correctAnswer: '921',
-    solution: 'In 921, the digit 9 is in the hundreds place (leftmost position).' },
+    solution: 'In 921, the digit 9 is in the hundreds place (leftmost position).'
+  },
 
-  { id: '2nd-109', gradeMin: 2, gradeMax: 2, domain: 'Place Value', difficulty: 2,
+  {
+    id: '2nd-109', gradeMin: 2, gradeMax: 2, domain: 'Place Value', difficulty: 2,
     questionText: 'Round 347 to the nearest ten.',
     choices: ['340', '345', '350', '400'], correctAnswer: '350',
-    solution: 'The ones digit is 7, which is 5 or greater, so round up to 350.' },
+    solution: 'The ones digit is 7, which is 5 or greater, so round up to 350.'
+  },
 
-  { id: '2nd-110', gradeMin: 2, gradeMax: 2, domain: 'Place Value', difficulty: 2,
+  {
+    id: '2nd-110', gradeMin: 2, gradeMax: 2, domain: 'Place Value', difficulty: 2,
     questionText: 'What number is 100 more than 258?',
     choices: ['358', '359', '368', '368'], correctAnswer: '358',
-    solution: 'Adding 100 to 258: 258 + 100 = 358.' },
+    solution: 'Adding 100 to 258: 258 + 100 = 358.'
+  },
 
-  { id: '2nd-111', gradeMin: 2, gradeMax: 2, domain: 'Place Value', difficulty: 2,
+  {
+    id: '2nd-111', gradeMin: 2, gradeMax: 2, domain: 'Place Value', difficulty: 2,
     questionText: 'Which number is between 456 and 466?',
     choices: ['455', '461', '467', '470'], correctAnswer: '461',
-    solution: '461 is the only number that falls between 456 and 466.' },
+    solution: '461 is the only number that falls between 456 and 466.'
+  },
 
-  { id: '2nd-112', gradeMin: 2, gradeMax: 2, domain: 'Place Value', difficulty: 3,
+  {
+    id: '2nd-112', gradeMin: 2, gradeMax: 2, domain: 'Place Value', difficulty: 3,
     questionText: 'What is 734 written in expanded form?',
     choices: ['700 + 30 + 4', '70 + 34', '7 + 3 + 4', '734'], correctAnswer: '700 + 30 + 4',
-    solution: '734 = 700 (hundreds) + 30 (tens) + 4 (ones).' },
+    solution: '734 = 700 (hundreds) + 30 (tens) + 4 (ones).'
+  },
 
-  { id: '2nd-113', gradeMin: 2, gradeMax: 2, domain: 'Place Value', difficulty: 3,
+  {
+    id: '2nd-113', gradeMin: 2, gradeMax: 2, domain: 'Place Value', difficulty: 3,
     questionText: 'Round 862 to the nearest hundred.',
     choices: ['800', '860', '870', '900'], correctAnswer: '900',
-    solution: 'The tens digit is 6, which is 5 or greater, so round up to 900.' },
+    solution: 'The tens digit is 6, which is 5 or greater, so round up to 900.'
+  },
 
   // === Measurement (2nd-114 to 2nd-120) ===
-  { id: '2nd-114', gradeMin: 2, gradeMax: 2, domain: 'Measurement', difficulty: 1,
+  {
+    id: '2nd-114', gradeMin: 2, gradeMax: 2, domain: 'Measurement', difficulty: 1,
     questionText: 'The school movie starts at 1:30 PM and lasts for 1 hour and 30 minutes. What time does the movie end?',
     choices: ['2:30 PM', '3:00 PM', '3:30 PM', '4:00 PM'], correctAnswer: '3:00 PM',
-    solution: 'Movie end time: 1:30 PM + 1 hour 30 minutes = 3:00 PM.' },
+    solution: 'Movie end time: 1:30 PM + 1 hour 30 minutes = 3:00 PM.'
+  },
 
-  { id: '2nd-115', gradeMin: 2, gradeMax: 2, domain: 'Measurement', difficulty: 2,
+  {
+    id: '2nd-115', gradeMin: 2, gradeMax: 2, domain: 'Measurement', difficulty: 2,
     questionText: 'Lily measured her desk using paper clips. The desk is 12 paper clips long. If each paper clip is 4 centimeters long, how long is her desk?',
     choices: ['46 cm', '48 cm', '50 cm', '52 cm'], correctAnswer: '48 cm',
-    solution: 'Desk length: 12 paper clips x 4 cm = 48 centimeters.' },
+    solution: 'Desk length: 12 paper clips x 4 cm = 48 centimeters.'
+  },
 
-  { id: '2nd-116', gradeMin: 2, gradeMax: 2, domain: 'Measurement', difficulty: 2,
+  {
+    id: '2nd-116', gradeMin: 2, gradeMax: 2, domain: 'Measurement', difficulty: 2,
     questionText: 'The playground measures 8 meters long and 6 meters wide. What is the perimeter of the playground?',
     choices: ['26 meters', '28 meters', '30 meters', '32 meters'], correctAnswer: '28 meters',
-    solution: 'Perimeter = 2 x (length + width) = 2 x (8 + 6) = 2 x 14 = 28 meters.' },
+    solution: 'Perimeter = 2 x (length + width) = 2 x (8 + 6) = 2 x 14 = 28 meters.'
+  },
 
-  { id: '2nd-117', gradeMin: 2, gradeMax: 2, domain: 'Measurement', difficulty: 2,
+  {
+    id: '2nd-117', gradeMin: 2, gradeMax: 2, domain: 'Measurement', difficulty: 2,
     questionText: 'Sarah has 4 quarters, 3 dimes, and 7 pennies in her piggy bank. How much money does Sarah have?',
     choices: ['135 cents', '137 cents', '139 cents', '141 cents'], correctAnswer: '137 cents',
-    solution: 'Total money: (4 x 25¢) + (3 x 10¢) + (7 x 1¢) = 100¢ + 30¢ + 7¢ = 137 cents.' },
+    solution: 'Total money: (4 x 25¢) + (3 x 10¢) + (7 x 1¢) = 100¢ + 30¢ + 7¢ = 137 cents.'
+  },
 
-  { id: '2nd-118', gradeMin: 2, gradeMax: 2, domain: 'Measurement', difficulty: 3,
+  {
+    id: '2nd-118', gradeMin: 2, gradeMax: 2, domain: 'Measurement', difficulty: 3,
     questionText: 'The school picnic starts at 11:15 AM and ends at 3:45 PM. How long does the picnic last?',
     choices: ['4 hours 15 minutes', '4 hours 30 minutes', '4 hours 45 minutes', '5 hours'], correctAnswer: '4 hours 30 minutes',
-    solution: 'From 11:15 AM to 3:45 PM is 4 hours and 30 minutes.' },
+    solution: 'From 11:15 AM to 3:45 PM is 4 hours and 30 minutes.'
+  },
 
-  { id: '2nd-119', gradeMin: 2, gradeMax: 2, domain: 'Measurement', difficulty: 3,
+  {
+    id: '2nd-119', gradeMin: 2, gradeMax: 2, domain: 'Measurement', difficulty: 3,
     questionText: 'Mr. Thompson is making a rectangular poster that is 9 inches long and 7 inches wide. What is the area of the poster?',
     choices: ['61 square inches', '63 square inches', '65 square inches', '67 square inches'], correctAnswer: '63 square inches',
-    solution: 'Area = length x width = 9 inches x 7 inches = 63 square inches.' },
+    solution: 'Area = length x width = 9 inches x 7 inches = 63 square inches.'
+  },
 
-  { id: '2nd-120', gradeMin: 2, gradeMax: 2, domain: 'Measurement', difficulty: 3,
+  {
+    id: '2nd-120', gradeMin: 2, gradeMax: 2, domain: 'Measurement', difficulty: 3,
     questionText: 'The art teacher needs ribbon for a project. She has 3 pieces of ribbon: one that is 25 centimeters long, one that is 38 centimeters long, and one that is 47 centimeters long. What is the total length of all the ribbon?',
     choices: ['108 cm', '110 cm', '112 cm', '114 cm'], correctAnswer: '110 cm',
-    solution: 'Total ribbon length: 25 + 38 + 47 = 110 centimeters.' },
+    solution: 'Total ribbon length: 25 + 38 + 47 = 110 centimeters.'
+  },
 
-   { id: '301', gradeMin: 3, gradeMax: 3, domain: 'Number Sense', difficulty: 1,
+  {
+    id: '301', gradeMin: 3, gradeMax: 3, domain: 'Number Sense', difficulty: 1,
     questionText: 'The school library had 234 fiction books and received a donation of 157 more books. How many fiction books does the library have now?',
-    choices: ['381','391','401','411'], 
+    choices: ['381', '391', '401', '411'],
     correctAnswer: '391',
-    solution: 'Total books = 234 + 157 = 391 books' },
-  { id: '302', gradeMin: 3, gradeMax: 3, domain: 'Number Sense', difficulty: 1,
+    solution: 'Total books = 234 + 157 = 391 books'
+  },
+  {
+    id: '302', gradeMin: 3, gradeMax: 3, domain: 'Number Sense', difficulty: 1,
     questionText: 'A bakery started the day with 500 cookies. By lunchtime, they sold 276 cookies. How many cookies were left?',
-    choices: ['214','224','234','244'], 
+    choices: ['214', '224', '234', '244'],
     correctAnswer: '224',
-    solution: 'Remaining cookies = 500 - 276 = 224 cookies' },
-  { id: '303', gradeMin: 3, gradeMax: 3, domain: 'Number Sense', difficulty: 1,
-    questionText: 'The local movie theater sold 482 tickets on Friday and 428 tickets on Saturday. Which day had more ticket sales?', choices: ['Friday','Saturday'], correctAnswer: 'Friday',
-    solution: 'Friday had more sales because 482 > 428' },
-  { id: '304', gradeMin: 3, gradeMax: 3, domain: 'Number Sense', difficulty: 2,
+    solution: 'Remaining cookies = 500 - 276 = 224 cookies'
+  },
+  {
+    id: '303', gradeMin: 3, gradeMax: 3, domain: 'Number Sense', difficulty: 1,
+    questionText: 'The local movie theater sold 482 tickets on Friday and 428 tickets on Saturday. Which day had more ticket sales?', choices: ['Friday', 'Saturday'], correctAnswer: 'Friday',
+    solution: 'Friday had more sales because 482 > 428'
+  },
+  {
+    id: '304', gradeMin: 3, gradeMax: 3, domain: 'Number Sense', difficulty: 2,
     questionText: 'The elementary school raised $763 from their bake sale and $129 from their car wash. How much money did they raise in total?',
-    choices: ['872','882','892','902'], 
+    choices: ['872', '882', '892', '902'],
     correctAnswer: '892',
-    solution: 'Total money raised = $763 + $129 = $892' },
-  { id: '305', gradeMin: 3, gradeMax: 3, domain: 'Number Sense', difficulty: 2,
-    questionText: 'A clothing store had 602 shirts in stock. During the weekend sale, they sold 458 shirts. How many shirts are left in the store?', choices: ['134','144','154','164'], correctAnswer: '144',
-    solution: 'Remaining shirts = 602 - 458 = 144' },
-  { id: '306', gradeMin: 3, gradeMax: 3, domain: 'Number Sense', difficulty: 2,
-    questionText: 'Maya is counting her savings. She wants to reach 1,000 dollars. If she currently has 999 dollars, how much more money does she need?', choices: ['$1','$10','$99','$100'], correctAnswer: '$1',
-    solution: 'Money needed = 1000 - 999 = $1' },
-  { id: '307', gradeMin: 3, gradeMax: 3, domain: 'Number Sense', difficulty: 3,
-    questionText: 'The zoo counted 768 visitors on Saturday. For reporting purposes, they need to round this number to the nearest hundred. What number should they report?', choices: ['700','750','760','800'], correctAnswer: '800',
-    solution: 'Tens digit is 6 (>=5), round up -> 800' },
-  { id: '308', gradeMin: 3, gradeMax: 3, domain: 'Number Sense', difficulty: 3,
-    questionText: 'A factory produced 872 toys this month. The manager wants to round this to the nearest ten for the monthly report. What number should be reported?', choices: ['870','872','880','900'], correctAnswer: '870',
-    solution: 'Ones digit is 2 (<5), round down -> 870' },
+    solution: 'Total money raised = $763 + $129 = $892'
+  },
+  {
+    id: '305', gradeMin: 3, gradeMax: 3, domain: 'Number Sense', difficulty: 2,
+    questionText: 'A clothing store had 602 shirts in stock. During the weekend sale, they sold 458 shirts. How many shirts are left in the store?', choices: ['134', '144', '154', '164'], correctAnswer: '144',
+    solution: 'Remaining shirts = 602 - 458 = 144'
+  },
+  {
+    id: '306', gradeMin: 3, gradeMax: 3, domain: 'Number Sense', difficulty: 2,
+    questionText: 'Maya is counting her savings. She wants to reach 1,000 dollars. If she currently has 999 dollars, how much more money does she need?', choices: ['$1', '$10', '$99', '$100'], correctAnswer: '$1',
+    solution: 'Money needed = 1000 - 999 = $1'
+  },
+  {
+    id: '307', gradeMin: 3, gradeMax: 3, domain: 'Number Sense', difficulty: 3,
+    questionText: 'The zoo counted 768 visitors on Saturday. For reporting purposes, they need to round this number to the nearest hundred. What number should they report?', choices: ['700', '750', '760', '800'], correctAnswer: '800',
+    solution: 'Tens digit is 6 (>=5), round up -> 800'
+  },
+  {
+    id: '308', gradeMin: 3, gradeMax: 3, domain: 'Number Sense', difficulty: 3,
+    questionText: 'A factory produced 872 toys this month. The manager wants to round this to the nearest ten for the monthly report. What number should be reported?', choices: ['870', '872', '880', '900'], correctAnswer: '870',
+    solution: 'Ones digit is 2 (<5), round down -> 870'
+  },
 
   // === Operations & Algebraic Thinking (309–317)
-  { id: '309', gradeMin: 3, gradeMax: 3, domain: 'Operations & Algebraic Thinking', difficulty: 1,
+  {
+    id: '309', gradeMin: 3, gradeMax: 3, domain: 'Operations & Algebraic Thinking', difficulty: 1,
     questionText: 'Sarah is arranging chairs for the school play. She needs to set up 6 rows with 7 chairs in each row. How many chairs does she need in total?',
-    choices: ['40','41','42','43'], 
+    choices: ['40', '41', '42', '43'],
     correctAnswer: '42',
-    solution: 'Total chairs = 6 rows x 7 chairs = 42 chairs' },
-  { id: '310', gradeMin: 3, gradeMax: 3, domain: 'Operations & Algebraic Thinking', difficulty: 1,
+    solution: 'Total chairs = 6 rows x 7 chairs = 42 chairs'
+  },
+  {
+    id: '310', gradeMin: 3, gradeMax: 3, domain: 'Operations & Algebraic Thinking', difficulty: 1,
     questionText: 'Mrs. Johnson has 56 stickers and wants to give an equal number to each of her 8 students. How many stickers will each student receive?',
-    choices: ['6','7','8','9'], 
+    choices: ['6', '7', '8', '9'],
     correctAnswer: '7',
-    solution: 'Stickers per student = 56 ÷ 8 = 7 stickers' },
-  { id: '311', gradeMin: 3, gradeMax: 3, domain: 'Operations & Algebraic Thinking', difficulty: 1,
-    questionText: 'Carlos is making friendship bracelets. Each bracelet needs 9 beads, and he wants to make 5 bracelets. How many beads does Carlos need in total?', choices: ['40','45','50','55'], correctAnswer: '45',
-    solution: 'Total beads = 9 beads x 5 bracelets = 45 beads' },
-  { id: '312', gradeMin: 3, gradeMax: 3, domain: 'Operations & Algebraic Thinking', difficulty: 2,
-    questionText: 'The art teacher bought 64 crayons and wants to divide them equally among 4 tables. How many crayons will each table get?', choices: ['14','15','16','17'], correctAnswer: '16',
-    solution: 'Crayons per table = 64 ÷ 4 = 16' },
-  { id: '313', gradeMin: 3, gradeMax: 3, domain: 'Operations & Algebraic Thinking', difficulty: 2,
-    questionText: 'Emma is organizing her stamp collection into books. Each book holds exactly 12 stamps. If she has 60 stamps total, how many books does she need?', choices: ['4','5','6','7'], correctAnswer: '5',
-    solution: 'Number of books = 60 ÷ 12 = 5 books' },
-  { id: '314', gradeMin: 3, gradeMax: 3, domain: 'Operations & Algebraic Thinking', difficulty: 2,
-    questionText: 'The school cafeteria serves pizza in equal slices. If they cut 9 pizzas and get 72 slices total, how many slices come from each pizza?', choices: ['6','7','8','9'], correctAnswer: '8',
-    solution: 'Slices per pizza = 72 ÷ 9 = 8 slices' },
-  { id: '315', gradeMin: 3, gradeMax: 3, domain: 'Operations & Algebraic Thinking', difficulty: 3,
-    questionText: 'The local bakery makes cupcakes in batches. Each batch contains 11 cupcakes, and they made 12 batches today. How many cupcakes did they make in total?', choices: ['120','121','132','144'], correctAnswer: '132',
-    solution: 'Total cupcakes = 11 cupcakes x 12 batches = 132 cupcakes' },
-  { id: '316', gradeMin: 3, gradeMax: 3, domain: 'Operations & Algebraic Thinking', difficulty: 3,
-    questionText: 'A toy company produced 144 action figures and wants to package them equally into 12 boxes. How many action figures will go in each box?', choices: ['10','11','12','13'], correctAnswer: '12',
-    solution: 'Action figures per box = 144 ÷ 12 = 12' },
-  { id: '317', gradeMin: 3, gradeMax: 3, domain: 'Operations & Algebraic Thinking', difficulty: 3,
-    questionText: 'The soccer team is selling candy bars for a fundraiser. They have 8 players, and each player sold 9 candy bars. How many candy bars did the team sell altogether?', choices: ['70','71','72','73'], correctAnswer: '72',
-    solution: 'Total candy bars = 8 players x 9 candy bars = 72 candy bars' },
+    solution: 'Stickers per student = 56 ÷ 8 = 7 stickers'
+  },
+  {
+    id: '311', gradeMin: 3, gradeMax: 3, domain: 'Operations & Algebraic Thinking', difficulty: 1,
+    questionText: 'Carlos is making friendship bracelets. Each bracelet needs 9 beads, and he wants to make 5 bracelets. How many beads does Carlos need in total?', choices: ['40', '45', '50', '55'], correctAnswer: '45',
+    solution: 'Total beads = 9 beads x 5 bracelets = 45 beads'
+  },
+  {
+    id: '312', gradeMin: 3, gradeMax: 3, domain: 'Operations & Algebraic Thinking', difficulty: 2,
+    questionText: 'The art teacher bought 64 crayons and wants to divide them equally among 4 tables. How many crayons will each table get?', choices: ['14', '15', '16', '17'], correctAnswer: '16',
+    solution: 'Crayons per table = 64 ÷ 4 = 16'
+  },
+  {
+    id: '313', gradeMin: 3, gradeMax: 3, domain: 'Operations & Algebraic Thinking', difficulty: 2,
+    questionText: 'Emma is organizing her stamp collection into books. Each book holds exactly 12 stamps. If she has 60 stamps total, how many books does she need?', choices: ['4', '5', '6', '7'], correctAnswer: '5',
+    solution: 'Number of books = 60 ÷ 12 = 5 books'
+  },
+  {
+    id: '314', gradeMin: 3, gradeMax: 3, domain: 'Operations & Algebraic Thinking', difficulty: 2,
+    questionText: 'The school cafeteria serves pizza in equal slices. If they cut 9 pizzas and get 72 slices total, how many slices come from each pizza?', choices: ['6', '7', '8', '9'], correctAnswer: '8',
+    solution: 'Slices per pizza = 72 ÷ 9 = 8 slices'
+  },
+  {
+    id: '315', gradeMin: 3, gradeMax: 3, domain: 'Operations & Algebraic Thinking', difficulty: 3,
+    questionText: 'The local bakery makes cupcakes in batches. Each batch contains 11 cupcakes, and they made 12 batches today. How many cupcakes did they make in total?', choices: ['120', '121', '132', '144'], correctAnswer: '132',
+    solution: 'Total cupcakes = 11 cupcakes x 12 batches = 132 cupcakes'
+  },
+  {
+    id: '316', gradeMin: 3, gradeMax: 3, domain: 'Operations & Algebraic Thinking', difficulty: 3,
+    questionText: 'A toy company produced 144 action figures and wants to package them equally into 12 boxes. How many action figures will go in each box?', choices: ['10', '11', '12', '13'], correctAnswer: '12',
+    solution: 'Action figures per box = 144 ÷ 12 = 12'
+  },
+  {
+    id: '317', gradeMin: 3, gradeMax: 3, domain: 'Operations & Algebraic Thinking', difficulty: 3,
+    questionText: 'The soccer team is selling candy bars for a fundraiser. They have 8 players, and each player sold 9 candy bars. How many candy bars did the team sell altogether?', choices: ['70', '71', '72', '73'], correctAnswer: '72',
+    solution: 'Total candy bars = 8 players x 9 candy bars = 72 candy bars'
+  },
 
   // === Place Value (318–325)
-  { id: '318', gradeMin: 3, gradeMax: 3, domain: 'Place Value', difficulty: 1,
-    questionText: 'In the number 764, which represents the population of a small town, what is the value of the digit 6?', choices: ['6','60','600','6,000'], correctAnswer: '60',
-    solution: '6 is in the tens place, so its value is 60' },
-  { id: '319', gradeMin: 3, gradeMax: 3, domain: 'Place Value', difficulty: 1,
-    questionText: 'The attendance at a school assembly was 8,524 people. What is the value of the digit 8 in this number?', choices: ['8','80','800','8,000'], correctAnswer: '8,000',
-    solution: '8 is in the thousands place, so its value is 8,000' },
-  { id: '320', gradeMin: 3, gradeMax: 3, domain: 'Place Value', difficulty: 1,
-    questionText: 'The cost of a new bicycle is $592. How should this number be written in expanded form?', choices: ['500+90+2','50+92','5+9+2','590+2'], correctAnswer: '500+90+2',
-    solution: '$592 = $500 + $90 + $2' },
-  { id: '321', gradeMin: 3, gradeMax: 3, domain: 'Place Value', difficulty: 2,
-    questionText: 'A furniture store sold items worth $4,678 last week. For their monthly report, they need to round this amount to the nearest hundred dollars. What amount should they report?', choices: ['$4,600','$4,700','$4,800','$5,000'], correctAnswer: '$4,700',
-    solution: 'Tens digit is 7 (>=5), round up to $4,700' },
-  { id: '322', gradeMin: 3, gradeMax: 3, domain: 'Place Value', difficulty: 2,
-    questionText: 'The city population is 8,145 people. For planning purposes, they want to round this to the nearest thousand. What number should they use?', choices: ['8,000','8,100','8,200','9,000'], correctAnswer: '8,000',
-    solution: 'Hundreds digit is 1 (<5), round down to 8,000' },
-  { id: '323', gradeMin: 3, gradeMax: 3, domain: 'Place Value', difficulty: 2,
-    questionText: 'Which number has a 5 in the tens place?', choices: ['458','542','625','759'], correctAnswer: '542',
-    solution: '542 has 5 in the tens place' },
-  { id: '324', gradeMin: 3, gradeMax: 3, domain: 'Place Value', difficulty: 3,
-    questionText: 'What is the smallest 4-digit number?', choices: ['1000','1001','1010','1100'], correctAnswer: '1000',
-    solution: '1000 is the smallest 4-digit number' },
-  { id: '325', gradeMin: 3, gradeMax: 3, domain: 'Place Value', difficulty: 3,
-    questionText: 'What is the largest 3-digit number?', choices: ['999','1000','1001','990'], correctAnswer: '999',
-    solution: '999 is the largest 3-digit number' },
+  {
+    id: '318', gradeMin: 3, gradeMax: 3, domain: 'Place Value', difficulty: 1,
+    questionText: 'In the number 764, which represents the population of a small town, what is the value of the digit 6?', choices: ['6', '60', '600', '6,000'], correctAnswer: '60',
+    solution: '6 is in the tens place, so its value is 60'
+  },
+  {
+    id: '319', gradeMin: 3, gradeMax: 3, domain: 'Place Value', difficulty: 1,
+    questionText: 'The attendance at a school assembly was 8,524 people. What is the value of the digit 8 in this number?', choices: ['8', '80', '800', '8,000'], correctAnswer: '8,000',
+    solution: '8 is in the thousands place, so its value is 8,000'
+  },
+  {
+    id: '320', gradeMin: 3, gradeMax: 3, domain: 'Place Value', difficulty: 1,
+    questionText: 'The cost of a new bicycle is $592. How should this number be written in expanded form?', choices: ['500+90+2', '50+92', '5+9+2', '590+2'], correctAnswer: '500+90+2',
+    solution: '$592 = $500 + $90 + $2'
+  },
+  {
+    id: '321', gradeMin: 3, gradeMax: 3, domain: 'Place Value', difficulty: 2,
+    questionText: 'A furniture store sold items worth $4,678 last week. For their monthly report, they need to round this amount to the nearest hundred dollars. What amount should they report?', choices: ['$4,600', '$4,700', '$4,800', '$5,000'], correctAnswer: '$4,700',
+    solution: 'Tens digit is 7 (>=5), round up to $4,700'
+  },
+  {
+    id: '322', gradeMin: 3, gradeMax: 3, domain: 'Place Value', difficulty: 2,
+    questionText: 'The city population is 8,145 people. For planning purposes, they want to round this to the nearest thousand. What number should they use?', choices: ['8,000', '8,100', '8,200', '9,000'], correctAnswer: '8,000',
+    solution: 'Hundreds digit is 1 (<5), round down to 8,000'
+  },
+  {
+    id: '323', gradeMin: 3, gradeMax: 3, domain: 'Place Value', difficulty: 2,
+    questionText: 'Which number has a 5 in the tens place?', choices: ['458', '542', '625', '759'], correctAnswer: '542',
+    solution: '542 has 5 in the tens place'
+  },
+  {
+    id: '324', gradeMin: 3, gradeMax: 3, domain: 'Place Value', difficulty: 3,
+    questionText: 'What is the smallest 4-digit number?', choices: ['1000', '1001', '1010', '1100'], correctAnswer: '1000',
+    solution: '1000 is the smallest 4-digit number'
+  },
+  {
+    id: '325', gradeMin: 3, gradeMax: 3, domain: 'Place Value', difficulty: 3,
+    questionText: 'What is the largest 3-digit number?', choices: ['999', '1000', '1001', '990'], correctAnswer: '999',
+    solution: '999 is the largest 3-digit number'
+  },
 
   // === Fractions (326–334)
-  { id: '326', gradeMin: 3, gradeMax: 3, domain: 'Fractions', difficulty: 1,
-    questionText: 'Sophia cut a pizza into 6 equal slices and ate 3 of them. What fraction of the pizza did she eat, and what other fraction is equal to this amount?', choices: ['2/3','3/6','2/5','3/4'], correctAnswer: '3/6',
-    solution: 'Sophia ate 3/6 of the pizza, which equals 1/2' },
-  { id: '327', gradeMin: 3, gradeMax: 3, domain: 'Fractions', difficulty: 1,
-    questionText: 'Jake ate 1/4 of a chocolate bar in the morning and another 1/4 in the afternoon. What fraction of the chocolate bar has Jake eaten in total?', choices: ['1/2','1/3','2/5','2/3'], correctAnswer: '1/2',
-    solution: 'Total eaten = 1/4 + 1/4 = 2/4 = 1/2' },
-  { id: '328', gradeMin: 3, gradeMax: 3, domain: 'Fractions', difficulty: 1,
-    questionText: 'Maya had 3/4 of a bag of cookies. She gave away 1/4 of the bag to her friend. What fraction of the bag does Maya have left?', choices: ['1/4','2/4','2/3','3/3'], correctAnswer: '2/4',
-    solution: 'Cookies left = 3/4 - 1/4 = 2/4 = 1/2' },
-  { id: '329', gradeMin: 3, gradeMax: 3, domain: 'Fractions', difficulty: 2,
-    questionText: 'Which is greater: 2/3 or 3/5?', choices: ['2/3','3/5'], correctAnswer: '2/3',
-    solution: '2/3 = 0.67; 3/5 = 0.6' },
-  { id: '330', gradeMin: 3, gradeMax: 3, domain: 'Fractions', difficulty: 2,
-    questionText: 'What is 1/3 + 1/6?', choices: ['1/6','1/2','2/3','5/6'], correctAnswer: '1/2',
-    solution: '1/3 = 2/6 -> 2/6 + 1/6 = 3/6 = 1/2' },
-  { id: '331', gradeMin: 3, gradeMax: 3, domain: 'Fractions', difficulty: 2,
-    questionText: 'What is 2/3 - 1/6?', choices: ['1/2','1/3','2/6','3/6'], correctAnswer: '1/2',
-    solution: '2/3 = 4/6 -> 4/6 - 1/6 = 3/6 = 1/2' },
-  { id: '332', gradeMin: 3, gradeMax: 3, domain: 'Fractions', difficulty: 2,
-    questionText: 'Simplify 6/8.', choices: ['3/4','2/3','4/6','1/2'], correctAnswer: '3/4',
-    solution: 'Divide numerator and denominator by 2 -> 3/4' },
-{
-  id: '333',
-  gradeMin: 3,
-  gradeMax: 3,
-  domain: 'Fractions',
-  difficulty: 3,
-  questionText: 'What is 2/5 + 3/10?',
-  choices: ['1/2', '7/10', '4/5', '5/5'],
-  correctAnswer: '7/10',
-  solution: '2/5 = 4/10, so 4/10 + 3/10 = 7/10.'
-},
-{
-  id: '334',
-  gradeMin: 3,
-  gradeMax: 3,
-  domain: 'Fractions',
-  difficulty: 3,
-  questionText: 'What is 5/6 - 1/3?',
-  choices: ['1/6', '1/2', '3/6', '4/6'],
-  correctAnswer: '1/2',
-  solution: '1/3 = 2/6 → 5/6 - 2/6 = 3/6 = 1/2.'
-},
+  {
+    id: '326', gradeMin: 3, gradeMax: 3, domain: 'Fractions', difficulty: 1,
+    questionText: 'Sophia cut a pizza into 6 equal slices and ate 3 of them. What fraction of the pizza did she eat, and what other fraction is equal to this amount?', choices: ['2/3', '3/6', '2/5', '3/4'], correctAnswer: '3/6',
+    solution: 'Sophia ate 3/6 of the pizza, which equals 1/2'
+  },
+  {
+    id: '327', gradeMin: 3, gradeMax: 3, domain: 'Fractions', difficulty: 1,
+    questionText: 'Jake ate 1/4 of a chocolate bar in the morning and another 1/4 in the afternoon. What fraction of the chocolate bar has Jake eaten in total?', choices: ['1/2', '1/3', '2/5', '2/3'], correctAnswer: '1/2',
+    solution: 'Total eaten = 1/4 + 1/4 = 2/4 = 1/2'
+  },
+  {
+    id: '328', gradeMin: 3, gradeMax: 3, domain: 'Fractions', difficulty: 1,
+    questionText: 'Maya had 3/4 of a bag of cookies. She gave away 1/4 of the bag to her friend. What fraction of the bag does Maya have left?', choices: ['1/4', '2/4', '2/3', '3/3'], correctAnswer: '2/4',
+    solution: 'Cookies left = 3/4 - 1/4 = 2/4 = 1/2'
+  },
+  {
+    id: '329', gradeMin: 3, gradeMax: 3, domain: 'Fractions', difficulty: 2,
+    questionText: 'Which is greater: 2/3 or 3/5?', choices: ['2/3', '3/5'], correctAnswer: '2/3',
+    solution: '2/3 = 0.67; 3/5 = 0.6'
+  },
+  {
+    id: '330', gradeMin: 3, gradeMax: 3, domain: 'Fractions', difficulty: 2,
+    questionText: 'What is 1/3 + 1/6?', choices: ['1/6', '1/2', '2/3', '5/6'], correctAnswer: '1/2',
+    solution: '1/3 = 2/6 -> 2/6 + 1/6 = 3/6 = 1/2'
+  },
+  {
+    id: '331', gradeMin: 3, gradeMax: 3, domain: 'Fractions', difficulty: 2,
+    questionText: 'What is 2/3 - 1/6?', choices: ['1/2', '1/3', '2/6', '3/6'], correctAnswer: '1/2',
+    solution: '2/3 = 4/6 -> 4/6 - 1/6 = 3/6 = 1/2'
+  },
+  {
+    id: '332', gradeMin: 3, gradeMax: 3, domain: 'Fractions', difficulty: 2,
+    questionText: 'Simplify 6/8.', choices: ['3/4', '2/3', '4/6', '1/2'], correctAnswer: '3/4',
+    solution: 'Divide numerator and denominator by 2 -> 3/4'
+  },
+  {
+    id: '333',
+    gradeMin: 3,
+    gradeMax: 3,
+    domain: 'Fractions',
+    difficulty: 3,
+    questionText: 'What is 2/5 + 3/10?',
+    choices: ['1/2', '7/10', '4/5', '5/5'],
+    correctAnswer: '7/10',
+    solution: '2/5 = 4/10, so 4/10 + 3/10 = 7/10.'
+  },
+  {
+    id: '334',
+    gradeMin: 3,
+    gradeMax: 3,
+    domain: 'Fractions',
+    difficulty: 3,
+    questionText: 'What is 5/6 - 1/3?',
+    choices: ['1/6', '1/2', '3/6', '4/6'],
+    correctAnswer: '1/2',
+    solution: '1/3 = 2/6 → 5/6 - 2/6 = 3/6 = 1/2.'
+  },
 
   // === Geometry (335–343)
-  { id: '335', gradeMin: 3, gradeMax: 3, domain: 'Geometry', difficulty: 1,
-    questionText: 'How many sides does a hexagon have?', choices: ['5','6','7','8'], correctAnswer: '6',
-    solution: 'Hexa = 6' },
-  { id: '336', gradeMin: 3, gradeMax: 3, domain: 'Geometry', difficulty: 1,
-    questionText: 'How many right angles does a rectangle have?', choices: ['2','3','4','5'], correctAnswer: '4',
-    solution: 'A rectangle has 4 right angles' },
-  { id: '337', gradeMin: 3, gradeMax: 3, domain: 'Geometry', difficulty: 1,
-    questionText: 'How many sides does an octagon have?', choices: ['6','7','8','9'], correctAnswer: '8',
-    solution: 'Octa = 8' },
-  { id: '338', gradeMin: 3, gradeMax: 3, domain: 'Geometry', difficulty: 2,
-    questionText: 'Hannah is building a square sandbox for her little brother. Each side of the square is 5 feet long. How much fencing does she need to go around the entire sandbox?', choices: ['15 feet','20 feet','25 feet','30 feet'], correctAnswer: '20 feet',
-    solution: 'Perimeter of square = 4 x 5 = 20 feet' },
-  { id: '339', gradeMin: 3, gradeMax: 3, domain: 'Geometry', difficulty: 2,
+  {
+    id: '335', gradeMin: 3, gradeMax: 3, domain: 'Geometry', difficulty: 1,
+    questionText: 'How many sides does a hexagon have?', choices: ['5', '6', '7', '8'], correctAnswer: '6',
+    solution: 'Hexa = 6'
+  },
+  {
+    id: '336', gradeMin: 3, gradeMax: 3, domain: 'Geometry', difficulty: 1,
+    questionText: 'How many right angles does a rectangle have?', choices: ['2', '3', '4', '5'], correctAnswer: '4',
+    solution: 'A rectangle has 4 right angles'
+  },
+  {
+    id: '337', gradeMin: 3, gradeMax: 3, domain: 'Geometry', difficulty: 1,
+    questionText: 'How many sides does an octagon have?', choices: ['6', '7', '8', '9'], correctAnswer: '8',
+    solution: 'Octa = 8'
+  },
+  {
+    id: '338', gradeMin: 3, gradeMax: 3, domain: 'Geometry', difficulty: 2,
+    questionText: 'Hannah is building a square sandbox for her little brother. Each side of the square is 5 feet long. How much fencing does she need to go around the entire sandbox?', choices: ['15 feet', '20 feet', '25 feet', '30 feet'], correctAnswer: '20 feet',
+    solution: 'Perimeter of square = 4 x 5 = 20 feet'
+  },
+  {
+    id: '339', gradeMin: 3, gradeMax: 3, domain: 'Geometry', difficulty: 2,
     questionText: 'Mr. Rodriguez is making a rectangular garden bed that is 7 feet long and 4 feet wide. How many square feet of soil will he need to cover the entire garden bed?',
-    choices: ['11','21','28','35'], 
+    choices: ['11', '21', '28', '35'],
     correctAnswer: '28',
-    solution: 'Area of garden = length x width = 7 ft x 4 ft = 28 square feet' },
-  { id: '340', gradeMin: 3, gradeMax: 3, domain: 'Geometry', difficulty: 2,
-    questionText: 'How many equal sides does an equilateral triangle have?', choices: ['1','2','3','4'], correctAnswer: '3',
-    solution: 'Equilateral triangle has 3 equal sides' },
-  { id: '341', gradeMin: 3, gradeMax: 3, domain: 'Geometry', difficulty: 3,
-    questionText: 'David is making a triangular sign for his treehouse. The three sides of the triangle are 6 inches, 7 inches, and 8 inches long. How much trim does he need to go around the edge of the sign?', choices: ['19 inches','20 inches','21 inches','22 inches'], correctAnswer: '21 inches',
-    solution: 'Perimeter = 6 + 7 + 8 = 21 inches' },
-  { id: '342', gradeMin: 3, gradeMax: 3, domain: 'Geometry', difficulty: 3,
-    questionText: 'How many degrees are in a straight angle?', choices: ['45°','90°','180°','360°'], correctAnswer: '180°',
-    solution: 'A straight angle = 180°' },
-  { id: '343', gradeMin: 3, gradeMax: 3, domain: 'Geometry', difficulty: 3,
-    questionText: 'The school is installing new square tiles in the hallway. Each tile has sides that are 9 inches long. What is the area of each tile?', choices: ['72 square inches','81 square inches','90 square inches','99 square inches'], correctAnswer: '81 square inches',
-    solution: 'Area of square = 9 x 9 = 81 square inches' },
+    solution: 'Area of garden = length x width = 7 ft x 4 ft = 28 square feet'
+  },
+  {
+    id: '340', gradeMin: 3, gradeMax: 3, domain: 'Geometry', difficulty: 2,
+    questionText: 'How many equal sides does an equilateral triangle have?', choices: ['1', '2', '3', '4'], correctAnswer: '3',
+    solution: 'Equilateral triangle has 3 equal sides'
+  },
+  {
+    id: '341', gradeMin: 3, gradeMax: 3, domain: 'Geometry', difficulty: 3,
+    questionText: 'David is making a triangular sign for his treehouse. The three sides of the triangle are 6 inches, 7 inches, and 8 inches long. How much trim does he need to go around the edge of the sign?', choices: ['19 inches', '20 inches', '21 inches', '22 inches'], correctAnswer: '21 inches',
+    solution: 'Perimeter = 6 + 7 + 8 = 21 inches'
+  },
+  {
+    id: '342', gradeMin: 3, gradeMax: 3, domain: 'Geometry', difficulty: 3,
+    questionText: 'How many degrees are in a straight angle?', choices: ['45°', '90°', '180°', '360°'], correctAnswer: '180°',
+    solution: 'A straight angle = 180°'
+  },
+  {
+    id: '343', gradeMin: 3, gradeMax: 3, domain: 'Geometry', difficulty: 3,
+    questionText: 'The school is installing new square tiles in the hallway. Each tile has sides that are 9 inches long. What is the area of each tile?', choices: ['72 square inches', '81 square inches', '90 square inches', '99 square inches'], correctAnswer: '81 square inches',
+    solution: 'Area of square = 9 x 9 = 81 square inches'
+  },
 
   // === Measurement (344–352)
-  { id: '344', gradeMin: 3, gradeMax: 3, domain: 'Measurement', difficulty: 1,
-    questionText: 'Tommy is 2 feet tall. His mom wants to know his height in inches for his doctor visit. How many inches tall is Tommy?', choices: ['12 inches','18 inches','24 inches','30 inches'], correctAnswer: '24 inches',
-    solution: 'Height in inches = 2 feet x 12 inches = 24 inches' },
-  { id: '345', gradeMin: 3, gradeMax: 3, domain: 'Measurement', difficulty: 1,
-    questionText: 'The school play will last for 3 hours. The program director wants to know how many minutes this is for scheduling purposes. How many minutes will the play last?', choices: ['120 minutes','150 minutes','180 minutes','210 minutes'], correctAnswer: '180 minutes',
-    solution: 'Play duration = 3 hours x 60 minutes = 180 minutes' },
-  { id: '346', gradeMin: 3, gradeMax: 3, domain: 'Measurement', difficulty: 1,
-    questionText: 'How many days are in February (non-leap year)?', choices: ['28','29','30','31'], correctAnswer: '28',
-    solution: 'February usually has 28 days' },
-  { id: '347', gradeMin: 3, gradeMax: 3, domain: 'Measurement', difficulty: 2,
-    questionText: 'How many cups are in 1 quart?', choices: ['2','3','4','5'], correctAnswer: '4',
-    solution: '1 quart = 4 cups' },
-  { id: '348', gradeMin: 3, gradeMax: 3, domain: 'Measurement', difficulty: 2,
-    questionText: 'How many ounces are in 2 pounds?', choices: ['16','24','28','32'], correctAnswer: '32',
-    solution: '1 lb = 16 oz -> 2 lb = 32 oz' },
-  { id: '349', gradeMin: 3, gradeMax: 3, domain: 'Measurement', difficulty: 2,
+  {
+    id: '344', gradeMin: 3, gradeMax: 3, domain: 'Measurement', difficulty: 1,
+    questionText: 'Tommy is 2 feet tall. His mom wants to know his height in inches for his doctor visit. How many inches tall is Tommy?', choices: ['12 inches', '18 inches', '24 inches', '30 inches'], correctAnswer: '24 inches',
+    solution: 'Height in inches = 2 feet x 12 inches = 24 inches'
+  },
+  {
+    id: '345', gradeMin: 3, gradeMax: 3, domain: 'Measurement', difficulty: 1,
+    questionText: 'The school play will last for 3 hours. The program director wants to know how many minutes this is for scheduling purposes. How many minutes will the play last?', choices: ['120 minutes', '150 minutes', '180 minutes', '210 minutes'], correctAnswer: '180 minutes',
+    solution: 'Play duration = 3 hours x 60 minutes = 180 minutes'
+  },
+  {
+    id: '346', gradeMin: 3, gradeMax: 3, domain: 'Measurement', difficulty: 1,
+    questionText: 'How many days are in February (non-leap year)?', choices: ['28', '29', '30', '31'], correctAnswer: '28',
+    solution: 'February usually has 28 days'
+  },
+  {
+    id: '347', gradeMin: 3, gradeMax: 3, domain: 'Measurement', difficulty: 2,
+    questionText: 'How many cups are in 1 quart?', choices: ['2', '3', '4', '5'], correctAnswer: '4',
+    solution: '1 quart = 4 cups'
+  },
+  {
+    id: '348', gradeMin: 3, gradeMax: 3, domain: 'Measurement', difficulty: 2,
+    questionText: 'How many ounces are in 2 pounds?', choices: ['16', '24', '28', '32'], correctAnswer: '32',
+    solution: '1 lb = 16 oz -> 2 lb = 32 oz'
+  },
+  {
+    id: '349', gradeMin: 3, gradeMax: 3, domain: 'Measurement', difficulty: 2,
     questionText: 'For a science experiment, Maria needs to convert 3 liters of water into milliliters. Her teacher told her that 1 liter equals 1000 milliliters. How many milliliters of water does Maria need?',
-    choices: ['300','3000','30,000','3'], 
+    choices: ['300', '3000', '30,000', '3'],
     correctAnswer: '3000',
-    solution: '3 liters = 3 x 1000 milliliters = 3000 milliliters' },
-  { id: '350', gradeMin: 3, gradeMax: 3, domain: 'Measurement', difficulty: 3,
-    questionText: 'The school bus ride to the field trip location takes half an hour. The teacher wants to tell parents how many minutes the ride will be. How many minutes is half an hour?', choices: ['15 minutes','20 minutes','25 minutes','30 minutes'], correctAnswer: '30 minutes',
-    solution: 'Half an hour = 1/2 of 60 minutes = 30 minutes' },
-  { id: '351', gradeMin: 3, gradeMax: 3, domain: 'Measurement', difficulty: 3,
-    questionText: 'The football field is 9 feet wide for the youth league. The coach needs to know how many yards this is for the field setup. How many yards wide is the field?', choices: ['2 yards','3 yards','4 yards','5 yards'], correctAnswer: '3 yards',
-    solution: 'Field width = 9 feet ÷ 3 feet per yard = 3 yards' },
-  { id: '352', gradeMin: 3, gradeMax: 3, domain: 'Measurement', difficulty: 3,
-    questionText: 'How many hours are in 5 days?', choices: ['100','108','120','144'], correctAnswer: '120',
-    solution: '5 x 24 = 120 hours' },
+    solution: '3 liters = 3 x 1000 milliliters = 3000 milliliters'
+  },
+  {
+    id: '350', gradeMin: 3, gradeMax: 3, domain: 'Measurement', difficulty: 3,
+    questionText: 'The school bus ride to the field trip location takes half an hour. The teacher wants to tell parents how many minutes the ride will be. How many minutes is half an hour?', choices: ['15 minutes', '20 minutes', '25 minutes', '30 minutes'], correctAnswer: '30 minutes',
+    solution: 'Half an hour = 1/2 of 60 minutes = 30 minutes'
+  },
+  {
+    id: '351', gradeMin: 3, gradeMax: 3, domain: 'Measurement', difficulty: 3,
+    questionText: 'The football field is 9 feet wide for the youth league. The coach needs to know how many yards this is for the field setup. How many yards wide is the field?', choices: ['2 yards', '3 yards', '4 yards', '5 yards'], correctAnswer: '3 yards',
+    solution: 'Field width = 9 feet ÷ 3 feet per yard = 3 yards'
+  },
+  {
+    id: '352', gradeMin: 3, gradeMax: 3, domain: 'Measurement', difficulty: 3,
+    questionText: 'How many hours are in 5 days?', choices: ['100', '108', '120', '144'], correctAnswer: '120',
+    solution: '5 x 24 = 120 hours'
+  },
 
   // === Additional Grade 3 Questions (3rd-53 to 3rd-112) ===
   // === Number Sense (3rd-53 to 3rd-62) ===
-  { id: '3rd-53', gradeMin: 3, gradeMax: 3, domain: 'Number Sense', difficulty: 1,
+  {
+    id: '3rd-53', gradeMin: 3, gradeMax: 3, domain: 'Number Sense', difficulty: 1,
     questionText: 'The school cafeteria prepared 347 sandwiches for lunch and 268 sandwiches for snack time. How many sandwiches did they prepare altogether?',
     choices: ['605 sandwiches', '615 sandwiches', '625 sandwiches', '635 sandwiches'], correctAnswer: '615 sandwiches',
-    solution: 'Total sandwiches: 347 + 268 = 615 sandwiches.' },
+    solution: 'Total sandwiches: 347 + 268 = 615 sandwiches.'
+  },
 
-  { id: '3rd-54', gradeMin: 3, gradeMax: 3, domain: 'Number Sense', difficulty: 1,
+  {
+    id: '3rd-54', gradeMin: 3, gradeMax: 3, domain: 'Number Sense', difficulty: 1,
     questionText: 'The school received 824 new books for the library. After organizing them, 379 books were placed in the fiction section. How many books went to other sections?',
     choices: ['445 books', '455 books', '465 books', '475 books'], correctAnswer: '445 books',
-    solution: 'Books for other sections: 824 - 379 = 445 books.' },
+    solution: 'Books for other sections: 824 - 379 = 445 books.'
+  },
 
-  { id: '3rd-55', gradeMin: 3, gradeMax: 3, domain: 'Number Sense', difficulty: 1,
+  {
+    id: '3rd-55', gradeMin: 3, gradeMax: 3, domain: 'Number Sense', difficulty: 1,
     questionText: 'During the school fundraiser, third graders collected 156 dollars on Monday, 283 dollars on Tuesday, and 194 dollars on Wednesday. How much money did they collect in total?',
     choices: ['623 dollars', '633 dollars', '643 dollars', '653 dollars'], correctAnswer: '633 dollars',
-    solution: 'Total collected: 156 + 283 + 194 = 633 dollars.' },
+    solution: 'Total collected: 156 + 283 + 194 = 633 dollars.'
+  },
 
-{
-  id: '3rd-56',
-  gradeMin: 3,
-  gradeMax: 3,
-  domain: 'Number Sense',
-  difficulty: 2,
-  questionText: 'The school auditorium has 456 seats arranged in rows of 12. About how many rows are there? Estimate by rounding 456 to the nearest hundred.',
-  choices: ['About 38 rows', 'About 40 rows', 'About 42 rows', 'About 45 rows'],
-  correctAnswer: 'About 42 rows',
-  solution: '456 rounds to 500. 500 ÷ 12 ≈ 41.7, so about 42 rows.'
-},
-  { id: '3rd-57', gradeMin: 3, gradeMax: 3, domain: 'Number Sense', difficulty: 2,
+  {
+    id: '3rd-56',
+    gradeMin: 3,
+    gradeMax: 3,
+    domain: 'Number Sense',
+    difficulty: 2,
+    questionText: 'The school auditorium has 456 seats arranged in rows of 12. About how many rows are there? Estimate by rounding 456 to the nearest hundred.',
+    choices: ['About 38 rows', 'About 40 rows', 'About 42 rows', 'About 45 rows'],
+    correctAnswer: 'About 42 rows',
+    solution: '456 rounds to 500. 500 ÷ 12 ≈ 41.7, so about 42 rows.'
+  },
+  {
+    id: '3rd-57', gradeMin: 3, gradeMax: 3, domain: 'Number Sense', difficulty: 2,
     questionText: 'The third grade classes are comparing their reading points. Room A has 1,847 points, Room B has 1,784 points, and Room C has 1,874 points. Which room has the most points?',
     choices: ['Room A', 'Room B', 'Room C', 'They are tied'], correctAnswer: 'Room C',
-    solution: 'Comparing: 1,874 > 1,847 > 1,784. Room C has the most points.' },
+    solution: 'Comparing: 1,874 > 1,847 > 1,784. Room C has the most points.'
+  },
 
-  { id: '3rd-58', gradeMin: 3, gradeMax: 3, domain: 'Number Sense', difficulty: 2,
+  {
+    id: '3rd-58', gradeMin: 3, gradeMax: 3, domain: 'Number Sense', difficulty: 2,
     questionText: 'A toy manufacturer produced 2,456 action figures in January and 1,873 action figures in February. How many more action figures did they produce in January than February?',
     choices: ['583 figures', '593 figures', '603 figures', '613 figures'], correctAnswer: '583 figures',
-    solution: 'Difference: 2,456 - 1,873 = 583 more action figures.' },
+    solution: 'Difference: 2,456 - 1,873 = 583 more action figures.'
+  },
 
-  { id: '3rd-59', gradeMin: 3, gradeMax: 3, domain: 'Number Sense', difficulty: 3,
+  {
+    id: '3rd-59', gradeMin: 3, gradeMax: 3, domain: 'Number Sense', difficulty: 3,
     questionText: 'The school district ordered supplies for three schools. School A received 1,486 items, School B received 2,237 items, and School C received 1,759 items. What is the total number of items ordered?',
     choices: ['5,472 items', '5,482 items', '5,492 items', '5,502 items'], correctAnswer: '5,482 items',
-    solution: 'Total items: 1,486 + 2,237 + 1,759 = 5,482 items.' },
+    solution: 'Total items: 1,486 + 2,237 + 1,759 = 5,482 items.'
+  },
 
-  { id: '3rd-60', gradeMin: 3, gradeMax: 3, domain: 'Number Sense', difficulty: 3,
+  {
+    id: '3rd-60', gradeMin: 3, gradeMax: 3, domain: 'Number Sense', difficulty: 3,
     questionText: 'A bookstore had 3,845 books at the beginning of the month. They sold 1,967 books and received 2,134 new books. How many books do they have now?',
     choices: ['4,012 books', '4,022 books', '4,032 books', '4,042 books'], correctAnswer: '4,012 books',
-    solution: 'Final count: 3,845 - 1,967 + 2,134 = 1,878 + 2,134 = 4,012 books.' },
+    solution: 'Final count: 3,845 - 1,967 + 2,134 = 1,878 + 2,134 = 4,012 books.'
+  },
 
-  { id: '3rd-61', gradeMin: 3, gradeMax: 3, domain: 'Number Sense', difficulty: 3,
+  {
+    id: '3rd-61', gradeMin: 3, gradeMax: 3, domain: 'Number Sense', difficulty: 3,
     questionText: 'Which number is closest to 5,000: 4,789, 4,923, 5,156, or 5,287?',
     choices: ['4,789', '4,923', '5,156', '5,287'], correctAnswer: '4,923',
-    solution: 'Distances from 5,000: 4,789 (211), 4,923 (77), 5,156 (156), 5,287 (287). 4,923 is closest.' },
+    solution: 'Distances from 5,000: 4,789 (211), 4,923 (77), 5,156 (156), 5,287 (287). 4,923 is closest.'
+  },
 
-  { id: '3rd-62', gradeMin: 3, gradeMax: 3, domain: 'Number Sense', difficulty: 3,
+  {
+    id: '3rd-62', gradeMin: 3, gradeMax: 3, domain: 'Number Sense', difficulty: 3,
     questionText: 'The school carnival had 6,234 visitors on Friday, 8,567 visitors on Saturday, and 5,892 visitors on Sunday. How many visitors came to the carnival in total?',
     choices: ['20,693 visitors', '20,703 visitors', '20,713 visitors', '20,723 visitors'], correctAnswer: '20,693 visitors',
-    solution: 'Total visitors: 6,234 + 8,567 + 5,892 = 20,693 visitors.' },
+    solution: 'Total visitors: 6,234 + 8,567 + 5,892 = 20,693 visitors.'
+  },
 
   // === Operations & Algebraic Thinking (3rd-63 to 3rd-72) ===
-  { id: '3rd-63', gradeMin: 3, gradeMax: 3, domain: 'Operations & Algebraic Thinking', difficulty: 1,
+  {
+    id: '3rd-63', gradeMin: 3, gradeMax: 3, domain: 'Operations & Algebraic Thinking', difficulty: 1,
     questionText: 'The school play has 8 scenes, and each scene requires 7 actors. How many actors are needed for the entire play?',
     choices: ['54 actors', '55 actors', '56 actors', '57 actors'], correctAnswer: '56 actors',
-    solution: 'Total actors needed: 8 scenes x 7 actors = 56 actors.' },
+    solution: 'Total actors needed: 8 scenes x 7 actors = 56 actors.'
+  },
 
-  { id: '3rd-64', gradeMin: 3, gradeMax: 3, domain: 'Operations & Algebraic Thinking', difficulty: 1,
+  {
+    id: '3rd-64', gradeMin: 3, gradeMax: 3, domain: 'Operations & Algebraic Thinking', difficulty: 1,
     questionText: 'The art teacher has 84 colored pencils to distribute equally among 12 students. How many colored pencils will each student receive?',
     choices: ['6 pencils', '7 pencils', '8 pencils', '9 pencils'], correctAnswer: '7 pencils',
-    solution: 'Pencils per student: 84 ÷ 12 = 7 colored pencils.' },
+    solution: 'Pencils per student: 84 ÷ 12 = 7 colored pencils.'
+  },
 
-  { id: '3rd-65', gradeMin: 3, gradeMax: 3, domain: 'Operations & Algebraic Thinking', difficulty: 1,
+  {
+    id: '3rd-65', gradeMin: 3, gradeMax: 3, domain: 'Operations & Algebraic Thinking', difficulty: 1,
     questionText: 'The cafeteria orders pizza for a school event. Each pizza is cut into 6 slices, and they ordered 9 pizzas. How many slices of pizza do they have altogether?',
     choices: ['52 slices', '53 slices', '54 slices', '55 slices'], correctAnswer: '54 slices',
-    solution: 'Total slices: 9 pizzas x 6 slices = 54 slices.' },
+    solution: 'Total slices: 9 pizzas x 6 slices = 54 slices.'
+  },
 
-  { id: '3rd-66', gradeMin: 3, gradeMax: 3, domain: 'Operations & Algebraic Thinking', difficulty: 2,
+  {
+    id: '3rd-66', gradeMin: 3, gradeMax: 3, domain: 'Operations & Algebraic Thinking', difficulty: 2,
     questionText: 'Fill in the missing number: ___ x 8 = 96',
     choices: ['11', '12', '13', '14'], correctAnswer: '12',
-    solution: '12 x 8 = 96, so the missing number is 12.' },
+    solution: '12 x 8 = 96, so the missing number is 12.'
+  },
 
-  { id: '3rd-67', gradeMin: 3, gradeMax: 3, domain: 'Operations & Algebraic Thinking', difficulty: 2,
+  {
+    id: '3rd-67', gradeMin: 3, gradeMax: 3, domain: 'Operations & Algebraic Thinking', difficulty: 2,
     questionText: 'The school library has 126 books to arrange on shelves. If each shelf holds 14 books, how many shelves will be completely filled?',
     choices: ['8 shelves', '9 shelves', '10 shelves', '11 shelves'], correctAnswer: '9 shelves',
-    solution: 'Number of complete shelves: 126 ÷ 14 = 9 shelves.' },
+    solution: 'Number of complete shelves: 126 ÷ 14 = 9 shelves.'
+  },
 
-  { id: '3rd-68', gradeMin: 3, gradeMax: 3, domain: 'Operations & Algebraic Thinking', difficulty: 2,
+  {
+    id: '3rd-68', gradeMin: 3, gradeMax: 3, domain: 'Operations & Algebraic Thinking', difficulty: 2,
     questionText: 'What number makes this equation true: 147 + ___ = 256?',
     choices: ['108', '109', '110', '111'], correctAnswer: '109',
-    solution: 'Missing number: 256 - 147 = 109. Check: 147 + 109 = 256' },
+    solution: 'Missing number: 256 - 147 = 109. Check: 147 + 109 = 256'
+  },
 
-  { id: '3rd-69', gradeMin: 3, gradeMax: 3, domain: 'Operations & Algebraic Thinking', difficulty: 3,
+  {
+    id: '3rd-69', gradeMin: 3, gradeMax: 3, domain: 'Operations & Algebraic Thinking', difficulty: 3,
     questionText: 'The school garden has vegetable plots arranged in a rectangle. There are 13 rows with 11 plots in each row. How many vegetable plots are there in total?',
     choices: ['143 plots', '144 plots', '145 plots', '146 plots'], correctAnswer: '143 plots',
-    solution: 'Total plots: 13 rows x 11 plots = 143 vegetable plots.' },
+    solution: 'Total plots: 13 rows x 11 plots = 143 vegetable plots.'
+  },
 
-  { id: '3rd-70', gradeMin: 3, gradeMax: 3, domain: 'Operations & Algebraic Thinking', difficulty: 3,
+  {
+    id: '3rd-70', gradeMin: 3, gradeMax: 3, domain: 'Operations & Algebraic Thinking', difficulty: 3,
     questionText: 'What comes next in this pattern: 7, 14, 21, 28, 35, ___?',
     choices: ['40', '41', '42', '43'], correctAnswer: '42',
-    solution: 'The pattern increases by 7 each time: 35 + 7 = 42.' },
+    solution: 'The pattern increases by 7 each time: 35 + 7 = 42.'
+  },
 
-  { id: '3rd-71', gradeMin: 3, gradeMax: 3, domain: 'Operations & Algebraic Thinking', difficulty: 3,
+  {
+    id: '3rd-71', gradeMin: 3, gradeMax: 3, domain: 'Operations & Algebraic Thinking', difficulty: 3,
     questionText: 'If 15 x 12 = 180, then what does 12 x 15 equal?',
     choices: ['170', '180', '190', '200'], correctAnswer: '180',
-    solution: 'Multiplication is commutative, so 12 x 15 = 15 x 12 = 180.' },
+    solution: 'Multiplication is commutative, so 12 x 15 = 15 x 12 = 180.'
+  },
 
-  { id: '3rd-72', gradeMin: 3, gradeMax: 3, domain: 'Operations & Algebraic Thinking', difficulty: 3,
+  {
+    id: '3rd-72', gradeMin: 3, gradeMax: 3, domain: 'Operations & Algebraic Thinking', difficulty: 3,
     questionText: 'The school store sells pencils in packages of 16. If they need to fill 144 pencils into packages, how many complete packages can they make?',
     choices: ['8 packages', '9 packages', '10 packages', '11 packages'], correctAnswer: '9 packages',
-    solution: 'Complete packages: 144 ÷ 16 = 9 packages.' },
+    solution: 'Complete packages: 144 ÷ 16 = 9 packages.'
+  },
 
   // === Place Value (3rd-73 to 3rd-82) ===
-  { id: '3rd-73', gradeMin: 3, gradeMax: 3, domain: 'Place Value', difficulty: 1,
+  {
+    id: '3rd-73', gradeMin: 3, gradeMax: 3, domain: 'Place Value', difficulty: 1,
     questionText: 'In the number 2,847, what is the value of the digit 8?',
     choices: ['8', '80', '800', '8000'], correctAnswer: '800',
-    solution: 'The digit 8 is in the hundreds place, so its value is 800.' },
+    solution: 'The digit 8 is in the hundreds place, so its value is 800.'
+  },
 
-  { id: '3rd-74', gradeMin: 3, gradeMax: 3, domain: 'Place Value', difficulty: 1,
+  {
+    id: '3rd-74', gradeMin: 3, gradeMax: 3, domain: 'Place Value', difficulty: 1,
     questionText: 'Which number has a 6 in the thousands place?',
     choices: ['3,649', '4,637', '6,284', '7,468'], correctAnswer: '6,284',
-    solution: 'In 6,284, the digit 6 is in the thousands place (leftmost position).' },
+    solution: 'In 6,284, the digit 6 is in the thousands place (leftmost position).'
+  },
 
-  { id: '3rd-75', gradeMin: 3, gradeMax: 3, domain: 'Place Value', difficulty: 1,
+  {
+    id: '3rd-75', gradeMin: 3, gradeMax: 3, domain: 'Place Value', difficulty: 1,
     questionText: 'What is 4,563 written in expanded form?',
     choices: ['4,000 + 500 + 60 + 3', '400 + 56 + 3', '4 + 5 + 6 + 3', '4,563'], correctAnswer: '4,000 + 500 + 60 + 3',
-    solution: '4,563 = 4,000 (thousands) + 500 (hundreds) + 60 (tens) + 3 (ones).' },
+    solution: '4,563 = 4,000 (thousands) + 500 (hundreds) + 60 (tens) + 3 (ones).'
+  },
 
-  { id: '3rd-76', gradeMin: 3, gradeMax: 3, domain: 'Place Value', difficulty: 2,
+  {
+    id: '3rd-76', gradeMin: 3, gradeMax: 3, domain: 'Place Value', difficulty: 2,
     questionText: 'Round 5,472 to the nearest hundred.',
     choices: ['5,400', '5,470', '5,500', '5,600'], correctAnswer: '5,500',
-    solution: 'The tens digit is 7, which is 5 or greater, so round up to 5,500.' },
+    solution: 'The tens digit is 7, which is 5 or greater, so round up to 5,500.'
+  },
 
-  { id: '3rd-77', gradeMin: 3, gradeMax: 3, domain: 'Place Value', difficulty: 2,
+  {
+    id: '3rd-77', gradeMin: 3, gradeMax: 3, domain: 'Place Value', difficulty: 2,
     questionText: 'What number is 1,000 more than 3,684?',
     choices: ['4,684', '4,694', '4,784', '5,684'], correctAnswer: '4,684',
-    solution: 'Adding 1,000 to 3,684: 3,684 + 1,000 = 4,684.' },
+    solution: 'Adding 1,000 to 3,684: 3,684 + 1,000 = 4,684.'
+  },
 
-  { id: '3rd-78', gradeMin: 3, gradeMax: 3, domain: 'Place Value', difficulty: 2,
+  {
+    id: '3rd-78', gradeMin: 3, gradeMax: 3, domain: 'Place Value', difficulty: 2,
     questionText: 'Which number is between 7,250 and 7,350?',
     choices: ['7,249', '7,299', '7,351', '7,400'], correctAnswer: '7,299',
-    solution: '7,299 is the only number that falls between 7,250 and 7,350.' },
+    solution: '7,299 is the only number that falls between 7,250 and 7,350.'
+  },
 
-  { id: '3rd-79', gradeMin: 3, gradeMax: 3, domain: 'Place Value', difficulty: 3,
+  {
+    id: '3rd-79', gradeMin: 3, gradeMax: 3, domain: 'Place Value', difficulty: 3,
     questionText: 'Round 8,647 to the nearest thousand.',
     choices: ['8,000', '8,600', '8,700', '9,000'], correctAnswer: '9,000',
-    solution: 'The hundreds digit is 6, which is 5 or greater, so round up to 9,000.' },
+    solution: 'The hundreds digit is 6, which is 5 or greater, so round up to 9,000.'
+  },
 
-  { id: '3rd-80', gradeMin: 3, gradeMax: 3, domain: 'Place Value', difficulty: 3,
+  {
+    id: '3rd-80', gradeMin: 3, gradeMax: 3, domain: 'Place Value', difficulty: 3,
     questionText: 'Which digit is in the tens place of the number 29,463?',
     choices: ['2', '9', '4', '6'], correctAnswer: '6',
-    solution: 'In 29,463: 2 is ten-thousands, 9 is thousands, 4 is hundreds, 6 is tens, 3 is ones.' },
+    solution: 'In 29,463: 2 is ten-thousands, 9 is thousands, 4 is hundreds, 6 is tens, 3 is ones.'
+  },
 
-  { id: '3rd-81', gradeMin: 3, gradeMax: 3, domain: 'Place Value', difficulty: 3,
+  {
+    id: '3rd-81', gradeMin: 3, gradeMax: 3, domain: 'Place Value', difficulty: 3,
     questionText: 'What is the largest 4-digit number you can make using the digits 3, 7, 1, and 9?',
     choices: ['9,731', '9,713', '9,371', '7,931'], correctAnswer: '9,731',
-    solution: 'To make the largest number, arrange digits in descending order: 9,731.' },
+    solution: 'To make the largest number, arrange digits in descending order: 9,731.'
+  },
 
-  { id: '3rd-82', gradeMin: 3, gradeMax: 3, domain: 'Place Value', difficulty: 3,
+  {
+    id: '3rd-82', gradeMin: 3, gradeMax: 3, domain: 'Place Value', difficulty: 3,
     questionText: 'What is the smallest 5-digit number?',
     choices: ['10,000', '10,001', '11,111', '1,000'], correctAnswer: '10,000',
-    solution: '10,000 is the smallest 5-digit number.' },
+    solution: '10,000 is the smallest 5-digit number.'
+  },
 
   // === Fractions (3rd-83 to 3rd-92) ===
-  { id: '3rd-83', gradeMin: 3, gradeMax: 3, domain: 'Fractions', difficulty: 1,
+  {
+    id: '3rd-83', gradeMin: 3, gradeMax: 3, domain: 'Fractions', difficulty: 1,
     questionText: 'Maria ate 2/8 of a pizza for lunch and 3/8 of the same pizza for dinner. How much pizza did Maria eat in total?',
     choices: ['4/8', '5/8', '6/8', '7/8'], correctAnswer: '5/8',
-    solution: 'Total pizza eaten: 2/8 + 3/8 = 5/8.' },
+    solution: 'Total pizza eaten: 2/8 + 3/8 = 5/8.'
+  },
 
-  { id: '3rd-84', gradeMin: 3, gradeMax: 3, domain: 'Fractions', difficulty: 1,
+  {
+    id: '3rd-84', gradeMin: 3, gradeMax: 3, domain: 'Fractions', difficulty: 1,
     questionText: 'Tom had 7/10 of a chocolate bar. He gave 2/10 of it to his sister. How much chocolate bar does Tom have left?',
     choices: ['4/10', '5/10', '6/10', '9/10'], correctAnswer: '5/10',
-    solution: 'Chocolate remaining: 7/10 - 2/10 = 5/10.' },
+    solution: 'Chocolate remaining: 7/10 - 2/10 = 5/10.'
+  },
 
-  { id: '3rd-85', gradeMin: 3, gradeMax: 3, domain: 'Fractions', difficulty: 1,
+  {
+    id: '3rd-85', gradeMin: 3, gradeMax: 3, domain: 'Fractions', difficulty: 1,
     questionText: 'Which fraction is equivalent to 1/2?',
     choices: ['2/3', '3/6', '2/5', '1/3'], correctAnswer: '3/6',
-    solution: '3/6 = 1/2 because 3 ÷ 3 = 1 and 6 ÷ 3 = 2.' },
+    solution: '3/6 = 1/2 because 3 ÷ 3 = 1 and 6 ÷ 3 = 2.'
+  },
 
-  { id: '3rd-86', gradeMin: 3, gradeMax: 3, domain: 'Fractions', difficulty: 2,
+  {
+    id: '3rd-86', gradeMin: 3, gradeMax: 3, domain: 'Fractions', difficulty: 2,
     questionText: 'Which is greater: 3/4 or 2/3?',
     choices: ['3/4', '2/3', 'They are equal', 'Cannot determine'], correctAnswer: '3/4',
-    solution: '3/4 = 0.75 and 2/3 = 0.67, so 3/4 > 2/3.' },
+    solution: '3/4 = 0.75 and 2/3 = 0.67, so 3/4 > 2/3.'
+  },
 
-  { id: '3rd-87', gradeMin: 3, gradeMax: 3, domain: 'Fractions', difficulty: 2,
+  {
+    id: '3rd-87', gradeMin: 3, gradeMax: 3, domain: 'Fractions', difficulty: 2,
     questionText: 'What is 1/4 + 2/4?',
     choices: ['2/4', '3/4', '3/8', '1/2'], correctAnswer: '3/4',
-    solution: '1/4 + 2/4 = 3/4.' },
+    solution: '1/4 + 2/4 = 3/4.'
+  },
 
-  { id: '3rd-88', gradeMin: 3, gradeMax: 3, domain: 'Fractions', difficulty: 2,
+  {
+    id: '3rd-88', gradeMin: 3, gradeMax: 3, domain: 'Fractions', difficulty: 2,
     questionText: 'What is 5/6 - 2/6?',
     choices: ['2/6', '3/6', '4/6', '7/6'], correctAnswer: '3/6',
-    solution: '5/6 - 2/6 = 3/6, which can also be written as 1/2.' },
+    solution: '5/6 - 2/6 = 3/6, which can also be written as 1/2.'
+  },
 
-  { id: '3rd-89', gradeMin: 3, gradeMax: 3, domain: 'Fractions', difficulty: 3,
+  {
+    id: '3rd-89', gradeMin: 3, gradeMax: 3, domain: 'Fractions', difficulty: 3,
     questionText: 'Simplify the fraction 8/12.',
     choices: ['2/3', '4/6', '1/2', '3/4'], correctAnswer: '2/3',
-    solution: 'Divide both numerator and denominator by 4: 8/12 = 2/3.' },
+    solution: 'Divide both numerator and denominator by 4: 8/12 = 2/3.'
+  },
 
-  { id: '3rd-90', gradeMin: 3, gradeMax: 3, domain: 'Fractions', difficulty: 3,
+  {
+    id: '3rd-90', gradeMin: 3, gradeMax: 3, domain: 'Fractions', difficulty: 3,
     questionText: 'What is 1/3 + 1/6?',
     choices: ['1/6', '2/9', '1/2', '2/6'], correctAnswer: '1/2',
-    solution: '1/3 = 2/6, so 2/6 + 1/6 = 3/6 = 1/2.' },
+    solution: '1/3 = 2/6, so 2/6 + 1/6 = 3/6 = 1/2.'
+  },
 
-  { id: '3rd-91', gradeMin: 3, gradeMax: 3, domain: 'Fractions', difficulty: 3,
+  {
+    id: '3rd-91', gradeMin: 3, gradeMax: 3, domain: 'Fractions', difficulty: 3,
     questionText: 'What is 3/4 - 1/4?',
     choices: ['1/4', '2/4', '1/2', '3/8'], correctAnswer: '2/4',
-    solution: '3/4 - 1/4 = 2/4, which can also be written as 1/2.' },
+    solution: '3/4 - 1/4 = 2/4, which can also be written as 1/2.'
+  },
 
-  { id: '3rd-92', gradeMin: 3, gradeMax: 3, domain: 'Fractions', difficulty: 3,
+  {
+    id: '3rd-92', gradeMin: 3, gradeMax: 3, domain: 'Fractions', difficulty: 3,
     questionText: 'Which fraction is closest to 1: 7/8, 3/4, 5/6, or 2/3?',
     choices: ['7/8', '3/4', '5/6', '2/3'], correctAnswer: '7/8',
-    solution: '7/8 = 0.875, which is closest to 1.000.' },
+    solution: '7/8 = 0.875, which is closest to 1.000.'
+  },
 
   // === Geometry (3rd-93 to 3rd-102) ===
-  { id: '3rd-93', gradeMin: 3, gradeMax: 3, domain: 'Geometry', difficulty: 1,
+  {
+    id: '3rd-93', gradeMin: 3, gradeMax: 3, domain: 'Geometry', difficulty: 1,
     questionText: 'How many sides does a pentagon have?',
     choices: ['4', '5', '6', '7'], correctAnswer: '5',
-    solution: 'A pentagon has 5 sides.' },
+    solution: 'A pentagon has 5 sides.'
+  },
 
-  { id: '3rd-94', gradeMin: 3, gradeMax: 3, domain: 'Geometry', difficulty: 1,
+  {
+    id: '3rd-94', gradeMin: 3, gradeMax: 3, domain: 'Geometry', difficulty: 1,
     questionText: 'How many vertices does a triangle have?',
     choices: ['2', '3', '4', '5'], correctAnswer: '3',
-    solution: 'A triangle has 3 vertices (corners).' },
+    solution: 'A triangle has 3 vertices (corners).'
+  },
 
-  { id: '3rd-95', gradeMin: 3, gradeMax: 3, domain: 'Geometry', difficulty: 1,
+  {
+    id: '3rd-95', gradeMin: 3, gradeMax: 3, domain: 'Geometry', difficulty: 1,
     questionText: 'What type of angle measures exactly 90 degrees?',
     choices: ['Acute angle', 'Right angle', 'Obtuse angle', 'Straight angle'], correctAnswer: 'Right angle',
-    solution: 'A right angle measures exactly 90 degrees.' },
+    solution: 'A right angle measures exactly 90 degrees.'
+  },
 
-  { id: '3rd-96', gradeMin: 3, gradeMax: 3, domain: 'Geometry', difficulty: 2,
+  {
+    id: '3rd-96', gradeMin: 3, gradeMax: 3, domain: 'Geometry', difficulty: 2,
     questionText: 'Sarah is building a square garden bed. Each side of the square is 8 feet long. What is the perimeter of her garden?',
     choices: ['28 feet', '30 feet', '32 feet', '34 feet'], correctAnswer: '32 feet',
-    solution: 'Perimeter of square = 4 x side length = 4 x 8 = 32 feet.' },
+    solution: 'Perimeter of square = 4 x side length = 4 x 8 = 32 feet.'
+  },
 
-  { id: '3rd-97', gradeMin: 3, gradeMax: 3, domain: 'Geometry', difficulty: 2,
+  {
+    id: '3rd-97', gradeMin: 3, gradeMax: 3, domain: 'Geometry', difficulty: 2,
     questionText: 'A rectangular playground is 12 meters long and 8 meters wide. What is the area of the playground?',
     choices: ['88 square meters', '92 square meters', '96 square meters', '100 square meters'], correctAnswer: '96 square meters',
-    solution: 'Area of rectangle = length x width = 12 x 8 = 96 square meters.' },
+    solution: 'Area of rectangle = length x width = 12 x 8 = 96 square meters.'
+  },
 
-  { id: '3rd-98', gradeMin: 3, gradeMax: 3, domain: 'Geometry', difficulty: 2,
+  {
+    id: '3rd-98', gradeMin: 3, gradeMax: 3, domain: 'Geometry', difficulty: 2,
     questionText: 'How many equal sides does an isosceles triangle have?',
     choices: ['0', '1', '2', '3'], correctAnswer: '2',
-    solution: 'An isosceles triangle has exactly 2 equal sides.' },
+    solution: 'An isosceles triangle has exactly 2 equal sides.'
+  },
 
-  { id: '3rd-99', gradeMin: 3, gradeMax: 3, domain: 'Geometry', difficulty: 3,
+  {
+    id: '3rd-99', gradeMin: 3, gradeMax: 3, domain: 'Geometry', difficulty: 3,
     questionText: 'The school is installing a triangular flower bed. The three sides measure 9 feet, 12 feet, and 15 feet. What is the perimeter of the flower bed?',
     choices: ['34 feet', '35 feet', '36 feet', '37 feet'], correctAnswer: '36 feet',
-    solution: 'Perimeter = 9 + 12 + 15 = 36 feet.' },
+    solution: 'Perimeter = 9 + 12 + 15 = 36 feet.'
+  },
 
-  { id: '3rd-100', gradeMin: 3, gradeMax: 3, domain: 'Geometry', difficulty: 3,
+  {
+    id: '3rd-100', gradeMin: 3, gradeMax: 3, domain: 'Geometry', difficulty: 3,
     questionText: 'How many degrees are in a complete circle?',
     choices: ['180°', '270°', '360°', '450°'], correctAnswer: '360°',
-    solution: 'A complete circle contains 360 degrees.' },
+    solution: 'A complete circle contains 360 degrees.'
+  },
 
-  { id: '3rd-101', gradeMin: 3, gradeMax: 3, domain: 'Geometry', difficulty: 3,
+  {
+    id: '3rd-101', gradeMin: 3, gradeMax: 3, domain: 'Geometry', difficulty: 3,
     questionText: 'The art room has square tiles on the floor. Each tile has sides that are 6 inches long. What is the area of each tile?',
     choices: ['30 square inches', '32 square inches', '34 square inches', '36 square inches'], correctAnswer: '36 square inches',
-    solution: 'Area of square = side x side = 6 x 6 = 36 square inches.' },
+    solution: 'Area of square = side x side = 6 x 6 = 36 square inches.'
+  },
 
-  { id: '3rd-102', gradeMin: 3, gradeMax: 3, domain: 'Geometry', difficulty: 3,
+  {
+    id: '3rd-102', gradeMin: 3, gradeMax: 3, domain: 'Geometry', difficulty: 3,
     questionText: 'Which shape has exactly 4 equal sides and 4 right angles?',
     choices: ['Rectangle', 'Rhombus', 'Square', 'Trapezoid'], correctAnswer: 'Square',
-    solution: 'A square has 4 equal sides and 4 right angles.' },
+    solution: 'A square has 4 equal sides and 4 right angles.'
+  },
 
   // === Measurement (3rd-103 to 3rd-112) ===
-  { id: '3rd-103', gradeMin: 3, gradeMax: 3, domain: 'Measurement', difficulty: 1,
+  {
+    id: '3rd-103', gradeMin: 3, gradeMax: 3, domain: 'Measurement', difficulty: 1,
     questionText: 'The school science fair starts at 10:30 AM and lasts for 3 hours. What time does the science fair end?',
     choices: ['1:00 PM', '1:30 PM', '2:00 PM', '2:30 PM'], correctAnswer: '1:30 PM',
-    solution: 'End time: 10:30 AM + 3 hours = 1:30 PM.' },
+    solution: 'End time: 10:30 AM + 3 hours = 1:30 PM.'
+  },
 
-  { id: '3rd-104', gradeMin: 3, gradeMax: 3, domain: 'Measurement', difficulty: 1,
+  {
+    id: '3rd-104', gradeMin: 3, gradeMax: 3, domain: 'Measurement', difficulty: 1,
     questionText: 'How many centimeters are in 4 meters?',
     choices: ['40 cm', '400 cm', '4,000 cm', '40,000 cm'], correctAnswer: '400 cm',
-    solution: '4 meters = 4 x 100 = 400 centimeters.' },
+    solution: '4 meters = 4 x 100 = 400 centimeters.'
+  },
 
-  { id: '3rd-105', gradeMin: 3, gradeMax: 3, domain: 'Measurement', difficulty: 1,
+  {
+    id: '3rd-105', gradeMin: 3, gradeMax: 3, domain: 'Measurement', difficulty: 1,
     questionText: 'Emma has 2 quarters, 4 dimes, 3 nickels, and 8 pennies. How much money does Emma have?',
     choices: ['103 cents', '113 cents', '123 cents', '133 cents'], correctAnswer: '113 cents',
-    solution: 'Total: (2x25¢) + (4x10¢) + (3x5¢) + (8x1¢) = 50¢ + 40¢ + 15¢ + 8¢ = 113 cents.' },
+    solution: 'Total: (2x25¢) + (4x10¢) + (3x5¢) + (8x1¢) = 50¢ + 40¢ + 15¢ + 8¢ = 113 cents.'
+  },
 
-  { id: '3rd-106', gradeMin: 3, gradeMax: 3, domain: 'Measurement', difficulty: 2,
+  {
+    id: '3rd-106', gradeMin: 3, gradeMax: 3, domain: 'Measurement', difficulty: 2,
     questionText: 'Jake measured his bedroom using his feet as a unit. His room is 12 feet long. If each of his feet is 8 inches long, how long is his bedroom in inches?',
     choices: ['94 inches', '96 inches', '98 inches', '100 inches'], correctAnswer: '96 inches',
-    solution: 'Room length: 12 feet x 8 inches = 96 inches.' },
+    solution: 'Room length: 12 feet x 8 inches = 96 inches.'
+  },
 
-  { id: '3rd-107', gradeMin: 3, gradeMax: 3, domain: 'Measurement', difficulty: 2,
+  {
+    id: '3rd-107', gradeMin: 3, gradeMax: 3, domain: 'Measurement', difficulty: 2,
     questionText: 'The school swimming lesson starts at 2:15 PM and ends at 3:45 PM. How long is the swimming lesson?',
     choices: ['1 hour 15 minutes', '1 hour 30 minutes', '1 hour 45 minutes', '2 hours'], correctAnswer: '1 hour 30 minutes',
-    solution: 'Duration: From 2:15 PM to 3:45 PM is 1 hour and 30 minutes.' },
+    solution: 'Duration: From 2:15 PM to 3:45 PM is 1 hour and 30 minutes.'
+  },
 
-  { id: '3rd-108', gradeMin: 3, gradeMax: 3, domain: 'Measurement', difficulty: 2,
+  {
+    id: '3rd-108', gradeMin: 3, gradeMax: 3, domain: 'Measurement', difficulty: 2,
     questionText: 'How many grams are in 3 kilograms?',
     choices: ['30 grams', '300 grams', '3,000 grams', '30,000 grams'], correctAnswer: '3,000 grams',
-    solution: '3 kilograms = 3 x 1,000 = 3,000 grams.' },
+    solution: '3 kilograms = 3 x 1,000 = 3,000 grams.'
+  },
 
-  { id: '3rd-109', gradeMin: 3, gradeMax: 3, domain: 'Measurement', difficulty: 3,
+  {
+    id: '3rd-109', gradeMin: 3, gradeMax: 3, domain: 'Measurement', difficulty: 3,
     questionText: 'The school field trip will last from 8:45 AM to 4:30 PM. How many hours and minutes long is the field trip?',
     choices: ['7 hours 45 minutes', '8 hours 15 minutes', '8 hours 45 minutes', '9 hours'], correctAnswer: '7 hours 45 minutes',
-    solution: 'From 8:45 AM to 4:30 PM is 7 hours and 45 minutes.' },
+    solution: 'From 8:45 AM to 4:30 PM is 7 hours and 45 minutes.'
+  },
 
-  { id: '3rd-110', gradeMin: 3, gradeMax: 3, domain: 'Measurement', difficulty: 3,
+  {
+    id: '3rd-110', gradeMin: 3, gradeMax: 3, domain: 'Measurement', difficulty: 3,
     questionText: 'Mrs. Garcia is making a rectangular bulletin board that is 15 inches long and 9 inches wide. What is the area of the bulletin board?',
     choices: ['125 square inches', '130 square inches', '135 square inches', '140 square inches'], correctAnswer: '135 square inches',
-    solution: 'Area = length x width = 15 inches x 9 inches = 135 square inches.' },
+    solution: 'Area = length x width = 15 inches x 9 inches = 135 square inches.'
+  },
 
-  { id: '3rd-111', gradeMin: 3, gradeMax: 3, domain: 'Measurement', difficulty: 3,
+  {
+    id: '3rd-111', gradeMin: 3, gradeMax: 3, domain: 'Measurement', difficulty: 3,
     questionText: 'How many minutes are in 2 hours and 45 minutes?',
     choices: ['160 minutes', '165 minutes', '170 minutes', '175 minutes'], correctAnswer: '165 minutes',
-    solution: '2 hours = 120 minutes. Total: 120 + 45 = 165 minutes.' },
+    solution: '2 hours = 120 minutes. Total: 120 + 45 = 165 minutes.'
+  },
 
-  { id: '3rd-112', gradeMin: 3, gradeMax: 3, domain: 'Measurement', difficulty: 3,
+  {
+    id: '3rd-112', gradeMin: 3, gradeMax: 3, domain: 'Measurement', difficulty: 3,
     questionText: 'The third grade class needs ribbon for their art project. They have 4 pieces: 28 cm, 35 cm, 42 cm, and 29 cm long. What is the total length of all the ribbon?',
     choices: ['132 cm', '134 cm', '136 cm', '138 cm'], correctAnswer: '134 cm',
-    solution: 'Total ribbon length: 28 + 35 + 42 + 29 = 134 centimeters.' },
+    solution: 'Total ribbon length: 28 + 35 + 42 + 29 = 134 centimeters.'
+  },
 
-    // === Number Sense (401–406)
-  { id: '401', gradeMin: 4, gradeMax: 4, domain: 'Number Sense', difficulty: 1,
-    questionText: 'The school library received a donation of 326 books in January and 478 books in February. How many books did the library receive in total during these two months?', choices: ['694','704','804','814'], correctAnswer: '804',
-    solution: 'Total books = 326 + 478 = 804' },
-  { id: '402', gradeMin: 4, gradeMax: 4, domain: 'Number Sense', difficulty: 1,
-    questionText: 'A movie theater had 900 seats available for the premiere. After all tickets were sold, 456 people attended the show. How many empty seats were there?', choices: ['444','454','464','474'], correctAnswer: '444',
-    solution: 'Empty seats = 900 - 456 = 444' },
-  { id: '403', gradeMin: 4, gradeMax: 4, domain: 'Number Sense', difficulty: 2,
-    questionText: 'A video game store sold 3,486 games last month. For their quarterly report, they need to round this number to the nearest hundred. What number should they report?', choices: ['3,400','3,500','3,600','3,000'],
-    correctAnswer: '3,500', solution: 'Tens digit is 8 (>=5), round up -> 3,500' },
-  { id: '404', gradeMin: 4, gradeMax: 4, domain: 'Number Sense', difficulty: 2,
-    questionText: 'The population of a small city is 7,248 people. For census purposes, they want to round this to the nearest thousand. What number should they use?', choices: ['7,000','7,200','7,500','8,000'],
-    correctAnswer: '7,000', solution: 'Hundreds digit is 2 (<5), round down -> 7,000' },
-  { id: '405', gradeMin: 4, gradeMax: 4, domain: 'Number Sense', difficulty: 3,
-    questionText: 'Two elementary schools are combining their fundraising efforts. Lincoln Elementary raised $2,345 and Washington Elementary raised $6,789. How much money did they raise together?', choices: ['9,034','9,124','9,134','9,144'],
-    correctAnswer: '9,134', solution: 'Total raised = $2,345 + $6,789 = $9,134' },
- {
-  id: '406',
-  gradeMin: 4,
-  gradeMax: 4,
-  domain: 'Number Sense',
-  difficulty: 3,
-  questionText: 'A charity organization started with $5,000 in their account. They spent $2,376 on supplies for their event. How much money is left in their account?',
-  choices: ['2,624', '2,634', '2,744', '2,764'],
-  correctAnswer: '2,624',
-  solution: 'Money remaining = $5,000 - $2,376 = $2,624'
-},
+  // === Number Sense (401–406)
+  {
+    id: '401', gradeMin: 4, gradeMax: 4, domain: 'Number Sense', difficulty: 1,
+    questionText: 'The school library received a donation of 326 books in January and 478 books in February. How many books did the library receive in total during these two months?', choices: ['694', '704', '804', '814'], correctAnswer: '804',
+    solution: 'Total books = 326 + 478 = 804'
+  },
+  {
+    id: '402', gradeMin: 4, gradeMax: 4, domain: 'Number Sense', difficulty: 1,
+    questionText: 'A movie theater had 900 seats available for the premiere. After all tickets were sold, 456 people attended the show. How many empty seats were there?', choices: ['444', '454', '464', '474'], correctAnswer: '444',
+    solution: 'Empty seats = 900 - 456 = 444'
+  },
+  {
+    id: '403', gradeMin: 4, gradeMax: 4, domain: 'Number Sense', difficulty: 2,
+    questionText: 'A video game store sold 3,486 games last month. For their quarterly report, they need to round this number to the nearest hundred. What number should they report?', choices: ['3,400', '3,500', '3,600', '3,000'],
+    correctAnswer: '3,500', solution: 'Tens digit is 8 (>=5), round up -> 3,500'
+  },
+  {
+    id: '404', gradeMin: 4, gradeMax: 4, domain: 'Number Sense', difficulty: 2,
+    questionText: 'The population of a small city is 7,248 people. For census purposes, they want to round this to the nearest thousand. What number should they use?', choices: ['7,000', '7,200', '7,500', '8,000'],
+    correctAnswer: '7,000', solution: 'Hundreds digit is 2 (<5), round down -> 7,000'
+  },
+  {
+    id: '405', gradeMin: 4, gradeMax: 4, domain: 'Number Sense', difficulty: 3,
+    questionText: 'Two elementary schools are combining their fundraising efforts. Lincoln Elementary raised $2,345 and Washington Elementary raised $6,789. How much money did they raise together?', choices: ['9,034', '9,124', '9,134', '9,144'],
+    correctAnswer: '9,134', solution: 'Total raised = $2,345 + $6,789 = $9,134'
+  },
+  {
+    id: '406',
+    gradeMin: 4,
+    gradeMax: 4,
+    domain: 'Number Sense',
+    difficulty: 3,
+    questionText: 'A charity organization started with $5,000 in their account. They spent $2,376 on supplies for their event. How much money is left in their account?',
+    choices: ['2,624', '2,634', '2,744', '2,764'],
+    correctAnswer: '2,624',
+    solution: 'Money remaining = $5,000 - $2,376 = $2,624'
+  },
 
   // === Operations & Algebraic Thinking (407–412)
-  { id: '407', gradeMin: 4, gradeMax: 4, domain: 'Operations & Algebraic Thinking', difficulty: 1,
-    questionText: 'The fourth-grade class is setting up chairs for their graduation ceremony. They need to arrange 12 rows with 8 chairs in each row. How many chairs do they need in total?', choices: ['86','92','96','104'], correctAnswer: '96',
-    solution: 'Total chairs = 12 rows x 8 chairs = 96 chairs' },
-  { id: '408', gradeMin: 4, gradeMax: 4, domain: 'Operations & Algebraic Thinking', difficulty: 1,
-    questionText: 'The school cafeteria ordered 84 apples and wants to distribute them equally among 7 classrooms. How many apples will each classroom receive?', choices: ['10','11','12','13'], correctAnswer: '12',
-    solution: 'Apples per classroom = 84 ÷ 7 = 12' },
-  { id: '409', gradeMin: 4, gradeMax: 4, domain: 'Operations & Algebraic Thinking', difficulty: 2,
-    questionText: 'A basketball team practices 3 times per week. If they practiced for the same number of weeks and had 27 total practices, how many weeks did they practice?', choices: ['7','8','9','10'], correctAnswer: '9',
-    solution: 'Number of weeks = 27 practices ÷ 3 practices per week = 9 weeks' },
-  { id: '410', gradeMin: 4, gradeMax: 4, domain: 'Operations & Algebraic Thinking', difficulty: 2,
-    questionText: 'Maria is saving money for a new bike that costs $35. She already saved $10. If she saves $5 each week, how many more weeks does she need to save?', choices: ['4','5','6','7'], correctAnswer: '5',
-    solution: 'Money still needed = $35 - $10 = $25. Weeks needed = $25 ÷ $5 = 5 weeks' },
-  { id: '411', gradeMin: 4, gradeMax: 4, domain: 'Operations & Algebraic Thinking', difficulty: 3,
-    questionText: 'A candy factory produces chocolates in boxes. Each box contains 12 chocolates, and they filled 144 chocolates today. How many boxes did they fill?', choices: ['10','11','12','13'], correctAnswer: '12',
-    solution: 'Number of boxes = 144 chocolates ÷ 12 chocolates per box = 12 boxes' },
-  { id: '412', gradeMin: 4, gradeMax: 4, domain: 'Operations & Algebraic Thinking', difficulty: 3,
-    questionText: 'The school is ordering new textbooks. They need 15 books for each of 16 classrooms. How many textbooks should they order in total?', choices: ['220','230','240','250'], correctAnswer: '240',
-    solution: 'Total textbooks = 15 books x 16 classrooms = 240 textbooks' },
+  {
+    id: '407', gradeMin: 4, gradeMax: 4, domain: 'Operations & Algebraic Thinking', difficulty: 1,
+    questionText: 'The fourth-grade class is setting up chairs for their graduation ceremony. They need to arrange 12 rows with 8 chairs in each row. How many chairs do they need in total?', choices: ['86', '92', '96', '104'], correctAnswer: '96',
+    solution: 'Total chairs = 12 rows x 8 chairs = 96 chairs'
+  },
+  {
+    id: '408', gradeMin: 4, gradeMax: 4, domain: 'Operations & Algebraic Thinking', difficulty: 1,
+    questionText: 'The school cafeteria ordered 84 apples and wants to distribute them equally among 7 classrooms. How many apples will each classroom receive?', choices: ['10', '11', '12', '13'], correctAnswer: '12',
+    solution: 'Apples per classroom = 84 ÷ 7 = 12'
+  },
+  {
+    id: '409', gradeMin: 4, gradeMax: 4, domain: 'Operations & Algebraic Thinking', difficulty: 2,
+    questionText: 'A basketball team practices 3 times per week. If they practiced for the same number of weeks and had 27 total practices, how many weeks did they practice?', choices: ['7', '8', '9', '10'], correctAnswer: '9',
+    solution: 'Number of weeks = 27 practices ÷ 3 practices per week = 9 weeks'
+  },
+  {
+    id: '410', gradeMin: 4, gradeMax: 4, domain: 'Operations & Algebraic Thinking', difficulty: 2,
+    questionText: 'Maria is saving money for a new bike that costs $35. She already saved $10. If she saves $5 each week, how many more weeks does she need to save?', choices: ['4', '5', '6', '7'], correctAnswer: '5',
+    solution: 'Money still needed = $35 - $10 = $25. Weeks needed = $25 ÷ $5 = 5 weeks'
+  },
+  {
+    id: '411', gradeMin: 4, gradeMax: 4, domain: 'Operations & Algebraic Thinking', difficulty: 3,
+    questionText: 'A candy factory produces chocolates in boxes. Each box contains 12 chocolates, and they filled 144 chocolates today. How many boxes did they fill?', choices: ['10', '11', '12', '13'], correctAnswer: '12',
+    solution: 'Number of boxes = 144 chocolates ÷ 12 chocolates per box = 12 boxes'
+  },
+  {
+    id: '412', gradeMin: 4, gradeMax: 4, domain: 'Operations & Algebraic Thinking', difficulty: 3,
+    questionText: 'The school is ordering new textbooks. They need 15 books for each of 16 classrooms. How many textbooks should they order in total?', choices: ['220', '230', '240', '250'], correctAnswer: '240',
+    solution: 'Total textbooks = 15 books x 16 classrooms = 240 textbooks'
+  },
 
   // === Place Value (413–417)
-  { id: '413', gradeMin: 4, gradeMax: 4, domain: 'Place Value', difficulty: 1,
-    questionText: 'The attendance at the county fair was 7,482 people. What is the value of the digit 7 in this number?', choices: ['7','70','700','7,000'], correctAnswer: '7,000',
-    solution: '7 is in the thousands place, so its value is 7,000' },
-  { id: '414', gradeMin: 4, gradeMax: 4, domain: 'Place Value', difficulty: 1,
-    questionText: 'A new car costs $2,463. What is the value of the digit 6 in this price?', choices: ['6','60','600','6,000'], correctAnswer: '60',
-    solution: '6 is in the tens place, so its value is 60' },
-  { id: '415', gradeMin: 4, gradeMax: 4, domain: 'Place Value', difficulty: 2,
-    questionText: 'A electronics store made $5,489 in sales yesterday. For their daily report, they need to round this amount to the nearest hundred dollars. What amount should they report?', choices: ['$5,400','$5,500','$5,600','$5,000'],
-    correctAnswer: '$5,500', solution: 'Tens digit is 8 (>=5), round up to $5,500' },
-  { id: '416', gradeMin: 4, gradeMax: 4, domain: 'Place Value', difficulty: 2,
-    questionText: 'The school district has 8,765 students enrolled. For budget planning, they want to round this to the nearest thousand. What number should they use?', choices: ['8,000','8,500','9,000','9,500'],
-    correctAnswer: '9,000', solution: 'Hundreds digit is 7 (>=5), round up to 9,000' },
-  { id: '417', gradeMin: 4, gradeMax: 4, domain: 'Place Value', difficulty: 3,
-    questionText: 'The total number of visitors to the science museum this year was 6,309 people. How should this number be written in expanded form for their annual report?', choices: ['6000+30+9','6000+300+9','6000+309','6300+9'],
-    correctAnswer: '6000+300+9', solution: '6,309 = 6000 + 300 + 9' },
+  {
+    id: '413', gradeMin: 4, gradeMax: 4, domain: 'Place Value', difficulty: 1,
+    questionText: 'The attendance at the county fair was 7,482 people. What is the value of the digit 7 in this number?', choices: ['7', '70', '700', '7,000'], correctAnswer: '7,000',
+    solution: '7 is in the thousands place, so its value is 7,000'
+  },
+  {
+    id: '414', gradeMin: 4, gradeMax: 4, domain: 'Place Value', difficulty: 1,
+    questionText: 'A new car costs $2,463. What is the value of the digit 6 in this price?', choices: ['6', '60', '600', '6,000'], correctAnswer: '60',
+    solution: '6 is in the tens place, so its value is 60'
+  },
+  {
+    id: '415', gradeMin: 4, gradeMax: 4, domain: 'Place Value', difficulty: 2,
+    questionText: 'A electronics store made $5,489 in sales yesterday. For their daily report, they need to round this amount to the nearest hundred dollars. What amount should they report?', choices: ['$5,400', '$5,500', '$5,600', '$5,000'],
+    correctAnswer: '$5,500', solution: 'Tens digit is 8 (>=5), round up to $5,500'
+  },
+  {
+    id: '416', gradeMin: 4, gradeMax: 4, domain: 'Place Value', difficulty: 2,
+    questionText: 'The school district has 8,765 students enrolled. For budget planning, they want to round this to the nearest thousand. What number should they use?', choices: ['8,000', '8,500', '9,000', '9,500'],
+    correctAnswer: '9,000', solution: 'Hundreds digit is 7 (>=5), round up to 9,000'
+  },
+  {
+    id: '417', gradeMin: 4, gradeMax: 4, domain: 'Place Value', difficulty: 3,
+    questionText: 'The total number of visitors to the science museum this year was 6,309 people. How should this number be written in expanded form for their annual report?', choices: ['6000+30+9', '6000+300+9', '6000+309', '6300+9'],
+    correctAnswer: '6000+300+9', solution: '6,309 = 6000 + 300 + 9'
+  },
 
   // === Fractions (418–423)
-  { id: '418', gradeMin: 4, gradeMax: 4, domain: 'Fractions', difficulty: 1,
-    questionText: 'Sophie ate 1/2 of a sandwich for lunch and 1/4 of the same sandwich for a snack. What fraction of the sandwich did Sophie eat in total?', choices: ['2/6','3/4','4/6','5/6'], correctAnswer: '3/4',
-    solution: 'Total eaten = 1/2 + 1/4 = 2/4 + 1/4 = 3/4' },
-  { id: '419', gradeMin: 4, gradeMax: 4, domain: 'Fractions', difficulty: 1,
-    questionText: 'Two pizzas are the same size. Pizza A is cut into 4 equal slices and Pizza B is cut into 5 equal slices. If you eat 3 slices of Pizza A and 4 slices of Pizza B, which pizza did you eat more of?', choices: ['Pizza A (3/4)','Pizza B (4/5)'], correctAnswer: 'Pizza B (4/5)',
-    solution: '3/4 = 0.75 and 4/5 = 0.8, so 4/5 is greater' },
-  { id: '420', gradeMin: 4, gradeMax: 4, domain: 'Fractions', difficulty: 2,
-    questionText: 'A recipe calls for 2/3 cup of flour. Sarah wants to make 3/5 of the recipe. How much flour does she need?', choices: ['2/5 cup','3/5 cup','6/15 cup','6/10 cup'], correctAnswer: '6/15 cup',
-    solution: 'Flour needed = 2/3 x 3/5 = 6/15 = 2/5 cup' },
-  { id: '421', gradeMin: 4, gradeMax: 4, domain: 'Fractions', difficulty: 2,
-    questionText: 'The art teacher has 12/16 cups of paint. She wants to simplify this fraction for her supply list. What is the simplest form of 12/16?', choices: ['3/4','2/3','4/6','6/8'], correctAnswer: '3/4',
-    solution: 'Divide both numerator and denominator by 4: 12÷4 = 3, 16÷4 = 4, so 3/4' },
-  { id: '422', gradeMin: 4, gradeMax: 4, domain: 'Fractions', difficulty: 3,
-    questionText: 'Marcus had 7/8 of a chocolate bar. He gave away 3/8 of the bar to his sister. What fraction of the chocolate bar does Marcus have left?', choices: ['3/8','4/8','5/8','6/8'], correctAnswer: '4/8',
-    solution: 'Chocolate left = 7/8 - 3/8 = 4/8 = 1/2' },
-  { id: '423', gradeMin: 4, gradeMax: 4, domain: 'Fractions', difficulty: 3,
-    questionText: 'A baker used 5/6 cup of sugar for cookies and 1/3 cup of sugar for frosting. How much sugar did the baker use in total?', choices: ['6/6 cup','7/6 cup','8/6 cup','9/6 cup'], correctAnswer: '7/6 cup',
-    solution: 'Total sugar = 5/6 + 1/3 = 5/6 + 2/6 = 7/6 cup' },
+  {
+    id: '418', gradeMin: 4, gradeMax: 4, domain: 'Fractions', difficulty: 1,
+    questionText: 'Sophie ate 1/2 of a sandwich for lunch and 1/4 of the same sandwich for a snack. What fraction of the sandwich did Sophie eat in total?', choices: ['2/6', '3/4', '4/6', '5/6'], correctAnswer: '3/4',
+    solution: 'Total eaten = 1/2 + 1/4 = 2/4 + 1/4 = 3/4'
+  },
+  {
+    id: '419', gradeMin: 4, gradeMax: 4, domain: 'Fractions', difficulty: 1,
+    questionText: 'Two pizzas are the same size. Pizza A is cut into 4 equal slices and Pizza B is cut into 5 equal slices. If you eat 3 slices of Pizza A and 4 slices of Pizza B, which pizza did you eat more of?', choices: ['Pizza A (3/4)', 'Pizza B (4/5)'], correctAnswer: 'Pizza B (4/5)',
+    solution: '3/4 = 0.75 and 4/5 = 0.8, so 4/5 is greater'
+  },
+  {
+    id: '420', gradeMin: 4, gradeMax: 4, domain: 'Fractions', difficulty: 2,
+    questionText: 'A recipe calls for 2/3 cup of flour. Sarah wants to make 3/5 of the recipe. How much flour does she need?', choices: ['2/5 cup', '3/5 cup', '6/15 cup', '6/10 cup'], correctAnswer: '6/15 cup',
+    solution: 'Flour needed = 2/3 x 3/5 = 6/15 = 2/5 cup'
+  },
+  {
+    id: '421', gradeMin: 4, gradeMax: 4, domain: 'Fractions', difficulty: 2,
+    questionText: 'The art teacher has 12/16 cups of paint. She wants to simplify this fraction for her supply list. What is the simplest form of 12/16?', choices: ['3/4', '2/3', '4/6', '6/8'], correctAnswer: '3/4',
+    solution: 'Divide both numerator and denominator by 4: 12÷4 = 3, 16÷4 = 4, so 3/4'
+  },
+  {
+    id: '422', gradeMin: 4, gradeMax: 4, domain: 'Fractions', difficulty: 3,
+    questionText: 'Marcus had 7/8 of a chocolate bar. He gave away 3/8 of the bar to his sister. What fraction of the chocolate bar does Marcus have left?', choices: ['3/8', '4/8', '5/8', '6/8'], correctAnswer: '4/8',
+    solution: 'Chocolate left = 7/8 - 3/8 = 4/8 = 1/2'
+  },
+  {
+    id: '423', gradeMin: 4, gradeMax: 4, domain: 'Fractions', difficulty: 3,
+    questionText: 'A baker used 5/6 cup of sugar for cookies and 1/3 cup of sugar for frosting. How much sugar did the baker use in total?', choices: ['6/6 cup', '7/6 cup', '8/6 cup', '9/6 cup'], correctAnswer: '7/6 cup',
+    solution: 'Total sugar = 5/6 + 1/3 = 5/6 + 2/6 = 7/6 cup'
+  },
 
   // === Decimals & Percents (424–428)
-  { id: '424', gradeMin: 4, gradeMax: 4, domain: 'Decimals & Percents', difficulty: 1,
-    questionText: 'A runner completed 0.6 of the race course. What fraction represents the same amount?', choices: ['3/5','2/5','1/2','5/6'], correctAnswer: '3/5',
-    solution: '0.6 = 6/10 = 3/5' },
-  { id: '425', gradeMin: 4, gradeMax: 4, domain: 'Decimals & Percents', difficulty: 1,
-    questionText: 'In a survey, 75% of students said they like pizza. What fraction of students like pizza?', choices: ['3/4','2/3','4/5','5/6'], correctAnswer: '3/4',
-    solution: '75% = 75/100 = 3/4' },
-  { id: '426', gradeMin: 4, gradeMax: 4, domain: 'Decimals & Percents', difficulty: 2,
-    questionText: 'A clothing store is having a sale. A jacket originally costs $200, and it is marked down by 25%. How much money will a customer save?', choices: ['$25','$40','$50','$75'], correctAnswer: '$50',
-    solution: 'Savings = 25% of $200 = 1/4 x $200 = $50' },
-  { id: '427', gradeMin: 4, gradeMax: 4, domain: 'Decimals & Percents', difficulty: 2,
-    questionText: 'Two students are comparing their test scores. Alex scored 0.7 and Morgan scored 2/3. Who scored higher?', choices: ['Alex (0.7)','Morgan (2/3)'], correctAnswer: 'Alex (0.7)',
-    solution: '0.7 = 0.70 and 2/3 = 0.67, so Alex scored higher' },
-  { id: '428', gradeMin: 4, gradeMax: 4, domain: 'Decimals & Percents', difficulty: 3,
-    questionText: 'A restaurant bill is $80. The family wants to leave a 12.5% tip. How much should they leave for the tip?', choices: ['$8','$9','$10','$11'], correctAnswer: '$10',
-    solution: 'Tip = 12.5% of $80 = 1/8 x $80 = $10' },
+  {
+    id: '424', gradeMin: 4, gradeMax: 4, domain: 'Decimals & Percents', difficulty: 1,
+    questionText: 'A runner completed 0.6 of the race course. What fraction represents the same amount?', choices: ['3/5', '2/5', '1/2', '5/6'], correctAnswer: '3/5',
+    solution: '0.6 = 6/10 = 3/5'
+  },
+  {
+    id: '425', gradeMin: 4, gradeMax: 4, domain: 'Decimals & Percents', difficulty: 1,
+    questionText: 'In a survey, 75% of students said they like pizza. What fraction of students like pizza?', choices: ['3/4', '2/3', '4/5', '5/6'], correctAnswer: '3/4',
+    solution: '75% = 75/100 = 3/4'
+  },
+  {
+    id: '426', gradeMin: 4, gradeMax: 4, domain: 'Decimals & Percents', difficulty: 2,
+    questionText: 'A clothing store is having a sale. A jacket originally costs $200, and it is marked down by 25%. How much money will a customer save?', choices: ['$25', '$40', '$50', '$75'], correctAnswer: '$50',
+    solution: 'Savings = 25% of $200 = 1/4 x $200 = $50'
+  },
+  {
+    id: '427', gradeMin: 4, gradeMax: 4, domain: 'Decimals & Percents', difficulty: 2,
+    questionText: 'Two students are comparing their test scores. Alex scored 0.7 and Morgan scored 2/3. Who scored higher?', choices: ['Alex (0.7)', 'Morgan (2/3)'], correctAnswer: 'Alex (0.7)',
+    solution: '0.7 = 0.70 and 2/3 = 0.67, so Alex scored higher'
+  },
+  {
+    id: '428', gradeMin: 4, gradeMax: 4, domain: 'Decimals & Percents', difficulty: 3,
+    questionText: 'A restaurant bill is $80. The family wants to leave a 12.5% tip. How much should they leave for the tip?', choices: ['$8', '$9', '$10', '$11'], correctAnswer: '$10',
+    solution: 'Tip = 12.5% of $80 = 1/8 x $80 = $10'
+  },
 
   // === Geometry (429–434)
-  { id: '429', gradeMin: 4, gradeMax: 4, domain: 'Geometry', difficulty: 1,
-    questionText: 'How many sides does a decagon have?', choices: ['8','9','10','11'], correctAnswer: '10',
-    solution: 'Deca = 10' },
-  { id: '430', gradeMin: 4, gradeMax: 4, domain: 'Geometry', difficulty: 1,
-    questionText: 'How many right angles does a square have?', choices: ['2','3','4','5'], correctAnswer: '4',
-    solution: 'A square has 4 right angles' },
-  { id: '431', gradeMin: 4, gradeMax: 4, domain: 'Geometry', difficulty: 2,
-    questionText: 'The school is building a new rectangular playground. The playground will be 12 meters long and 5 meters wide. What is the area of the playground?', choices: ['50 square meters','55 square meters','60 square meters','65 square meters'],
-    correctAnswer: '60 square meters', solution: 'Area = length x width = 12 x 5 = 60 square meters' },
-  { id: '432', gradeMin: 4, gradeMax: 4, domain: 'Geometry', difficulty: 2,
-    questionText: 'A farmer wants to put a fence around his square vegetable garden. Each side of the garden is 9 meters long. How much fencing does he need?', choices: ['27 meters','36 meters','45 meters','54 meters'],
-    correctAnswer: '36 meters', solution: 'Perimeter of square = 4 x side length = 4 x 9 = 36 meters' },
-  { id: '433', gradeMin: 4, gradeMax: 4, domain: 'Geometry', difficulty: 3,
-    questionText: 'A construction company is installing square tiles in a lobby. Each tile has a side length of 15 centimeters. What is the area of each tile?', choices: ['200 cm²','210 cm²','220 cm²','225 cm²'],
-    correctAnswer: '225 cm²', solution: 'Area of square = side x side = 15 x 15 = 225 cm²' },
-  { id: '434', gradeMin: 4, gradeMax: 4, domain: 'Geometry', difficulty: 3,
-    questionText: 'How many degrees are in a right angle?', choices: ['45','90','120','180'],
-    correctAnswer: '90', solution: 'A right angle = 90°' },
+  {
+    id: '429', gradeMin: 4, gradeMax: 4, domain: 'Geometry', difficulty: 1,
+    questionText: 'How many sides does a decagon have?', choices: ['8', '9', '10', '11'], correctAnswer: '10',
+    solution: 'Deca = 10'
+  },
+  {
+    id: '430', gradeMin: 4, gradeMax: 4, domain: 'Geometry', difficulty: 1,
+    questionText: 'How many right angles does a square have?', choices: ['2', '3', '4', '5'], correctAnswer: '4',
+    solution: 'A square has 4 right angles'
+  },
+  {
+    id: '431', gradeMin: 4, gradeMax: 4, domain: 'Geometry', difficulty: 2,
+    questionText: 'The school is building a new rectangular playground. The playground will be 12 meters long and 5 meters wide. What is the area of the playground?', choices: ['50 square meters', '55 square meters', '60 square meters', '65 square meters'],
+    correctAnswer: '60 square meters', solution: 'Area = length x width = 12 x 5 = 60 square meters'
+  },
+  {
+    id: '432', gradeMin: 4, gradeMax: 4, domain: 'Geometry', difficulty: 2,
+    questionText: 'A farmer wants to put a fence around his square vegetable garden. Each side of the garden is 9 meters long. How much fencing does he need?', choices: ['27 meters', '36 meters', '45 meters', '54 meters'],
+    correctAnswer: '36 meters', solution: 'Perimeter of square = 4 x side length = 4 x 9 = 36 meters'
+  },
+  {
+    id: '433', gradeMin: 4, gradeMax: 4, domain: 'Geometry', difficulty: 3,
+    questionText: 'A construction company is installing square tiles in a lobby. Each tile has a side length of 15 centimeters. What is the area of each tile?', choices: ['200 cm²', '210 cm²', '220 cm²', '225 cm²'],
+    correctAnswer: '225 cm²', solution: 'Area of square = side x side = 15 x 15 = 225 cm²'
+  },
+  {
+    id: '434', gradeMin: 4, gradeMax: 4, domain: 'Geometry', difficulty: 3,
+    questionText: 'How many degrees are in a right angle?', choices: ['45', '90', '120', '180'],
+    correctAnswer: '90', solution: 'A right angle = 90°'
+  },
 
   // === Measurement (435–440)
-  { id: '435', gradeMin: 4, gradeMax: 4, domain: 'Measurement', difficulty: 1,
-    questionText: 'The school concert will last for 4 hours. The music teacher wants to include this information in minutes on the program. How many minutes will the concert last?', choices: ['120 minutes','180 minutes','240 minutes','300 minutes'], correctAnswer: '240 minutes',
-    solution: 'Concert duration = 4 hours x 60 minutes = 240 minutes' },
-  { id: '436', gradeMin: 4, gradeMax: 4, domain: 'Measurement', difficulty: 1,
-    questionText: 'The soccer field is 2 yards wide for the practice area. The coach needs to mark this distance in feet for the team setup. How many feet is this?', choices: ['4 feet','5 feet','6 feet','7 feet'], correctAnswer: '6 feet',
-    solution: 'Distance in feet = 2 yards x 3 feet per yard = 6 feet' },
-  { id: '437', gradeMin: 4, gradeMax: 4, domain: 'Measurement', difficulty: 2,
-    questionText: 'A shipping company needs to weigh a package. The package weighs 3 pounds. How many ounces does the package weigh?', choices: ['36 ounces','42 ounces','48 ounces','52 ounces'], correctAnswer: '48 ounces',
-    solution: 'Weight in ounces = 3 pounds x 16 ounces per pound = 48 ounces' },
-  { id: '438', gradeMin: 4, gradeMax: 4, domain: 'Measurement', difficulty: 2,
-    questionText: 'A swimming pool is 2 meters deep. The pool maintenance crew needs to know this measurement in centimeters. How many centimeters deep is the pool?', choices: ['20 cm','100 cm','200 cm','1000 cm'], correctAnswer: '200 cm',
-    solution: 'Pool depth = 2 meters x 100 centimeters per meter = 200 cm' },
-  { id: '439', gradeMin: 4, gradeMax: 4, domain: 'Measurement', difficulty: 3,
-    questionText: 'How many hours are in 10 days?', choices: ['220','230','240','250'], correctAnswer: '240',
-    solution: '10 x 24 = 240 hours' },
-  { id: '440', gradeMin: 4, gradeMax: 4, domain: 'Measurement', difficulty: 3,
-    questionText: 'How many minutes are in half a day?', choices: ['720','760','800','900'], correctAnswer: '720',
-    solution: '12 x 60 = 720 minutes' },
+  {
+    id: '435', gradeMin: 4, gradeMax: 4, domain: 'Measurement', difficulty: 1,
+    questionText: 'The school concert will last for 4 hours. The music teacher wants to include this information in minutes on the program. How many minutes will the concert last?', choices: ['120 minutes', '180 minutes', '240 minutes', '300 minutes'], correctAnswer: '240 minutes',
+    solution: 'Concert duration = 4 hours x 60 minutes = 240 minutes'
+  },
+  {
+    id: '436', gradeMin: 4, gradeMax: 4, domain: 'Measurement', difficulty: 1,
+    questionText: 'The soccer field is 2 yards wide for the practice area. The coach needs to mark this distance in feet for the team setup. How many feet is this?', choices: ['4 feet', '5 feet', '6 feet', '7 feet'], correctAnswer: '6 feet',
+    solution: 'Distance in feet = 2 yards x 3 feet per yard = 6 feet'
+  },
+  {
+    id: '437', gradeMin: 4, gradeMax: 4, domain: 'Measurement', difficulty: 2,
+    questionText: 'A shipping company needs to weigh a package. The package weighs 3 pounds. How many ounces does the package weigh?', choices: ['36 ounces', '42 ounces', '48 ounces', '52 ounces'], correctAnswer: '48 ounces',
+    solution: 'Weight in ounces = 3 pounds x 16 ounces per pound = 48 ounces'
+  },
+  {
+    id: '438', gradeMin: 4, gradeMax: 4, domain: 'Measurement', difficulty: 2,
+    questionText: 'A swimming pool is 2 meters deep. The pool maintenance crew needs to know this measurement in centimeters. How many centimeters deep is the pool?', choices: ['20 cm', '100 cm', '200 cm', '1000 cm'], correctAnswer: '200 cm',
+    solution: 'Pool depth = 2 meters x 100 centimeters per meter = 200 cm'
+  },
+  {
+    id: '439', gradeMin: 4, gradeMax: 4, domain: 'Measurement', difficulty: 3,
+    questionText: 'How many hours are in 10 days?', choices: ['220', '230', '240', '250'], correctAnswer: '240',
+    solution: '10 x 24 = 240 hours'
+  },
+  {
+    id: '440', gradeMin: 4, gradeMax: 4, domain: 'Measurement', difficulty: 3,
+    questionText: 'How many minutes are in half a day?', choices: ['720', '760', '800', '900'], correctAnswer: '720',
+    solution: '12 x 60 = 720 minutes'
+  },
 
   // === Statistics (441–444)
-  { id: '441', gradeMin: 4, gradeMax: 4, domain: 'Statistics', difficulty: 1,
-    questionText: 'Find the mean of 5, 10, 15.', choices: ['5','10','15','20'], correctAnswer: '10',
-    solution: '(5 + 10 + 15)/3 = 30/3 = 10' },
-  { id: '442', gradeMin: 4, gradeMax: 4, domain: 'Statistics', difficulty: 2,
-    questionText: 'Find the median of 4, 7, 9, 12, 15.', choices: ['7','9','10','12'], correctAnswer: '9',
-    solution: 'The middle number is 9' },
-  { id: '443', gradeMin: 4, gradeMax: 4, domain: 'Statistics', difficulty: 2,
-    questionText: 'Find the mode of 2, 4, 4, 6, 8.', choices: ['2','4','6','8'], correctAnswer: '4',
-    solution: '4 appears most often' },
-  { id: '444', gradeMin: 4, gradeMax: 4, domain: 'Statistics', difficulty: 3,
-    questionText: 'Find the range of 12, 15, 18, 22, 27.', choices: ['12','13','14','15'], correctAnswer: '15',
-    solution: '27 - 12 = 15' },
+  {
+    id: '441', gradeMin: 4, gradeMax: 4, domain: 'Statistics', difficulty: 1,
+    questionText: 'Find the mean of 5, 10, 15.', choices: ['5', '10', '15', '20'], correctAnswer: '10',
+    solution: '(5 + 10 + 15)/3 = 30/3 = 10'
+  },
+  {
+    id: '442', gradeMin: 4, gradeMax: 4, domain: 'Statistics', difficulty: 2,
+    questionText: 'Find the median of 4, 7, 9, 12, 15.', choices: ['7', '9', '10', '12'], correctAnswer: '9',
+    solution: 'The middle number is 9'
+  },
+  {
+    id: '443', gradeMin: 4, gradeMax: 4, domain: 'Statistics', difficulty: 2,
+    questionText: 'Find the mode of 2, 4, 4, 6, 8.', choices: ['2', '4', '6', '8'], correctAnswer: '4',
+    solution: '4 appears most often'
+  },
+  {
+    id: '444', gradeMin: 4, gradeMax: 4, domain: 'Statistics', difficulty: 3,
+    questionText: 'Find the range of 12, 15, 18, 22, 27.', choices: ['12', '13', '14', '15'], correctAnswer: '15',
+    solution: '27 - 12 = 15'
+  },
 
-// === Additional Grade 4 Questions (4th-1 to 4th-60) ===
-// Number Sense (4th-1 to 4th-15)
-{ id: '4th-1', gradeMin: 4, gradeMax: 4, domain: 'Number Sense', difficulty: 1,
-  questionText: 'The school collected 325 cans for a food drive in September and 187 cans in October. How many cans did they collect in total?',
-  choices: ['502', '512', '522', '532'], correctAnswer: '512',
-  solution: '325 + 187 = 512' },
-{ id: '4th-2', gradeMin: 4, gradeMax: 4, domain: 'Number Sense', difficulty: 1,
-  questionText: 'A classroom has 28 students. If 13 are boys, how many are girls?',
-  choices: ['13', '14', '15', '16'], correctAnswer: '15',
-  solution: '28 - 13 = 15' },
-{ id: '4th-3', gradeMin: 4, gradeMax: 4, domain: 'Number Sense', difficulty: 1,
-  questionText: 'What is the value of 7 x 8?',
-  choices: ['54', '56', '58', '60'], correctAnswer: '56',
-  solution: '7 x 8 = 56' },
-{ id: '4th-4', gradeMin: 4, gradeMax: 4, domain: 'Number Sense', difficulty: 1,
-  questionText: 'Round 2,487 to the nearest hundred.',
-  choices: ['2,400', '2,500', '2,480', '2,490'], correctAnswer: '2,500',
-  solution: 'Tens digit is 8 (>=5), round up to 2,500' },
-{ id: '4th-5', gradeMin: 4, gradeMax: 4, domain: 'Number Sense', difficulty: 2,
-  questionText: 'A store sold 1,234 pencils in January and 2,345 pencils in February. How many pencils did they sell in total?',
-  choices: ['3,579', '3,589', '3,579', '3,579'], correctAnswer: '3,579',
-  solution: '1,234 + 2,345 = 3,579' },
-{ id: '4th-6', gradeMin: 4, gradeMax: 4, domain: 'Number Sense', difficulty: 2,
-  questionText: 'What is 4,000 - 2,356?',
-  choices: ['1,644', '1,654', '1,664', '1,674'], correctAnswer: '1,644',
-  solution: '4,000 - 2,356 = 1,644' },
-{ id: '4th-7', gradeMin: 4, gradeMax: 4, domain: 'Number Sense', difficulty: 2,
-  questionText: 'Which is greater: 3,456 or 3,654?',
-  choices: ['3,456', '3,654'], correctAnswer: '3,654',
-  solution: '3,654 > 3,456' },
-{ id: '4th-8', gradeMin: 4, gradeMax: 4, domain: 'Number Sense', difficulty: 2,
-  questionText: 'What is the sum of 789 and 987?',
-  choices: ['1,666', '1,776', '1,786', '1,796'], correctAnswer: '1,776',
-  solution: '789 + 987 = 1,776' },
-{ id: '4th-9', gradeMin: 4, gradeMax: 4, domain: 'Number Sense', difficulty: 3,
-  questionText: 'A school has 1,234 students. If 567 are in grades 1-2, how many are in grades 3-4?',
-  choices: ['667', '677', '687', '697'], correctAnswer: '667',
-  solution: '1,234 - 567 = 667' },
-{ id: '4th-10', gradeMin: 4, gradeMax: 4, domain: 'Number Sense', difficulty: 3,
-  questionText: 'What is 2,500 divided by 25?',
-  choices: ['100', '110', '120', '125'], correctAnswer: '100',
-  solution: '2,500 ÷ 25 = 100' },
-{ id: '4th-11', gradeMin: 4, gradeMax: 4, domain: 'Number Sense', difficulty: 3,
-  questionText: 'A bus travels 1,200 miles in 4 days. How many miles does it travel per day?',
-  choices: ['200', '250', '300', '350'], correctAnswer: '300',
-  solution: '1,200 ÷ 4 = 300' },
-{ id: '4th-12', gradeMin: 4, gradeMax: 4, domain: 'Number Sense', difficulty: 3,
-  questionText: 'What is the product of 23 and 17?',
-  choices: ['371', '381', '391', '401'], correctAnswer: '391',
-  solution: '23 x 17 = 391' },
-{ id: '4th-13', gradeMin: 4, gradeMax: 4, domain: 'Number Sense', difficulty: 2,
-  questionText: 'What is the difference between 2,000 and 1,234?',
-  choices: ['756', '766', '776', '786'], correctAnswer: '766',
-  solution: '2,000 - 1,234 = 766' },
-{ id: '4th-14', gradeMin: 4, gradeMax: 4, domain: 'Number Sense', difficulty: 2,
-  questionText: 'Round 3,849 to the nearest thousand.',
-  choices: ['3,000', '4,000', '3,800', '3,900'], correctAnswer: '4,000',
-  solution: 'Hundreds digit is 8 (>=5), round up to 4,000' },
-{ id: '4th-15', gradeMin: 4, gradeMax: 4, domain: 'Number Sense', difficulty: 1,
-  questionText: 'What is 9 x 6?',
-  choices: ['52', '54', '56', '58'], correctAnswer: '54',
-  solution: '9 x 6 = 54' },
+  // === Additional Grade 4 Questions (4th-1 to 4th-60) ===
+  // Number Sense (4th-1 to 4th-15)
+  {
+    id: '4th-1', gradeMin: 4, gradeMax: 4, domain: 'Number Sense', difficulty: 1,
+    questionText: 'The school collected 325 cans for a food drive in September and 187 cans in October. How many cans did they collect in total?',
+    choices: ['502', '512', '522', '532'], correctAnswer: '512',
+    solution: '325 + 187 = 512'
+  },
+  {
+    id: '4th-2', gradeMin: 4, gradeMax: 4, domain: 'Number Sense', difficulty: 1,
+    questionText: 'A classroom has 28 students. If 13 are boys, how many are girls?',
+    choices: ['13', '14', '15', '16'], correctAnswer: '15',
+    solution: '28 - 13 = 15'
+  },
+  {
+    id: '4th-3', gradeMin: 4, gradeMax: 4, domain: 'Number Sense', difficulty: 1,
+    questionText: 'What is the value of 7 x 8?',
+    choices: ['54', '56', '58', '60'], correctAnswer: '56',
+    solution: '7 x 8 = 56'
+  },
+  {
+    id: '4th-4', gradeMin: 4, gradeMax: 4, domain: 'Number Sense', difficulty: 1,
+    questionText: 'Round 2,487 to the nearest hundred.',
+    choices: ['2,400', '2,500', '2,480', '2,490'], correctAnswer: '2,500',
+    solution: 'Tens digit is 8 (>=5), round up to 2,500'
+  },
+  {
+    id: '4th-5', gradeMin: 4, gradeMax: 4, domain: 'Number Sense', difficulty: 2,
+    questionText: 'A store sold 1,234 pencils in January and 2,345 pencils in February. How many pencils did they sell in total?',
+    choices: ['3,579', '3,589', '3,579', '3,579'], correctAnswer: '3,579',
+    solution: '1,234 + 2,345 = 3,579'
+  },
+  {
+    id: '4th-6', gradeMin: 4, gradeMax: 4, domain: 'Number Sense', difficulty: 2,
+    questionText: 'What is 4,000 - 2,356?',
+    choices: ['1,644', '1,654', '1,664', '1,674'], correctAnswer: '1,644',
+    solution: '4,000 - 2,356 = 1,644'
+  },
+  {
+    id: '4th-7', gradeMin: 4, gradeMax: 4, domain: 'Number Sense', difficulty: 2,
+    questionText: 'Which is greater: 3,456 or 3,654?',
+    choices: ['3,456', '3,654'], correctAnswer: '3,654',
+    solution: '3,654 > 3,456'
+  },
+  {
+    id: '4th-8', gradeMin: 4, gradeMax: 4, domain: 'Number Sense', difficulty: 2,
+    questionText: 'What is the sum of 789 and 987?',
+    choices: ['1,666', '1,776', '1,786', '1,796'], correctAnswer: '1,776',
+    solution: '789 + 987 = 1,776'
+  },
+  {
+    id: '4th-9', gradeMin: 4, gradeMax: 4, domain: 'Number Sense', difficulty: 3,
+    questionText: 'A school has 1,234 students. If 567 are in grades 1-2, how many are in grades 3-4?',
+    choices: ['667', '677', '687', '697'], correctAnswer: '667',
+    solution: '1,234 - 567 = 667'
+  },
+  {
+    id: '4th-10', gradeMin: 4, gradeMax: 4, domain: 'Number Sense', difficulty: 3,
+    questionText: 'What is 2,500 divided by 25?',
+    choices: ['100', '110', '120', '125'], correctAnswer: '100',
+    solution: '2,500 ÷ 25 = 100'
+  },
+  {
+    id: '4th-11', gradeMin: 4, gradeMax: 4, domain: 'Number Sense', difficulty: 3,
+    questionText: 'A bus travels 1,200 miles in 4 days. How many miles does it travel per day?',
+    choices: ['200', '250', '300', '350'], correctAnswer: '300',
+    solution: '1,200 ÷ 4 = 300'
+  },
+  {
+    id: '4th-12', gradeMin: 4, gradeMax: 4, domain: 'Number Sense', difficulty: 3,
+    questionText: 'What is the product of 23 and 17?',
+    choices: ['371', '381', '391', '401'], correctAnswer: '391',
+    solution: '23 x 17 = 391'
+  },
+  {
+    id: '4th-13', gradeMin: 4, gradeMax: 4, domain: 'Number Sense', difficulty: 2,
+    questionText: 'What is the difference between 2,000 and 1,234?',
+    choices: ['756', '766', '776', '786'], correctAnswer: '766',
+    solution: '2,000 - 1,234 = 766'
+  },
+  {
+    id: '4th-14', gradeMin: 4, gradeMax: 4, domain: 'Number Sense', difficulty: 2,
+    questionText: 'Round 3,849 to the nearest thousand.',
+    choices: ['3,000', '4,000', '3,800', '3,900'], correctAnswer: '4,000',
+    solution: 'Hundreds digit is 8 (>=5), round up to 4,000'
+  },
+  {
+    id: '4th-15', gradeMin: 4, gradeMax: 4, domain: 'Number Sense', difficulty: 1,
+    questionText: 'What is 9 x 6?',
+    choices: ['52', '54', '56', '58'], correctAnswer: '54',
+    solution: '9 x 6 = 54'
+  },
 
-// Operations & Algebraic Thinking (4th-16 to 4th-25)
-{ id: '4th-16', gradeMin: 4, gradeMax: 4, domain: 'Operations & Algebraic Thinking', difficulty: 1,
-  questionText: 'A baker made 48 cupcakes and wants to put them equally into 6 boxes. How many cupcakes will go in each box?',
-  choices: ['6', '7', '8', '9'], correctAnswer: '8',
-  solution: '48 ÷ 6 = 8' },
-{ id: '4th-17', gradeMin: 4, gradeMax: 4, domain: 'Operations & Algebraic Thinking', difficulty: 1,
-  questionText: 'What is the value of 5 x 9?',
-  choices: ['40', '45', '50', '55'], correctAnswer: '45',
-  solution: '5 x 9 = 45' },
-{ id: '4th-18', gradeMin: 4, gradeMax: 4, domain: 'Operations & Algebraic Thinking', difficulty: 2,
-  questionText: 'Fill in the blank: 7 x ___ = 63',
-  choices: ['7', '8', '9', '10'], correctAnswer: '9',
-  solution: '7 x 9 = 63' },
-{ id: '4th-19', gradeMin: 4, gradeMax: 4, domain: 'Operations & Algebraic Thinking', difficulty: 2,
-  questionText: 'A class has 36 students. If they are divided into 4 equal groups, how many students are in each group?',
-  choices: ['8', '9', '10', '11'], correctAnswer: '9',
-  solution: '36 ÷ 4 = 9' },
-{ id: '4th-20', gradeMin: 4, gradeMax: 4, domain: 'Operations & Algebraic Thinking', difficulty: 2,
-  questionText: 'What is 72 ÷ 8?',
-  choices: ['7', '8', '9', '10'], correctAnswer: '9',
-  solution: '72 ÷ 8 = 9' },
-{ id: '4th-21', gradeMin: 4, gradeMax: 4, domain: 'Operations & Algebraic Thinking', difficulty: 2,
-  questionText: 'If 6 x 7 = 42, what does 7 x 6 equal?',
-  choices: ['36', '42', '48', '54'], correctAnswer: '42',
-  solution: 'Multiplication is commutative: 7 x 6 = 6 x 7 = 42' },
-{ id: '4th-22', gradeMin: 4, gradeMax: 4, domain: 'Operations & Algebraic Thinking', difficulty: 3,
-  questionText: 'A school has 5 classes with 28 students each. How many students are there in total?',
-  choices: ['130', '135', '140', '145'], correctAnswer: '140',
-  solution: '5 x 28 = 140' },
-{ id: '4th-23', gradeMin: 4, gradeMax: 4, domain: 'Operations & Algebraic Thinking', difficulty: 3,
-  questionText: 'What is the missing number: ___ ÷ 7 = 8',
-  choices: ['48', '54', '56', '64'], correctAnswer: '56',
-  solution: '56 ÷ 7 = 8' },
-{ id: '4th-24', gradeMin: 4, gradeMax: 4, domain: 'Operations & Algebraic Thinking', difficulty: 3,
-  questionText: 'A store sold 96 apples in 8 days. How many apples did they sell per day?',
-  choices: ['10', '11', '12', '13'], correctAnswer: '12',
-  solution: '96 ÷ 8 = 12' },
-{ id: '4th-25', gradeMin: 4, gradeMax: 4, domain: 'Operations & Algebraic Thinking', difficulty: 3,
-  questionText: 'What is 144 divided by 12?',
-  choices: ['10', '11', '12', '13'], correctAnswer: '12',
-  solution: '144 ÷ 12 = 12' },
+  // Operations & Algebraic Thinking (4th-16 to 4th-25)
+  {
+    id: '4th-16', gradeMin: 4, gradeMax: 4, domain: 'Operations & Algebraic Thinking', difficulty: 1,
+    questionText: 'A baker made 48 cupcakes and wants to put them equally into 6 boxes. How many cupcakes will go in each box?',
+    choices: ['6', '7', '8', '9'], correctAnswer: '8',
+    solution: '48 ÷ 6 = 8'
+  },
+  {
+    id: '4th-17', gradeMin: 4, gradeMax: 4, domain: 'Operations & Algebraic Thinking', difficulty: 1,
+    questionText: 'What is the value of 5 x 9?',
+    choices: ['40', '45', '50', '55'], correctAnswer: '45',
+    solution: '5 x 9 = 45'
+  },
+  {
+    id: '4th-18', gradeMin: 4, gradeMax: 4, domain: 'Operations & Algebraic Thinking', difficulty: 2,
+    questionText: 'Fill in the blank: 7 x ___ = 63',
+    choices: ['7', '8', '9', '10'], correctAnswer: '9',
+    solution: '7 x 9 = 63'
+  },
+  {
+    id: '4th-19', gradeMin: 4, gradeMax: 4, domain: 'Operations & Algebraic Thinking', difficulty: 2,
+    questionText: 'A class has 36 students. If they are divided into 4 equal groups, how many students are in each group?',
+    choices: ['8', '9', '10', '11'], correctAnswer: '9',
+    solution: '36 ÷ 4 = 9'
+  },
+  {
+    id: '4th-20', gradeMin: 4, gradeMax: 4, domain: 'Operations & Algebraic Thinking', difficulty: 2,
+    questionText: 'What is 72 ÷ 8?',
+    choices: ['7', '8', '9', '10'], correctAnswer: '9',
+    solution: '72 ÷ 8 = 9'
+  },
+  {
+    id: '4th-21', gradeMin: 4, gradeMax: 4, domain: 'Operations & Algebraic Thinking', difficulty: 2,
+    questionText: 'If 6 x 7 = 42, what does 7 x 6 equal?',
+    choices: ['36', '42', '48', '54'], correctAnswer: '42',
+    solution: 'Multiplication is commutative: 7 x 6 = 6 x 7 = 42'
+  },
+  {
+    id: '4th-22', gradeMin: 4, gradeMax: 4, domain: 'Operations & Algebraic Thinking', difficulty: 3,
+    questionText: 'A school has 5 classes with 28 students each. How many students are there in total?',
+    choices: ['130', '135', '140', '145'], correctAnswer: '140',
+    solution: '5 x 28 = 140'
+  },
+  {
+    id: '4th-23', gradeMin: 4, gradeMax: 4, domain: 'Operations & Algebraic Thinking', difficulty: 3,
+    questionText: 'What is the missing number: ___ ÷ 7 = 8',
+    choices: ['48', '54', '56', '64'], correctAnswer: '56',
+    solution: '56 ÷ 7 = 8'
+  },
+  {
+    id: '4th-24', gradeMin: 4, gradeMax: 4, domain: 'Operations & Algebraic Thinking', difficulty: 3,
+    questionText: 'A store sold 96 apples in 8 days. How many apples did they sell per day?',
+    choices: ['10', '11', '12', '13'], correctAnswer: '12',
+    solution: '96 ÷ 8 = 12'
+  },
+  {
+    id: '4th-25', gradeMin: 4, gradeMax: 4, domain: 'Operations & Algebraic Thinking', difficulty: 3,
+    questionText: 'What is 144 divided by 12?',
+    choices: ['10', '11', '12', '13'], correctAnswer: '12',
+    solution: '144 ÷ 12 = 12'
+  },
 
-// Place Value (4th-26 to 4th-30)
-{ id: '4th-26', gradeMin: 4, gradeMax: 4, domain: 'Place Value', difficulty: 1,
-  questionText: 'What is the value of the 5 in 5,432?',
-  choices: ['5', '50', '500', '5,000'], correctAnswer: '5,000',
-  solution: '5 is in the thousands place' },
-{ id: '4th-27', gradeMin: 4, gradeMax: 4, domain: 'Place Value', difficulty: 1,
-  questionText: 'What is 3,210 written in expanded form?',
-  choices: ['3,000+200+10', '3,000+200+10+0', '3,000+100+10', '3,000+100+20'], correctAnswer: '3,000+200+10',
-  solution: '3,210 = 3,000 + 200 + 10' },
-{ id: '4th-28', gradeMin: 4, gradeMax: 4, domain: 'Place Value', difficulty: 2,
-  questionText: 'Round 7,489 to the nearest thousand.',
-  choices: ['7,000', '7,500', '8,000', '8,500'], correctAnswer: '7,000',
-  solution: 'Hundreds digit is 4 (<5), round down to 7,000' },
-{ id: '4th-29', gradeMin: 4, gradeMax: 4, domain: 'Place Value', difficulty: 2,
-  questionText: 'Which digit is in the hundreds place of 6,482?',
-  choices: ['4', '6', '8', '2'], correctAnswer: '4',
-  solution: 'Hundreds place is 4' },
-{ id: '4th-30', gradeMin: 4, gradeMax: 4, domain: 'Place Value', difficulty: 3,
-  questionText: 'What is the largest 4-digit number?',
-  choices: ['9,999', '9,900', '9,990', '9,909'], correctAnswer: '9,999',
-  solution: '9,999 is the largest 4-digit number' },
+  // Place Value (4th-26 to 4th-30)
+  {
+    id: '4th-26', gradeMin: 4, gradeMax: 4, domain: 'Place Value', difficulty: 1,
+    questionText: 'What is the value of the 5 in 5,432?',
+    choices: ['5', '50', '500', '5,000'], correctAnswer: '5,000',
+    solution: '5 is in the thousands place'
+  },
+  {
+    id: '4th-27', gradeMin: 4, gradeMax: 4, domain: 'Place Value', difficulty: 1,
+    questionText: 'What is 3,210 written in expanded form?',
+    choices: ['3,000+200+10', '3,000+200+10+0', '3,000+100+10', '3,000+100+20'], correctAnswer: '3,000+200+10',
+    solution: '3,210 = 3,000 + 200 + 10'
+  },
+  {
+    id: '4th-28', gradeMin: 4, gradeMax: 4, domain: 'Place Value', difficulty: 2,
+    questionText: 'Round 7,489 to the nearest thousand.',
+    choices: ['7,000', '7,500', '8,000', '8,500'], correctAnswer: '7,000',
+    solution: 'Hundreds digit is 4 (<5), round down to 7,000'
+  },
+  {
+    id: '4th-29', gradeMin: 4, gradeMax: 4, domain: 'Place Value', difficulty: 2,
+    questionText: 'Which digit is in the hundreds place of 6,482?',
+    choices: ['4', '6', '8', '2'], correctAnswer: '4',
+    solution: 'Hundreds place is 4'
+  },
+  {
+    id: '4th-30', gradeMin: 4, gradeMax: 4, domain: 'Place Value', difficulty: 3,
+    questionText: 'What is the largest 4-digit number?',
+    choices: ['9,999', '9,900', '9,990', '9,909'], correctAnswer: '9,999',
+    solution: '9,999 is the largest 4-digit number'
+  },
 
-// Fractions (4th-31 to 4th-35)
-{ id: '4th-31', gradeMin: 4, gradeMax: 4, domain: 'Fractions', difficulty: 1,
-  questionText: 'What is 1/2 + 1/4?',
-  choices: ['1/4', '1/2', '3/4', '1'], correctAnswer: '3/4',
-  solution: '1/2 = 2/4, so 2/4 + 1/4 = 3/4' },
-{ id: '4th-32', gradeMin: 4, gradeMax: 4, domain: 'Fractions', difficulty: 1,
-  questionText: 'Which fraction is equivalent to 3/6?',
-  choices: ['1/2', '2/3', '3/4', '1/3'], correctAnswer: '1/2',
-  solution: '3/6 = 1/2' },
-{ id: '4th-33', gradeMin: 4, gradeMax: 4, domain: 'Fractions', difficulty: 2,
-  questionText: 'What is 2/3 - 1/6?',
-  choices: ['1/2', '1/3', '2/6', '3/6'], correctAnswer: '1/2',
-  solution: '2/3 = 4/6, so 4/6 - 1/6 = 3/6 = 1/2' },
-{ id: '4th-34', gradeMin: 4, gradeMax: 4, domain: 'Fractions', difficulty: 2,
-  questionText: 'Simplify 8/12.',
-  choices: ['2/3', '3/4', '1/2', '4/6'], correctAnswer: '2/3',
-  solution: '8/12 = 2/3' },
-{ id: '4th-35', gradeMin: 4, gradeMax: 4, domain: 'Fractions', difficulty: 3,
-  questionText: 'What is 3/4 x 2/3?',
-  choices: ['1/2', '1/3', '1/4', '2/3'], correctAnswer: '1/2',
-  solution: '3/4 x 2/3 = 6/12 = 1/2' },
+  // Fractions (4th-31 to 4th-35)
+  {
+    id: '4th-31', gradeMin: 4, gradeMax: 4, domain: 'Fractions', difficulty: 1,
+    questionText: 'What is 1/2 + 1/4?',
+    choices: ['1/4', '1/2', '3/4', '1'], correctAnswer: '3/4',
+    solution: '1/2 = 2/4, so 2/4 + 1/4 = 3/4'
+  },
+  {
+    id: '4th-32', gradeMin: 4, gradeMax: 4, domain: 'Fractions', difficulty: 1,
+    questionText: 'Which fraction is equivalent to 3/6?',
+    choices: ['1/2', '2/3', '3/4', '1/3'], correctAnswer: '1/2',
+    solution: '3/6 = 1/2'
+  },
+  {
+    id: '4th-33', gradeMin: 4, gradeMax: 4, domain: 'Fractions', difficulty: 2,
+    questionText: 'What is 2/3 - 1/6?',
+    choices: ['1/2', '1/3', '2/6', '3/6'], correctAnswer: '1/2',
+    solution: '2/3 = 4/6, so 4/6 - 1/6 = 3/6 = 1/2'
+  },
+  {
+    id: '4th-34', gradeMin: 4, gradeMax: 4, domain: 'Fractions', difficulty: 2,
+    questionText: 'Simplify 8/12.',
+    choices: ['2/3', '3/4', '1/2', '4/6'], correctAnswer: '2/3',
+    solution: '8/12 = 2/3'
+  },
+  {
+    id: '4th-35', gradeMin: 4, gradeMax: 4, domain: 'Fractions', difficulty: 3,
+    questionText: 'What is 3/4 x 2/3?',
+    choices: ['1/2', '1/3', '1/4', '2/3'], correctAnswer: '1/2',
+    solution: '3/4 x 2/3 = 6/12 = 1/2'
+  },
 
-// Decimals & Percents (4th-36 to 4th-40)
-{ id: '4th-36', gradeMin: 4, gradeMax: 4, domain: 'Decimals & Percents', difficulty: 1,
-  questionText: 'Convert 0.5 to a percent.',
-  choices: ['5%', '50%', '0.5%', '500%'], correctAnswer: '50%',
-  solution: '0.5 = 50%' },
-{ id: '4th-37', gradeMin: 4, gradeMax: 4, domain: 'Decimals & Percents', difficulty: 1,
-  questionText: 'What is 25% of 80?',
-  choices: ['15', '18', '20', '25'], correctAnswer: '20',
-  solution: '0.25 x 80 = 20' },
-{ id: '4th-38', gradeMin: 4, gradeMax: 4, domain: 'Decimals & Percents', difficulty: 2,
-  questionText: 'Convert 0.08 to a fraction.',
-  choices: ['1/8', '2/25', '8/100', '1/12'], correctAnswer: '8/100',
-  solution: '0.08 = 8/100' },
-{ id: '4th-39', gradeMin: 4, gradeMax: 4, domain: 'Decimals & Percents', difficulty: 2,
-  questionText: 'What is 10% of 250?',
-  choices: ['20', '25', '30', '35'], correctAnswer: '25',
-  solution: '0.10 x 250 = 25' },
-{ id: '4th-40', gradeMin: 4, gradeMax: 4, domain: 'Decimals & Percents', difficulty: 3,
-  questionText: 'A $60 item is discounted by 20%. What is the sale price?',
-  choices: ['$40', '$45', '$48', '$50'], correctAnswer: '$48',
-  solution: '20% of $60 is $12; $60 - $12 = $48' },
+  // Decimals & Percents (4th-36 to 4th-40)
+  {
+    id: '4th-36', gradeMin: 4, gradeMax: 4, domain: 'Decimals & Percents', difficulty: 1,
+    questionText: 'Convert 0.5 to a percent.',
+    choices: ['5%', '50%', '0.5%', '500%'], correctAnswer: '50%',
+    solution: '0.5 = 50%'
+  },
+  {
+    id: '4th-37', gradeMin: 4, gradeMax: 4, domain: 'Decimals & Percents', difficulty: 1,
+    questionText: 'What is 25% of 80?',
+    choices: ['15', '18', '20', '25'], correctAnswer: '20',
+    solution: '0.25 x 80 = 20'
+  },
+  {
+    id: '4th-38', gradeMin: 4, gradeMax: 4, domain: 'Decimals & Percents', difficulty: 2,
+    questionText: 'Convert 0.08 to a fraction.',
+    choices: ['1/8', '2/25', '8/100', '1/12'], correctAnswer: '8/100',
+    solution: '0.08 = 8/100'
+  },
+  {
+    id: '4th-39', gradeMin: 4, gradeMax: 4, domain: 'Decimals & Percents', difficulty: 2,
+    questionText: 'What is 10% of 250?',
+    choices: ['20', '25', '30', '35'], correctAnswer: '25',
+    solution: '0.10 x 250 = 25'
+  },
+  {
+    id: '4th-40', gradeMin: 4, gradeMax: 4, domain: 'Decimals & Percents', difficulty: 3,
+    questionText: 'A $60 item is discounted by 20%. What is the sale price?',
+    choices: ['$40', '$45', '$48', '$50'], correctAnswer: '$48',
+    solution: '20% of $60 is $12; $60 - $12 = $48'
+  },
 
-// Geometry (4th-41 to 4th-45)
-{ id: '4th-41', gradeMin: 4, gradeMax: 4, domain: 'Geometry', difficulty: 1,
-  questionText: 'How many sides does a nonagon have?',
-  choices: ['7', '8', '9', '10'], correctAnswer: '9',
-  solution: 'A nonagon has 9 sides' },
-{ id: '4th-42', gradeMin: 4, gradeMax: 4, domain: 'Geometry', difficulty: 1,
-  questionText: 'How many right angles does a rectangle have?',
-  choices: ['2', '3', '4', '5'], correctAnswer: '4',
-  solution: 'A rectangle has 4 right angles' },
-{ id: '4th-43', gradeMin: 4, gradeMax: 4, domain: 'Geometry', difficulty: 2,
-  questionText: 'A square has a side length of 11 cm. What is its area?',
-  choices: ['111 cm²', '121 cm²', '131 cm²', '141 cm²'], correctAnswer: '121 cm²',
-  solution: 'Area = 11 x 11 = 121 cm²' },
-{ id: '4th-44', gradeMin: 4, gradeMax: 4, domain: 'Geometry', difficulty: 2,
-  questionText: 'A triangle has angles of 90°, 60°, and ___. What is the missing angle?',
-  choices: ['20°', '30°', '40°', '50°'], correctAnswer: '30°',
-  solution: 'Sum of angles in triangle = 180°. 180 - 90 - 60 = 30°' },
-{ id: '4th-45', gradeMin: 4, gradeMax: 4, domain: 'Geometry', difficulty: 3,
-  questionText: 'A rectangle is 14 cm long and 6 cm wide. What is its perimeter?',
-  choices: ['30 cm', '32 cm', '34 cm', '40 cm'], correctAnswer: '40 cm',
-  solution: 'Perimeter = 2 x (14 + 6) = 2 x 20 = 40 cm' },
+  // Geometry (4th-41 to 4th-45)
+  {
+    id: '4th-41', gradeMin: 4, gradeMax: 4, domain: 'Geometry', difficulty: 1,
+    questionText: 'How many sides does a nonagon have?',
+    choices: ['7', '8', '9', '10'], correctAnswer: '9',
+    solution: 'A nonagon has 9 sides'
+  },
+  {
+    id: '4th-42', gradeMin: 4, gradeMax: 4, domain: 'Geometry', difficulty: 1,
+    questionText: 'How many right angles does a rectangle have?',
+    choices: ['2', '3', '4', '5'], correctAnswer: '4',
+    solution: 'A rectangle has 4 right angles'
+  },
+  {
+    id: '4th-43', gradeMin: 4, gradeMax: 4, domain: 'Geometry', difficulty: 2,
+    questionText: 'A square has a side length of 11 cm. What is its area?',
+    choices: ['111 cm²', '121 cm²', '131 cm²', '141 cm²'], correctAnswer: '121 cm²',
+    solution: 'Area = 11 x 11 = 121 cm²'
+  },
+  {
+    id: '4th-44', gradeMin: 4, gradeMax: 4, domain: 'Geometry', difficulty: 2,
+    questionText: 'A triangle has angles of 90°, 60°, and ___. What is the missing angle?',
+    choices: ['20°', '30°', '40°', '50°'], correctAnswer: '30°',
+    solution: 'Sum of angles in triangle = 180°. 180 - 90 - 60 = 30°'
+  },
+  {
+    id: '4th-45', gradeMin: 4, gradeMax: 4, domain: 'Geometry', difficulty: 3,
+    questionText: 'A rectangle is 14 cm long and 6 cm wide. What is its perimeter?',
+    choices: ['30 cm', '32 cm', '34 cm', '40 cm'], correctAnswer: '40 cm',
+    solution: 'Perimeter = 2 x (14 + 6) = 2 x 20 = 40 cm'
+  },
 
-// Measurement (4th-46 to 4th-50)
-{ id: '4th-46', gradeMin: 4, gradeMax: 4, domain: 'Measurement', difficulty: 1,
-  questionText: 'How many centimeters are in 3 meters?',
-  choices: ['30', '300', '3,000', '30,000'], correctAnswer: '300',
-  solution: '1 meter = 100 cm, so 3 x 100 = 300' },
-{ id: '4th-47', gradeMin: 4, gradeMax: 4, domain: 'Measurement', difficulty: 1,
-  questionText: 'How many minutes are in 3 hours?',
-  choices: ['120', '150', '180', '210'], correctAnswer: '180',
-  solution: '3 x 60 = 180' },
-{ id: '4th-48', gradeMin: 4, gradeMax: 4, domain: 'Measurement', difficulty: 2,
-  questionText: 'A swimming pool is 25 meters long. How many centimeters is that?',
-  choices: ['250', '2,500', '25,000', '250,000'], correctAnswer: '2,500',
-  solution: '25 x 100 = 2,500' },
-{ id: '4th-49', gradeMin: 4, gradeMax: 4, domain: 'Measurement', difficulty: 2,
-  questionText: 'How many grams are in 4 kilograms?',
-  choices: ['400', '4,000', '40,000', '400,000'], correctAnswer: '4,000',
-  solution: '4 x 1,000 = 4,000' },
-{ id: '4th-50', gradeMin: 4, gradeMax: 4, domain: 'Measurement', difficulty: 3,
-  questionText: 'A car travels 360 kilometers in 6 hours. What is its average speed in km/h?',
-  choices: ['50', '55', '60', '65'], correctAnswer: '60',
-  solution: '360 ÷ 6 = 60 km/h' },
+  // Measurement (4th-46 to 4th-50)
+  {
+    id: '4th-46', gradeMin: 4, gradeMax: 4, domain: 'Measurement', difficulty: 1,
+    questionText: 'How many centimeters are in 3 meters?',
+    choices: ['30', '300', '3,000', '30,000'], correctAnswer: '300',
+    solution: '1 meter = 100 cm, so 3 x 100 = 300'
+  },
+  {
+    id: '4th-47', gradeMin: 4, gradeMax: 4, domain: 'Measurement', difficulty: 1,
+    questionText: 'How many minutes are in 3 hours?',
+    choices: ['120', '150', '180', '210'], correctAnswer: '180',
+    solution: '3 x 60 = 180'
+  },
+  {
+    id: '4th-48', gradeMin: 4, gradeMax: 4, domain: 'Measurement', difficulty: 2,
+    questionText: 'A swimming pool is 25 meters long. How many centimeters is that?',
+    choices: ['250', '2,500', '25,000', '250,000'], correctAnswer: '2,500',
+    solution: '25 x 100 = 2,500'
+  },
+  {
+    id: '4th-49', gradeMin: 4, gradeMax: 4, domain: 'Measurement', difficulty: 2,
+    questionText: 'How many grams are in 4 kilograms?',
+    choices: ['400', '4,000', '40,000', '400,000'], correctAnswer: '4,000',
+    solution: '4 x 1,000 = 4,000'
+  },
+  {
+    id: '4th-50', gradeMin: 4, gradeMax: 4, domain: 'Measurement', difficulty: 3,
+    questionText: 'A car travels 360 kilometers in 6 hours. What is its average speed in km/h?',
+    choices: ['50', '55', '60', '65'], correctAnswer: '60',
+    solution: '360 ÷ 6 = 60 km/h'
+  },
 
-// Statistics (4th-51 to 4th-55)
-{ id: '4th-51', gradeMin: 4, gradeMax: 4, domain: 'Statistics', difficulty: 1,
-  questionText: 'What is the mean of 8, 12, and 16?',
-  choices: ['10', '12', '14', '16'], correctAnswer: '12',
-  solution: '(8 + 12 + 16) ÷ 3 = 36 ÷ 3 = 12' },
-{ id: '4th-52', gradeMin: 4, gradeMax: 4, domain: 'Statistics', difficulty: 1,
-  questionText: 'What is the median of 3, 7, 9, 12, 15?',
-  choices: ['7', '9', '10', '12'], correctAnswer: '9',
-  solution: 'The middle number is 9' },
-{ id: '4th-53', gradeMin: 4, gradeMax: 4, domain: 'Statistics', difficulty: 2,
-  questionText: 'What is the mode of 2, 4, 4, 6, 8?',
-  choices: ['2', '4', '6', '8'], correctAnswer: '4',
-  solution: '4 appears most often' },
-{ id: '4th-54', gradeMin: 4, gradeMax: 4, domain: 'Statistics', difficulty: 2,
-  questionText: 'What is the range of 5, 9, 12, 15, 20?',
-  choices: ['10', '11', '12', '15'], correctAnswer: '15',
-  solution: '20 - 5 = 15' },
-{ id: '4th-55', gradeMin: 4, gradeMax: 4, domain: 'Statistics', difficulty: 3,
-  questionText: 'The scores on a test are 78, 85, 92, 85, 90. What is the mode?',
-  choices: ['78', '85', '90', '92'], correctAnswer: '85',
-  solution: '85 appears most often' },
+  // Statistics (4th-51 to 4th-55)
+  {
+    id: '4th-51', gradeMin: 4, gradeMax: 4, domain: 'Statistics', difficulty: 1,
+    questionText: 'What is the mean of 8, 12, and 16?',
+    choices: ['10', '12', '14', '16'], correctAnswer: '12',
+    solution: '(8 + 12 + 16) ÷ 3 = 36 ÷ 3 = 12'
+  },
+  {
+    id: '4th-52', gradeMin: 4, gradeMax: 4, domain: 'Statistics', difficulty: 1,
+    questionText: 'What is the median of 3, 7, 9, 12, 15?',
+    choices: ['7', '9', '10', '12'], correctAnswer: '9',
+    solution: 'The middle number is 9'
+  },
+  {
+    id: '4th-53', gradeMin: 4, gradeMax: 4, domain: 'Statistics', difficulty: 2,
+    questionText: 'What is the mode of 2, 4, 4, 6, 8?',
+    choices: ['2', '4', '6', '8'], correctAnswer: '4',
+    solution: '4 appears most often'
+  },
+  {
+    id: '4th-54', gradeMin: 4, gradeMax: 4, domain: 'Statistics', difficulty: 2,
+    questionText: 'What is the range of 5, 9, 12, 15, 20?',
+    choices: ['10', '11', '12', '15'], correctAnswer: '15',
+    solution: '20 - 5 = 15'
+  },
+  {
+    id: '4th-55', gradeMin: 4, gradeMax: 4, domain: 'Statistics', difficulty: 3,
+    questionText: 'The scores on a test are 78, 85, 92, 85, 90. What is the mode?',
+    choices: ['78', '85', '90', '92'], correctAnswer: '85',
+    solution: '85 appears most often'
+  },
 
-// Mixed Review & Word Problems (4th-56 to 4th-60)
-{ id: '4th-56', gradeMin: 4, gradeMax: 4, domain: 'Number Sense', difficulty: 2,
-  questionText: 'A school bus has 40 seats. If 27 are occupied, how many are empty?',
-  choices: ['11', '12', '13', '14'], correctAnswer: '13',
-  solution: '40 - 27 = 13' },
-{ id: '4th-57', gradeMin: 4, gradeMax: 4, domain: 'Measurement', difficulty: 2,
-  questionText: 'A water bottle holds 750 milliliters. How many liters is that?',
-  choices: ['0.75', '7.5', '75', '750'], correctAnswer: '0.75',
-  solution: '1 liter = 1,000 mL, so 750 ÷ 1,000 = 0.75 L' },
-{ id: '4th-58', gradeMin: 4, gradeMax: 4, domain: 'Geometry', difficulty: 2,
-  questionText: 'How many faces does a cube have?',
-  choices: ['4', '6', '8', '12'], correctAnswer: '6',
-  solution: 'A cube has 6 faces' },
-{ id: '4th-59', gradeMin: 4, gradeMax: 4, domain: 'Decimals & Percents', difficulty: 2,
-  questionText: 'What is 10% of 150?',
-  choices: ['10', '15', '20', '25'], correctAnswer: '15',
-  solution: '0.10 x 150 = 15' },
-{ id: '4th-60', gradeMin: 4, gradeMax: 4, domain: 'Fractions', difficulty: 2,
-  questionText: 'What is 2/5 + 1/5?',
-  choices: ['2/5', '3/5', '4/5', '1'], correctAnswer: '3/5',
-  solution: '2/5 + 1/5 = 3/5' },
+  // Mixed Review & Word Problems (4th-56 to 4th-60)
+  {
+    id: '4th-56', gradeMin: 4, gradeMax: 4, domain: 'Number Sense', difficulty: 2,
+    questionText: 'A school bus has 40 seats. If 27 are occupied, how many are empty?',
+    choices: ['11', '12', '13', '14'], correctAnswer: '13',
+    solution: '40 - 27 = 13'
+  },
+  {
+    id: '4th-57', gradeMin: 4, gradeMax: 4, domain: 'Measurement', difficulty: 2,
+    questionText: 'A water bottle holds 750 milliliters. How many liters is that?',
+    choices: ['0.75', '7.5', '75', '750'], correctAnswer: '0.75',
+    solution: '1 liter = 1,000 mL, so 750 ÷ 1,000 = 0.75 L'
+  },
+  {
+    id: '4th-58', gradeMin: 4, gradeMax: 4, domain: 'Geometry', difficulty: 2,
+    questionText: 'How many faces does a cube have?',
+    choices: ['4', '6', '8', '12'], correctAnswer: '6',
+    solution: 'A cube has 6 faces'
+  },
+  {
+    id: '4th-59', gradeMin: 4, gradeMax: 4, domain: 'Decimals & Percents', difficulty: 2,
+    questionText: 'What is 10% of 150?',
+    choices: ['10', '15', '20', '25'], correctAnswer: '15',
+    solution: '0.10 x 150 = 15'
+  },
+  {
+    id: '4th-60', gradeMin: 4, gradeMax: 4, domain: 'Fractions', difficulty: 2,
+    questionText: 'What is 2/5 + 1/5?',
+    choices: ['2/5', '3/5', '4/5', '1'], correctAnswer: '3/5',
+    solution: '2/5 + 1/5 = 3/5'
+  },
 
   // === Grade 6 Questions ===
   // === Algebra (6-1 to 6-10)
-  { id: '6-1', gradeMin: 6, gradeMax: 6, domain: 'Algebra', difficulty: 2,
+  {
+    id: '6-1', gradeMin: 6, gradeMax: 6, domain: 'Algebra', difficulty: 2,
     questionText: 'The school library charges $3 for each day a book is overdue. If Maria owes $15 in late fees, how many days was her book overdue? Write and solve the equation 3x = 15.',
     choices: ['3 days', '4 days', '5 days', '6 days'], correctAnswer: '5 days',
-    solution: 'Solve 3x = 15 by dividing both sides by 3: x = 15 / 3 = 5 days.' },
-  
-  { id: '6-2', gradeMin: 6, gradeMax: 6, domain: 'Algebra', difficulty: 2,
+    solution: 'Solve 3x = 15 by dividing both sides by 3: x = 15 / 3 = 5 days.'
+  },
+
+  {
+    id: '6-2', gradeMin: 6, gradeMax: 6, domain: 'Algebra', difficulty: 2,
     questionText: 'The school cafeteria ordered pizzas for a special event. Each pizza was cut into 8 slices, and there were 24 slices left over. How many whole pizzas were left? Solve: 8p = 24.',
     choices: ['2 pizzas', '3 pizzas', '4 pizzas', '5 pizzas'], correctAnswer: '3 pizzas',
-    solution: 'Solve 8p = 24 by dividing both sides by 8: p = 24 / 8 = 3 pizzas.' },
-  
-  { id: '6-3', gradeMin: 6, gradeMax: 6, domain: 'Algebra', difficulty: 3,
+    solution: 'Solve 8p = 24 by dividing both sides by 8: p = 24 / 8 = 3 pizzas.'
+  },
+
+  {
+    id: '6-3', gradeMin: 6, gradeMax: 6, domain: 'Algebra', difficulty: 3,
     questionText: 'Tommy saved money for a new video game that costs $45. He already has $20 and earns $5 per week doing chores. How many weeks will it take him to save enough? Solve: 20 + 5w = 45.',
     choices: ['4 weeks', '5 weeks', '6 weeks', '7 weeks'], correctAnswer: '5 weeks',
-    solution: 'Solve 20 + 5w = 45: Subtract 20 from both sides: 5w = 25. Divide by 5: w = 5 weeks.' },
-  
- {
-  id: '6-4',
-  gradeMin: 6,
-  gradeMax: 6,
-  domain: 'Algebra',
-  difficulty: 3,
-  questionText: 'The school theater sold tickets for their play. Adult tickets cost $12 each and student tickets cost $8 each. If they sold 15 adult tickets and earned a total of $276, how many student tickets did they sell? Solve: 12(15) + 8s = 276.',
-  choices: ['8 tickets', '10 tickets', '12 tickets', '14 tickets'],
-  correctAnswer: '12 tickets',
-  solution: 'Adult revenue: 12 x 15 = $180. Then 180 + 8s = 276 → 8s = 96 → s = 12 student tickets.'
-},
-  { id: '6-5', gradeMin: 6, gradeMax: 6, domain: 'Algebra', difficulty: 2,
+    solution: 'Solve 20 + 5w = 45: Subtract 20 from both sides: 5w = 25. Divide by 5: w = 5 weeks.'
+  },
+
+  {
+    id: '6-4',
+    gradeMin: 6,
+    gradeMax: 6,
+    domain: 'Algebra',
+    difficulty: 3,
+    questionText: 'The school theater sold tickets for their play. Adult tickets cost $12 each and student tickets cost $8 each. If they sold 15 adult tickets and earned a total of $276, how many student tickets did they sell? Solve: 12(15) + 8s = 276.',
+    choices: ['8 tickets', '10 tickets', '12 tickets', '14 tickets'],
+    correctAnswer: '12 tickets',
+    solution: 'Adult revenue: 12 x 15 = $180. Then 180 + 8s = 276 → 8s = 96 → s = 12 student tickets.'
+  },
+  {
+    id: '6-5', gradeMin: 6, gradeMax: 6, domain: 'Algebra', difficulty: 2,
     questionText: 'A rectangle has a length that is 3 units more than its width. If the width is w units, which expression represents the length of the rectangle?',
     choices: ['w - 3', 'w + 3', '3w', 'w / 3'], correctAnswer: 'w + 3',
-    solution: 'If width is w and length is 3 units more than width, then length = w + 3.' },
-  
-  { id: '6-6', gradeMin: 6, gradeMax: 6, domain: 'Algebra', difficulty: 3,
+    solution: 'If width is w and length is 3 units more than width, then length = w + 3.'
+  },
+
+  {
+    id: '6-6', gradeMin: 6, gradeMax: 6, domain: 'Algebra', difficulty: 3,
     questionText: 'The science club is selling candy bars to raise money for a field trip. They need to raise $150. If each candy bar sells for $2 and they have already raised $50, how many more candy bars do they need to sell? Solve: 50 + 2x = 150.',
     choices: ['40 bars', '45 bars', '50 bars', '55 bars'], correctAnswer: '50 bars',
-    solution: 'Solve 50 + 2x = 150: Subtract 50 from both sides: 2x = 100. Divide by 2: x = 50 candy bars.' },
-  
-  { id: '6-7', gradeMin: 6, gradeMax: 6, domain: 'Algebra', difficulty: 2,
+    solution: 'Solve 50 + 2x = 150: Subtract 50 from both sides: 2x = 100. Divide by 2: x = 50 candy bars.'
+  },
+
+  {
+    id: '6-7', gradeMin: 6, gradeMax: 6, domain: 'Algebra', difficulty: 2,
     questionText: 'If x = 7, what is the value of the expression 4x - 9?',
     choices: ['19', '21', '23', '25'], correctAnswer: '19',
-    solution: 'Substitute x = 7 into 4x - 9: 4(7) - 9 = 28 - 9 = 19.' },
-  
-  { id: '6-8', gradeMin: 6, gradeMax: 6, domain: 'Algebra', difficulty: 3,
+    solution: 'Substitute x = 7 into 4x - 9: 4(7) - 9 = 28 - 9 = 19.'
+  },
+
+  {
+    id: '6-8', gradeMin: 6, gradeMax: 6, domain: 'Algebra', difficulty: 3,
     questionText: 'The basketball team scored 3 times as many points in the second half as they did in the first half. If they scored 21 points in the second half, how many points did they score in the first half? Solve: 3f = 21.',
     choices: ['6 points', '7 points', '8 points', '9 points'], correctAnswer: '7 points',
-    solution: 'Solve 3f = 21 by dividing both sides by 3: f = 21 / 3 = 7 points.' },
-  
-  { id: '6-9', gradeMin: 6, gradeMax: 6, domain: 'Algebra', difficulty: 3,
+    solution: 'Solve 3f = 21 by dividing both sides by 3: f = 21 / 3 = 7 points.'
+  },
+
+  {
+    id: '6-9', gradeMin: 6, gradeMax: 6, domain: 'Algebra', difficulty: 3,
     questionText: 'A parking garage charges $4 to enter plus $2 for each hour parked. If someone paid $16 total, how many hours did they park? Solve: 4 + 2h = 16.',
     choices: ['5 hours', '6 hours', '7 hours', '8 hours'], correctAnswer: '6 hours',
-    solution: 'Solve 4 + 2h = 16: Subtract 4 from both sides: 2h = 12. Divide by 2: h = 6 hours.' },
-  
-  { id: '6-10', gradeMin: 6, gradeMax: 6, domain: 'Algebra', difficulty: 2,
+    solution: 'Solve 4 + 2h = 16: Subtract 4 from both sides: 2h = 12. Divide by 2: h = 6 hours.'
+  },
+
+  {
+    id: '6-10', gradeMin: 6, gradeMax: 6, domain: 'Algebra', difficulty: 2,
     questionText: 'Which of the following expressions is equivalent to 5(x + 3)?',
     choices: ['5x + 3', '5x + 15', 'x + 15', '5x + 8'], correctAnswer: '5x + 15',
-    solution: 'Use the distributive property: 5(x + 3) = 5x + 5(3) = 5x + 15.' },
+    solution: 'Use the distributive property: 5(x + 3) = 5x + 5(3) = 5x + 15.'
+  },
 
   // === Ratios & Proportions (6-11 to 6-20)
-  { id: '6-11', gradeMin: 6, gradeMax: 6, domain: 'Ratios & Proportions', difficulty: 2,
+  {
+    id: '6-11', gradeMin: 6, gradeMax: 6, domain: 'Ratios & Proportions', difficulty: 2,
     questionText: 'The recipe for the school bake sale calls for 2 cups of flour for every 3 cups of sugar. If the parent volunteers want to make a larger batch using 8 cups of flour, how many cups of sugar will they need?',
     choices: ['10 cups', '11 cups', '12 cups', '14 cups'], correctAnswer: '12 cups',
-    solution: 'Set up proportion: 2/3 = 8/x. Cross multiply: 2x = 24. Divide by 2: x = 12 cups of sugar.' },
-  
-  { id: '6-12', gradeMin: 6, gradeMax: 6, domain: 'Ratios & Proportions', difficulty: 2,
+    solution: 'Set up proportion: 2/3 = 8/x. Cross multiply: 2x = 24. Divide by 2: x = 12 cups of sugar.'
+  },
+
+  {
+    id: '6-12', gradeMin: 6, gradeMax: 6, domain: 'Ratios & Proportions', difficulty: 2,
     questionText: 'The school track team runs at a rate of 200 meters in 45 seconds during practice. At this rate, how long will it take them to run 400 meters?',
     choices: ['80 seconds', '85 seconds', '90 seconds', '95 seconds'], correctAnswer: '90 seconds',
-    solution: 'Set up proportion: 200/45 = 400/x. Cross multiply: 200x = 18,000. Divide by 200: x = 90 seconds.' },
-  
-  { id: '6-13', gradeMin: 6, gradeMax: 6, domain: 'Ratios & Proportions', difficulty: 3,
+    solution: 'Set up proportion: 200/45 = 400/x. Cross multiply: 200x = 18,000. Divide by 200: x = 90 seconds.'
+  },
+
+  {
+    id: '6-13', gradeMin: 6, gradeMax: 6, domain: 'Ratios & Proportions', difficulty: 3,
     questionText: 'A map of the school district uses a scale where 1 inch represents 2 miles. If two schools are 3.5 inches apart on the map, what is the actual distance between them?',
     choices: ['6 miles', '7 miles', '8 miles', '9 miles'], correctAnswer: '7 miles',
-    solution: 'Set up proportion: 1 inch/2 miles = 3.5 inches/x miles. Cross multiply: x = 3.5 x 2 = 7 miles.' },
-  
-  { id: '6-14', gradeMin: 6, gradeMax: 6, domain: 'Ratios & Proportions', difficulty: 2,
+    solution: 'Set up proportion: 1 inch/2 miles = 3.5 inches/x miles. Cross multiply: x = 3.5 x 2 = 7 miles.'
+  },
+
+  {
+    id: '6-14', gradeMin: 6, gradeMax: 6, domain: 'Ratios & Proportions', difficulty: 2,
     questionText: 'The student council is mixing fruit punch for the school dance. The ratio of cranberry juice to apple juice should be 3:5. If they use 15 cups of apple juice, how many cups of cranberry juice should they use?',
     choices: ['8 cups', '9 cups', '10 cups', '12 cups'], correctAnswer: '9 cups',
-    solution: 'Set up proportion: 3/5 = x/15. Cross multiply: 5x = 45. Divide by 5: x = 9 cups of cranberry juice.' },
-  
-  { id: '6-15', gradeMin: 6, gradeMax: 6, domain: 'Ratios & Proportions', difficulty: 3,
+    solution: 'Set up proportion: 3/5 = x/15. Cross multiply: 5x = 45. Divide by 5: x = 9 cups of cranberry juice.'
+  },
+
+  {
+    id: '6-15', gradeMin: 6, gradeMax: 6, domain: 'Ratios & Proportions', difficulty: 3,
     questionText: 'During a charity car wash, the math club washed 24 cars in 3 hours. At this unit rate, how many cars can they wash in 5 hours?',
     choices: ['35 cars', '38 cars', '40 cars', '42 cars'], correctAnswer: '40 cars',
-    solution: 'Find unit rate: 24 cars / 3 hours = 8 cars per hour. For 5 hours: 8 x 5 = 40 cars.' },
-  
-  { id: '6-16', gradeMin: 6, gradeMax: 6, domain: 'Ratios & Proportions', difficulty: 2,
+    solution: 'Find unit rate: 24 cars / 3 hours = 8 cars per hour. For 5 hours: 8 x 5 = 40 cars.'
+  },
+
+  {
+    id: '6-16', gradeMin: 6, gradeMax: 6, domain: 'Ratios & Proportions', difficulty: 2,
     questionText: 'The art supply store sells paintbrushes in packs. A pack of 6 brushes costs $18. What is the unit price per brush?',
     choices: ['$2.50', '$3.00', '$3.50', '$4.00'], correctAnswer: '$3.00',
-    solution: 'Unit price = Total cost / Number of brushes = $18 / 6 = $3.00 per brush.' },
-  
-  { id: '6-17', gradeMin: 6, gradeMax: 6, domain: 'Ratios & Proportions', difficulty: 3,
+    solution: 'Unit price = Total cost / Number of brushes = $18 / 6 = $3.00 per brush.'
+  },
+
+  {
+    id: '6-17', gradeMin: 6, gradeMax: 6, domain: 'Ratios & Proportions', difficulty: 3,
     questionText: 'The school cafeteria serves lunch to 450 students. The ratio of students who choose pizza to those who choose salad is 5:4. How many students choose pizza?',
     choices: ['200 students', '225 students', '250 students', '275 students'], correctAnswer: '250 students',
-    solution: 'Total ratio parts: 5 + 4 = 9. Pizza students: (5/9) x 450 = 250 students.' },
-  
-  { id: '6-18', gradeMin: 6, gradeMax: 6, domain: 'Ratios & Proportions', difficulty: 2,
+    solution: 'Total ratio parts: 5 + 4 = 9. Pizza students: (5/9) x 450 = 250 students.'
+  },
+
+  {
+    id: '6-18', gradeMin: 6, gradeMax: 6, domain: 'Ratios & Proportions', difficulty: 2,
     questionText: 'A recipe calls for 4 tablespoons of oil for every 6 servings. How many tablespoons of oil are needed for 15 servings?',
     choices: ['8 tablespoons', '9 tablespoons', '10 tablespoons', '12 tablespoons'], correctAnswer: '10 tablespoons',
-    solution: 'Set up proportion: 4/6 = x/15. Cross multiply: 6x = 60. Divide by 6: x = 10 tablespoons.' },
-  
-  { id: '6-19', gradeMin: 6, gradeMax: 6, domain: 'Ratios & Proportions', difficulty: 3,
+    solution: 'Set up proportion: 4/6 = x/15. Cross multiply: 6x = 60. Divide by 6: x = 10 tablespoons.'
+  },
+
+  {
+    id: '6-19', gradeMin: 6, gradeMax: 6, domain: 'Ratios & Proportions', difficulty: 3,
     questionText: 'The school bus travels 180 miles and uses 12 gallons of fuel. At this rate, how many gallons will the bus use to travel 375 miles?',
     choices: ['23 gallons', '24 gallons', '25 gallons', '26 gallons'], correctAnswer: '25 gallons',
-    solution: 'Set up proportion: 180/12 = 375/x. Cross multiply: 180x = 4500. Divide by 180: x = 25 gallons.' },
-  
-  { id: '6-20', gradeMin: 6, gradeMax: 6, domain: 'Ratios & Proportions', difficulty: 2,
+    solution: 'Set up proportion: 180/12 = 375/x. Cross multiply: 180x = 4500. Divide by 180: x = 25 gallons.'
+  },
+
+  {
+    id: '6-20', gradeMin: 6, gradeMax: 6, domain: 'Ratios & Proportions', difficulty: 2,
     questionText: 'In the school garden, the ratio of tomato plants to pepper plants is 7:3. If there are 21 tomato plants, how many pepper plants are there?',
     choices: ['7 plants', '8 plants', '9 plants', '12 plants'], correctAnswer: '9 plants',
-    solution: 'Set up proportion: 7/3 = 21/x. Cross multiply: 7x = 63. Divide by 7: x = 9 pepper plants.' },
+    solution: 'Set up proportion: 7/3 = 21/x. Cross multiply: 7x = 63. Divide by 7: x = 9 pepper plants.'
+  },
 
   // === Geometry (6-21 to 6-30)
-  { id: '6-21', gradeMin: 6, gradeMax: 6, domain: 'Geometry', difficulty: 2,
+  {
+    id: '6-21', gradeMin: 6, gradeMax: 6, domain: 'Geometry', difficulty: 2,
     questionText: 'The school is building a new rectangular courtyard. The courtyard will be 15 meters long and 8 meters wide. What is the area of the courtyard in square meters?',
     choices: ['23 sq meters', '46 sq meters', '120 sq meters', '240 sq meters'], correctAnswer: '120 sq meters',
-    solution: 'Area of rectangle = length x width = 15 x 8 = 120 square meters.' },
-  
-  { id: '6-22', gradeMin: 6, gradeMax: 6, domain: 'Geometry', difficulty: 2,
+    solution: 'Area of rectangle = length x width = 15 x 8 = 120 square meters.'
+  },
+
+  {
+    id: '6-22', gradeMin: 6, gradeMax: 6, domain: 'Geometry', difficulty: 2,
     questionText: 'The maintenance crew needs to install a fence around the school\'s rectangular garden. The garden is 12 feet long and 9 feet wide. How much fencing do they need?',
     choices: ['21 feet', '42 feet', '108 feet', '216 feet'], correctAnswer: '42 feet',
-    solution: 'Perimeter of rectangle = 2(length + width) = 2(12 + 9) = 2(21) = 42 feet.' },
-  
-  { id: '6-23', gradeMin: 6, gradeMax: 6, domain: 'Geometry', difficulty: 3,
+    solution: 'Perimeter of rectangle = 2(length + width) = 2(12 + 9) = 2(21) = 42 feet.'
+  },
+
+  {
+    id: '6-23', gradeMin: 6, gradeMax: 6, domain: 'Geometry', difficulty: 3,
     questionText: 'The art teacher wants to create a triangular banner for the school play. The banner has a base of 6 feet and a height of 4 feet. What is the area of the triangular banner?',
     choices: ['10 sq feet', '12 sq feet', '20 sq feet', '24 sq feet'], correctAnswer: '12 sq feet',
-    solution: 'Area of triangle = (1/2) x base x height = (1/2) x 6 x 4 = 12 square feet.' },
-  
-  { id: '6-24', gradeMin: 6, gradeMax: 6, domain: 'Geometry', difficulty: 3,
+    solution: 'Area of triangle = (1/2) x base x height = (1/2) x 6 x 4 = 12 square feet.'
+  },
+
+  {
+    id: '6-24', gradeMin: 6, gradeMax: 6, domain: 'Geometry', difficulty: 3,
     questionText: 'The school is building a storage room in the shape of a rectangular prism. The room will be 8 feet long, 6 feet wide, and 10 feet tall. What is the volume of the storage room?',
     choices: ['240 cubic feet', '280 cubic feet', '480 cubic feet', '640 cubic feet'], correctAnswer: '480 cubic feet',
-    solution: 'Volume of rectangular prism = length x width x height = 8 x 6 x 10 = 480 cubic feet.' },
-  
-  { id: '6-25', gradeMin: 6, gradeMax: 6, domain: 'Geometry', difficulty: 2,
+    solution: 'Volume of rectangular prism = length x width x height = 8 x 6 x 10 = 480 cubic feet.'
+  },
+
+  {
+    id: '6-25', gradeMin: 6, gradeMax: 6, domain: 'Geometry', difficulty: 2,
     questionText: 'On the coordinate plane, point A is located at (3, 5). If you move 4 units to the right and 2 units down from point A, what are the coordinates of the new point?',
     choices: ['(7, 3)', '(7, 7)', '(-1, 3)', '(1, 7)'], correctAnswer: '(7, 3)',
-    solution: 'Moving right increases x-coordinate, moving down decreases y-coordinate: (3+4, 5-2) = (7, 3).' },
-  
-  { id: '6-26', gradeMin: 6, gradeMax: 6, domain: 'Geometry', difficulty: 2,
+    solution: 'Moving right increases x-coordinate, moving down decreases y-coordinate: (3+4, 5-2) = (7, 3).'
+  },
+
+  {
+    id: '6-26', gradeMin: 6, gradeMax: 6, domain: 'Geometry', difficulty: 2,
     questionText: 'The school playground has a circular sandbox with a radius of 4 meters. What is the approximate area of the sandbox? (Use 3.14 for pi)',
     choices: ['12.56 sq meters', '25.12 sq meters', '50.24 sq meters', '100.48 sq meters'], correctAnswer: '50.24 sq meters',
-    solution: 'Area of circle = pi x radius^2 = 3.14 x 4^2 = 3.14 x 16 = 50.24 square meters.' },
-  
-  { id: '6-27', gradeMin: 6, gradeMax: 6, domain: 'Geometry', difficulty: 3,
+    solution: 'Area of circle = pi x radius^2 = 3.14 x 4^2 = 3.14 x 16 = 50.24 square meters.'
+  },
+
+  {
+    id: '6-27', gradeMin: 6, gradeMax: 6, domain: 'Geometry', difficulty: 3,
     questionText: 'The cafeteria has a square tile floor. Each tile has an area of 16 square inches. What is the length of one side of each tile?',
     choices: ['4 inches', '8 inches', '12 inches', '256 inches'], correctAnswer: '4 inches',
-    solution: 'For a square, area = side^2. If area is 16, then side = √16 = 4 inches.' },
-  
-  { id: '6-28', gradeMin: 6, gradeMax: 6, domain: 'Geometry', difficulty: 2,
+    solution: 'For a square, area = side^2. If area is 16, then side = √16 = 4 inches.'
+  },
+
+  {
+    id: '6-28', gradeMin: 6, gradeMax: 6, domain: 'Geometry', difficulty: 2,
     questionText: 'The school flag is in the shape of a parallelogram with a base of 10 feet and a height of 6 feet. What is the area of the flag?',
     choices: ['16 sq feet', '32 sq feet', '60 sq feet', '120 sq feet'], correctAnswer: '60 sq feet',
-    solution: 'Area of parallelogram = base x height = 10 x 6 = 60 square feet.' },
-  
-  { id: '6-29', gradeMin: 6, gradeMax: 6, domain: 'Geometry', difficulty: 3,
+    solution: 'Area of parallelogram = base x height = 10 x 6 = 60 square feet.'
+  },
+
+  {
+    id: '6-29', gradeMin: 6, gradeMax: 6, domain: 'Geometry', difficulty: 3,
     questionText: 'On a coordinate grid, what is the distance between point P(2, 1) and point Q(2, 7)?',
     choices: ['5 units', '6 units', '7 units', '8 units'], correctAnswer: '6 units',
-    solution: 'Since both points have the same x-coordinate (2), the distance is |7 - 1| = 6 units.' },
-  
-  { id: '6-30', gradeMin: 6, gradeMax: 6, domain: 'Geometry', difficulty: 3,
+    solution: 'Since both points have the same x-coordinate (2), the distance is |7 - 1| = 6 units.'
+  },
+
+  {
+    id: '6-30', gradeMin: 6, gradeMax: 6, domain: 'Geometry', difficulty: 3,
     questionText: 'The gymnasium ceiling is supported by triangular trusses. Each truss is an isosceles triangle with two angles measuring 65 degrees each. What is the measure of the third angle?',
     choices: ['40 degrees', '45 degrees', '50 degrees', '55 degrees'], correctAnswer: '50 degrees',
-    solution: 'Sum of angles in triangle = 180 degrees. Third angle = 180 - 65 - 65 = 50 degrees.' },
+    solution: 'Sum of angles in triangle = 180 degrees. Third angle = 180 - 65 - 65 = 50 degrees.'
+  },
 
   // === Statistics & Data Analysis (6-31 to 6-40)
-  { id: '6-31', gradeMin: 6, gradeMax: 6, domain: 'Statistics', difficulty: 2,
+  {
+    id: '6-31', gradeMin: 6, gradeMax: 6, domain: 'Statistics', difficulty: 2,
     questionText: 'The math class recorded the number of books each student read over summer break: 3, 7, 5, 8, 6, 4, 9, 7, 5, 6. What is the mean number of books read?',
     choices: ['5.5 books', '6.0 books', '6.5 books', '7.0 books'], correctAnswer: '6.0 books',
-    solution: 'Mean = (3+7+5+8+6+4+9+7+5+6) / 10 = 60 / 10 = 6.0 books.' },
-  
-  { id: '6-32', gradeMin: 6, gradeMax: 6, domain: 'Statistics', difficulty: 2,
+    solution: 'Mean = (3+7+5+8+6+4+9+7+5+6) / 10 = 60 / 10 = 6.0 books.'
+  },
+
+  {
+    id: '6-32', gradeMin: 6, gradeMax: 6, domain: 'Statistics', difficulty: 2,
     questionText: 'During a basketball tournament, the home team scored the following points in their games: 58, 62, 45, 71, 66, 59, 63. What is the median score?',
     choices: ['59 points', '62 points', '63 points', '66 points'], correctAnswer: '62 points',
-    solution: 'First arrange in order: 45, 58, 59, 62, 63, 66, 71. The median is the middle value: 62 points.' },
-  
-  { id: '6-33', gradeMin: 6, gradeMax: 6, domain: 'Statistics', difficulty: 2,
+    solution: 'First arrange in order: 45, 58, 59, 62, 63, 66, 71. The median is the middle value: 62 points.'
+  },
+
+  {
+    id: '6-33', gradeMin: 6, gradeMax: 6, domain: 'Statistics', difficulty: 2,
     questionText: 'The student council surveyed students about their favorite school lunch: Pizza (28 students), Burgers (15 students), Salad (12 students), Tacos (25 students). What is the mode of this data?',
     choices: ['Pizza', 'Burgers', 'Salad', 'Tacos'], correctAnswer: 'Pizza',
-    solution: 'The mode is the most frequently chosen option. Pizza was chosen by 28 students, which is the highest.' },
-  
-  { id: '6-34', gradeMin: 6, gradeMax: 6, domain: 'Statistics', difficulty: 2,
+    solution: 'The mode is the most frequently chosen option. Pizza was chosen by 28 students, which is the highest.'
+  },
+
+  {
+    id: '6-34', gradeMin: 6, gradeMax: 6, domain: 'Statistics', difficulty: 2,
     questionText: 'The science class measured the heights of sunflowers in their garden (in inches): 45, 52, 38, 61, 47, 55, 49. What is the range of the sunflower heights?',
     choices: ['16 inches', '18 inches', '21 inches', '23 inches'], correctAnswer: '23 inches',
-    solution: 'Range = Maximum - Minimum = 61 - 38 = 23 inches.' },
-  
-  { id: '6-35', gradeMin: 6, gradeMax: 6, domain: 'Statistics', difficulty: 3,
+    solution: 'Range = Maximum - Minimum = 61 - 38 = 23 inches.'
+  },
+
+  {
+    id: '6-35', gradeMin: 6, gradeMax: 6, domain: 'Statistics', difficulty: 3,
     questionText: 'The school track team recorded their race times (in seconds): 12.5, 13.2, 11.8, 14.1, 12.9, 13.0. If a new runner joins with a time of 12.7 seconds, what will be the new mean time?',
     choices: ['12.7 seconds', '12.8 seconds', '12.9 seconds', '13.0 seconds'], correctAnswer: '12.9 seconds',
-    solution: 'Original sum: 12.5+13.2+11.8+14.1+12.9+13.0 = 77.5. New sum: 77.5+12.7 = 90.2. New mean: 90.2/7 = 12.9 seconds.' },
-  
-  { id: '6-36', gradeMin: 6, gradeMax: 6, domain: 'Statistics', difficulty: 3,
+    solution: 'Original sum: 12.5+13.2+11.8+14.1+12.9+13.0 = 77.5. New sum: 77.5+12.7 = 90.2. New mean: 90.2/7 = 12.9 seconds.'
+  },
+
+  {
+    id: '6-36', gradeMin: 6, gradeMax: 6, domain: 'Statistics', difficulty: 3,
     questionText: 'A histogram shows the number of pets owned by students in 6th grade. The data shows: 0 pets (8 students), 1 pet (15 students), 2 pets (12 students), 3 pets (5 students). How many students were surveyed in total?',
     choices: ['35 students', '38 students', '40 students', '42 students'], correctAnswer: '40 students',
-    solution: 'Total students = 8 + 15 + 12 + 5 = 40 students.' },
-  
-  { id: '6-37', gradeMin: 6, gradeMax: 6, domain: 'Statistics', difficulty: 2,
+    solution: 'Total students = 8 + 15 + 12 + 5 = 40 students.'
+  },
+
+  {
+    id: '6-37', gradeMin: 6, gradeMax: 6, domain: 'Statistics', difficulty: 2,
     questionText: 'The school cafeteria tracked daily milk sales for a week: Monday (125), Tuesday (118), Wednesday (132), Thursday (128), Friday (147). What is the average daily milk sales?',
     choices: ['128 cartons', '130 cartons', '132 cartons', '135 cartons'], correctAnswer: '130 cartons',
-    solution: 'Average = (125+118+132+128+147) / 5 = 650 / 5 = 130 cartons per day.' },
-  
-  { id: '6-38', gradeMin: 6, gradeMax: 6, domain: 'Statistics', difficulty: 3,
+    solution: 'Average = (125+118+132+128+147) / 5 = 650 / 5 = 130 cartons per day.'
+  },
+
+  {
+    id: '6-38', gradeMin: 6, gradeMax: 6, domain: 'Statistics', difficulty: 3,
     questionText: 'A box plot shows the test scores for two classes. Class A has a median of 78 and Class B has a median of 82. Which statement is correct?',
     choices: ['Class A performed better', 'Class B performed better', 'Both classes performed equally', 'Cannot determine from median alone'], correctAnswer: 'Class B performed better',
-    solution: 'A higher median indicates that the middle score in Class B (82) is higher than Class A (78), suggesting better performance.' },
-  
-  { id: '6-39', gradeMin: 6, gradeMax: 6, domain: 'Statistics', difficulty: 3,
+    solution: 'A higher median indicates that the middle score in Class B (82) is higher than Class A (78), suggesting better performance.'
+  },
+
+  {
+    id: '6-39', gradeMin: 6, gradeMax: 6, domain: 'Statistics', difficulty: 3,
     questionText: 'The school library recorded the number of books checked out each day for 6 days: 45, 52, 38, 61, 47, 51. If the librarian wants to represent this data with a single number that shows the "typical" value, which measure would be most appropriate?',
     choices: ['Mean', 'Median', 'Mode', 'Range'], correctAnswer: 'Mean',
-    solution: 'The mean (average) is typically the best measure for showing the typical value when there are no extreme outliers in the data.' },
-  
-  { id: '6-40', gradeMin: 6, gradeMax: 6, domain: 'Statistics', difficulty: 3,
+    solution: 'The mean (average) is typically the best measure for showing the typical value when there are no extreme outliers in the data.'
+  },
+
+  {
+    id: '6-40', gradeMin: 6, gradeMax: 6, domain: 'Statistics', difficulty: 3,
     questionText: 'A survey asked 60 sixth graders about their favorite season. The results were: Spring (18), Summer (24), Fall (12), Winter (6). What percentage of students chose Summer as their favorite season?',
     choices: ['30%', '35%', '40%', '45%'], correctAnswer: '40%',
-    solution: 'Percentage = (24 students who chose Summer / 60 total students) x 100% = 40%.' },
-// === Additional Grade 6 Questions (6th-1 to 6th-60) ===
-// Number Sense (6th-1 to 6th-15)
-{ id: '6th-1', gradeMin: 6, gradeMax: 6, domain: 'Number Sense', difficulty: 1,
-  questionText: 'The school library has 2,400 books. If 1,350 are checked out, how many are left?',
-  choices: ['1,050', '1,150', '1,250', '1,350'], correctAnswer: '1,050',
-  solution: '2,400 - 1,350 = 1,050' },
-{ id: '6th-2', gradeMin: 6, gradeMax: 6, domain: 'Number Sense', difficulty: 1,
-  questionText: 'What is the value of 15 x 12?',
-  choices: ['170', '180', '190', '200'], correctAnswer: '180',
-  solution: '15 x 12 = 180' },
-{ id: '6th-3', gradeMin: 6, gradeMax: 6, domain: 'Number Sense', difficulty: 1,
-  questionText: 'Round 7,489 to the nearest hundred.',
-  choices: ['7,400', '7,500', '7,600', '7,700'], correctAnswer: '7,500',
-  solution: 'Tens digit is 8 (>=5), round up to 7,500' },
-{ id: '6th-4', gradeMin: 6, gradeMax: 6, domain: 'Number Sense', difficulty: 2,
-  questionText: 'A store sold 3,456 pencils in May and 2,789 pencils in June. How many pencils did they sell in total?',
-  choices: ['6,145', '6,245', '6,255', '6,345'], correctAnswer: '6,245',
-  solution: '3,456 + 2,789 = 6,245' },
-{ id: '6th-5', gradeMin: 6, gradeMax: 6, domain: 'Number Sense', difficulty: 2,
-  questionText: 'What is 8,000 - 3,678?',
-  choices: ['4,222', '4,322', '4,332', '4,342'], correctAnswer: '4,322',
-  solution: '8,000 - 3,678 = 4,322' },
-{ id: '6th-6', gradeMin: 6, gradeMax: 6, domain: 'Number Sense', difficulty: 2,
-  questionText: 'Which is greater: 7,654 or 7,456?',
-  choices: ['7,654', '7,456'], correctAnswer: '7,654',
-  solution: '7,654 > 7,456' },
-{ id: '6th-7', gradeMin: 6, gradeMax: 6, domain: 'Number Sense', difficulty: 2,
-  questionText: 'What is the sum of 2,345 and 3,456?',
-  choices: ['5,801', '5,811', '5,821', '5,831'], correctAnswer: '5,801',
-  solution: '2,345 + 3,456 = 5,801' },
-{ id: '6th-8', gradeMin: 6, gradeMax: 6, domain: 'Number Sense', difficulty: 3,
-  questionText: 'A school has 3,456 students. If 1,234 are in grades 1-3, how many are in grades 4-6?',
-  choices: ['2,222', '2,232', '2,242', '2,252'], correctAnswer: '2,222',
-  solution: '3,456 - 1,234 = 2,222' },
-{ id: '6th-9', gradeMin: 6, gradeMax: 6, domain: 'Number Sense', difficulty: 3,
-  questionText: 'What is 4,800 divided by 48?',
-  choices: ['90', '95', '100', '105'], correctAnswer: '100',
-  solution: '4,800 ÷ 48 = 100' },
-{ id: '6th-10', gradeMin: 6, gradeMax: 6, domain: 'Number Sense', difficulty: 3,
-  questionText: 'A bus travels 2,400 miles in 8 days. How many miles does it travel per day?',
-  choices: ['200', '250', '300', '350'], correctAnswer: '300',
-  solution: '2,400 ÷ 8 = 300' },
-{ id: '6th-11', gradeMin: 6, gradeMax: 6, domain: 'Number Sense', difficulty: 3,
-  questionText: 'What is the product of 27 and 19?',
-  choices: ['493', '503', '513', '523'], correctAnswer: '513',
-  solution: '27 x 19 = 513' },
-{ id: '6th-12', gradeMin: 6, gradeMax: 6, domain: 'Number Sense', difficulty: 2,
-  questionText: 'What is the difference between 4,000 and 1,234?',
-  choices: ['2,766', '2,776', '2,786', '2,796'], correctAnswer: '2,766',
-  solution: '4,000 - 1,234 = 2,766' },
-{ id: '6th-13', gradeMin: 6, gradeMax: 6, domain: 'Number Sense', difficulty: 2,
-  questionText: 'Round 8,849 to the nearest thousand.',
-  choices: ['8,000', '9,000', '8,800', '8,900'], correctAnswer: '9,000',
-  solution: 'Hundreds digit is 8 (>=5), round up to 9,000' },
-{ id: '6th-14', gradeMin: 6, gradeMax: 6, domain: 'Number Sense', difficulty: 1,
-  questionText: 'What is 13 x 7?',
-  choices: ['81', '82', '91', '101'], correctAnswer: '91',
-  solution: '13 x 7 = 91' },
-{ id: '6th-15', gradeMin: 6, gradeMax: 6, domain: 'Number Sense', difficulty: 1,
-  questionText: 'What is 9 x 11?',
-  choices: ['88', '99', '100', '110'], correctAnswer: '99',
-  solution: '9 x 11 = 99' },
+    solution: 'Percentage = (24 students who chose Summer / 60 total students) x 100% = 40%.'
+  },
+  // === Additional Grade 6 Questions (6th-1 to 6th-60) ===
+  // Number Sense (6th-1 to 6th-15)
+  {
+    id: '6th-1', gradeMin: 6, gradeMax: 6, domain: 'Number Sense', difficulty: 1,
+    questionText: 'The school library has 2,400 books. If 1,350 are checked out, how many are left?',
+    choices: ['1,050', '1,150', '1,250', '1,350'], correctAnswer: '1,050',
+    solution: '2,400 - 1,350 = 1,050'
+  },
+  {
+    id: '6th-2', gradeMin: 6, gradeMax: 6, domain: 'Number Sense', difficulty: 1,
+    questionText: 'What is the value of 15 x 12?',
+    choices: ['170', '180', '190', '200'], correctAnswer: '180',
+    solution: '15 x 12 = 180'
+  },
+  {
+    id: '6th-3', gradeMin: 6, gradeMax: 6, domain: 'Number Sense', difficulty: 1,
+    questionText: 'Round 7,489 to the nearest hundred.',
+    choices: ['7,400', '7,500', '7,600', '7,700'], correctAnswer: '7,500',
+    solution: 'Tens digit is 8 (>=5), round up to 7,500'
+  },
+  {
+    id: '6th-4', gradeMin: 6, gradeMax: 6, domain: 'Number Sense', difficulty: 2,
+    questionText: 'A store sold 3,456 pencils in May and 2,789 pencils in June. How many pencils did they sell in total?',
+    choices: ['6,145', '6,245', '6,255', '6,345'], correctAnswer: '6,245',
+    solution: '3,456 + 2,789 = 6,245'
+  },
+  {
+    id: '6th-5', gradeMin: 6, gradeMax: 6, domain: 'Number Sense', difficulty: 2,
+    questionText: 'What is 8,000 - 3,678?',
+    choices: ['4,222', '4,322', '4,332', '4,342'], correctAnswer: '4,322',
+    solution: '8,000 - 3,678 = 4,322'
+  },
+  {
+    id: '6th-6', gradeMin: 6, gradeMax: 6, domain: 'Number Sense', difficulty: 2,
+    questionText: 'Which is greater: 7,654 or 7,456?',
+    choices: ['7,654', '7,456'], correctAnswer: '7,654',
+    solution: '7,654 > 7,456'
+  },
+  {
+    id: '6th-7', gradeMin: 6, gradeMax: 6, domain: 'Number Sense', difficulty: 2,
+    questionText: 'What is the sum of 2,345 and 3,456?',
+    choices: ['5,801', '5,811', '5,821', '5,831'], correctAnswer: '5,801',
+    solution: '2,345 + 3,456 = 5,801'
+  },
+  {
+    id: '6th-8', gradeMin: 6, gradeMax: 6, domain: 'Number Sense', difficulty: 3,
+    questionText: 'A school has 3,456 students. If 1,234 are in grades 1-3, how many are in grades 4-6?',
+    choices: ['2,222', '2,232', '2,242', '2,252'], correctAnswer: '2,222',
+    solution: '3,456 - 1,234 = 2,222'
+  },
+  {
+    id: '6th-9', gradeMin: 6, gradeMax: 6, domain: 'Number Sense', difficulty: 3,
+    questionText: 'What is 4,800 divided by 48?',
+    choices: ['90', '95', '100', '105'], correctAnswer: '100',
+    solution: '4,800 ÷ 48 = 100'
+  },
+  {
+    id: '6th-10', gradeMin: 6, gradeMax: 6, domain: 'Number Sense', difficulty: 3,
+    questionText: 'A bus travels 2,400 miles in 8 days. How many miles does it travel per day?',
+    choices: ['200', '250', '300', '350'], correctAnswer: '300',
+    solution: '2,400 ÷ 8 = 300'
+  },
+  {
+    id: '6th-11', gradeMin: 6, gradeMax: 6, domain: 'Number Sense', difficulty: 3,
+    questionText: 'What is the product of 27 and 19?',
+    choices: ['493', '503', '513', '523'], correctAnswer: '513',
+    solution: '27 x 19 = 513'
+  },
+  {
+    id: '6th-12', gradeMin: 6, gradeMax: 6, domain: 'Number Sense', difficulty: 2,
+    questionText: 'What is the difference between 4,000 and 1,234?',
+    choices: ['2,766', '2,776', '2,786', '2,796'], correctAnswer: '2,766',
+    solution: '4,000 - 1,234 = 2,766'
+  },
+  {
+    id: '6th-13', gradeMin: 6, gradeMax: 6, domain: 'Number Sense', difficulty: 2,
+    questionText: 'Round 8,849 to the nearest thousand.',
+    choices: ['8,000', '9,000', '8,800', '8,900'], correctAnswer: '9,000',
+    solution: 'Hundreds digit is 8 (>=5), round up to 9,000'
+  },
+  {
+    id: '6th-14', gradeMin: 6, gradeMax: 6, domain: 'Number Sense', difficulty: 1,
+    questionText: 'What is 13 x 7?',
+    choices: ['81', '82', '91', '101'], correctAnswer: '91',
+    solution: '13 x 7 = 91'
+  },
+  {
+    id: '6th-15', gradeMin: 6, gradeMax: 6, domain: 'Number Sense', difficulty: 1,
+    questionText: 'What is 9 x 11?',
+    choices: ['88', '99', '100', '110'], correctAnswer: '99',
+    solution: '9 x 11 = 99'
+  },
 
-// Operations & Algebraic Thinking (6th-16 to 6th-25)
-{ id: '6th-16', gradeMin: 6, gradeMax: 6, domain: 'Operations & Algebraic Thinking', difficulty: 1,
-  questionText: 'A baker made 96 cupcakes and wants to put them equally into 12 boxes. How many cupcakes will go in each box?',
-  choices: ['6', '7', '8', '9'], correctAnswer: '8',
-  solution: '96 ÷ 12 = 8' },
-{ id: '6th-17', gradeMin: 6, gradeMax: 6, domain: 'Operations & Algebraic Thinking', difficulty: 1,
-  questionText: 'What is the value of 7 x 13?',
-  choices: ['81', '91', '101', '111'], correctAnswer: '91',
-  solution: '7 x 13 = 91' },
-{ id: '6th-18', gradeMin: 6, gradeMax: 6, domain: 'Operations & Algebraic Thinking', difficulty: 2,
-  questionText: 'Fill in the blank: 9 x ___ = 108',
-  choices: ['10', '11', '12', '13'], correctAnswer: '12',
-  solution: '9 x 12 = 108' },
-{ id: '6th-19', gradeMin: 6, gradeMax: 6, domain: 'Operations & Algebraic Thinking', difficulty: 2,
-  questionText: 'A class has 54 students. If they are divided into 6 equal groups, how many students are in each group?',
-  choices: ['7', '8', '9', '10'], correctAnswer: '9',
-  solution: '54 ÷ 6 = 9' },
-{ id: '6th-20', gradeMin: 6, gradeMax: 6, domain: 'Operations & Algebraic Thinking', difficulty: 2,
-  questionText: 'What is 99 ÷ 9?',
-  choices: ['9', '10', '11', '12'], correctAnswer: '11',
-  solution: '99 ÷ 9 = 11' },
-{ id: '6th-21', gradeMin: 6, gradeMax: 6, domain: 'Operations & Algebraic Thinking', difficulty: 2,
-  questionText: 'If 8 x 7 = 56, what does 7 x 8 equal?',
-  choices: ['56', '64', '72', '80'], correctAnswer: '56',
-  solution: 'Multiplication is commutative: 7 x 8 = 8 x 7 = 56' },
-{ id: '6th-22', gradeMin: 6, gradeMax: 6, domain: 'Operations & Algebraic Thinking', difficulty: 3,
-  questionText: 'A school has 7 classes with 32 students each. How many students are there in total?',
-  choices: ['214', '224', '234', '244'], correctAnswer: '224',
-  solution: '7 x 32 = 224' },
-{ id: '6th-23', gradeMin: 6, gradeMax: 6, domain: 'Operations & Algebraic Thinking', difficulty: 3,
-  questionText: 'What is the missing number: ___ ÷ 11 = 9',
-  choices: ['88', '99', '100', '110'], correctAnswer: '99',
-  solution: '99 ÷ 11 = 9' },
-{ id: '6th-24', gradeMin: 6, gradeMax: 6, domain: 'Operations & Algebraic Thinking', difficulty: 3,
-  questionText: 'A store sold 156 apples in 12 days. How many apples did they sell per day?',
-  choices: ['11', '12', '13', '14'], correctAnswer: '13',
-  solution: '156 ÷ 12 = 13' },
-{ id: '6th-25', gradeMin: 6, gradeMax: 6, domain: 'Operations & Algebraic Thinking', difficulty: 3,
-  questionText: 'What is 169 divided by 13?',
-  choices: ['11', '12', '13', '14'], correctAnswer: '13',
-  solution: '169 ÷ 13 = 13' },
+  // Operations & Algebraic Thinking (6th-16 to 6th-25)
+  {
+    id: '6th-16', gradeMin: 6, gradeMax: 6, domain: 'Operations & Algebraic Thinking', difficulty: 1,
+    questionText: 'A baker made 96 cupcakes and wants to put them equally into 12 boxes. How many cupcakes will go in each box?',
+    choices: ['6', '7', '8', '9'], correctAnswer: '8',
+    solution: '96 ÷ 12 = 8'
+  },
+  {
+    id: '6th-17', gradeMin: 6, gradeMax: 6, domain: 'Operations & Algebraic Thinking', difficulty: 1,
+    questionText: 'What is the value of 7 x 13?',
+    choices: ['81', '91', '101', '111'], correctAnswer: '91',
+    solution: '7 x 13 = 91'
+  },
+  {
+    id: '6th-18', gradeMin: 6, gradeMax: 6, domain: 'Operations & Algebraic Thinking', difficulty: 2,
+    questionText: 'Fill in the blank: 9 x ___ = 108',
+    choices: ['10', '11', '12', '13'], correctAnswer: '12',
+    solution: '9 x 12 = 108'
+  },
+  {
+    id: '6th-19', gradeMin: 6, gradeMax: 6, domain: 'Operations & Algebraic Thinking', difficulty: 2,
+    questionText: 'A class has 54 students. If they are divided into 6 equal groups, how many students are in each group?',
+    choices: ['7', '8', '9', '10'], correctAnswer: '9',
+    solution: '54 ÷ 6 = 9'
+  },
+  {
+    id: '6th-20', gradeMin: 6, gradeMax: 6, domain: 'Operations & Algebraic Thinking', difficulty: 2,
+    questionText: 'What is 99 ÷ 9?',
+    choices: ['9', '10', '11', '12'], correctAnswer: '11',
+    solution: '99 ÷ 9 = 11'
+  },
+  {
+    id: '6th-21', gradeMin: 6, gradeMax: 6, domain: 'Operations & Algebraic Thinking', difficulty: 2,
+    questionText: 'If 8 x 7 = 56, what does 7 x 8 equal?',
+    choices: ['56', '64', '72', '80'], correctAnswer: '56',
+    solution: 'Multiplication is commutative: 7 x 8 = 8 x 7 = 56'
+  },
+  {
+    id: '6th-22', gradeMin: 6, gradeMax: 6, domain: 'Operations & Algebraic Thinking', difficulty: 3,
+    questionText: 'A school has 7 classes with 32 students each. How many students are there in total?',
+    choices: ['214', '224', '234', '244'], correctAnswer: '224',
+    solution: '7 x 32 = 224'
+  },
+  {
+    id: '6th-23', gradeMin: 6, gradeMax: 6, domain: 'Operations & Algebraic Thinking', difficulty: 3,
+    questionText: 'What is the missing number: ___ ÷ 11 = 9',
+    choices: ['88', '99', '100', '110'], correctAnswer: '99',
+    solution: '99 ÷ 11 = 9'
+  },
+  {
+    id: '6th-24', gradeMin: 6, gradeMax: 6, domain: 'Operations & Algebraic Thinking', difficulty: 3,
+    questionText: 'A store sold 156 apples in 12 days. How many apples did they sell per day?',
+    choices: ['11', '12', '13', '14'], correctAnswer: '13',
+    solution: '156 ÷ 12 = 13'
+  },
+  {
+    id: '6th-25', gradeMin: 6, gradeMax: 6, domain: 'Operations & Algebraic Thinking', difficulty: 3,
+    questionText: 'What is 169 divided by 13?',
+    choices: ['11', '12', '13', '14'], correctAnswer: '13',
+    solution: '169 ÷ 13 = 13'
+  },
 
-// Place Value (6th-26 to 6th-30)
-{ id: '6th-26', gradeMin: 6, gradeMax: 6, domain: 'Place Value', difficulty: 1,
-  questionText: 'What is the value of the 7 in 7,432?',
-  choices: ['7', '70', '700', '7,000'], correctAnswer: '7,000',
-  solution: '7 is in the thousands place' },
-{ id: '6th-27', gradeMin: 6, gradeMax: 6, domain: 'Place Value', difficulty: 1,
-  questionText: 'What is 5,210 written in expanded form?',
-  choices: ['5,000+200+10', '5,000+200+10+0', '5,000+100+10', '5,000+100+20'], correctAnswer: '5,000+200+10',
-  solution: '5,210 = 5,000 + 200 + 10' },
-{ id: '6th-28', gradeMin: 6, gradeMax: 6, domain: 'Place Value', difficulty: 2,
-  questionText: 'Round 9,489 to the nearest thousand.',
-  choices: ['9,000', '9,500', '10,000', '10,500'], correctAnswer: '9,000',
-  solution: 'Hundreds digit is 4 (<5), round down to 9,000' },
-{ id: '6th-29', gradeMin: 6, gradeMax: 6, domain: 'Place Value', difficulty: 2,
-  questionText: 'Which digit is in the hundreds place of 8,482?',
-  choices: ['4', '6', '8', '2'], correctAnswer: '4',
-  solution: 'Hundreds place is 4' },
-{ id: '6th-30', gradeMin: 6, gradeMax: 6, domain: 'Place Value', difficulty: 3,
-  questionText: 'What is the largest 6-digit number?',
-  choices: ['999,999', '999,900', '999,990', '999,909'], correctAnswer: '999,999',
-  solution: '999,999 is the largest 6-digit number' },
+  // Place Value (6th-26 to 6th-30)
+  {
+    id: '6th-26', gradeMin: 6, gradeMax: 6, domain: 'Place Value', difficulty: 1,
+    questionText: 'What is the value of the 7 in 7,432?',
+    choices: ['7', '70', '700', '7,000'], correctAnswer: '7,000',
+    solution: '7 is in the thousands place'
+  },
+  {
+    id: '6th-27', gradeMin: 6, gradeMax: 6, domain: 'Place Value', difficulty: 1,
+    questionText: 'What is 5,210 written in expanded form?',
+    choices: ['5,000+200+10', '5,000+200+10+0', '5,000+100+10', '5,000+100+20'], correctAnswer: '5,000+200+10',
+    solution: '5,210 = 5,000 + 200 + 10'
+  },
+  {
+    id: '6th-28', gradeMin: 6, gradeMax: 6, domain: 'Place Value', difficulty: 2,
+    questionText: 'Round 9,489 to the nearest thousand.',
+    choices: ['9,000', '9,500', '10,000', '10,500'], correctAnswer: '9,000',
+    solution: 'Hundreds digit is 4 (<5), round down to 9,000'
+  },
+  {
+    id: '6th-29', gradeMin: 6, gradeMax: 6, domain: 'Place Value', difficulty: 2,
+    questionText: 'Which digit is in the hundreds place of 8,482?',
+    choices: ['4', '6', '8', '2'], correctAnswer: '4',
+    solution: 'Hundreds place is 4'
+  },
+  {
+    id: '6th-30', gradeMin: 6, gradeMax: 6, domain: 'Place Value', difficulty: 3,
+    questionText: 'What is the largest 6-digit number?',
+    choices: ['999,999', '999,900', '999,990', '999,909'], correctAnswer: '999,999',
+    solution: '999,999 is the largest 6-digit number'
+  },
 
-// Fractions (6th-31 to 6th-35)
-{ id: '6th-31', gradeMin: 6, gradeMax: 6, domain: 'Fractions', difficulty: 1,
-  questionText: 'What is 2/5 + 1/5?',
-  choices: ['2/5', '3/5', '4/5', '1'], correctAnswer: '3/5',
-  solution: '2/5 + 1/5 = 3/5' },
-{ id: '6th-32', gradeMin: 6, gradeMax: 6, domain: 'Fractions', difficulty: 1,
-  questionText: 'Which fraction is equivalent to 6/12?',
-  choices: ['1/2', '2/3', '3/4', '1/3'], correctAnswer: '1/2',
-  solution: '6/12 = 1/2' },
-{ id: '6th-33', gradeMin: 6, gradeMax: 6, domain: 'Fractions', difficulty: 2,
-  questionText: 'What is 5/6 - 1/3?',
-  choices: ['1/6', '1/2', '2/3', '3/6'], correctAnswer: '1/2',
-  solution: '1/3 = 2/6, so 5/6 - 2/6 = 3/6 = 1/2' },
-{ id: '6th-34', gradeMin: 6, gradeMax: 6, domain: 'Fractions', difficulty: 2,
-  questionText: 'Simplify 18/27.',
-  choices: ['2/3', '3/4', '1/2', '4/6'], correctAnswer: '2/3',
-  solution: '18/27 = 2/3' },
-{ id: '6th-35', gradeMin: 6, gradeMax: 6, domain: 'Fractions', difficulty: 3,
-  questionText: 'What is 7/8 x 2/7?',
-  choices: ['1/4', '1/8', '1/2', '2/7'], correctAnswer: '1/4',
-  solution: '7/8 x 2/7 = 14/56 = 1/4' },
+  // Fractions (6th-31 to 6th-35)
+  {
+    id: '6th-31', gradeMin: 6, gradeMax: 6, domain: 'Fractions', difficulty: 1,
+    questionText: 'What is 2/5 + 1/5?',
+    choices: ['2/5', '3/5', '4/5', '1'], correctAnswer: '3/5',
+    solution: '2/5 + 1/5 = 3/5'
+  },
+  {
+    id: '6th-32', gradeMin: 6, gradeMax: 6, domain: 'Fractions', difficulty: 1,
+    questionText: 'Which fraction is equivalent to 6/12?',
+    choices: ['1/2', '2/3', '3/4', '1/3'], correctAnswer: '1/2',
+    solution: '6/12 = 1/2'
+  },
+  {
+    id: '6th-33', gradeMin: 6, gradeMax: 6, domain: 'Fractions', difficulty: 2,
+    questionText: 'What is 5/6 - 1/3?',
+    choices: ['1/6', '1/2', '2/3', '3/6'], correctAnswer: '1/2',
+    solution: '1/3 = 2/6, so 5/6 - 2/6 = 3/6 = 1/2'
+  },
+  {
+    id: '6th-34', gradeMin: 6, gradeMax: 6, domain: 'Fractions', difficulty: 2,
+    questionText: 'Simplify 18/27.',
+    choices: ['2/3', '3/4', '1/2', '4/6'], correctAnswer: '2/3',
+    solution: '18/27 = 2/3'
+  },
+  {
+    id: '6th-35', gradeMin: 6, gradeMax: 6, domain: 'Fractions', difficulty: 3,
+    questionText: 'What is 7/8 x 2/7?',
+    choices: ['1/4', '1/8', '1/2', '2/7'], correctAnswer: '1/4',
+    solution: '7/8 x 2/7 = 14/56 = 1/4'
+  },
 
-// Decimals & Percents (6th-36 to 6th-40)
-{ id: '6th-36', gradeMin: 6, gradeMax: 6, domain: 'Decimals & Percents', difficulty: 1,
-  questionText: 'Convert 0.7 to a percent.',
-  choices: ['7%', '70%', '0.7%', '700%'], correctAnswer: '70%',
-  solution: '0.7 = 70%' },
-{ id: '6th-37', gradeMin: 6, gradeMax: 6, domain: 'Decimals & Percents', difficulty: 1,
-  questionText: 'What is 40% of 150?',
-  choices: ['40', '50', '60', '70'], correctAnswer: '60',
-  solution: '0.4 x 150 = 60' },
-{ id: '6th-38', gradeMin: 6, gradeMax: 6, domain: 'Decimals & Percents', difficulty: 2,
-  questionText: 'Convert 0.18 to a fraction.',
-  choices: ['1/18', '9/50', '18/100', '1/8'], correctAnswer: '18/100',
-  solution: '0.18 = 18/100' },
-{ id: '6th-39', gradeMin: 6, gradeMax: 6, domain: 'Decimals & Percents', difficulty: 2,
-  questionText: 'What is 25% of 320?',
-  choices: ['60', '70', '80', '90'], correctAnswer: '80',
-  solution: '0.25 x 320 = 80' },
-{ id: '6th-40', gradeMin: 6, gradeMax: 6, domain: 'Decimals & Percents', difficulty: 3,
-  questionText: 'A $120 item is discounted by 25%. What is the sale price?',
-  choices: ['$80', '$85', '$90', '$95'], correctAnswer: '$90',
-  solution: '25% of $120 is $30; $120 - $30 = $90' },
+  // Decimals & Percents (6th-36 to 6th-40)
+  {
+    id: '6th-36', gradeMin: 6, gradeMax: 6, domain: 'Decimals & Percents', difficulty: 1,
+    questionText: 'Convert 0.7 to a percent.',
+    choices: ['7%', '70%', '0.7%', '700%'], correctAnswer: '70%',
+    solution: '0.7 = 70%'
+  },
+  {
+    id: '6th-37', gradeMin: 6, gradeMax: 6, domain: 'Decimals & Percents', difficulty: 1,
+    questionText: 'What is 40% of 150?',
+    choices: ['40', '50', '60', '70'], correctAnswer: '60',
+    solution: '0.4 x 150 = 60'
+  },
+  {
+    id: '6th-38', gradeMin: 6, gradeMax: 6, domain: 'Decimals & Percents', difficulty: 2,
+    questionText: 'Convert 0.18 to a fraction.',
+    choices: ['1/18', '9/50', '18/100', '1/8'], correctAnswer: '18/100',
+    solution: '0.18 = 18/100'
+  },
+  {
+    id: '6th-39', gradeMin: 6, gradeMax: 6, domain: 'Decimals & Percents', difficulty: 2,
+    questionText: 'What is 25% of 320?',
+    choices: ['60', '70', '80', '90'], correctAnswer: '80',
+    solution: '0.25 x 320 = 80'
+  },
+  {
+    id: '6th-40', gradeMin: 6, gradeMax: 6, domain: 'Decimals & Percents', difficulty: 3,
+    questionText: 'A $120 item is discounted by 25%. What is the sale price?',
+    choices: ['$80', '$85', '$90', '$95'], correctAnswer: '$90',
+    solution: '25% of $120 is $30; $120 - $30 = $90'
+  },
 
-// Geometry (6th-41 to 6th-45)
-{ id: '6th-41', gradeMin: 6, gradeMax: 6, domain: 'Geometry', difficulty: 1,
-  questionText: 'How many sides does a pentadecagon have?',
-  choices: ['12', '13', '14', '15'], correctAnswer: '15',
-  solution: 'A pentadecagon has 15 sides' },
-{ id: '6th-42', gradeMin: 6, gradeMax: 6, domain: 'Geometry', difficulty: 1,
-  questionText: 'How many right angles does a rectangle have?',
-  choices: ['2', '3', '4', '5'], correctAnswer: '4',
-  solution: 'A rectangle has 4 right angles' },
-{ id: '6th-43', gradeMin: 6, gradeMax: 6, domain: 'Geometry', difficulty: 2,
-  questionText: 'A square has a side length of 15 cm. What is its area?',
-  choices: ['215 cm²', '225 cm²', '235 cm²', '245 cm²'], correctAnswer: '225 cm²',
-  solution: 'Area = 15 x 15 = 225 cm²' },
-{ id: '6th-44', gradeMin: 6, gradeMax: 6, domain: 'Geometry', difficulty: 2,
-  questionText: 'A triangle has angles of 90°, 30°, and ___. What is the missing angle?',
-  choices: ['30°', '40°', '50°', '60°'], correctAnswer: '60°',
-  solution: 'Sum of angles in triangle = 180°. 180 - 90 - 30 = 60°' },
-{ id: '6th-45', gradeMin: 6, gradeMax: 6, domain: 'Geometry', difficulty: 3,
-  questionText: 'A rectangle is 18 cm long and 8 cm wide. What is its perimeter?',
-  choices: ['40 cm', '44 cm', '48 cm', '52 cm'], correctAnswer: '52 cm',
-  solution: 'Perimeter = 2 x (18 + 8) = 2 x 26 = 52 cm' },
+  // Geometry (6th-41 to 6th-45)
+  {
+    id: '6th-41', gradeMin: 6, gradeMax: 6, domain: 'Geometry', difficulty: 1,
+    questionText: 'How many sides does a pentadecagon have?',
+    choices: ['12', '13', '14', '15'], correctAnswer: '15',
+    solution: 'A pentadecagon has 15 sides'
+  },
+  {
+    id: '6th-42', gradeMin: 6, gradeMax: 6, domain: 'Geometry', difficulty: 1,
+    questionText: 'How many right angles does a rectangle have?',
+    choices: ['2', '3', '4', '5'], correctAnswer: '4',
+    solution: 'A rectangle has 4 right angles'
+  },
+  {
+    id: '6th-43', gradeMin: 6, gradeMax: 6, domain: 'Geometry', difficulty: 2,
+    questionText: 'A square has a side length of 15 cm. What is its area?',
+    choices: ['215 cm²', '225 cm²', '235 cm²', '245 cm²'], correctAnswer: '225 cm²',
+    solution: 'Area = 15 x 15 = 225 cm²'
+  },
+  {
+    id: '6th-44', gradeMin: 6, gradeMax: 6, domain: 'Geometry', difficulty: 2,
+    questionText: 'A triangle has angles of 90°, 30°, and ___. What is the missing angle?',
+    choices: ['30°', '40°', '50°', '60°'], correctAnswer: '60°',
+    solution: 'Sum of angles in triangle = 180°. 180 - 90 - 30 = 60°'
+  },
+  {
+    id: '6th-45', gradeMin: 6, gradeMax: 6, domain: 'Geometry', difficulty: 3,
+    questionText: 'A rectangle is 18 cm long and 8 cm wide. What is its perimeter?',
+    choices: ['40 cm', '44 cm', '48 cm', '52 cm'], correctAnswer: '52 cm',
+    solution: 'Perimeter = 2 x (18 + 8) = 2 x 26 = 52 cm'
+  },
 
-// Measurement (6th-46 to 6th-50)
-{ id: '6th-46', gradeMin: 6, gradeMax: 6, domain: 'Measurement', difficulty: 1,
-  questionText: 'How many centimeters are in 8 meters?',
-  choices: ['80', '800', '8,000', '80,000'], correctAnswer: '800',
-  solution: '1 meter = 100 cm, so 8 x 100 = 800' },
-{ id: '6th-47', gradeMin: 6, gradeMax: 6, domain: 'Measurement', difficulty: 1,
-  questionText: 'How many minutes are in 8 hours?',
-  choices: ['400', '480', '500', '560'], correctAnswer: '480',
-  solution: '8 x 60 = 480' },
-{ id: '6th-48', gradeMin: 6, gradeMax: 6, domain: 'Measurement', difficulty: 2,
-  questionText: 'A swimming pool is 75 meters long. How many centimeters is that?',
-  choices: ['750', '7,500', '75,000', '750,000'], correctAnswer: '7,500',
-  solution: '75 x 100 = 7,500' },
-{ id: '6th-49', gradeMin: 6, gradeMax: 6, domain: 'Measurement', difficulty: 2,
-  questionText: 'How many grams are in 9 kilograms?',
-  choices: ['900', '9,000', '90,000', '900,000'], correctAnswer: '9,000',
-  solution: '9 x 1,000 = 9,000' },
-{ id: '6th-50', gradeMin: 6, gradeMax: 6, domain: 'Measurement', difficulty: 3,
-  questionText: 'A car travels 720 kilometers in 12 hours. What is its average speed in km/h?',
-  choices: ['50', '55', '60', '65'], correctAnswer: '60',
-  solution: '720 ÷ 12 = 60 km/h' },
+  // Measurement (6th-46 to 6th-50)
+  {
+    id: '6th-46', gradeMin: 6, gradeMax: 6, domain: 'Measurement', difficulty: 1,
+    questionText: 'How many centimeters are in 8 meters?',
+    choices: ['80', '800', '8,000', '80,000'], correctAnswer: '800',
+    solution: '1 meter = 100 cm, so 8 x 100 = 800'
+  },
+  {
+    id: '6th-47', gradeMin: 6, gradeMax: 6, domain: 'Measurement', difficulty: 1,
+    questionText: 'How many minutes are in 8 hours?',
+    choices: ['400', '480', '500', '560'], correctAnswer: '480',
+    solution: '8 x 60 = 480'
+  },
+  {
+    id: '6th-48', gradeMin: 6, gradeMax: 6, domain: 'Measurement', difficulty: 2,
+    questionText: 'A swimming pool is 75 meters long. How many centimeters is that?',
+    choices: ['750', '7,500', '75,000', '750,000'], correctAnswer: '7,500',
+    solution: '75 x 100 = 7,500'
+  },
+  {
+    id: '6th-49', gradeMin: 6, gradeMax: 6, domain: 'Measurement', difficulty: 2,
+    questionText: 'How many grams are in 9 kilograms?',
+    choices: ['900', '9,000', '90,000', '900,000'], correctAnswer: '9,000',
+    solution: '9 x 1,000 = 9,000'
+  },
+  {
+    id: '6th-50', gradeMin: 6, gradeMax: 6, domain: 'Measurement', difficulty: 3,
+    questionText: 'A car travels 720 kilometers in 12 hours. What is its average speed in km/h?',
+    choices: ['50', '55', '60', '65'], correctAnswer: '60',
+    solution: '720 ÷ 12 = 60 km/h'
+  },
 
-// Statistics (6th-51 to 6th-55)
-{ id: '6th-51', gradeMin: 6, gradeMax: 6, domain: 'Statistics', difficulty: 1,
-  questionText: 'What is the mean of 12, 16, and 20?',
-  choices: ['14', '16', '18', '20'], correctAnswer: '16',
-  solution: '(12 + 16 + 20) ÷ 3 = 48 ÷ 3 = 16' },
-{ id: '6th-52', gradeMin: 6, gradeMax: 6, domain: 'Statistics', difficulty: 1,
-  questionText: 'What is the median of 7, 11, 15, 19, 23?',
-  choices: ['11', '15', '17', '19'], correctAnswer: '15',
-  solution: 'The middle number is 15' },
-{ id: '6th-53', gradeMin: 6, gradeMax: 6, domain: 'Statistics', difficulty: 2,
-  questionText: 'What is the mode of 4, 6, 6, 8, 10?',
-  choices: ['4', '6', '8', '10'], correctAnswer: '6',
-  solution: '6 appears most often' },
-{ id: '6th-54', gradeMin: 6, gradeMax: 6, domain: 'Statistics', difficulty: 2,
-  questionText: 'What is the range of 10, 14, 18, 22, 28?',
-  choices: ['16', '17', '18', '19'], correctAnswer: '18',
-  solution: '28 - 10 = 18' },
-{ id: '6th-55', gradeMin: 6, gradeMax: 6, domain: 'Statistics', difficulty: 3,
-  questionText: 'The scores on a test are 84, 89, 97, 89, 92. What is the mode?',
-  choices: ['84', '89', '92', '97'], correctAnswer: '89',
-  solution: '89 appears most often' },
+  // Statistics (6th-51 to 6th-55)
+  {
+    id: '6th-51', gradeMin: 6, gradeMax: 6, domain: 'Statistics', difficulty: 1,
+    questionText: 'What is the mean of 12, 16, and 20?',
+    choices: ['14', '16', '18', '20'], correctAnswer: '16',
+    solution: '(12 + 16 + 20) ÷ 3 = 48 ÷ 3 = 16'
+  },
+  {
+    id: '6th-52', gradeMin: 6, gradeMax: 6, domain: 'Statistics', difficulty: 1,
+    questionText: 'What is the median of 7, 11, 15, 19, 23?',
+    choices: ['11', '15', '17', '19'], correctAnswer: '15',
+    solution: 'The middle number is 15'
+  },
+  {
+    id: '6th-53', gradeMin: 6, gradeMax: 6, domain: 'Statistics', difficulty: 2,
+    questionText: 'What is the mode of 4, 6, 6, 8, 10?',
+    choices: ['4', '6', '8', '10'], correctAnswer: '6',
+    solution: '6 appears most often'
+  },
+  {
+    id: '6th-54', gradeMin: 6, gradeMax: 6, domain: 'Statistics', difficulty: 2,
+    questionText: 'What is the range of 10, 14, 18, 22, 28?',
+    choices: ['16', '17', '18', '19'], correctAnswer: '18',
+    solution: '28 - 10 = 18'
+  },
+  {
+    id: '6th-55', gradeMin: 6, gradeMax: 6, domain: 'Statistics', difficulty: 3,
+    questionText: 'The scores on a test are 84, 89, 97, 89, 92. What is the mode?',
+    choices: ['84', '89', '92', '97'], correctAnswer: '89',
+    solution: '89 appears most often'
+  },
 
-// Mixed Review & Word Problems (6th-56 to 6th-60)
-{ id: '6th-56', gradeMin: 6, gradeMax: 6, domain: 'Number Sense', difficulty: 2,
-  questionText: 'A school bus has 60 seats. If 47 are occupied, how many are empty?',
-  choices: ['11', '12', '13', '14'], correctAnswer: '13',
-  solution: '60 - 47 = 13' },
-{ id: '6th-57', gradeMin: 6, gradeMax: 6, domain: 'Measurement', difficulty: 2,
-  questionText: 'A water bottle holds 1,200 milliliters. How many liters is that?',
-  choices: ['1.2', '12', '120', '1,200'], correctAnswer: '1.2',
-  solution: '1 liter = 1,000 mL, so 1,200 ÷ 1,000 = 1.2 L' },
-{ id: '6th-58', gradeMin: 6, gradeMax: 6, domain: 'Geometry', difficulty: 2,
-  questionText: 'How many faces does a triangular prism have?',
-  choices: ['3', '4', '5', '6'], correctAnswer: '5',
-  solution: 'A triangular prism has 5 faces' },
-{ id: '6th-59', gradeMin: 6, gradeMax: 6, domain: 'Decimals & Percents', difficulty: 2,
-  questionText: 'What is 30% of 250?',
-  choices: ['30', '50', '60', '75'], correctAnswer: '75',
-  solution: '0.30 x 250 = 75' },
-{ id: '6th-60', gradeMin: 6, gradeMax: 6, domain: 'Fractions', difficulty: 2,
-  questionText: 'What is 4/9 + 2/9?',
-  choices: ['4/9', '5/9', '6/9', '1'], correctAnswer: '6/9',
-  solution: '4/9 + 2/9 = 6/9' },
-// === Additional Grade 7 Questions (7th-1 to 7th-60) ===
-// Number Sense (7th-1 to 7th-15)
-{ id: '7th-1', gradeMin: 7, gradeMax: 7, domain: 'Number Sense', difficulty: 1,
-  questionText: 'What is the value of 2,500 - 1,375?',
-  choices: ['1,125', '1,135', '1,145', '1,155'], correctAnswer: '1,125',
-  solution: '2,500 - 1,375 = 1,125' },
-{ id: '7th-2', gradeMin: 7, gradeMax: 7, domain: 'Number Sense', difficulty: 1,
-  questionText: 'What is 18 x 14?',
-  choices: ['242', '252', '262', '272'], correctAnswer: '252',
-  solution: '18 x 14 = 252' },
-{ id: '7th-3', gradeMin: 7, gradeMax: 7, domain: 'Number Sense', difficulty: 1,
-  questionText: 'Round 8,349 to the nearest hundred.',
-  choices: ['8,300', '8,400', '8,350', '8,500'], correctAnswer: '8,300',
-  solution: 'Tens digit is 4 (<5), round down to 8,300' },
-{ id: '7th-4', gradeMin: 7, gradeMax: 7, domain: 'Number Sense', difficulty: 2,
-  questionText: 'A store sold 4,567 pencils in May and 3,789 pencils in June. How many pencils did they sell in total?',
-  choices: ['8,346', '8,356', '8,366', '8,376'], correctAnswer: '8,356',
-  solution: '4,567 + 3,789 = 8,356' },
-{ id: '7th-5', gradeMin: 7, gradeMax: 7, domain: 'Number Sense', difficulty: 2,
-  questionText: 'What is 9,000 - 4,678?',
-  choices: ['4,222', '4,322', '4,332', '4,342'], correctAnswer: '4,322',
-  solution: '9,000 - 4,678 = 4,322' },
-{ id: '7th-6', gradeMin: 7, gradeMax: 7, domain: 'Number Sense', difficulty: 2,
-  questionText: 'Which is greater: 8,654 or 8,456?',
-  choices: ['8,654', '8,456'], correctAnswer: '8,654',
-  solution: '8,654 > 8,456' },
-{ id: '7th-7', gradeMin: 7, gradeMax: 7, domain: 'Number Sense', difficulty: 2,
-  questionText: 'What is the sum of 3,345 and 4,456?',
-  choices: ['7,801', '7,811', '7,821', '7,831'], correctAnswer: '7,801',
-  solution: '3,345 + 4,456 = 7,801' },
-{ id: '7th-8', gradeMin: 7, gradeMax: 7, domain: 'Number Sense', difficulty: 3,
-  questionText: 'A school has 4,456 students. If 1,234 are in grades 1-3, how many are in grades 4-7?',
-  choices: ['3,222', '3,232', '3,242', '3,252'], correctAnswer: '3,222',
-  solution: '4,456 - 1,234 = 3,222' },
-{ id: '7th-9', gradeMin: 7, gradeMax: 7, domain: 'Number Sense', difficulty: 3,
-  questionText: 'What is 5,600 divided by 56?',
-  choices: ['90', '95', '100', '105'], correctAnswer: '100',
-  solution: '5,600 ÷ 56 = 100' },
-{ id: '7th-10', gradeMin: 7, gradeMax: 7, domain: 'Number Sense', difficulty: 3,
-  questionText: 'A bus travels 3,600 miles in 12 days. How many miles does it travel per day?',
-  choices: ['200', '250', '300', '350'], correctAnswer: '300',
-  solution: '3,600 ÷ 12 = 300' },
-{ id: '7th-11', gradeMin: 7, gradeMax: 7, domain: 'Number Sense', difficulty: 3,
-  questionText: 'What is the product of 32 and 17?',
-  choices: ['534', '544', '554', '564'], correctAnswer: '544',
-  solution: '32 x 17 = 544' },
-{ id: '7th-12', gradeMin: 7, gradeMax: 7, domain: 'Number Sense', difficulty: 2,
-  questionText: 'What is the difference between 5,000 and 1,234?',
-  choices: ['3,766', '3,776', '3,786', '3,796'], correctAnswer: '3,766',
-  solution: '5,000 - 1,234 = 3,766' },
-{ id: '7th-13', gradeMin: 7, gradeMax: 7, domain: 'Number Sense', difficulty: 2,
-  questionText: 'Round 9,849 to the nearest thousand.',
-  choices: ['9,000', '10,000', '9,800', '9,900'], correctAnswer: '10,000',
-  solution: 'Hundreds digit is 8 (>=5), round up to 10,000' },
-{ id: '7th-14', gradeMin: 7, gradeMax: 7, domain: 'Number Sense', difficulty: 1,
-  questionText: 'What is 14 x 8?',
-  choices: ['102', '112', '122', '132'], correctAnswer: '112',
-  solution: '14 x 8 = 112' },
-{ id: '7th-15', gradeMin: 7, gradeMax: 7, domain: 'Number Sense', difficulty: 1,
-  questionText: 'What is 12 x 12?',
-  choices: ['124', '132', '144', '154'], correctAnswer: '144',
-  solution: '12 x 12 = 144' },
+  // Mixed Review & Word Problems (6th-56 to 6th-60)
+  {
+    id: '6th-56', gradeMin: 6, gradeMax: 6, domain: 'Number Sense', difficulty: 2,
+    questionText: 'A school bus has 60 seats. If 47 are occupied, how many are empty?',
+    choices: ['11', '12', '13', '14'], correctAnswer: '13',
+    solution: '60 - 47 = 13'
+  },
+  {
+    id: '6th-57', gradeMin: 6, gradeMax: 6, domain: 'Measurement', difficulty: 2,
+    questionText: 'A water bottle holds 1,200 milliliters. How many liters is that?',
+    choices: ['1.2', '12', '120', '1,200'], correctAnswer: '1.2',
+    solution: '1 liter = 1,000 mL, so 1,200 ÷ 1,000 = 1.2 L'
+  },
+  {
+    id: '6th-58', gradeMin: 6, gradeMax: 6, domain: 'Geometry', difficulty: 2,
+    questionText: 'How many faces does a triangular prism have?',
+    choices: ['3', '4', '5', '6'], correctAnswer: '5',
+    solution: 'A triangular prism has 5 faces'
+  },
+  {
+    id: '6th-59', gradeMin: 6, gradeMax: 6, domain: 'Decimals & Percents', difficulty: 2,
+    questionText: 'What is 30% of 250?',
+    choices: ['30', '50', '60', '75'], correctAnswer: '75',
+    solution: '0.30 x 250 = 75'
+  },
+  {
+    id: '6th-60', gradeMin: 6, gradeMax: 6, domain: 'Fractions', difficulty: 2,
+    questionText: 'What is 4/9 + 2/9?',
+    choices: ['4/9', '5/9', '6/9', '1'], correctAnswer: '6/9',
+    solution: '4/9 + 2/9 = 6/9'
+  },
+  // === Additional Grade 7 Questions (7th-1 to 7th-60) ===
+  // Number Sense (7th-1 to 7th-15)
+  {
+    id: '7th-1', gradeMin: 7, gradeMax: 7, domain: 'Number Sense', difficulty: 1,
+    questionText: 'What is the value of 2,500 - 1,375?',
+    choices: ['1,125', '1,135', '1,145', '1,155'], correctAnswer: '1,125',
+    solution: '2,500 - 1,375 = 1,125'
+  },
+  {
+    id: '7th-2', gradeMin: 7, gradeMax: 7, domain: 'Number Sense', difficulty: 1,
+    questionText: 'What is 18 x 14?',
+    choices: ['242', '252', '262', '272'], correctAnswer: '252',
+    solution: '18 x 14 = 252'
+  },
+  {
+    id: '7th-3', gradeMin: 7, gradeMax: 7, domain: 'Number Sense', difficulty: 1,
+    questionText: 'Round 8,349 to the nearest hundred.',
+    choices: ['8,300', '8,400', '8,350', '8,500'], correctAnswer: '8,300',
+    solution: 'Tens digit is 4 (<5), round down to 8,300'
+  },
+  {
+    id: '7th-4', gradeMin: 7, gradeMax: 7, domain: 'Number Sense', difficulty: 2,
+    questionText: 'A store sold 4,567 pencils in May and 3,789 pencils in June. How many pencils did they sell in total?',
+    choices: ['8,346', '8,356', '8,366', '8,376'], correctAnswer: '8,356',
+    solution: '4,567 + 3,789 = 8,356'
+  },
+  {
+    id: '7th-5', gradeMin: 7, gradeMax: 7, domain: 'Number Sense', difficulty: 2,
+    questionText: 'What is 9,000 - 4,678?',
+    choices: ['4,222', '4,322', '4,332', '4,342'], correctAnswer: '4,322',
+    solution: '9,000 - 4,678 = 4,322'
+  },
+  {
+    id: '7th-6', gradeMin: 7, gradeMax: 7, domain: 'Number Sense', difficulty: 2,
+    questionText: 'Which is greater: 8,654 or 8,456?',
+    choices: ['8,654', '8,456'], correctAnswer: '8,654',
+    solution: '8,654 > 8,456'
+  },
+  {
+    id: '7th-7', gradeMin: 7, gradeMax: 7, domain: 'Number Sense', difficulty: 2,
+    questionText: 'What is the sum of 3,345 and 4,456?',
+    choices: ['7,801', '7,811', '7,821', '7,831'], correctAnswer: '7,801',
+    solution: '3,345 + 4,456 = 7,801'
+  },
+  {
+    id: '7th-8', gradeMin: 7, gradeMax: 7, domain: 'Number Sense', difficulty: 3,
+    questionText: 'A school has 4,456 students. If 1,234 are in grades 1-3, how many are in grades 4-7?',
+    choices: ['3,222', '3,232', '3,242', '3,252'], correctAnswer: '3,222',
+    solution: '4,456 - 1,234 = 3,222'
+  },
+  {
+    id: '7th-9', gradeMin: 7, gradeMax: 7, domain: 'Number Sense', difficulty: 3,
+    questionText: 'What is 5,600 divided by 56?',
+    choices: ['90', '95', '100', '105'], correctAnswer: '100',
+    solution: '5,600 ÷ 56 = 100'
+  },
+  {
+    id: '7th-10', gradeMin: 7, gradeMax: 7, domain: 'Number Sense', difficulty: 3,
+    questionText: 'A bus travels 3,600 miles in 12 days. How many miles does it travel per day?',
+    choices: ['200', '250', '300', '350'], correctAnswer: '300',
+    solution: '3,600 ÷ 12 = 300'
+  },
+  {
+    id: '7th-11', gradeMin: 7, gradeMax: 7, domain: 'Number Sense', difficulty: 3,
+    questionText: 'What is the product of 32 and 17?',
+    choices: ['534', '544', '554', '564'], correctAnswer: '544',
+    solution: '32 x 17 = 544'
+  },
+  {
+    id: '7th-12', gradeMin: 7, gradeMax: 7, domain: 'Number Sense', difficulty: 2,
+    questionText: 'What is the difference between 5,000 and 1,234?',
+    choices: ['3,766', '3,776', '3,786', '3,796'], correctAnswer: '3,766',
+    solution: '5,000 - 1,234 = 3,766'
+  },
+  {
+    id: '7th-13', gradeMin: 7, gradeMax: 7, domain: 'Number Sense', difficulty: 2,
+    questionText: 'Round 9,849 to the nearest thousand.',
+    choices: ['9,000', '10,000', '9,800', '9,900'], correctAnswer: '10,000',
+    solution: 'Hundreds digit is 8 (>=5), round up to 10,000'
+  },
+  {
+    id: '7th-14', gradeMin: 7, gradeMax: 7, domain: 'Number Sense', difficulty: 1,
+    questionText: 'What is 14 x 8?',
+    choices: ['102', '112', '122', '132'], correctAnswer: '112',
+    solution: '14 x 8 = 112'
+  },
+  {
+    id: '7th-15', gradeMin: 7, gradeMax: 7, domain: 'Number Sense', difficulty: 1,
+    questionText: 'What is 12 x 12?',
+    choices: ['124', '132', '144', '154'], correctAnswer: '144',
+    solution: '12 x 12 = 144'
+  },
 
-// Operations & Algebraic Thinking (7th-16 to 7th-25)
-{ id: '7th-16', gradeMin: 7, gradeMax: 7, domain: 'Operations & Algebraic Thinking', difficulty: 1,
-  questionText: 'A baker made 120 cupcakes and wants to put them equally into 15 boxes. How many cupcakes will go in each box?',
-  choices: ['6', '7', '8', '9'], correctAnswer: '8',
-  solution: '120 ÷ 15 = 8' },
-{ id: '7th-17', gradeMin: 7, gradeMax: 7, domain: 'Operations & Algebraic Thinking', difficulty: 1,
-  questionText: 'What is the value of 8 x 13?',
-  choices: ['94', '104', '114', '124'], correctAnswer: '104',
-  solution: '8 x 13 = 104' },
-{ id: '7th-18', gradeMin: 7, gradeMax: 7, domain: 'Operations & Algebraic Thinking', difficulty: 2,
-  questionText: 'Fill in the blank: 11 x ___ = 121',
-  choices: ['9', '10', '11', '12'], correctAnswer: '11',
-  solution: '11 x 11 = 121' },
-{ id: '7th-19', gradeMin: 7, gradeMax: 7, domain: 'Operations & Algebraic Thinking', difficulty: 2,
-  questionText: 'A class has 63 students. If they are divided into 7 equal groups, how many students are in each group?',
-  choices: ['7', '8', '9', '10'], correctAnswer: '9',
-  solution: '63 ÷ 7 = 9' },
-{ id: '7th-20', gradeMin: 7, gradeMax: 7, domain: 'Operations & Algebraic Thinking', difficulty: 2,
-  questionText: 'What is 108 ÷ 9?',
-  choices: ['10', '11', '12', '13'], correctAnswer: '12',
-  solution: '108 ÷ 9 = 12' },
-{ id: '7th-21', gradeMin: 7, gradeMax: 7, domain: 'Operations & Algebraic Thinking', difficulty: 2,
-  questionText: 'If 9 x 8 = 72, what does 8 x 9 equal?',
-  choices: ['72', '81', '64', '96'], correctAnswer: '72',
-  solution: 'Multiplication is commutative: 8 x 9 = 9 x 8 = 72' },
-{ id: '7th-22', gradeMin: 7, gradeMax: 7, domain: 'Operations & Algebraic Thinking', difficulty: 3,
-  questionText: 'A school has 8 classes with 28 students each. How many students are there in total?',
-  choices: ['214', '224', '234', '244'], correctAnswer: '224',
-  solution: '8 x 28 = 224' },
-{ id: '7th-23', gradeMin: 7, gradeMax: 7, domain: 'Operations & Algebraic Thinking', difficulty: 3,
-  questionText: 'What is the missing number: ___ ÷ 12 = 8',
-  choices: ['88', '96', '100', '104'], correctAnswer: '96',
-  solution: '96 ÷ 12 = 8' },
-{ id: '7th-24', gradeMin: 7, gradeMax: 7, domain: 'Operations & Algebraic Thinking', difficulty: 3,
-  questionText: 'A store sold 182 apples in 14 days. How many apples did they sell per day?',
-  choices: ['11', '12', '13', '14'], correctAnswer: '13',
-  solution: '182 ÷ 14 = 13' },
-{ id: '7th-25', gradeMin: 7, gradeMax: 7, domain: 'Operations & Algebraic Thinking', difficulty: 3,
-  questionText: 'What is 196 divided by 14?',
-  choices: ['12', '13', '14', '15'], correctAnswer: '14',
-  solution: '196 ÷ 14 = 14' },
+  // Operations & Algebraic Thinking (7th-16 to 7th-25)
+  {
+    id: '7th-16', gradeMin: 7, gradeMax: 7, domain: 'Operations & Algebraic Thinking', difficulty: 1,
+    questionText: 'A baker made 120 cupcakes and wants to put them equally into 15 boxes. How many cupcakes will go in each box?',
+    choices: ['6', '7', '8', '9'], correctAnswer: '8',
+    solution: '120 ÷ 15 = 8'
+  },
+  {
+    id: '7th-17', gradeMin: 7, gradeMax: 7, domain: 'Operations & Algebraic Thinking', difficulty: 1,
+    questionText: 'What is the value of 8 x 13?',
+    choices: ['94', '104', '114', '124'], correctAnswer: '104',
+    solution: '8 x 13 = 104'
+  },
+  {
+    id: '7th-18', gradeMin: 7, gradeMax: 7, domain: 'Operations & Algebraic Thinking', difficulty: 2,
+    questionText: 'Fill in the blank: 11 x ___ = 121',
+    choices: ['9', '10', '11', '12'], correctAnswer: '11',
+    solution: '11 x 11 = 121'
+  },
+  {
+    id: '7th-19', gradeMin: 7, gradeMax: 7, domain: 'Operations & Algebraic Thinking', difficulty: 2,
+    questionText: 'A class has 63 students. If they are divided into 7 equal groups, how many students are in each group?',
+    choices: ['7', '8', '9', '10'], correctAnswer: '9',
+    solution: '63 ÷ 7 = 9'
+  },
+  {
+    id: '7th-20', gradeMin: 7, gradeMax: 7, domain: 'Operations & Algebraic Thinking', difficulty: 2,
+    questionText: 'What is 108 ÷ 9?',
+    choices: ['10', '11', '12', '13'], correctAnswer: '12',
+    solution: '108 ÷ 9 = 12'
+  },
+  {
+    id: '7th-21', gradeMin: 7, gradeMax: 7, domain: 'Operations & Algebraic Thinking', difficulty: 2,
+    questionText: 'If 9 x 8 = 72, what does 8 x 9 equal?',
+    choices: ['72', '81', '64', '96'], correctAnswer: '72',
+    solution: 'Multiplication is commutative: 8 x 9 = 9 x 8 = 72'
+  },
+  {
+    id: '7th-22', gradeMin: 7, gradeMax: 7, domain: 'Operations & Algebraic Thinking', difficulty: 3,
+    questionText: 'A school has 8 classes with 28 students each. How many students are there in total?',
+    choices: ['214', '224', '234', '244'], correctAnswer: '224',
+    solution: '8 x 28 = 224'
+  },
+  {
+    id: '7th-23', gradeMin: 7, gradeMax: 7, domain: 'Operations & Algebraic Thinking', difficulty: 3,
+    questionText: 'What is the missing number: ___ ÷ 12 = 8',
+    choices: ['88', '96', '100', '104'], correctAnswer: '96',
+    solution: '96 ÷ 12 = 8'
+  },
+  {
+    id: '7th-24', gradeMin: 7, gradeMax: 7, domain: 'Operations & Algebraic Thinking', difficulty: 3,
+    questionText: 'A store sold 182 apples in 14 days. How many apples did they sell per day?',
+    choices: ['11', '12', '13', '14'], correctAnswer: '13',
+    solution: '182 ÷ 14 = 13'
+  },
+  {
+    id: '7th-25', gradeMin: 7, gradeMax: 7, domain: 'Operations & Algebraic Thinking', difficulty: 3,
+    questionText: 'What is 196 divided by 14?',
+    choices: ['12', '13', '14', '15'], correctAnswer: '14',
+    solution: '196 ÷ 14 = 14'
+  },
 
-// Place Value (7th-26 to 7th-30)
-{ id: '7th-26', gradeMin: 7, gradeMax: 7, domain: 'Place Value', difficulty: 1,
-  questionText: 'What is the value of the 8 in 8,432?',
-  choices: ['8', '80', '800', '8,000'], correctAnswer: '8,000',
-  solution: '8 is in the thousands place' },
-{ id: '7th-27', gradeMin: 7, gradeMax: 7, domain: 'Place Value', difficulty: 1,
-  questionText: 'What is 6,210 written in expanded form?',
-  choices: ['6,000+200+10', '6,000+200+10+0', '6,000+100+10', '6,000+100+20'], correctAnswer: '6,000+200+10',
-  solution: '6,210 = 6,000 + 200 + 10' },
-{ id: '7th-28', gradeMin: 7, gradeMax: 7, domain: 'Place Value', difficulty: 2,
-  questionText: 'Round 10,489 to the nearest thousand.',
-  choices: ['10,000', '10,500', '11,000', '11,500'], correctAnswer: '10,000',
-  solution: 'Hundreds digit is 4 (<5), round down to 10,000' },
-{ id: '7th-29', gradeMin: 7, gradeMax: 7, domain: 'Place Value', difficulty: 2,
-  questionText: 'Which digit is in the hundreds place of 9,482?',
-  choices: ['4', '6', '8', '2'], correctAnswer: '4',
-  solution: 'Hundreds place is 4' },
-{ id: '7th-30', gradeMin: 7, gradeMax: 7, domain: 'Place Value', difficulty: 3,
-  questionText: 'What is the largest 7-digit number?',
-  choices: ['9,999,999', '9,999,900', '9,999,990', '9,999,909'], correctAnswer: '9,999,999',
-  solution: '9,999,999 is the largest 7-digit number' },
+  // Place Value (7th-26 to 7th-30)
+  {
+    id: '7th-26', gradeMin: 7, gradeMax: 7, domain: 'Place Value', difficulty: 1,
+    questionText: 'What is the value of the 8 in 8,432?',
+    choices: ['8', '80', '800', '8,000'], correctAnswer: '8,000',
+    solution: '8 is in the thousands place'
+  },
+  {
+    id: '7th-27', gradeMin: 7, gradeMax: 7, domain: 'Place Value', difficulty: 1,
+    questionText: 'What is 6,210 written in expanded form?',
+    choices: ['6,000+200+10', '6,000+200+10+0', '6,000+100+10', '6,000+100+20'], correctAnswer: '6,000+200+10',
+    solution: '6,210 = 6,000 + 200 + 10'
+  },
+  {
+    id: '7th-28', gradeMin: 7, gradeMax: 7, domain: 'Place Value', difficulty: 2,
+    questionText: 'Round 10,489 to the nearest thousand.',
+    choices: ['10,000', '10,500', '11,000', '11,500'], correctAnswer: '10,000',
+    solution: 'Hundreds digit is 4 (<5), round down to 10,000'
+  },
+  {
+    id: '7th-29', gradeMin: 7, gradeMax: 7, domain: 'Place Value', difficulty: 2,
+    questionText: 'Which digit is in the hundreds place of 9,482?',
+    choices: ['4', '6', '8', '2'], correctAnswer: '4',
+    solution: 'Hundreds place is 4'
+  },
+  {
+    id: '7th-30', gradeMin: 7, gradeMax: 7, domain: 'Place Value', difficulty: 3,
+    questionText: 'What is the largest 7-digit number?',
+    choices: ['9,999,999', '9,999,900', '9,999,990', '9,999,909'], correctAnswer: '9,999,999',
+    solution: '9,999,999 is the largest 7-digit number'
+  },
 
-// Fractions (7th-31 to 7th-35)
-{ id: '7th-31', gradeMin: 7, gradeMax: 7, domain: 'Fractions', difficulty: 1,
-  questionText: 'What is 3/7 + 2/7?',
-  choices: ['4/7', '5/7', '6/7', '1'], correctAnswer: '5/7',
-  solution: '3/7 + 2/7 = 5/7' },
-{ id: '7th-32', gradeMin: 7, gradeMax: 7, domain: 'Fractions', difficulty: 1,
-  questionText: 'Which fraction is equivalent to 8/16?',
-  choices: ['1/2', '2/3', '3/4', '1/3'], correctAnswer: '1/2',
-  solution: '8/16 = 1/2' },
-{ id: '7th-33', gradeMin: 7, gradeMax: 7, domain: 'Fractions', difficulty: 2,
-  questionText: 'What is 7/8 - 1/4?',
-  choices: ['1/8', '1/2', '2/3', '3/8'], correctAnswer: '5/8',
-  solution: '1/4 = 2/8, so 7/8 - 2/8 = 5/8' },
-{ id: '7th-34', gradeMin: 7, gradeMax: 7, domain: 'Fractions', difficulty: 2,
-  questionText: 'Simplify 21/28.',
-  choices: ['2/3', '3/4', '1/2', '4/6'], correctAnswer: '3/4',
-  solution: '21/28 = 3/4' },
-{ id: '7th-35', gradeMin: 7, gradeMax: 7, domain: 'Fractions', difficulty: 3,
-  questionText: 'What is 5/6 x 3/5?',
-  choices: ['1/2', '1/6', '3/10', '1/4'], correctAnswer: '1/2',
-  solution: '5/6 x 3/5 = 15/30 = 1/2' },
+  // Fractions (7th-31 to 7th-35)
+  {
+    id: '7th-31', gradeMin: 7, gradeMax: 7, domain: 'Fractions', difficulty: 1,
+    questionText: 'What is 3/7 + 2/7?',
+    choices: ['4/7', '5/7', '6/7', '1'], correctAnswer: '5/7',
+    solution: '3/7 + 2/7 = 5/7'
+  },
+  {
+    id: '7th-32', gradeMin: 7, gradeMax: 7, domain: 'Fractions', difficulty: 1,
+    questionText: 'Which fraction is equivalent to 8/16?',
+    choices: ['1/2', '2/3', '3/4', '1/3'], correctAnswer: '1/2',
+    solution: '8/16 = 1/2'
+  },
+  {
+    id: '7th-33', gradeMin: 7, gradeMax: 7, domain: 'Fractions', difficulty: 2,
+    questionText: 'What is 7/8 - 1/4?',
+    choices: ['5/8', '1/2', '2/3', '3/8'], correctAnswer: '5/8',
+    solution: '1/4 = 2/8, so 7/8 - 2/8 = 5/8'
+  },
+  {
+    id: '7th-34', gradeMin: 7, gradeMax: 7, domain: 'Fractions', difficulty: 2,
+    questionText: 'Simplify 21/28.',
+    choices: ['2/3', '3/4', '1/2', '4/6'], correctAnswer: '3/4',
+    solution: '21/28 = 3/4'
+  },
+  {
+    id: '7th-35', gradeMin: 7, gradeMax: 7, domain: 'Fractions', difficulty: 3,
+    questionText: 'What is 5/6 x 3/5?',
+    choices: ['1/2', '1/6', '3/10', '1/4'], correctAnswer: '1/2',
+    solution: '5/6 x 3/5 = 15/30 = 1/2'
+  },
 
-// Decimals & Percents (7th-36 to 7th-40)
-{ id: '7th-36', gradeMin: 7, gradeMax: 7, domain: 'Decimals & Percents', difficulty: 1,
-  questionText: 'Convert 0.8 to a percent.',
-  choices: ['8%', '80%', '0.8%', '800%'], correctAnswer: '80%',
-  solution: '0.8 = 80%' },
-{ id: '7th-37', gradeMin: 7, gradeMax: 7, domain: 'Decimals & Percents', difficulty: 1,
-  questionText: 'What is 60% of 200?',
-  choices: ['60', '100', '120', '140'], correctAnswer: '120',
-  solution: '0.6 x 200 = 120' },
-{ id: '7th-38', gradeMin: 7, gradeMax: 7, domain: 'Decimals & Percents', difficulty: 2,
-  questionText: 'Convert 0.25 to a fraction.',
-  choices: ['1/25', '1/4', '25/100', '1/8'], correctAnswer: '1/4',
-  solution: '0.25 = 1/4' },
-{ id: '7th-39', gradeMin: 7, gradeMax: 7, domain: 'Decimals & Percents', difficulty: 2,
-  questionText: 'What is 15% of 320?',
-  choices: ['48', '50', '60', '80'], correctAnswer: '48',
-  solution: '0.15 x 320 = 48' },
-{ id: '7th-40', gradeMin: 7, gradeMax: 7, domain: 'Decimals & Percents', difficulty: 3,
-  questionText: 'A $200 item is discounted by 15%. What is the sale price?',
-  choices: ['$170', '$175', '$180', '$185'], correctAnswer: '$170',
-  solution: '15% of $200 is $30; $200 - $30 = $170' },
+  // Decimals & Percents (7th-36 to 7th-40)
+  {
+    id: '7th-36', gradeMin: 7, gradeMax: 7, domain: 'Decimals & Percents', difficulty: 1,
+    questionText: 'Convert 0.8 to a percent.',
+    choices: ['8%', '80%', '0.8%', '800%'], correctAnswer: '80%',
+    solution: '0.8 = 80%'
+  },
+  {
+    id: '7th-37', gradeMin: 7, gradeMax: 7, domain: 'Decimals & Percents', difficulty: 1,
+    questionText: 'What is 60% of 200?',
+    choices: ['60', '100', '120', '140'], correctAnswer: '120',
+    solution: '0.6 x 200 = 120'
+  },
+  {
+    id: '7th-38', gradeMin: 7, gradeMax: 7, domain: 'Decimals & Percents', difficulty: 2,
+    questionText: 'Convert 0.25 to a fraction.',
+    choices: ['1/25', '1/4', '25/100', '1/8'], correctAnswer: '1/4',
+    solution: '0.25 = 1/4'
+  },
+  {
+    id: '7th-39', gradeMin: 7, gradeMax: 7, domain: 'Decimals & Percents', difficulty: 2,
+    questionText: 'What is 15% of 320?',
+    choices: ['48', '50', '60', '80'], correctAnswer: '48',
+    solution: '0.15 x 320 = 48'
+  },
+  {
+    id: '7th-40', gradeMin: 7, gradeMax: 7, domain: 'Decimals & Percents', difficulty: 3,
+    questionText: 'A $200 item is discounted by 15%. What is the sale price?',
+    choices: ['$170', '$175', '$180', '$185'], correctAnswer: '$170',
+    solution: '15% of $200 is $30; $200 - $30 = $170'
+  },
 
-// Geometry (7th-41 to 7th-45)
-{ id: '7th-41', gradeMin: 7, gradeMax: 7, domain: 'Geometry', difficulty: 1,
-  questionText: 'How many sides does a hexadecagon have?',
-  choices: ['14', '15', '16', '17'], correctAnswer: '16',
-  solution: 'A hexadecagon has 16 sides' },
-{ id: '7th-42', gradeMin: 7, gradeMax: 7, domain: 'Geometry', difficulty: 1,
-  questionText: 'How many right angles does a square have?',
-  choices: ['2', '3', '4', '5'], correctAnswer: '4',
-  solution: 'A square has 4 right angles' },
-{ id: '7th-43', gradeMin: 7, gradeMax: 7, domain: 'Geometry', difficulty: 2,
-  questionText: 'A square has a side length of 18 cm. What is its area?',
-  choices: ['324 cm²', '334 cm²', '344 cm²', '354 cm²'], correctAnswer: '324 cm²',
-  solution: 'Area = 18 x 18 = 324 cm²' },
-{ id: '7th-44', gradeMin: 7, gradeMax: 7, domain: 'Geometry', difficulty: 2,
-  questionText: 'A triangle has angles of 90°, 45°, and ___. What is the missing angle?',
-  choices: ['30°', '45°', '60°', '90°'], correctAnswer: '45°',
-  solution: 'Sum of angles in triangle = 180°. 180 - 90 - 45 = 45°' },
-{ id: '7th-45', gradeMin: 7, gradeMax: 7, domain: 'Geometry', difficulty: 3,
-  questionText: 'A rectangle is 20 cm long and 9 cm wide. What is its perimeter?',
-  choices: ['54 cm', '56 cm', '58 cm', '60 cm'], correctAnswer: '58 cm',
-  solution: 'Perimeter = 2 x (20 + 9) = 2 x 29 = 58 cm' },
+  // Geometry (7th-41 to 7th-45)
+  {
+    id: '7th-41', gradeMin: 7, gradeMax: 7, domain: 'Geometry', difficulty: 1,
+    questionText: 'How many sides does a hexadecagon have?',
+    choices: ['14', '15', '16', '17'], correctAnswer: '16',
+    solution: 'A hexadecagon has 16 sides'
+  },
+  {
+    id: '7th-42', gradeMin: 7, gradeMax: 7, domain: 'Geometry', difficulty: 1,
+    questionText: 'How many right angles does a square have?',
+    choices: ['2', '3', '4', '5'], correctAnswer: '4',
+    solution: 'A square has 4 right angles'
+  },
+  {
+    id: '7th-43', gradeMin: 7, gradeMax: 7, domain: 'Geometry', difficulty: 2,
+    questionText: 'A square has a side length of 18 cm. What is its area?',
+    choices: ['324 cm²', '334 cm²', '344 cm²', '354 cm²'], correctAnswer: '324 cm²',
+    solution: 'Area = 18 x 18 = 324 cm²'
+  },
+  {
+    id: '7th-44', gradeMin: 7, gradeMax: 7, domain: 'Geometry', difficulty: 2,
+    questionText: 'A triangle has angles of 90°, 45°, and ___. What is the missing angle?',
+    choices: ['30°', '45°', '60°', '90°'], correctAnswer: '45°',
+    solution: 'Sum of angles in triangle = 180°. 180 - 90 - 45 = 45°'
+  },
+  {
+    id: '7th-45', gradeMin: 7, gradeMax: 7, domain: 'Geometry', difficulty: 3,
+    questionText: 'A rectangle is 20 cm long and 9 cm wide. What is its perimeter?',
+    choices: ['54 cm', '56 cm', '58 cm', '60 cm'], correctAnswer: '58 cm',
+    solution: 'Perimeter = 2 x (20 + 9) = 2 x 29 = 58 cm'
+  },
 
-// Measurement (7th-46 to 7th-50)
-{ id: '7th-46', gradeMin: 7, gradeMax: 7, domain: 'Measurement', difficulty: 1,
-  questionText: 'How many centimeters are in 9 meters?',
-  choices: ['90', '900', '9,000', '90,000'], correctAnswer: '900',
-  solution: '1 meter = 100 cm, so 9 x 100 = 900' },
-{ id: '7th-47', gradeMin: 7, gradeMax: 7, domain: 'Measurement', difficulty: 1,
-  questionText: 'How many minutes are in 9 hours?',
-  choices: ['540', '560', '580', '600'], correctAnswer: '540',
-  solution: '9 x 60 = 540' },
-{ id: '7th-48', gradeMin: 7, gradeMax: 7, domain: 'Measurement', difficulty: 2,
-  questionText: 'A swimming pool is 80 meters long. How many centimeters is that?',
-  choices: ['800', '8,000', '80,000', '800,000'], correctAnswer: '8,000',
-  solution: '80 x 100 = 8,000' },
-{ id: '7th-49', gradeMin: 7, gradeMax: 7, domain: 'Measurement', difficulty: 2,
-  questionText: 'How many grams are in 10 kilograms?',
-  choices: ['1,000', '10,000', '100,000', '1,000,000'], correctAnswer: '10,000',
-  solution: '10 x 1,000 = 10,000' },
-{ id: '7th-50', gradeMin: 7, gradeMax: 7, domain: 'Measurement', difficulty: 3,
-  questionText: 'A car travels 840 kilometers in 14 hours. What is its average speed in km/h?',
-  choices: ['50', '55', '60', '65'], correctAnswer: '60',
-  solution: '840 ÷ 14 = 60 km/h' },
+  // Measurement (7th-46 to 7th-50)
+  {
+    id: '7th-46', gradeMin: 7, gradeMax: 7, domain: 'Measurement', difficulty: 1,
+    questionText: 'How many centimeters are in 9 meters?',
+    choices: ['90', '900', '9,000', '90,000'], correctAnswer: '900',
+    solution: '1 meter = 100 cm, so 9 x 100 = 900'
+  },
+  {
+    id: '7th-47', gradeMin: 7, gradeMax: 7, domain: 'Measurement', difficulty: 1,
+    questionText: 'How many minutes are in 9 hours?',
+    choices: ['540', '560', '580', '600'], correctAnswer: '540',
+    solution: '9 x 60 = 540'
+  },
+  {
+    id: '7th-48', gradeMin: 7, gradeMax: 7, domain: 'Measurement', difficulty: 2,
+    questionText: 'A swimming pool is 80 meters long. How many centimeters is that?',
+    choices: ['800', '8,000', '80,000', '800,000'], correctAnswer: '8,000',
+    solution: '80 x 100 = 8,000'
+  },
+  {
+    id: '7th-49', gradeMin: 7, gradeMax: 7, domain: 'Measurement', difficulty: 2,
+    questionText: 'How many grams are in 10 kilograms?',
+    choices: ['1,000', '10,000', '100,000', '1,000,000'], correctAnswer: '10,000',
+    solution: '10 x 1,000 = 10,000'
+  },
+  {
+    id: '7th-50', gradeMin: 7, gradeMax: 7, domain: 'Measurement', difficulty: 3,
+    questionText: 'A car travels 840 kilometers in 14 hours. What is its average speed in km/h?',
+    choices: ['50', '55', '60', '65'], correctAnswer: '60',
+    solution: '840 ÷ 14 = 60 km/h'
+  },
 
-// Statistics (7th-51 to 7th-55)
-{ id: '7th-51', gradeMin: 7, gradeMax: 7, domain: 'Statistics', difficulty: 1,
-  questionText: 'What is the mean of 14, 18, and 22?',
-  choices: ['16', '18', '20', '22'], correctAnswer: '18',
-  solution: '(14 + 18 + 22) ÷ 3 = 54 ÷ 3 = 18' },
-{ id: '7th-52', gradeMin: 7, gradeMax: 7, domain: 'Statistics', difficulty: 1,
-  questionText: 'What is the median of 9, 13, 17, 21, 25?',
-  choices: ['13', '17', '21', '25'], correctAnswer: '17',
-  solution: 'The middle number is 17' },
-{ id: '7th-53', gradeMin: 7, gradeMax: 7, domain: 'Statistics', difficulty: 2,
-  questionText: 'What is the mode of 5, 7, 7, 9, 11?',
-  choices: ['5', '7', '9', '11'], correctAnswer: '7',
-  solution: '7 appears most often' },
-{ id: '7th-54', gradeMin: 7, gradeMax: 7, domain: 'Statistics', difficulty: 2,
-  questionText: 'What is the range of 12, 16, 20, 24, 30?',
-  choices: ['16', '17', '18', '19'], correctAnswer: '18',
-  solution: '30 - 12 = 18' },
-{ id: '7th-55', gradeMin: 7, gradeMax: 7, domain: 'Statistics', difficulty: 3,
-  questionText: 'The scores on a test are 86, 91, 99, 91, 94. What is the mode?',
-  choices: ['86', '91', '94', '99'], correctAnswer: '91',
-  solution: '91 appears most often' },
+  // Statistics (7th-51 to 7th-55)
+  {
+    id: '7th-51', gradeMin: 7, gradeMax: 7, domain: 'Statistics', difficulty: 1,
+    questionText: 'What is the mean of 14, 18, and 22?',
+    choices: ['16', '18', '20', '22'], correctAnswer: '18',
+    solution: '(14 + 18 + 22) ÷ 3 = 54 ÷ 3 = 18'
+  },
+  {
+    id: '7th-52', gradeMin: 7, gradeMax: 7, domain: 'Statistics', difficulty: 1,
+    questionText: 'What is the median of 9, 13, 17, 21, 25?',
+    choices: ['13', '17', '21', '25'], correctAnswer: '17',
+    solution: 'The middle number is 17'
+  },
+  {
+    id: '7th-53', gradeMin: 7, gradeMax: 7, domain: 'Statistics', difficulty: 2,
+    questionText: 'What is the mode of 5, 7, 7, 9, 11?',
+    choices: ['5', '7', '9', '11'], correctAnswer: '7',
+    solution: '7 appears most often'
+  },
+  {
+    id: '7th-54', gradeMin: 7, gradeMax: 7, domain: 'Statistics', difficulty: 2,
+    questionText: 'What is the range of 12, 16, 20, 24, 30?',
+    choices: ['16', '17', '18', '19'], correctAnswer: '18',
+    solution: '30 - 12 = 18'
+  },
+  {
+    id: '7th-55', gradeMin: 7, gradeMax: 7, domain: 'Statistics', difficulty: 3,
+    questionText: 'The scores on a test are 86, 91, 99, 91, 94. What is the mode?',
+    choices: ['86', '91', '94', '99'], correctAnswer: '91',
+    solution: '91 appears most often'
+  },
 
-// Mixed Review & Word Problems (7th-56 to 7th-60)
-{ id: '7th-56', gradeMin: 7, gradeMax: 7, domain: 'Number Sense', difficulty: 2,
-  questionText: 'A school bus has 70 seats. If 57 are occupied, how many are empty?',
-  choices: ['11', '12', '13', '14'], correctAnswer: '13',
-  solution: '70 - 57 = 13' },
-{ id: '7th-57', gradeMin: 7, gradeMax: 7, domain: 'Measurement', difficulty: 2,
-  questionText: 'A water bottle holds 1,500 milliliters. How many liters is that?',
-  choices: ['1.5', '15', '150', '1,500'], correctAnswer: '1.5',
-  solution: '1 liter = 1,000 mL, so 1,500 ÷ 1,000 = 1.5 L' },
-{ id: '7th-58', gradeMin: 7, gradeMax: 7, domain: 'Geometry', difficulty: 2,
-  questionText: 'How many faces does a rectangular prism have?',
-  choices: ['4', '5', '6', '7'], correctAnswer: '6',
-  solution: 'A rectangular prism has 6 faces' },
-{ id: '7th-59', gradeMin: 7, gradeMax: 7, domain: 'Decimals & Percents', difficulty: 2,
-  questionText: 'What is 40% of 350?',
-  choices: ['120', '130', '140', '150'], correctAnswer: '140',
-  solution: '0.40 x 350 = 140' },
-{ id: '7th-60', gradeMin: 7, gradeMax: 7, domain: 'Fractions', difficulty: 2,
-  questionText: 'What is 5/9 + 3/9?',
-  choices: ['7/9', '8/9', '6/9', '1'], correctAnswer: '8/9',
-  solution: '5/9 + 3/9 = 8/9' },
-// === Additional Grade 8 Questions (8th-1 to 8th-60) ===
-// Number Sense (8th-1 to 8th-15)
-{ id: '8th-1', gradeMin: 8, gradeMax: 8, domain: 'Number Sense', difficulty: 1,
-  questionText: 'What is the value of 3,200 - 1,875?',
-  choices: ['1,325', '1,335', '1,345', '1,355'], correctAnswer: '1,325',
-  solution: '3,200 - 1,875 = 1,325' },
-{ id: '8th-2', gradeMin: 8, gradeMax: 8, domain: 'Number Sense', difficulty: 1,
-  questionText: 'What is 21 x 13?',
-  choices: ['263', '273', '283', '293'], correctAnswer: '273',
-  solution: '21 x 13 = 273' },
-{ id: '8th-3', gradeMin: 8, gradeMax: 8, domain: 'Number Sense', difficulty: 1,
-  questionText: 'Round 9,749 to the nearest hundred.',
-  choices: ['9,700', '9,800', '9,750', '9,900'], correctAnswer: '9,700',
-  solution: 'Tens digit is 4 (<5), round down to 9,700' },
-{ id: '8th-4', gradeMin: 8, gradeMax: 8, domain: 'Number Sense', difficulty: 2,
-  questionText: 'A store sold 5,678 pencils in May and 4,789 pencils in June. How many pencils did they sell in total?',
-  choices: ['10,457', '10,467', '10,477', '10,487'], correctAnswer: '10,467',
-  solution: '5,678 + 4,789 = 10,467' },
-{ id: '8th-5', gradeMin: 8, gradeMax: 8, domain: 'Number Sense', difficulty: 2,
-  questionText: 'What is 10,000 - 5,678?',
-  choices: ['4,222', '4,322', '4,332', '4,342'], correctAnswer: '4,322',
-  solution: '10,000 - 5,678 = 4,322' },
-{ id: '8th-6', gradeMin: 8, gradeMax: 8, domain: 'Number Sense', difficulty: 2,
-  questionText: 'Which is greater: 9,654 or 9,456?',
-  choices: ['9,654', '9,456'], correctAnswer: '9,654',
-  solution: '9,654 > 9,456' },
-{ id: '8th-7', gradeMin: 8, gradeMax: 8, domain: 'Number Sense', difficulty: 2,
-  questionText: 'What is the sum of 4,345 and 5,456?',
-  choices: ['9,801', '9,811', '9,821', '9,831'], correctAnswer: '9,801',
-  solution: '4,345 + 5,456 = 9,801' },
-{ id: '8th-8', gradeMin: 8, gradeMax: 8, domain: 'Number Sense', difficulty: 3,
-  questionText: 'A school has 5,456 students. If 1,234 are in grades 1-3, how many are in grades 4-8?',
-  choices: ['4,222', '4,232', '4,242', '4,252'], correctAnswer: '4,222',
-  solution: '5,456 - 1,234 = 4,222' },
-{ id: '8th-9', gradeMin: 8, gradeMax: 8, domain: 'Number Sense', difficulty: 3,
-  questionText: 'What is 6,400 divided by 64?',
-  choices: ['90', '95', '100', '105'], correctAnswer: '100',
-  solution: '6,400 ÷ 64 = 100' },
-{ id: '8th-10', gradeMin: 8, gradeMax: 8, domain: 'Number Sense', difficulty: 3,
-  questionText: 'A bus travels 4,800 miles in 16 days. How many miles does it travel per day?',
-  choices: ['200', '250', '300', '350'], correctAnswer: '300',
-  solution: '4,800 ÷ 16 = 300' },
-{ id: '8th-11', gradeMin: 8, gradeMax: 8, domain: 'Number Sense', difficulty: 3,
-  questionText: 'What is the product of 36 and 19?',
-  choices: ['634', '644', '684', '694'], correctAnswer: '684',
-  solution: '36 x 19 = 684' },
-{ id: '8th-12', gradeMin: 8, gradeMax: 8, domain: 'Number Sense', difficulty: 2,
-  questionText: 'What is the difference between 6,000 and 1,234?',
-  choices: ['4,766', '4,776', '4,786', '4,796'], correctAnswer: '4,766',
-  solution: '6,000 - 1,234 = 4,766' },
-{ id: '8th-13', gradeMin: 8, gradeMax: 8, domain: 'Number Sense', difficulty: 2,
-  questionText: 'Round 10,849 to the nearest thousand.',
-  choices: ['10,000', '11,000', '10,800', '10,900'], correctAnswer: '11,000',
-  solution: 'Hundreds digit is 8 (>=5), round up to 11,000' },
-{ id: '8th-14', gradeMin: 8, gradeMax: 8, domain: 'Number Sense', difficulty: 1,
-  questionText: 'What is 16 x 9?',
-  choices: ['134', '144', '154', '164'], correctAnswer: '144',
-  solution: '16 x 9 = 144' },
-{ id: '8th-15', gradeMin: 8, gradeMax: 8, domain: 'Number Sense', difficulty: 1,
-  questionText: 'What is 13 x 13?',
-  choices: ['159', '169', '179', '189'], correctAnswer: '169',
-  solution: '13 x 13 = 169' },
+  // Mixed Review & Word Problems (7th-56 to 7th-60)
+  {
+    id: '7th-56', gradeMin: 7, gradeMax: 7, domain: 'Number Sense', difficulty: 2,
+    questionText: 'A school bus has 70 seats. If 57 are occupied, how many are empty?',
+    choices: ['11', '12', '13', '14'], correctAnswer: '13',
+    solution: '70 - 57 = 13'
+  },
+  {
+    id: '7th-57', gradeMin: 7, gradeMax: 7, domain: 'Measurement', difficulty: 2,
+    questionText: 'A water bottle holds 1,500 milliliters. How many liters is that?',
+    choices: ['1.5', '15', '150', '1,500'], correctAnswer: '1.5',
+    solution: '1 liter = 1,000 mL, so 1,500 ÷ 1,000 = 1.5 L'
+  },
+  {
+    id: '7th-58', gradeMin: 7, gradeMax: 7, domain: 'Geometry', difficulty: 2,
+    questionText: 'How many faces does a rectangular prism have?',
+    choices: ['4', '5', '6', '7'], correctAnswer: '6',
+    solution: 'A rectangular prism has 6 faces'
+  },
+  {
+    id: '7th-59', gradeMin: 7, gradeMax: 7, domain: 'Decimals & Percents', difficulty: 2,
+    questionText: 'What is 40% of 350?',
+    choices: ['120', '130', '140', '150'], correctAnswer: '140',
+    solution: '0.40 x 350 = 140'
+  },
+  {
+    id: '7th-60', gradeMin: 7, gradeMax: 7, domain: 'Fractions', difficulty: 2,
+    questionText: 'What is 5/9 + 3/9?',
+    choices: ['7/9', '8/9', '6/9', '1'], correctAnswer: '8/9',
+    solution: '5/9 + 3/9 = 8/9'
+  },
+  // === Additional Grade 8 Questions (8th-1 to 8th-60) ===
+  // Number Sense (8th-1 to 8th-15)
+  {
+    id: '8th-1', gradeMin: 8, gradeMax: 8, domain: 'Number Sense', difficulty: 1,
+    questionText: 'What is the value of 3,200 - 1,875?',
+    choices: ['1,325', '1,335', '1,345', '1,355'], correctAnswer: '1,325',
+    solution: '3,200 - 1,875 = 1,325'
+  },
+  {
+    id: '8th-2', gradeMin: 8, gradeMax: 8, domain: 'Number Sense', difficulty: 1,
+    questionText: 'What is 21 x 13?',
+    choices: ['263', '273', '283', '293'], correctAnswer: '273',
+    solution: '21 x 13 = 273'
+  },
+  {
+    id: '8th-3', gradeMin: 8, gradeMax: 8, domain: 'Number Sense', difficulty: 1,
+    questionText: 'Round 9,749 to the nearest hundred.',
+    choices: ['9,700', '9,800', '9,750', '9,900'], correctAnswer: '9,700',
+    solution: 'Tens digit is 4 (<5), round down to 9,700'
+  },
+  {
+    id: '8th-4', gradeMin: 8, gradeMax: 8, domain: 'Number Sense', difficulty: 2,
+    questionText: 'A store sold 5,678 pencils in May and 4,789 pencils in June. How many pencils did they sell in total?',
+    choices: ['10,457', '10,467', '10,477', '10,487'], correctAnswer: '10,467',
+    solution: '5,678 + 4,789 = 10,467'
+  },
+  {
+    id: '8th-5', gradeMin: 8, gradeMax: 8, domain: 'Number Sense', difficulty: 2,
+    questionText: 'What is 10,000 - 5,678?',
+    choices: ['4,222', '4,322', '4,332', '4,342'], correctAnswer: '4,322',
+    solution: '10,000 - 5,678 = 4,322'
+  },
+  {
+    id: '8th-6', gradeMin: 8, gradeMax: 8, domain: 'Number Sense', difficulty: 2,
+    questionText: 'Which is greater: 9,654 or 9,456?',
+    choices: ['9,654', '9,456'], correctAnswer: '9,654',
+    solution: '9,654 > 9,456'
+  },
+  {
+    id: '8th-7', gradeMin: 8, gradeMax: 8, domain: 'Number Sense', difficulty: 2,
+    questionText: 'What is the sum of 4,345 and 5,456?',
+    choices: ['9,801', '9,811', '9,821', '9,831'], correctAnswer: '9,801',
+    solution: '4,345 + 5,456 = 9,801'
+  },
+  {
+    id: '8th-8', gradeMin: 8, gradeMax: 8, domain: 'Number Sense', difficulty: 3,
+    questionText: 'A school has 5,456 students. If 1,234 are in grades 1-3, how many are in grades 4-8?',
+    choices: ['4,222', '4,232', '4,242', '4,252'], correctAnswer: '4,222',
+    solution: '5,456 - 1,234 = 4,222'
+  },
+  {
+    id: '8th-9', gradeMin: 8, gradeMax: 8, domain: 'Number Sense', difficulty: 3,
+    questionText: 'What is 6,400 divided by 64?',
+    choices: ['90', '95', '100', '105'], correctAnswer: '100',
+    solution: '6,400 ÷ 64 = 100'
+  },
+  {
+    id: '8th-10', gradeMin: 8, gradeMax: 8, domain: 'Number Sense', difficulty: 3,
+    questionText: 'A bus travels 4,800 miles in 16 days. How many miles does it travel per day?',
+    choices: ['200', '250', '300', '350'], correctAnswer: '300',
+    solution: '4,800 ÷ 16 = 300'
+  },
+  {
+    id: '8th-11', gradeMin: 8, gradeMax: 8, domain: 'Number Sense', difficulty: 3,
+    questionText: 'What is the product of 36 and 19?',
+    choices: ['634', '644', '684', '694'], correctAnswer: '684',
+    solution: '36 x 19 = 684'
+  },
+  {
+    id: '8th-12', gradeMin: 8, gradeMax: 8, domain: 'Number Sense', difficulty: 2,
+    questionText: 'What is the difference between 6,000 and 1,234?',
+    choices: ['4,766', '4,776', '4,786', '4,796'], correctAnswer: '4,766',
+    solution: '6,000 - 1,234 = 4,766'
+  },
+  {
+    id: '8th-13', gradeMin: 8, gradeMax: 8, domain: 'Number Sense', difficulty: 2,
+    questionText: 'Round 10,849 to the nearest thousand.',
+    choices: ['10,000', '11,000', '10,800', '10,900'], correctAnswer: '11,000',
+    solution: 'Hundreds digit is 8 (>=5), round up to 11,000'
+  },
+  {
+    id: '8th-14', gradeMin: 8, gradeMax: 8, domain: 'Number Sense', difficulty: 1,
+    questionText: 'What is 16 x 9?',
+    choices: ['134', '144', '154', '164'], correctAnswer: '144',
+    solution: '16 x 9 = 144'
+  },
+  {
+    id: '8th-15', gradeMin: 8, gradeMax: 8, domain: 'Number Sense', difficulty: 1,
+    questionText: 'What is 13 x 13?',
+    choices: ['159', '169', '179', '189'], correctAnswer: '169',
+    solution: '13 x 13 = 169'
+  },
 
-// Operations & Algebraic Thinking (8th-16 to 8th-25)
-{ id: '8th-16', gradeMin: 8, gradeMax: 8, domain: 'Operations & Algebraic Thinking', difficulty: 1,
-  questionText: 'A baker made 144 cupcakes and wants to put them equally into 18 boxes. How many cupcakes will go in each box?',
-  choices: ['6', '7', '8', '9'], correctAnswer: '8',
-  solution: '144 ÷ 18 = 8' },
-{ id: '8th-17', gradeMin: 8, gradeMax: 8, domain: 'Operations & Algebraic Thinking', difficulty: 1,
-  questionText: 'What is the value of 9 x 14?',
-  choices: ['116', '126', '136', '146'], correctAnswer: '126',
-  solution: '9 x 14 = 126' },
-{ id: '8th-18', gradeMin: 8, gradeMax: 8, domain: 'Operations & Algebraic Thinking', difficulty: 2,
-  questionText: 'Fill in the blank: 12 x ___ = 144',
-  choices: ['10', '11', '12', '13'], correctAnswer: '12',
-  solution: '12 x 12 = 144' },
-{ id: '8th-19', gradeMin: 8, gradeMax: 8, domain: 'Operations & Algebraic Thinking', difficulty: 2,
-  questionText: 'A class has 72 students. If they are divided into 8 equal groups, how many students are in each group?',
-  choices: ['7', '8', '9', '10'], correctAnswer: '9',
-  solution: '72 ÷ 8 = 9' },
-{ id: '8th-20', gradeMin: 8, gradeMax: 8, domain: 'Operations & Algebraic Thinking', difficulty: 2,
-  questionText: 'What is 120 ÷ 10?',
-  choices: ['10', '11', '12', '13'], correctAnswer: '12',
-  solution: '120 ÷ 10 = 12' },
-{ id: '8th-21', gradeMin: 8, gradeMax: 8, domain: 'Operations & Algebraic Thinking', difficulty: 2,
-  questionText: 'If 10 x 7 = 70, what does 7 x 10 equal?',
-  choices: ['70', '77', '80', '90'], correctAnswer: '70',
-  solution: 'Multiplication is commutative: 7 x 10 = 10 x 7 = 70' },
-{ id: '8th-22', gradeMin: 8, gradeMax: 8, domain: 'Operations & Algebraic Thinking', difficulty: 3,
-  questionText: 'A school has 9 classes with 30 students each. How many students are there in total?',
-  choices: ['260', '270', '280', '290'], correctAnswer: '270',
-  solution: '9 x 30 = 270' },
-{ id: '8th-23', gradeMin: 8, gradeMax: 8, domain: 'Operations & Algebraic Thinking', difficulty: 3,
-  questionText: 'What is the missing number: ___ ÷ 13 = 9',
-  choices: ['99', '108', '117', '126'], correctAnswer: '117',
-  solution: '117 ÷ 13 = 9' },
-{ id: '8th-24', gradeMin: 8, gradeMax: 8, domain: 'Operations & Algebraic Thinking', difficulty: 3,
-  questionText: 'A store sold 208 apples in 16 days. How many apples did they sell per day?',
-  choices: ['11', '12', '13', '14'], correctAnswer: '13',
-  solution: '208 ÷ 16 = 13' },
-{ id: '8th-25', gradeMin: 8, gradeMax: 8, domain: 'Operations & Algebraic Thinking', difficulty: 3,
-  questionText: 'What is 210 divided by 15?',
-  choices: ['12', '13', '14', '15'], correctAnswer: '14',
-  solution: '210 ÷ 15 = 14' },
+  // Operations & Algebraic Thinking (8th-16 to 8th-25)
+  {
+    id: '8th-16', gradeMin: 8, gradeMax: 8, domain: 'Operations & Algebraic Thinking', difficulty: 1,
+    questionText: 'A baker made 144 cupcakes and wants to put them equally into 18 boxes. How many cupcakes will go in each box?',
+    choices: ['6', '7', '8', '9'], correctAnswer: '8',
+    solution: '144 ÷ 18 = 8'
+  },
+  {
+    id: '8th-17', gradeMin: 8, gradeMax: 8, domain: 'Operations & Algebraic Thinking', difficulty: 1,
+    questionText: 'What is the value of 9 x 14?',
+    choices: ['116', '126', '136', '146'], correctAnswer: '126',
+    solution: '9 x 14 = 126'
+  },
+  {
+    id: '8th-18', gradeMin: 8, gradeMax: 8, domain: 'Operations & Algebraic Thinking', difficulty: 2,
+    questionText: 'Fill in the blank: 12 x ___ = 144',
+    choices: ['10', '11', '12', '13'], correctAnswer: '12',
+    solution: '12 x 12 = 144'
+  },
+  {
+    id: '8th-19', gradeMin: 8, gradeMax: 8, domain: 'Operations & Algebraic Thinking', difficulty: 2,
+    questionText: 'A class has 72 students. If they are divided into 8 equal groups, how many students are in each group?',
+    choices: ['7', '8', '9', '10'], correctAnswer: '9',
+    solution: '72 ÷ 8 = 9'
+  },
+  {
+    id: '8th-20', gradeMin: 8, gradeMax: 8, domain: 'Operations & Algebraic Thinking', difficulty: 2,
+    questionText: 'What is 120 ÷ 10?',
+    choices: ['10', '11', '12', '13'], correctAnswer: '12',
+    solution: '120 ÷ 10 = 12'
+  },
+  {
+    id: '8th-21', gradeMin: 8, gradeMax: 8, domain: 'Operations & Algebraic Thinking', difficulty: 2,
+    questionText: 'If 10 x 7 = 70, what does 7 x 10 equal?',
+    choices: ['70', '77', '80', '90'], correctAnswer: '70',
+    solution: 'Multiplication is commutative: 7 x 10 = 10 x 7 = 70'
+  },
+  {
+    id: '8th-22', gradeMin: 8, gradeMax: 8, domain: 'Operations & Algebraic Thinking', difficulty: 3,
+    questionText: 'A school has 9 classes with 30 students each. How many students are there in total?',
+    choices: ['260', '270', '280', '290'], correctAnswer: '270',
+    solution: '9 x 30 = 270'
+  },
+  {
+    id: '8th-23', gradeMin: 8, gradeMax: 8, domain: 'Operations & Algebraic Thinking', difficulty: 3,
+    questionText: 'What is the missing number: ___ ÷ 13 = 9',
+    choices: ['99', '108', '117', '126'], correctAnswer: '117',
+    solution: '117 ÷ 13 = 9'
+  },
+  {
+    id: '8th-24', gradeMin: 8, gradeMax: 8, domain: 'Operations & Algebraic Thinking', difficulty: 3,
+    questionText: 'A store sold 208 apples in 16 days. How many apples did they sell per day?',
+    choices: ['11', '12', '13', '14'], correctAnswer: '13',
+    solution: '208 ÷ 16 = 13'
+  },
+  {
+    id: '8th-25', gradeMin: 8, gradeMax: 8, domain: 'Operations & Algebraic Thinking', difficulty: 3,
+    questionText: 'What is 210 divided by 15?',
+    choices: ['12', '13', '14', '15'], correctAnswer: '14',
+    solution: '210 ÷ 15 = 14'
+  },
 
-// Place Value (8th-26 to 8th-30)
-{ id: '8th-26', gradeMin: 8, gradeMax: 8, domain: 'Place Value', difficulty: 1,
-  questionText: 'What is the value of the 9 in 9,432?',
-  choices: ['9', '90', '900', '9,000'], correctAnswer: '9,000',
-  solution: '9 is in the thousands place' },
-{ id: '8th-27', gradeMin: 8, gradeMax: 8, domain: 'Place Value', difficulty: 1,
-  questionText: 'What is 7,210 written in expanded form?',
-  choices: ['7,000+200+10', '7,000+200+10+0', '7,000+100+10', '7,000+100+20'], correctAnswer: '7,000+200+10',
-  solution: '7,210 = 7,000 + 200 + 10' },
-{ id: '8th-28', gradeMin: 8, gradeMax: 8, domain: 'Place Value', difficulty: 2,
-  questionText: 'Round 11,489 to the nearest thousand.',
-  choices: ['11,000', '11,500', '12,000', '12,500'], correctAnswer: '11,000',
-  solution: 'Hundreds digit is 4 (<5), round down to 11,000' },
-{ id: '8th-29', gradeMin: 8, gradeMax: 8, domain: 'Place Value', difficulty: 2,
-  questionText: 'Which digit is in the hundreds place of 10,482?',
-  choices: ['4', '6', '8', '2'], correctAnswer: '4',
-  solution: 'Hundreds place is 4' },
-{ id: '8th-30', gradeMin: 8, gradeMax: 8, domain: 'Place Value', difficulty: 3,
-  questionText: 'What is the largest 8-digit number?',
-  choices: ['99,999,999', '99,999,900', '99,999,990', '99,999,909'], correctAnswer: '99,999,999',
-  solution: '99,999,999 is the largest 8-digit number' },
+  // Place Value (8th-26 to 8th-30)
+  {
+    id: '8th-26', gradeMin: 8, gradeMax: 8, domain: 'Place Value', difficulty: 1,
+    questionText: 'What is the value of the 9 in 9,432?',
+    choices: ['9', '90', '900', '9,000'], correctAnswer: '9,000',
+    solution: '9 is in the thousands place'
+  },
+  {
+    id: '8th-27', gradeMin: 8, gradeMax: 8, domain: 'Place Value', difficulty: 1,
+    questionText: 'What is 7,210 written in expanded form?',
+    choices: ['7,000+200+10', '7,000+200+10+0', '7,000+100+10', '7,000+100+20'], correctAnswer: '7,000+200+10',
+    solution: '7,210 = 7,000 + 200 + 10'
+  },
+  {
+    id: '8th-28', gradeMin: 8, gradeMax: 8, domain: 'Place Value', difficulty: 2,
+    questionText: 'Round 11,489 to the nearest thousand.',
+    choices: ['11,000', '11,500', '12,000', '12,500'], correctAnswer: '11,000',
+    solution: 'Hundreds digit is 4 (<5), round down to 11,000'
+  },
+  {
+    id: '8th-29', gradeMin: 8, gradeMax: 8, domain: 'Place Value', difficulty: 2,
+    questionText: 'Which digit is in the hundreds place of 10,482?',
+    choices: ['4', '6', '8', '2'], correctAnswer: '4',
+    solution: 'Hundreds place is 4'
+  },
+  {
+    id: '8th-30', gradeMin: 8, gradeMax: 8, domain: 'Place Value', difficulty: 3,
+    questionText: 'What is the largest 8-digit number?',
+    choices: ['99,999,999', '99,999,900', '99,999,990', '99,999,909'], correctAnswer: '99,999,999',
+    solution: '99,999,999 is the largest 8-digit number'
+  },
 
-// Fractions (8th-31 to 8th-35)
-{ id: '8th-31', gradeMin: 8, gradeMax: 8, domain: 'Fractions', difficulty: 1,
-  questionText: 'What is 4/9 + 2/9?',
-  choices: ['4/9', '5/9', '6/9', '1'], correctAnswer: '6/9',
-  solution: '4/9 + 2/9 = 6/9' },
-{ id: '8th-32', gradeMin: 8, gradeMax: 8, domain: 'Fractions', difficulty: 1,
-  questionText: 'Which fraction is equivalent to 10/20?',
-  choices: ['1/2', '2/3', '3/4', '1/3'], correctAnswer: '1/2',
-  solution: '10/20 = 1/2' },
-{ id: '8th-33', gradeMin: 8, gradeMax: 8, domain: 'Fractions', difficulty: 2,
-  questionText: 'What is 9/10 - 1/5?',
-  choices: ['1/10', '1/2', '2/3', '3/10'], correctAnswer: '7/10',
-  solution: '1/5 = 2/10, so 9/10 - 2/10 = 7/10' },
-{ id: '8th-34', gradeMin: 8, gradeMax: 8, domain: 'Fractions', difficulty: 2,
-  questionText: 'Simplify 24/32.',
-  choices: ['2/3', '3/4', '1/2', '4/6'], correctAnswer: '3/4',
-  solution: '24/32 = 3/4' },
-{ id: '8th-35', gradeMin: 8, gradeMax: 8, domain: 'Fractions', difficulty: 3,
-  questionText: 'What is 3/4 x 2/3?',
-  choices: ['1/2', '1/6', '3/10', '1/4'], correctAnswer: '1/2',
-  solution: '3/4 x 2/3 = 6/12 = 1/2' },
+  // Fractions (8th-31 to 8th-35)
+  {
+    id: '8th-31', gradeMin: 8, gradeMax: 8, domain: 'Fractions', difficulty: 1,
+    questionText: 'What is 4/9 + 2/9?',
+    choices: ['4/9', '5/9', '6/9', '1'], correctAnswer: '6/9',
+    solution: '4/9 + 2/9 = 6/9'
+  },
+  {
+    id: '8th-32', gradeMin: 8, gradeMax: 8, domain: 'Fractions', difficulty: 1,
+    questionText: 'Which fraction is equivalent to 10/20?',
+    choices: ['1/2', '2/3', '3/4', '1/3'], correctAnswer: '1/2',
+    solution: '10/20 = 1/2'
+  },
+  {
+    id: '8th-33', gradeMin: 8, gradeMax: 8, domain: 'Fractions', difficulty: 2,
+    questionText: 'What is 9/10 - 1/5?',
+    choices: ['7/10', '1/2', '2/3', '3/10'], correctAnswer: '7/10',
+    solution: '1/5 = 2/10, so 9/10 - 2/10 = 7/10'
+  },
+  {
+    id: '8th-34', gradeMin: 8, gradeMax: 8, domain: 'Fractions', difficulty: 2,
+    questionText: 'Simplify 24/32.',
+    choices: ['2/3', '3/4', '1/2', '4/6'], correctAnswer: '3/4',
+    solution: '24/32 = 3/4'
+  },
+  {
+    id: '8th-35', gradeMin: 8, gradeMax: 8, domain: 'Fractions', difficulty: 3,
+    questionText: 'What is 3/4 x 2/3?',
+    choices: ['1/2', '1/6', '3/10', '1/4'], correctAnswer: '1/2',
+    solution: '3/4 x 2/3 = 6/12 = 1/2'
+  },
 
-// Decimals & Percents (8th-36 to 8th-40)
-{ id: '8th-36', gradeMin: 8, gradeMax: 8, domain: 'Decimals & Percents', difficulty: 1,
-  questionText: 'Convert 0.9 to a percent.',
-  choices: ['9%', '90%', '0.9%', '900%'], correctAnswer: '90%',
-  solution: '0.9 = 90%' },
-{ id: '8th-37', gradeMin: 8, gradeMax: 8, domain: 'Decimals & Percents', difficulty: 1,
-  questionText: 'What is 70% of 300?',
-  choices: ['70', '140', '210', '240'], correctAnswer: '210',
-  solution: '0.7 x 300 = 210' },
-{ id: '8th-38', gradeMin: 8, gradeMax: 8, domain: 'Decimals & Percents', difficulty: 2,
-  questionText: 'Convert 0.4 to a fraction.',
-  choices: ['1/4', '2/5', '4/10', '2/3'], correctAnswer: '2/5',
-  solution: '0.4 = 2/5' },
-{ id: '8th-39', gradeMin: 8, gradeMax: 8, domain: 'Decimals & Percents', difficulty: 2,
-  questionText: 'What is 35% of 400?',
-  choices: ['120', '130', '140', '150'], correctAnswer: '140',
-  solution: '0.35 x 400 = 140' },
-{ id: '8th-40', gradeMin: 8, gradeMax: 8, domain: 'Decimals & Percents', difficulty: 3,
-  questionText: 'A $300 item is discounted by 20%. What is the sale price?',
-  choices: ['$220', '$230', '$240', '$250'], correctAnswer: '$240',
-  solution: '20% of $300 is $60; $300 - $60 = $240' },
+  // Decimals & Percents (8th-36 to 8th-40)
+  {
+    id: '8th-36', gradeMin: 8, gradeMax: 8, domain: 'Decimals & Percents', difficulty: 1,
+    questionText: 'Convert 0.9 to a percent.',
+    choices: ['9%', '90%', '0.9%', '900%'], correctAnswer: '90%',
+    solution: '0.9 = 90%'
+  },
+  {
+    id: '8th-37', gradeMin: 8, gradeMax: 8, domain: 'Decimals & Percents', difficulty: 1,
+    questionText: 'What is 70% of 300?',
+    choices: ['70', '140', '210', '240'], correctAnswer: '210',
+    solution: '0.7 x 300 = 210'
+  },
+  {
+    id: '8th-38', gradeMin: 8, gradeMax: 8, domain: 'Decimals & Percents', difficulty: 2,
+    questionText: 'Convert 0.4 to a fraction.',
+    choices: ['1/4', '2/5', '4/10', '2/3'], correctAnswer: '2/5',
+    solution: '0.4 = 2/5'
+  },
+  {
+    id: '8th-39', gradeMin: 8, gradeMax: 8, domain: 'Decimals & Percents', difficulty: 2,
+    questionText: 'What is 35% of 400?',
+    choices: ['120', '130', '140', '150'], correctAnswer: '140',
+    solution: '0.35 x 400 = 140'
+  },
+  {
+    id: '8th-40', gradeMin: 8, gradeMax: 8, domain: 'Decimals & Percents', difficulty: 3,
+    questionText: 'A $300 item is discounted by 20%. What is the sale price?',
+    choices: ['$220', '$230', '$240', '$250'], correctAnswer: '$240',
+    solution: '20% of $300 is $60; $300 - $60 = $240'
+  },
 
-// Geometry (8th-41 to 8th-45)
-{ id: '8th-41', gradeMin: 8, gradeMax: 8, domain: 'Geometry', difficulty: 1,
-  questionText: 'How many sides does a heptadecagon have?',
-  choices: ['15', '16', '17', '18'], correctAnswer: '17',
-  solution: 'A heptadecagon has 17 sides' },
-{ id: '8th-42', gradeMin: 8, gradeMax: 8, domain: 'Geometry', difficulty: 1,
-  questionText: 'How many right angles does a parallelogram have?',
-  choices: ['0', '1', '2', '4'], correctAnswer: '0',
-  solution: 'A parallelogram has 0 right angles unless it is a rectangle or square' },
-{ id: '8th-43', gradeMin: 8, gradeMax: 8, domain: 'Geometry', difficulty: 2,
-  questionText: 'A square has a side length of 20 cm. What is its area?',
-  choices: ['400 cm²', '410 cm²', '420 cm²', '430 cm²'], correctAnswer: '400 cm²',
-  solution: 'Area = 20 x 20 = 400 cm²' },
-{ id: '8th-44', gradeMin: 8, gradeMax: 8, domain: 'Geometry', difficulty: 2,
-  questionText: 'A triangle has angles of 90°, 60°, and ___. What is the missing angle?',
-  choices: ['20°', '30°', '40°', '50°'], correctAnswer: '30°',
-  solution: 'Sum of angles in triangle = 180°. 180 - 90 - 60 = 30°' },
-{ id: '8th-45', gradeMin: 8, gradeMax: 8, domain: 'Geometry', difficulty: 3,
-  questionText: 'A rectangle is 22 cm long and 10 cm wide. What is its perimeter?',
-  choices: ['60 cm', '62 cm', '64 cm', '66 cm'], correctAnswer: '64 cm',
-  solution: 'Perimeter = 2 x (22 + 10) = 2 x 32 = 64 cm' },
+  // Geometry (8th-41 to 8th-45)
+  {
+    id: '8th-41', gradeMin: 8, gradeMax: 8, domain: 'Geometry', difficulty: 1,
+    questionText: 'How many sides does a heptadecagon have?',
+    choices: ['15', '16', '17', '18'], correctAnswer: '17',
+    solution: 'A heptadecagon has 17 sides'
+  },
+  {
+    id: '8th-42', gradeMin: 8, gradeMax: 8, domain: 'Geometry', difficulty: 1,
+    questionText: 'How many right angles does a parallelogram have?',
+    choices: ['0', '1', '2', '4'], correctAnswer: '0',
+    solution: 'A parallelogram has 0 right angles unless it is a rectangle or square'
+  },
+  {
+    id: '8th-43', gradeMin: 8, gradeMax: 8, domain: 'Geometry', difficulty: 2,
+    questionText: 'A square has a side length of 20 cm. What is its area?',
+    choices: ['400 cm²', '410 cm²', '420 cm²', '430 cm²'], correctAnswer: '400 cm²',
+    solution: 'Area = 20 x 20 = 400 cm²'
+  },
+  {
+    id: '8th-44', gradeMin: 8, gradeMax: 8, domain: 'Geometry', difficulty: 2,
+    questionText: 'A triangle has angles of 90°, 60°, and ___. What is the missing angle?',
+    choices: ['20°', '30°', '40°', '50°'], correctAnswer: '30°',
+    solution: 'Sum of angles in triangle = 180°. 180 - 90 - 60 = 30°'
+  },
+  {
+    id: '8th-45', gradeMin: 8, gradeMax: 8, domain: 'Geometry', difficulty: 3,
+    questionText: 'A rectangle is 22 cm long and 10 cm wide. What is its perimeter?',
+    choices: ['60 cm', '62 cm', '64 cm', '66 cm'], correctAnswer: '64 cm',
+    solution: 'Perimeter = 2 x (22 + 10) = 2 x 32 = 64 cm'
+  },
 
-// Measurement (8th-46 to 8th-50)
-{ id: '8th-46', gradeMin: 8, gradeMax: 8, domain: 'Measurement', difficulty: 1,
-  questionText: 'How many centimeters are in 10 meters?',
-  choices: ['100', '1,000', '10,000', '100,000'], correctAnswer: '1,000',
-  solution: '1 meter = 100 cm, so 10 x 100 = 1,000' },
-{ id: '8th-47', gradeMin: 8, gradeMax: 8, domain: 'Measurement', difficulty: 1,
-  questionText: 'How many minutes are in 10 hours?',
-  choices: ['600', '620', '640', '660'], correctAnswer: '600',
-  solution: '10 x 60 = 600' },
-{ id: '8th-48', gradeMin: 8, gradeMax: 8, domain: 'Measurement', difficulty: 2,
-  questionText: 'A swimming pool is 90 meters long. How many centimeters is that?',
-  choices: ['900', '9,000', '90,000', '900,000'], correctAnswer: '9,000',
-  solution: '90 x 100 = 9,000' },
-{ id: '8th-49', gradeMin: 8, gradeMax: 8, domain: 'Measurement', difficulty: 2,
-  questionText: 'How many grams are in 12 kilograms?',
-  choices: ['1,200', '12,000', '120,000', '1,200,000'], correctAnswer: '12,000',
-  solution: '12 x 1,000 = 12,000' },
-{ id: '8th-50', gradeMin: 8, gradeMax: 8, domain: 'Measurement', difficulty: 3,
-  questionText: 'A car travels 960 kilometers in 16 hours. What is its average speed in km/h?',
-  choices: ['50', '55', '60', '65'], correctAnswer: '60',
-  solution: '960 ÷ 16 = 60 km/h' },
+  // Measurement (8th-46 to 8th-50)
+  {
+    id: '8th-46', gradeMin: 8, gradeMax: 8, domain: 'Measurement', difficulty: 1,
+    questionText: 'How many centimeters are in 10 meters?',
+    choices: ['100', '1,000', '10,000', '100,000'], correctAnswer: '1,000',
+    solution: '1 meter = 100 cm, so 10 x 100 = 1,000'
+  },
+  {
+    id: '8th-47', gradeMin: 8, gradeMax: 8, domain: 'Measurement', difficulty: 1,
+    questionText: 'How many minutes are in 10 hours?',
+    choices: ['600', '620', '640', '660'], correctAnswer: '600',
+    solution: '10 x 60 = 600'
+  },
+  {
+    id: '8th-48', gradeMin: 8, gradeMax: 8, domain: 'Measurement', difficulty: 2,
+    questionText: 'A swimming pool is 90 meters long. How many centimeters is that?',
+    choices: ['900', '9,000', '90,000', '900,000'], correctAnswer: '9,000',
+    solution: '90 x 100 = 9,000'
+  },
+  {
+    id: '8th-49', gradeMin: 8, gradeMax: 8, domain: 'Measurement', difficulty: 2,
+    questionText: 'How many grams are in 12 kilograms?',
+    choices: ['1,200', '12,000', '120,000', '1,200,000'], correctAnswer: '12,000',
+    solution: '12 x 1,000 = 12,000'
+  },
+  {
+    id: '8th-50', gradeMin: 8, gradeMax: 8, domain: 'Measurement', difficulty: 3,
+    questionText: 'A car travels 960 kilometers in 16 hours. What is its average speed in km/h?',
+    choices: ['50', '55', '60', '65'], correctAnswer: '60',
+    solution: '960 ÷ 16 = 60 km/h'
+  },
 
-// Statistics (8th-51 to 8th-55)
-{ id: '8th-51', gradeMin: 8, gradeMax: 8, domain: 'Statistics', difficulty: 1,
-  questionText: 'What is the mean of 16, 20, and 24?',
-  choices: ['18', '20', '22', '24'], correctAnswer: '20',
-  solution: '(16 + 20 + 24) ÷ 3 = 60 ÷ 3 = 20' },
-{ id: '8th-52', gradeMin: 8, gradeMax: 8, domain: 'Statistics', difficulty: 1,
-  questionText: 'What is the median of 11, 15, 19, 23, 27?',
-  choices: ['15', '19', '23', '27'], correctAnswer: '19',
-  solution: 'The middle number is 19' },
-{ id: '8th-53', gradeMin: 8, gradeMax: 8, domain: 'Statistics', difficulty: 2,
-  questionText: 'What is the mode of 6, 8, 8, 10, 12?',
-  choices: ['6', '8', '10', '12'], correctAnswer: '8',
-  solution: '8 appears most often' },
-{
-  id: '8th-54',
-  gradeMin: 8,
-  gradeMax: 8,
-  domain: 'Statistics',
-  difficulty: 2,
-  questionText: 'What is the range of 14, 18, 22, 26, 34?',
-  choices: ['16', '18', '20', '19'],
-  correctAnswer: '20',
-  solution: 'Range = max - min = 34 - 14 = 20.'
-},
-{ id: '8th-55', gradeMin: 8, gradeMax: 8, domain: 'Statistics', difficulty: 3,
-  questionText: 'The scores on a test are 88, 93, 101, 93, 96. What is the mode?',
-  choices: ['88', '93', '96', '101'], correctAnswer: '93',
-  solution: '93 appears most often' },
+  // Statistics (8th-51 to 8th-55)
+  {
+    id: '8th-51', gradeMin: 8, gradeMax: 8, domain: 'Statistics', difficulty: 1,
+    questionText: 'What is the mean of 16, 20, and 24?',
+    choices: ['18', '20', '22', '24'], correctAnswer: '20',
+    solution: '(16 + 20 + 24) ÷ 3 = 60 ÷ 3 = 20'
+  },
+  {
+    id: '8th-52', gradeMin: 8, gradeMax: 8, domain: 'Statistics', difficulty: 1,
+    questionText: 'What is the median of 11, 15, 19, 23, 27?',
+    choices: ['15', '19', '23', '27'], correctAnswer: '19',
+    solution: 'The middle number is 19'
+  },
+  {
+    id: '8th-53', gradeMin: 8, gradeMax: 8, domain: 'Statistics', difficulty: 2,
+    questionText: 'What is the mode of 6, 8, 8, 10, 12?',
+    choices: ['6', '8', '10', '12'], correctAnswer: '8',
+    solution: '8 appears most often'
+  },
+  {
+    id: '8th-54',
+    gradeMin: 8,
+    gradeMax: 8,
+    domain: 'Statistics',
+    difficulty: 2,
+    questionText: 'What is the range of 14, 18, 22, 26, 34?',
+    choices: ['16', '18', '20', '19'],
+    correctAnswer: '20',
+    solution: 'Range = max - min = 34 - 14 = 20.'
+  },
+  {
+    id: '8th-55', gradeMin: 8, gradeMax: 8, domain: 'Statistics', difficulty: 3,
+    questionText: 'The scores on a test are 88, 93, 101, 93, 96. What is the mode?',
+    choices: ['88', '93', '96', '101'], correctAnswer: '93',
+    solution: '93 appears most often'
+  },
 
-// Mixed Review & Word Problems (8th-56 to 8th-60)
-{ id: '8th-56', gradeMin: 8, gradeMax: 8, domain: 'Number Sense', difficulty: 2,
-  questionText: 'A school bus has 80 seats. If 67 are occupied, how many are empty?',
-  choices: ['11', '12', '13', '14'], correctAnswer: '13',
-  solution: '80 - 67 = 13' },
-{ id: '8th-57', gradeMin: 8, gradeMax: 8, domain: 'Measurement', difficulty: 2,
-  questionText: 'A water bottle holds 1,800 milliliters. How many liters is that?',
-  choices: ['1.8', '18', '180', '1,800'], correctAnswer: '1.8',
-  solution: '1 liter = 1,000 mL, so 1,800 ÷ 1,000 = 1.8 L' },
-{ id: '8th-58', gradeMin: 8, gradeMax: 8, domain: 'Geometry', difficulty: 2,
-  questionText: 'How many faces does a pentagonal prism have?',
-  choices: ['5', '6', '7', '10'], correctAnswer: '7',
-  solution: 'A pentagonal prism has 7 faces' },
-{ id: '8th-59', gradeMin: 8, gradeMax: 8, domain: 'Decimals & Percents', difficulty: 2,
-  questionText: 'What is 50% of 380?',
-  choices: ['180', '190', '200', '210'], correctAnswer: '190',
-  solution: '0.50 x 380 = 190' },
-{ id: '8th-60', gradeMin: 8, gradeMax: 8, domain: 'Fractions', difficulty: 2,
-  questionText: 'What is 7/10 + 1/10?',
-  choices: ['7/10', '8/10', '9/10', '1'], correctAnswer: '8/10',
-  solution: '7/10 + 1/10 = 8/10' },
-// === Additional Grade 7 Questions (7th-61 to 7th-100) ===
-{ id: '7th-61', gradeMin: 7, gradeMax: 7, domain: 'Number Sense', difficulty: 2, questionText: 'What is the value of 4,000 - 2,345?', choices: ['1,655', '1,665', '1,675', '1,685'], correctAnswer: '1,655', solution: '4,000 - 2,345 = 1,655' },
-{ id: '7th-62', gradeMin: 7, gradeMax: 7, domain: 'Number Sense', difficulty: 2, questionText: 'What is 23 x 12?', choices: ['256', '266', '276', '286'], correctAnswer: '276', solution: '23 x 12 = 276' },
-{ id: '7th-63', gradeMin: 7, gradeMax: 7, domain: 'Number Sense', difficulty: 1, questionText: 'Round 7,249 to the nearest hundred.', choices: ['7,200', '7,300', '7,250', '7,400'], correctAnswer: '7,200', solution: 'Tens digit is 4 (<5), round down to 7,200' },
-{ id: '7th-64', gradeMin: 7, gradeMax: 7, domain: 'Number Sense', difficulty: 3, questionText: 'A store sold 2,345 pencils in May and 3,789 pencils in June. How many pencils did they sell in total?', choices: ['6,134', '6,144', '6,154', '6,164'], correctAnswer: '6,134', solution: '2,345 + 3,789 = 6,134' },
-{ id: '7th-65', gradeMin: 7, gradeMax: 7, domain: 'Number Sense', difficulty: 2, questionText: 'What is 7,000 - 3,678?', choices: ['3,322', '3,332', '3,342', '3,352'], correctAnswer: '3,322', solution: '7,000 - 3,678 = 3,322' },
-{ id: '7th-66', gradeMin: 7, gradeMax: 7, domain: 'Number Sense', difficulty: 2, questionText: 'Which is greater: 6,654 or 6,456?', choices: ['6,654', '6,456'], correctAnswer: '6,654', solution: '6,654 > 6,456' },
-{ id: '7th-67', gradeMin: 7, gradeMax: 7, domain: 'Number Sense', difficulty: 2, questionText: 'What is the sum of 1,345 and 2,456?', choices: ['3,801', '3,811', '3,821', '3,831'], correctAnswer: '3,801', solution: '1,345 + 2,456 = 3,801' },
-{ id: '7th-68', gradeMin: 7, gradeMax: 7, domain: 'Number Sense', difficulty: 3, questionText: 'A school has 2,456 students. If 1,234 are in grades 1-3, how many are in grades 4-7?', choices: ['1,222', '1,232', '1,242', '1,252'], correctAnswer: '1,222', solution: '2,456 - 1,234 = 1,222' },
-{ id: '7th-69', gradeMin: 7, gradeMax: 7, domain: 'Number Sense', difficulty: 3, questionText: 'What is 3,600 divided by 36?', choices: ['90', '95', '100', '105'], correctAnswer: '100', solution: '3,600 ÷ 36 = 100' },
-{ id: '7th-70', gradeMin: 7, gradeMax: 7, domain: 'Number Sense', difficulty: 3, questionText: 'A bus travels 1,800 miles in 6 days. How many miles does it travel per day?', choices: ['200', '250', '300', '350'], correctAnswer: '300', solution: '1,800 ÷ 6 = 300' },
-// ... 30 more 7th grade questions across all domains ...
-{ id: '7th-100', gradeMin: 7, gradeMax: 7, domain: 'Fractions', difficulty: 2, questionText: 'What is 2/5 + 3/5?', choices: ['4/5', '5/5', '1', '2'], correctAnswer: '1', solution: '2/5 + 3/5 = 5/5 = 1' },
+  // Mixed Review & Word Problems (8th-56 to 8th-60)
+  {
+    id: '8th-56', gradeMin: 8, gradeMax: 8, domain: 'Number Sense', difficulty: 2,
+    questionText: 'A school bus has 80 seats. If 67 are occupied, how many are empty?',
+    choices: ['11', '12', '13', '14'], correctAnswer: '13',
+    solution: '80 - 67 = 13'
+  },
+  {
+    id: '8th-57', gradeMin: 8, gradeMax: 8, domain: 'Measurement', difficulty: 2,
+    questionText: 'A water bottle holds 1,800 milliliters. How many liters is that?',
+    choices: ['1.8', '18', '180', '1,800'], correctAnswer: '1.8',
+    solution: '1 liter = 1,000 mL, so 1,800 ÷ 1,000 = 1.8 L'
+  },
+  {
+    id: '8th-58', gradeMin: 8, gradeMax: 8, domain: 'Geometry', difficulty: 2,
+    questionText: 'How many faces does a pentagonal prism have?',
+    choices: ['5', '6', '7', '10'], correctAnswer: '7',
+    solution: 'A pentagonal prism has 7 faces'
+  },
+  {
+    id: '8th-59', gradeMin: 8, gradeMax: 8, domain: 'Decimals & Percents', difficulty: 2,
+    questionText: 'What is 50% of 380?',
+    choices: ['180', '190', '200', '210'], correctAnswer: '190',
+    solution: '0.50 x 380 = 190'
+  },
+  {
+    id: '8th-60', gradeMin: 8, gradeMax: 8, domain: 'Fractions', difficulty: 2,
+    questionText: 'What is 7/10 + 1/10?',
+    choices: ['7/10', '8/10', '9/10', '1'], correctAnswer: '8/10',
+    solution: '7/10 + 1/10 = 8/10'
+  },
+  // === Additional Grade 7 Questions (7th-61 to 7th-100) ===
+  { id: '7th-61', gradeMin: 7, gradeMax: 7, domain: 'Number Sense', difficulty: 2, questionText: 'What is the value of 4,000 - 2,345?', choices: ['1,655', '1,665', '1,675', '1,685'], correctAnswer: '1,655', solution: '4,000 - 2,345 = 1,655' },
+  { id: '7th-62', gradeMin: 7, gradeMax: 7, domain: 'Number Sense', difficulty: 2, questionText: 'What is 23 x 12?', choices: ['256', '266', '276', '286'], correctAnswer: '276', solution: '23 x 12 = 276' },
+  { id: '7th-63', gradeMin: 7, gradeMax: 7, domain: 'Number Sense', difficulty: 1, questionText: 'Round 7,249 to the nearest hundred.', choices: ['7,200', '7,300', '7,250', '7,400'], correctAnswer: '7,200', solution: 'Tens digit is 4 (<5), round down to 7,200' },
+  { id: '7th-64', gradeMin: 7, gradeMax: 7, domain: 'Number Sense', difficulty: 3, questionText: 'A store sold 2,345 pencils in May and 3,789 pencils in June. How many pencils did they sell in total?', choices: ['6,134', '6,144', '6,154', '6,164'], correctAnswer: '6,134', solution: '2,345 + 3,789 = 6,134' },
+  { id: '7th-65', gradeMin: 7, gradeMax: 7, domain: 'Number Sense', difficulty: 2, questionText: 'What is 7,000 - 3,678?', choices: ['3,322', '3,332', '3,342', '3,352'], correctAnswer: '3,322', solution: '7,000 - 3,678 = 3,322' },
+  { id: '7th-66', gradeMin: 7, gradeMax: 7, domain: 'Number Sense', difficulty: 2, questionText: 'Which is greater: 6,654 or 6,456?', choices: ['6,654', '6,456'], correctAnswer: '6,654', solution: '6,654 > 6,456' },
+  { id: '7th-67', gradeMin: 7, gradeMax: 7, domain: 'Number Sense', difficulty: 2, questionText: 'What is the sum of 1,345 and 2,456?', choices: ['3,801', '3,811', '3,821', '3,831'], correctAnswer: '3,801', solution: '1,345 + 2,456 = 3,801' },
+  { id: '7th-68', gradeMin: 7, gradeMax: 7, domain: 'Number Sense', difficulty: 3, questionText: 'A school has 2,456 students. If 1,234 are in grades 1-3, how many are in grades 4-7?', choices: ['1,222', '1,232', '1,242', '1,252'], correctAnswer: '1,222', solution: '2,456 - 1,234 = 1,222' },
+  { id: '7th-69', gradeMin: 7, gradeMax: 7, domain: 'Number Sense', difficulty: 3, questionText: 'What is 3,600 divided by 36?', choices: ['90', '95', '100', '105'], correctAnswer: '100', solution: '3,600 ÷ 36 = 100' },
+  { id: '7th-70', gradeMin: 7, gradeMax: 7, domain: 'Number Sense', difficulty: 3, questionText: 'A bus travels 1,800 miles in 6 days. How many miles does it travel per day?', choices: ['200', '250', '300', '350'], correctAnswer: '300', solution: '1,800 ÷ 6 = 300' },
+  // ... 30 more 7th grade questions across all domains ...
+  { id: '7th-100', gradeMin: 7, gradeMax: 7, domain: 'Fractions', difficulty: 2, questionText: 'What is 2/5 + 3/5?', choices: ['4/5', '5/5', '1', '2'], correctAnswer: '1', solution: '2/5 + 3/5 = 5/5 = 1' },
 
-// === Additional Grade 8 Questions (8th-61 to 8th-100) ===
-{ id: '8th-61', gradeMin: 8, gradeMax: 8, domain: 'Number Sense', difficulty: 2, questionText: 'What is the value of 5,000 - 2,345?', choices: ['2,655', '2,665', '2,675', '2,685'], correctAnswer: '2,655', solution: '5,000 - 2,345 = 2,655' },
-{ id: '8th-62', gradeMin: 8, gradeMax: 8, domain: 'Number Sense', difficulty: 2, questionText: 'What is 25 x 14?', choices: ['340', '350', '360', '370'], correctAnswer: '350', solution: '25 x 14 = 350' },
-{ id: '8th-63', gradeMin: 8, gradeMax: 8, domain: 'Number Sense', difficulty: 1, questionText: 'Round 8,249 to the nearest hundred.', choices: ['8,200', '8,300', '8,250', '8,400'], correctAnswer: '8,200', solution: 'Tens digit is 4 (<5), round down to 8,200' },
-{ id: '8th-64', gradeMin: 8, gradeMax: 8, domain: 'Number Sense', difficulty: 3, questionText: 'A store sold 3,345 pencils in May and 4,789 pencils in June. How many pencils did they sell in total?', choices: ['8,134', '8,144', '8,154', '8,164'], correctAnswer: '8,134', solution: '3,345 + 4,789 = 8,134' },
-{ id: '8th-65', gradeMin: 8, gradeMax: 8, domain: 'Number Sense', difficulty: 2, questionText: 'What is 8,000 - 3,678?', choices: ['4,322', '4,332', '4,342', '4,352'], correctAnswer: '4,322', solution: '8,000 - 3,678 = 4,322' },
-{ id: '8th-66', gradeMin: 8, gradeMax: 8, domain: 'Number Sense', difficulty: 2, questionText: 'Which is greater: 7,654 or 7,456?', choices: ['7,654', '7,456'], correctAnswer: '7,654', solution: '7,654 > 7,456' },
-{ id: '8th-67', gradeMin: 8, gradeMax: 8, domain: 'Number Sense', difficulty: 2, questionText: 'What is the sum of 2,345 and 3,456?', choices: ['5,801', '5,811', '5,821', '5,831'], correctAnswer: '5,801', solution: '2,345 + 3,456 = 5,801' },
-{ id: '8th-68', gradeMin: 8, gradeMax: 8, domain: 'Number Sense', difficulty: 3, questionText: 'A school has 3,456 students. If 1,234 are in grades 1-3, how many are in grades 4-8?', choices: ['2,222', '2,232', '2,242', '2,252'], correctAnswer: '2,222', solution: '3,456 - 1,234 = 2,222' },
-{ id: '8th-69', gradeMin: 8, gradeMax: 8, domain: 'Number Sense', difficulty: 3, questionText: 'What is 4,800 divided by 48?', choices: ['90', '95', '100', '105'], correctAnswer: '100', solution: '4,800 ÷ 48 = 100' },
-{ id: '8th-70', gradeMin: 8, gradeMax: 8, domain: 'Number Sense', difficulty: 3, questionText: 'A bus travels 2,400 miles in 8 days. How many miles does it travel per day?', choices: ['200', '250', '300', '350'], correctAnswer: '300', solution: '2,400 ÷ 8 = 300' },
-// ... 30 more 8th grade questions across all domains ...
-{ id: '8th-100', gradeMin: 8, gradeMax: 8, domain: 'Fractions', difficulty: 2, questionText: 'What is 3/7 + 4/7?', choices: ['6/7', '7/7', '1', '2'], correctAnswer: '1', solution: '3/7 + 4/7 = 7/7 = 1' },
-// === Additional Grade 8 Questions (8th-101 to 8th-120) ===
-{ id: '8th-101', gradeMin: 8, gradeMax: 8, domain: 'Number Sense', difficulty: 2, questionText: 'What is the value of 6,000 - 3,245?', choices: ['2,755', '2,765', '2,775', '2,785'], correctAnswer: '2,755', solution: '6,000 - 3,245 = 2,755' },
-{ id: '8th-102', gradeMin: 8, gradeMax: 8, domain: 'Number Sense', difficulty: 2, questionText: 'What is 27 x 15?', choices: ['385', '405', '415', '425'], correctAnswer: '405', solution: '27 x 15 = 405' },
-{ id: '8th-103', gradeMin: 8, gradeMax: 8, domain: 'Number Sense', difficulty: 1, questionText: 'Round 9,149 to the nearest hundred.', choices: ['9,100', '9,200', '9,150', '9,300'], correctAnswer: '9,100', solution: 'Tens digit is 4 (<5), round down to 9,100' },
-{ id: '8th-104', gradeMin: 8, gradeMax: 8, domain: 'Number Sense', difficulty: 3, questionText: 'A store sold 4,345 pencils in May and 5,789 pencils in June. How many pencils did they sell in total?', choices: ['10,134', '10,144', '10,154', '10,164'], correctAnswer: '10,134', solution: '4,345 + 5,789 = 10,134' },
-{ id: '8th-105', gradeMin: 8, gradeMax: 8, domain: 'Number Sense', difficulty: 2, questionText: 'What is 9,000 - 4,678?', choices: ['4,322', '4,332', '4,342', '4,352'], correctAnswer: '4,322', solution: '9,000 - 4,678 = 4,322' },
-{ id: '8th-106', gradeMin: 8, gradeMax: 8, domain: 'Number Sense', difficulty: 2, questionText: 'Which is greater: 8,654 or 8,456?', choices: ['8,654', '8,456'], correctAnswer: '8,654', solution: '8,654 > 8,456' },
-{ id: '8th-107', gradeMin: 8, gradeMax: 8, domain: 'Number Sense', difficulty: 2, questionText: 'What is the sum of 3,345 and 4,456?', choices: ['7,801', '7,811', '7,821', '7,831'], correctAnswer: '7,801', solution: '3,345 + 4,456 = 7,801' },
-{ id: '8th-108', gradeMin: 8, gradeMax: 8, domain: 'Number Sense', difficulty: 3, questionText: 'A school has 4,456 students. If 1,234 are in grades 1-3, how many are in grades 4-8?', choices: ['3,222', '3,232', '3,242', '3,252'], correctAnswer: '3,222', solution: '4,456 - 1,234 = 3,222' },
-{ id: '8th-109', gradeMin: 8, gradeMax: 8, domain: 'Number Sense', difficulty: 3, questionText: 'What is 5,600 divided by 56?', choices: ['90', '95', '100', '105'], correctAnswer: '100', solution: '5,600 ÷ 56 = 100' },
-{ id: '8th-110', gradeMin: 8, gradeMax: 8, domain: 'Number Sense', difficulty: 3, questionText: 'A bus travels 3,600 miles in 12 days. How many miles does it travel per day?', choices: ['200', '250', '300', '350'], correctAnswer: '300', solution: '3,600 ÷ 12 = 300' },
-{ id: '8th-111', gradeMin: 8, gradeMax: 8, domain: 'Operations & Algebraic Thinking', difficulty: 2, questionText: 'What is 144 ÷ 12?', choices: ['10', '11', '12', '13'], correctAnswer: '12', solution: '144 ÷ 12 = 12' },
-{ id: '8th-112', gradeMin: 8, gradeMax: 8, domain: 'Operations & Algebraic Thinking', difficulty: 2, questionText: 'If 11 x 8 = 88, what does 8 x 11 equal?', choices: ['88', '81', '96', '99'], correctAnswer: '88', solution: 'Multiplication is commutative: 8 x 11 = 11 x 8 = 88' },
-{ id: '8th-113', gradeMin: 8, gradeMax: 8, domain: 'Operations & Algebraic Thinking', difficulty: 3, questionText: 'A school has 10 classes with 25 students each. How many students are there in total?', choices: ['250', '225', '275', '300'], correctAnswer: '250', solution: '10 x 25 = 250' },
-{ id: '8th-114', gradeMin: 8, gradeMax: 8, domain: 'Operations & Algebraic Thinking', difficulty: 3, questionText: 'What is the missing number: ___ ÷ 10 = 11', choices: ['110', '120', '130', '140'], correctAnswer: '110', solution: '110 ÷ 10 = 11' },
-{ id: '8th-115', gradeMin: 8, gradeMax: 8, domain: 'Operations & Algebraic Thinking', difficulty: 3, questionText: 'A store sold 156 apples in 12 days. How many apples did they sell per day?', choices: ['11', '12', '13', '14'], correctAnswer: '13', solution: '156 ÷ 12 = 13' },
-{ id: '8th-116', gradeMin: 8, gradeMax: 8, domain: 'Operations & Algebraic Thinking', difficulty: 3, questionText: 'What is 169 divided by 13?', choices: ['11', '12', '13', '14'], correctAnswer: '13', solution: '169 ÷ 13 = 13' },
-{ id: '8th-117', gradeMin: 8, gradeMax: 8, domain: 'Fractions', difficulty: 2, questionText: 'What is 1/2 + 1/4?', choices: ['1/2', '3/4', '2/4', '1'], correctAnswer: '3/4', solution: '1/2 + 1/4 = 2/4 + 1/4 = 3/4' },
-{ id: '8th-118', gradeMin: 8, gradeMax: 8, domain: 'Fractions', difficulty: 2, questionText: 'What is 2/3 - 1/6?', choices: ['1/2', '1/3', '1/6', '2/6'], correctAnswer: '1/2', solution: '2/3 = 4/6, so 4/6 - 1/6 = 3/6 = 1/2' },
-{ id: '8th-119', gradeMin: 8, gradeMax: 8, domain: 'Fractions', difficulty: 2, questionText: 'What is 3/8 + 1/8?', choices: ['3/8', '4/8', '1/2', '1'], correctAnswer: '1/2', solution: '3/8 + 1/8 = 4/8 = 1/2' },
-{ id: '8th-120', gradeMin: 8, gradeMax: 8, domain: 'Fractions', difficulty: 2, questionText: 'What is 5/6 - 1/3?', choices: ['1/6', '1/2', '2/3', '3/6'], correctAnswer: '1/2', solution: '1/3 = 2/6, so 5/6 - 2/6 = 3/6 = 1/2' },
+  // === Additional Grade 8 Questions (8th-61 to 8th-100) ===
+  { id: '8th-61', gradeMin: 8, gradeMax: 8, domain: 'Number Sense', difficulty: 2, questionText: 'What is the value of 5,000 - 2,345?', choices: ['2,655', '2,665', '2,675', '2,685'], correctAnswer: '2,655', solution: '5,000 - 2,345 = 2,655' },
+  { id: '8th-62', gradeMin: 8, gradeMax: 8, domain: 'Number Sense', difficulty: 2, questionText: 'What is 25 x 14?', choices: ['340', '350', '360', '370'], correctAnswer: '350', solution: '25 x 14 = 350' },
+  { id: '8th-63', gradeMin: 8, gradeMax: 8, domain: 'Number Sense', difficulty: 1, questionText: 'Round 8,249 to the nearest hundred.', choices: ['8,200', '8,300', '8,250', '8,400'], correctAnswer: '8,200', solution: 'Tens digit is 4 (<5), round down to 8,200' },
+  { id: '8th-64', gradeMin: 8, gradeMax: 8, domain: 'Number Sense', difficulty: 3, questionText: 'A store sold 3,345 pencils in May and 4,789 pencils in June. How many pencils did they sell in total?', choices: ['8,134', '8,144', '8,154', '8,164'], correctAnswer: '8,134', solution: '3,345 + 4,789 = 8,134' },
+  { id: '8th-65', gradeMin: 8, gradeMax: 8, domain: 'Number Sense', difficulty: 2, questionText: 'What is 8,000 - 3,678?', choices: ['4,322', '4,332', '4,342', '4,352'], correctAnswer: '4,322', solution: '8,000 - 3,678 = 4,322' },
+  { id: '8th-66', gradeMin: 8, gradeMax: 8, domain: 'Number Sense', difficulty: 2, questionText: 'Which is greater: 7,654 or 7,456?', choices: ['7,654', '7,456'], correctAnswer: '7,654', solution: '7,654 > 7,456' },
+  { id: '8th-67', gradeMin: 8, gradeMax: 8, domain: 'Number Sense', difficulty: 2, questionText: 'What is the sum of 2,345 and 3,456?', choices: ['5,801', '5,811', '5,821', '5,831'], correctAnswer: '5,801', solution: '2,345 + 3,456 = 5,801' },
+  { id: '8th-68', gradeMin: 8, gradeMax: 8, domain: 'Number Sense', difficulty: 3, questionText: 'A school has 3,456 students. If 1,234 are in grades 1-3, how many are in grades 4-8?', choices: ['2,222', '2,232', '2,242', '2,252'], correctAnswer: '2,222', solution: '3,456 - 1,234 = 2,222' },
+  { id: '8th-69', gradeMin: 8, gradeMax: 8, domain: 'Number Sense', difficulty: 3, questionText: 'What is 4,800 divided by 48?', choices: ['90', '95', '100', '105'], correctAnswer: '100', solution: '4,800 ÷ 48 = 100' },
+  { id: '8th-70', gradeMin: 8, gradeMax: 8, domain: 'Number Sense', difficulty: 3, questionText: 'A bus travels 2,400 miles in 8 days. How many miles does it travel per day?', choices: ['200', '250', '300', '350'], correctAnswer: '300', solution: '2,400 ÷ 8 = 300' },
+  // ... 30 more 8th grade questions across all domains ...
+  { id: '8th-100', gradeMin: 8, gradeMax: 8, domain: 'Fractions', difficulty: 2, questionText: 'What is 3/7 + 4/7?', choices: ['6/7', '7/7', '1', '2'], correctAnswer: '1', solution: '3/7 + 4/7 = 7/7 = 1' },
+  // === Additional Grade 8 Questions (8th-101 to 8th-120) ===
+  { id: '8th-101', gradeMin: 8, gradeMax: 8, domain: 'Number Sense', difficulty: 2, questionText: 'What is the value of 6,000 - 3,245?', choices: ['2,755', '2,765', '2,775', '2,785'], correctAnswer: '2,755', solution: '6,000 - 3,245 = 2,755' },
+  { id: '8th-102', gradeMin: 8, gradeMax: 8, domain: 'Number Sense', difficulty: 2, questionText: 'What is 27 x 15?', choices: ['385', '405', '415', '425'], correctAnswer: '405', solution: '27 x 15 = 405' },
+  { id: '8th-103', gradeMin: 8, gradeMax: 8, domain: 'Number Sense', difficulty: 1, questionText: 'Round 9,149 to the nearest hundred.', choices: ['9,100', '9,200', '9,150', '9,300'], correctAnswer: '9,100', solution: 'Tens digit is 4 (<5), round down to 9,100' },
+  { id: '8th-104', gradeMin: 8, gradeMax: 8, domain: 'Number Sense', difficulty: 3, questionText: 'A store sold 4,345 pencils in May and 5,789 pencils in June. How many pencils did they sell in total?', choices: ['10,134', '10,144', '10,154', '10,164'], correctAnswer: '10,134', solution: '4,345 + 5,789 = 10,134' },
+  { id: '8th-105', gradeMin: 8, gradeMax: 8, domain: 'Number Sense', difficulty: 2, questionText: 'What is 9,000 - 4,678?', choices: ['4,322', '4,332', '4,342', '4,352'], correctAnswer: '4,322', solution: '9,000 - 4,678 = 4,322' },
+  { id: '8th-106', gradeMin: 8, gradeMax: 8, domain: 'Number Sense', difficulty: 2, questionText: 'Which is greater: 8,654 or 8,456?', choices: ['8,654', '8,456'], correctAnswer: '8,654', solution: '8,654 > 8,456' },
+  { id: '8th-107', gradeMin: 8, gradeMax: 8, domain: 'Number Sense', difficulty: 2, questionText: 'What is the sum of 3,345 and 4,456?', choices: ['7,801', '7,811', '7,821', '7,831'], correctAnswer: '7,801', solution: '3,345 + 4,456 = 7,801' },
+  { id: '8th-108', gradeMin: 8, gradeMax: 8, domain: 'Number Sense', difficulty: 3, questionText: 'A school has 4,456 students. If 1,234 are in grades 1-3, how many are in grades 4-8?', choices: ['3,222', '3,232', '3,242', '3,252'], correctAnswer: '3,222', solution: '4,456 - 1,234 = 3,222' },
+  { id: '8th-109', gradeMin: 8, gradeMax: 8, domain: 'Number Sense', difficulty: 3, questionText: 'What is 5,600 divided by 56?', choices: ['90', '95', '100', '105'], correctAnswer: '100', solution: '5,600 ÷ 56 = 100' },
+  { id: '8th-110', gradeMin: 8, gradeMax: 8, domain: 'Number Sense', difficulty: 3, questionText: 'A bus travels 3,600 miles in 12 days. How many miles does it travel per day?', choices: ['200', '250', '300', '350'], correctAnswer: '300', solution: '3,600 ÷ 12 = 300' },
+  { id: '8th-111', gradeMin: 8, gradeMax: 8, domain: 'Operations & Algebraic Thinking', difficulty: 2, questionText: 'What is 144 ÷ 12?', choices: ['10', '11', '12', '13'], correctAnswer: '12', solution: '144 ÷ 12 = 12' },
+  { id: '8th-112', gradeMin: 8, gradeMax: 8, domain: 'Operations & Algebraic Thinking', difficulty: 2, questionText: 'If 11 x 8 = 88, what does 8 x 11 equal?', choices: ['88', '81', '96', '99'], correctAnswer: '88', solution: 'Multiplication is commutative: 8 x 11 = 11 x 8 = 88' },
+  { id: '8th-113', gradeMin: 8, gradeMax: 8, domain: 'Operations & Algebraic Thinking', difficulty: 3, questionText: 'A school has 10 classes with 25 students each. How many students are there in total?', choices: ['250', '225', '275', '300'], correctAnswer: '250', solution: '10 x 25 = 250' },
+  { id: '8th-114', gradeMin: 8, gradeMax: 8, domain: 'Operations & Algebraic Thinking', difficulty: 3, questionText: 'What is the missing number: ___ ÷ 10 = 11', choices: ['110', '120', '130', '140'], correctAnswer: '110', solution: '110 ÷ 10 = 11' },
+  { id: '8th-115', gradeMin: 8, gradeMax: 8, domain: 'Operations & Algebraic Thinking', difficulty: 3, questionText: 'A store sold 156 apples in 12 days. How many apples did they sell per day?', choices: ['11', '12', '13', '14'], correctAnswer: '13', solution: '156 ÷ 12 = 13' },
+  { id: '8th-116', gradeMin: 8, gradeMax: 8, domain: 'Operations & Algebraic Thinking', difficulty: 3, questionText: 'What is 169 divided by 13?', choices: ['11', '12', '13', '14'], correctAnswer: '13', solution: '169 ÷ 13 = 13' },
+  { id: '8th-117', gradeMin: 8, gradeMax: 8, domain: 'Fractions', difficulty: 2, questionText: 'What is 1/2 + 1/4?', choices: ['1/2', '3/4', '2/4', '1'], correctAnswer: '3/4', solution: '1/2 + 1/4 = 2/4 + 1/4 = 3/4' },
+  { id: '8th-118', gradeMin: 8, gradeMax: 8, domain: 'Fractions', difficulty: 2, questionText: 'What is 2/3 - 1/6?', choices: ['1/2', '1/3', '1/6', '2/6'], correctAnswer: '1/2', solution: '2/3 = 4/6, so 4/6 - 1/6 = 3/6 = 1/2' },
+  { id: '8th-119', gradeMin: 8, gradeMax: 8, domain: 'Fractions', difficulty: 2, questionText: 'What is 3/8 + 1/8?', choices: ['3/8', '4/8', '1/2', '1'], correctAnswer: '1/2', solution: '3/8 + 1/8 = 4/8 = 1/2' },
+  { id: '8th-120', gradeMin: 8, gradeMax: 8, domain: 'Fractions', difficulty: 2, questionText: 'What is 5/6 - 1/3?', choices: ['1/6', '1/2', '2/3', '3/6'], correctAnswer: '1/2', solution: '1/3 = 2/6, so 5/6 - 2/6 = 3/6 = 1/2' },
 
   // === Additional Grade 1 Questions (1st-45 to 1st-74) ===
-  { id: '1st-45', gradeMin: 1, gradeMax: 1, domain: 'Number Sense', difficulty: 1,
+  {
+    id: '1st-45', gradeMin: 1, gradeMax: 1, domain: 'Number Sense', difficulty: 1,
     questionText: 'Emma is collecting stickers for her album. She has 3 sparkly stickers and 4 rainbow stickers. How many stickers does Emma have altogether?',
     choices: ['6 stickers', '7 stickers', '8 stickers', '9 stickers'], correctAnswer: '7 stickers',
-    solution: 'Add the stickers together: 3 + 4 = 7 stickers.' },
+    solution: 'Add the stickers together: 3 + 4 = 7 stickers.'
+  },
 
-  { id: '1st-46', gradeMin: 1, gradeMax: 1, domain: 'Number Sense', difficulty: 1,
+  {
+    id: '1st-46', gradeMin: 1, gradeMax: 1, domain: 'Number Sense', difficulty: 1,
     questionText: 'Tommy has 9 toy cars in his collection. His little brother takes away 3 of them to play with. How many toy cars does Tommy have left?',
     choices: ['5 cars', '6 cars', '7 cars', '8 cars'], correctAnswer: '6 cars',
-    solution: 'Subtract the cars taken away: 9 - 3 = 6 cars left.' },
+    solution: 'Subtract the cars taken away: 9 - 3 = 6 cars left.'
+  },
 
-  { id: '1st-47', gradeMin: 1, gradeMax: 1, domain: 'Number Sense', difficulty: 2,
+  {
+    id: '1st-47', gradeMin: 1, gradeMax: 1, domain: 'Number Sense', difficulty: 2,
     questionText: 'At the school playground, there are 5 swings and 6 slides. How many pieces of playground equipment are there in total?',
     choices: ['10 pieces', '11 pieces', '12 pieces', '13 pieces'], correctAnswer: '11 pieces',
-    solution: 'Add the swings and slides: 5 + 6 = 11 pieces of equipment.' },
+    solution: 'Add the swings and slides: 5 + 6 = 11 pieces of equipment.'
+  },
 
-  { id: '1st-48', gradeMin: 1, gradeMax: 1, domain: 'Number Sense', difficulty: 2,
+  {
+    id: '1st-48', gradeMin: 1, gradeMax: 1, domain: 'Number Sense', difficulty: 2,
     questionText: 'Maria is counting by twos while jumping rope. She says: 2, 4, 6, 8. What number should she say next?',
     choices: ['9', '10', '11', '12'], correctAnswer: '10',
-    solution: 'When counting by twos, add 2 to the last number: 8 + 2 = 10.' },
+    solution: 'When counting by twos, add 2 to the last number: 8 + 2 = 10.'
+  },
 
-  { id: '1st-49', gradeMin: 1, gradeMax: 1, domain: 'Number Sense', difficulty: 1,
+  {
+    id: '1st-49', gradeMin: 1, gradeMax: 1, domain: 'Number Sense', difficulty: 1,
     questionText: 'In the classroom, there are 12 students sitting at tables and 4 students sitting on the carpet. How many students are in the classroom altogether?',
     choices: ['15 students', '16 students', '17 students', '18 students'], correctAnswer: '16 students',
-    solution: 'Add all the students: 12 + 4 = 16 students in the classroom.' },
+    solution: 'Add all the students: 12 + 4 = 16 students in the classroom.'
+  },
 
-  { id: '1st-50', gradeMin: 1, gradeMax: 1, domain: 'Number Sense', difficulty: 2,
+  {
+    id: '1st-50', gradeMin: 1, gradeMax: 1, domain: 'Number Sense', difficulty: 2,
     questionText: 'Jake is organizing his crayons. He puts them in groups of 5. If he makes 3 groups, how many crayons does Jake have?',
     choices: ['8 crayons', '12 crayons', '15 crayons', '18 crayons'], correctAnswer: '15 crayons',
-    solution: 'Count by fives three times: 5 + 5 + 5 = 15 crayons, or 3 groups x 5 = 15.' },
+    solution: 'Count by fives three times: 5 + 5 + 5 = 15 crayons, or 3 groups x 5 = 15.'
+  },
 
-  { id: '1st-51', gradeMin: 1, gradeMax: 1, domain: 'Number Sense', difficulty: 1,
+  {
+    id: '1st-51', gradeMin: 1, gradeMax: 1, domain: 'Number Sense', difficulty: 1,
     questionText: 'Sarah has 8 flower stickers. She gives 2 stickers to her friend and 1 sticker to her sister. How many flower stickers does Sarah have left?',
     choices: ['4 stickers', '5 stickers', '6 stickers', '7 stickers'], correctAnswer: '5 stickers',
-    solution: 'Sarah gives away 2 + 1 = 3 stickers. She has 8 - 3 = 5 stickers left.' },
+    solution: 'Sarah gives away 2 + 1 = 3 stickers. She has 8 - 3 = 5 stickers left.'
+  },
 
-  { id: '1st-52', gradeMin: 1, gradeMax: 1, domain: 'Number Sense', difficulty: 2,
+  {
+    id: '1st-52', gradeMin: 1, gradeMax: 1, domain: 'Number Sense', difficulty: 2,
     questionText: 'The teacher is setting up chairs for story time. She arranges 4 chairs in the first row and 5 chairs in the second row. How many chairs did she set up?',
     choices: ['8 chairs', '9 chairs', '10 chairs', '11 chairs'], correctAnswer: '9 chairs',
-    solution: 'Add the chairs in both rows: 4 + 5 = 9 chairs total.' },
+    solution: 'Add the chairs in both rows: 4 + 5 = 9 chairs total.'
+  },
 
-  { id: '1st-53', gradeMin: 1, gradeMax: 1, domain: 'Place Value', difficulty: 1,
+  {
+    id: '1st-53', gradeMin: 1, gradeMax: 1, domain: 'Place Value', difficulty: 1,
     questionText: 'Look at the number 17. How many ones are in this number?',
     choices: ['1 one', '6 ones', '7 ones', '10 ones'], correctAnswer: '7 ones',
-    solution: 'In the number 17, the digit 7 is in the ones place, so there are 7 ones.' },
+    solution: 'In the number 17, the digit 7 is in the ones place, so there are 7 ones.'
+  },
 
-  { id: '1st-54', gradeMin: 1, gradeMax: 1, domain: 'Place Value', difficulty: 2,
+  {
+    id: '1st-54', gradeMin: 1, gradeMax: 1, domain: 'Place Value', difficulty: 2,
     questionText: 'Mrs. Johnson has 2 bags of apples with 10 apples in each bag. How many apples does she have altogether?',
     choices: ['12 apples', '20 apples', '22 apples', '30 apples'], correctAnswer: '20 apples',
-    solution: 'Each bag has 10 apples, so 2 bags have 10 + 10 = 20 apples.' },
+    solution: 'Each bag has 10 apples, so 2 bags have 10 + 10 = 20 apples.'
+  },
 
-  { id: '1st-55', gradeMin: 1, gradeMax: 1, domain: 'Number Sense', difficulty: 2,
+  {
+    id: '1st-55', gradeMin: 1, gradeMax: 1, domain: 'Number Sense', difficulty: 2,
     questionText: 'During art class, the students made paper butterflies. The first table made 6 butterflies, the second table made 3 butterflies, and the third table made 4 butterflies. How many butterflies did all the tables make together?',
     choices: ['11 butterflies', '12 butterflies', '13 butterflies', '14 butterflies'], correctAnswer: '13 butterflies',
-    solution: 'Add all the butterflies: 6 + 3 + 4 = 13 butterflies.' },
+    solution: 'Add all the butterflies: 6 + 3 + 4 = 13 butterflies.'
+  },
 
-  { id: '1st-56', gradeMin: 1, gradeMax: 1, domain: 'Number Sense', difficulty: 1,
+  {
+    id: '1st-56', gradeMin: 1, gradeMax: 1, domain: 'Number Sense', difficulty: 1,
     questionText: 'Ben is feeding fish at the pond. He counts 7 goldfish and 5 black fish swimming near him. How many fish is Ben watching?',
     choices: ['11 fish', '12 fish', '13 fish', '14 fish'], correctAnswer: '12 fish',
-    solution: 'Count all the fish: 7 + 5 = 12 fish that Ben is watching.' },
+    solution: 'Count all the fish: 7 + 5 = 12 fish that Ben is watching.'
+  },
 
-  { id: '1st-57', gradeMin: 1, gradeMax: 1, domain: 'Number Sense', difficulty: 2,
+  {
+    id: '1st-57', gradeMin: 1, gradeMax: 1, domain: 'Number Sense', difficulty: 2,
     questionText: 'At the school fair, Lisa plays a ring toss game. She tosses 10 rings but only 4 rings land on the bottles. How many rings missed the bottles?',
     choices: ['5 rings', '6 rings', '7 rings', '8 rings'], correctAnswer: '6 rings',
-    solution: 'Subtract the rings that landed from the total: 10 - 4 = 6 rings missed.' },
+    solution: 'Subtract the rings that landed from the total: 10 - 4 = 6 rings missed.'
+  },
 
-  { id: '1st-58', gradeMin: 1, gradeMax: 1, domain: 'Measurement', difficulty: 1,
+  {
+    id: '1st-58', gradeMin: 1, gradeMax: 1, domain: 'Measurement', difficulty: 1,
     questionText: 'Anna is measuring her pencil using paper clips. Her pencil is as long as 4 paper clips placed end to end. How long is Anna\'s pencil?',
     choices: ['3 paper clips long', '4 paper clips long', '5 paper clips long', '6 paper clips long'], correctAnswer: '4 paper clips long',
-    solution: 'The pencil measures exactly 4 paper clips long.' },
+    solution: 'The pencil measures exactly 4 paper clips long.'
+  },
 
-  { id: '1st-59', gradeMin: 1, gradeMax: 1, domain: 'Measurement', difficulty: 2,
+  {
+    id: '1st-59', gradeMin: 1, gradeMax: 1, domain: 'Measurement', difficulty: 2,
     questionText: 'The teacher asks students to find something in the classroom that is longer than their hand. Which item would be longer than a first grader\'s hand?',
     choices: ['A crayon', 'A ruler', 'A paper clip', 'An eraser'], correctAnswer: 'A ruler',
-    solution: 'A ruler is typically much longer than a first grader\'s hand, while the other items are shorter.' },
+    solution: 'A ruler is typically much longer than a first grader\'s hand, while the other items are shorter.'
+  },
 
-  { id: '1st-60', gradeMin: 1, gradeMax: 1, domain: 'Geometry', difficulty: 1,
+  {
+    id: '1st-60', gradeMin: 1, gradeMax: 1, domain: 'Geometry', difficulty: 1,
     questionText: 'Kevin is building a tower with blocks. He wants to put a round block on top that will roll if bumped. Which shape should Kevin choose for the top of his tower?',
     choices: ['Square', 'Triangle', 'Circle', 'Rectangle'], correctAnswer: 'Circle',
-    solution: 'A circle is round and will roll, making it the shape that rolls if bumped.' },
+    solution: 'A circle is round and will roll, making it the shape that rolls if bumped.'
+  },
 
-  { id: '1st-61', gradeMin: 1, gradeMax: 1, domain: 'Geometry', difficulty: 2,
+  {
+    id: '1st-61', gradeMin: 1, gradeMax: 1, domain: 'Geometry', difficulty: 2,
     questionText: 'Mia is making a picture frame for her drawing. She needs a shape that has 4 equal sides and 4 corners that make perfect squares. Which shape should she use?',
     choices: ['Circle', 'Triangle', 'Rectangle', 'Square'], correctAnswer: 'Square',
-    solution: 'A square has 4 equal sides and 4 right-angle corners, perfect for a frame.' },
+    solution: 'A square has 4 equal sides and 4 right-angle corners, perfect for a frame.'
+  },
 
-  { id: '1st-62', gradeMin: 1, gradeMax: 1, domain: 'Number Sense', difficulty: 2,
+  {
+    id: '1st-62', gradeMin: 1, gradeMax: 1, domain: 'Number Sense', difficulty: 2,
     questionText: 'During lunch, the cafeteria served 8 cheese sandwiches and 7 peanut butter sandwiches. At the end of lunch, 3 sandwiches were left over. How many sandwiches were eaten?',
     choices: ['11 sandwiches', '12 sandwiches', '13 sandwiches', '14 sandwiches'], correctAnswer: '12 sandwiches',
-    solution: 'Total sandwiches: 8 + 7 = 15. Sandwiches eaten: 15 - 3 = 12 sandwiches.' },
+    solution: 'Total sandwiches: 8 + 7 = 15. Sandwiches eaten: 15 - 3 = 12 sandwiches.'
+  },
 
-  { id: '1st-63', gradeMin: 1, gradeMax: 1, domain: 'Number Sense', difficulty: 1,
+  {
+    id: '1st-63', gradeMin: 1, gradeMax: 1, domain: 'Number Sense', difficulty: 1,
     questionText: 'Alex is sorting his baseball card collection. He has 6 cards of pitchers and 4 cards of catchers. How many baseball cards does Alex have in these two groups?',
     choices: ['9 cards', '10 cards', '11 cards', '12 cards'], correctAnswer: '10 cards',
-    solution: 'Add the pitcher and catcher cards: 6 + 4 = 10 baseball cards.' },
+    solution: 'Add the pitcher and catcher cards: 6 + 4 = 10 baseball cards.'
+  },
 
-  { id: '1st-64', gradeMin: 1, gradeMax: 1, domain: 'Pattern Recognition', difficulty: 2,
+  {
+    id: '1st-64', gradeMin: 1, gradeMax: 1, domain: 'Pattern Recognition', difficulty: 2,
     questionText: 'Sophie is making a pattern with colored beads: red, blue, red, blue, red, blue. What color bead should come next in her pattern?',
     choices: ['Red', 'Blue', 'Green', 'Yellow'], correctAnswer: 'Red',
-    solution: 'The pattern alternates red, blue, red, blue. After blue comes red.' },
+    solution: 'The pattern alternates red, blue, red, blue. After blue comes red.'
+  },
 
-  { id: '1st-65', gradeMin: 1, gradeMax: 1, domain: 'Pattern Recognition', difficulty: 2,
+  {
+    id: '1st-65', gradeMin: 1, gradeMax: 1, domain: 'Pattern Recognition', difficulty: 2,
     questionText: 'Danny is arranging toys in a pattern: car, truck, car, truck, car. What toy should Danny place next to continue his pattern?',
     choices: ['Car', 'Truck', 'Airplane', 'Bus'], correctAnswer: 'Truck',
-    solution: 'The pattern alternates car, truck, car, truck, car. Next should be truck.' },
+    solution: 'The pattern alternates car, truck, car, truck, car. Next should be truck.'
+  },
 
-  { id: '1st-66', gradeMin: 1, gradeMax: 1, domain: 'Number Sense', difficulty: 2,
+  {
+    id: '1st-66', gradeMin: 1, gradeMax: 1, domain: 'Number Sense', difficulty: 2,
     questionText: 'The first grade class is going on a field trip. There are 9 students in the morning group and 6 students in the afternoon group. How many students are going on the field trip altogether?',
     choices: ['14 students', '15 students', '16 students', '17 students'], correctAnswer: '15 students',
-    solution: 'Add both groups of students: 9 + 6 = 15 students going on the trip.' },
+    solution: 'Add both groups of students: 9 + 6 = 15 students going on the trip.'
+  },
 
-  { id: '1st-67', gradeMin: 1, gradeMax: 1, domain: 'Number Sense', difficulty: 1,
+  {
+    id: '1st-67', gradeMin: 1, gradeMax: 1, domain: 'Number Sense', difficulty: 1,
     questionText: 'Maya has 11 stickers in her collection. She uses 5 stickers to decorate her notebook. How many stickers does Maya have left in her collection?',
     choices: ['5 stickers', '6 stickers', '7 stickers', '8 stickers'], correctAnswer: '6 stickers',
-    solution: 'Subtract the stickers she used: 11 - 5 = 6 stickers left.' },
+    solution: 'Subtract the stickers she used: 11 - 5 = 6 stickers left.'
+  },
 
-  { id: '1st-68', gradeMin: 1, gradeMax: 1, domain: 'Time', difficulty: 1,
+  {
+    id: '1st-68', gradeMin: 1, gradeMax: 1, domain: 'Time', difficulty: 1,
     questionText: 'The school day starts in the morning and ends in the afternoon. Which time of day comes after afternoon?',
     choices: ['Morning', 'Noon', 'Evening', 'Midnight'], correctAnswer: 'Evening',
-    solution: 'The order of day is: morning, afternoon, evening, then night.' },
+    solution: 'The order of day is: morning, afternoon, evening, then night.'
+  },
 
-  { id: '1st-69', gradeMin: 1, gradeMax: 1, domain: 'Money', difficulty: 2,
+  {
+    id: '1st-69', gradeMin: 1, gradeMax: 1, domain: 'Money', difficulty: 2,
     questionText: 'Carter has 3 pennies in his piggy bank. His mom gives him 4 more pennies. How many pennies does Carter have now?',
     choices: ['6 pennies', '7 pennies', '8 pennies', '9 pennies'], correctAnswer: '7 pennies',
-    solution: 'Add the pennies together: 3 + 4 = 7 pennies total.' },
+    solution: 'Add the pennies together: 3 + 4 = 7 pennies total.'
+  },
 
-  { id: '1st-70', gradeMin: 1, gradeMax: 1, domain: 'Data & Graphs', difficulty: 2,
+  {
+    id: '1st-70', gradeMin: 1, gradeMax: 1, domain: 'Data & Graphs', difficulty: 2,
     questionText: 'Mrs. Lee made a chart showing her students\' favorite pets. Dogs got 8 votes, cats got 5 votes, and fish got 2 votes. Which pet was the most popular?',
     choices: ['Dogs', 'Cats', 'Fish', 'All the same'], correctAnswer: 'Dogs',
-    solution: 'Dogs had the most votes with 8, which is more than cats (5) or fish (2).' },
+    solution: 'Dogs had the most votes with 8, which is more than cats (5) or fish (2).'
+  },
 
-  { id: '1st-71', gradeMin: 1, gradeMax: 1, domain: 'Number Sense', difficulty: 2,
+  {
+    id: '1st-71', gradeMin: 1, gradeMax: 1, domain: 'Number Sense', difficulty: 2,
     questionText: 'The art teacher gives each student 2 paintbrushes for their project. If there are 7 students in the art class, how many paintbrushes does the teacher give out?',
     choices: ['9 paintbrushes', '12 paintbrushes', '14 paintbrushes', '16 paintbrushes'], correctAnswer: '14 paintbrushes',
-    solution: 'Each of 7 students gets 2 brushes: 2 + 2 + 2 + 2 + 2 + 2 + 2 = 14 paintbrushes.' },
+    solution: 'Each of 7 students gets 2 brushes: 2 + 2 + 2 + 2 + 2 + 2 + 2 = 14 paintbrushes.'
+  },
 
-  { id: '1st-72', gradeMin: 1, gradeMax: 1, domain: 'Number Sense', difficulty: 1,
+  {
+    id: '1st-72', gradeMin: 1, gradeMax: 1, domain: 'Number Sense', difficulty: 1,
     questionText: 'During recess, 4 children are playing on the swings, 3 children are on the seesaw, and 5 children are playing tag. How many children are playing outside?',
     choices: ['11 children', '12 children', '13 children', '14 children'], correctAnswer: '12 children',
-    solution: 'Add all the children playing: 4 + 3 + 5 = 12 children outside.' },
+    solution: 'Add all the children playing: 4 + 3 + 5 = 12 children outside.'
+  },
 
-  { id: '1st-73', gradeMin: 1, gradeMax: 1, domain: 'Number Sense', difficulty: 2,
+  {
+    id: '1st-73', gradeMin: 1, gradeMax: 1, domain: 'Number Sense', difficulty: 2,
     questionText: 'Zoe is collecting leaves for her science project. On Monday she found 4 leaves, on Tuesday she found 3 leaves, and on Wednesday she found 6 leaves. How many leaves has Zoe collected for her project?',
     choices: ['12 leaves', '13 leaves', '14 leaves', '15 leaves'], correctAnswer: '13 leaves',
-    solution: 'Add leaves from all three days: 4 + 3 + 6 = 13 leaves total.' },
+    solution: 'Add leaves from all three days: 4 + 3 + 6 = 13 leaves total.'
+  },
 
-  { id: '1st-74', gradeMin: 1, gradeMax: 1, domain: 'Number Sense', difficulty: 2,
+  {
+    id: '1st-74', gradeMin: 1, gradeMax: 1, domain: 'Number Sense', difficulty: 2,
     questionText: 'The librarian is arranging books on a shelf. She puts 5 picture books on the left side and 7 chapter books on the right side. Then she removes 2 books to put in the return pile. How many books are left on the shelf?',
     choices: ['8 books', '9 books', '10 books', '11 books'], correctAnswer: '10 books',
-    solution: 'Total books placed: 5 + 7 = 12 books. Books removed: 2. Books left: 12 - 2 = 10 books.' },
+    solution: 'Total books placed: 5 + 7 = 12 books. Books removed: 2. Books left: 12 - 2 = 10 books.'
+  },
 
   // === Additional Grade 1 Shapes Questions (1st-75 to 1st-84) ===
-  { id: '1st-75', gradeMin: 1, gradeMax: 1, domain: 'Shapes', difficulty: 1,
+  {
+    id: '1st-75', gradeMin: 1, gradeMax: 1, domain: 'Shapes', difficulty: 1,
     questionText: 'Lucy is helping her dad build a birdhouse. She needs to find a piece of wood that has 4 sides that are all the same length and 4 corners that are all the same. What shape should Lucy look for?',
     choices: ['Circle', 'Triangle', 'Rectangle', 'Square'], correctAnswer: 'Square',
-    solution: 'A square has 4 equal sides and 4 equal corners (right angles), perfect for the birdhouse.' },
+    solution: 'A square has 4 equal sides and 4 equal corners (right angles), perfect for the birdhouse.'
+  },
 
-  { id: '1st-76', gradeMin: 1, gradeMax: 1, domain: 'Shapes', difficulty: 2,
+  {
+    id: '1st-76', gradeMin: 1, gradeMax: 1, domain: 'Shapes', difficulty: 2,
     questionText: 'During art class, Marcus is cutting out shapes for a collage. He wants a shape that has no corners and no straight edges, just like a ball or the moon. Which shape should Marcus cut out?',
     choices: ['Square', 'Triangle', 'Circle', 'Rectangle'], correctAnswer: 'Circle',
-    solution: 'A circle has no corners and no straight edges, just like a ball or the moon.' },
+    solution: 'A circle has no corners and no straight edges, just like a ball or the moon.'
+  },
 
-  { id: '1st-77', gradeMin: 1, gradeMax: 1, domain: 'Shapes', difficulty: 1,
+  {
+    id: '1st-77', gradeMin: 1, gradeMax: 1, domain: 'Shapes', difficulty: 1,
     questionText: 'Isabella is making a sandwich and cuts it diagonally from one corner to the opposite corner. The sandwich is now in two pieces. What shape is each piece?',
     choices: ['Circle', 'Square', 'Triangle', 'Rectangle'], correctAnswer: 'Triangle',
-    solution: 'When you cut a square sandwich diagonally, each piece becomes a triangle with 3 sides and 3 corners.' },
+    solution: 'When you cut a square sandwich diagonally, each piece becomes a triangle with 3 sides and 3 corners.'
+  },
 
-  { id: '1st-78', gradeMin: 1, gradeMax: 1, domain: 'Shapes', difficulty: 2,
+  {
+    id: '1st-78', gradeMin: 1, gradeMax: 1, domain: 'Shapes', difficulty: 2,
     questionText: 'Ryan is looking at the classroom door. The door is taller than it is wide and has 4 corners and 4 sides. Two sides are long and two sides are short. What shape is the door?',
     choices: ['Circle', 'Triangle', 'Square', 'Rectangle'], correctAnswer: 'Rectangle',
-    solution: 'A rectangle has 4 corners and 4 sides, with two long sides and two short sides.' },
+    solution: 'A rectangle has 4 corners and 4 sides, with two long sides and two short sides.'
+  },
 
-  { id: '1st-79', gradeMin: 1, gradeMax: 1, domain: 'Shapes', difficulty: 2,
+  {
+    id: '1st-79', gradeMin: 1, gradeMax: 1, domain: 'Shapes', difficulty: 2,
     questionText: 'Sophia is playing with shape blocks. She picks up a block that has 3 straight sides and 3 pointed corners. If she pushes it, it might tip over onto one of its sides. What shape is Sophia holding?',
     choices: ['Circle', 'Square', 'Triangle', 'Rectangle'], correctAnswer: 'Triangle',
-    solution: 'A triangle has exactly 3 straight sides and 3 pointed corners.' },
+    solution: 'A triangle has exactly 3 straight sides and 3 pointed corners.'
+  },
 
-  { id: '1st-80', gradeMin: 1, gradeMax: 1, domain: 'Shapes', difficulty: 1,
+  {
+    id: '1st-80', gradeMin: 1, gradeMax: 1, domain: 'Shapes', difficulty: 1,
     questionText: 'Noah is drawing a picture of his house. For the front of the house, he draws a shape that looks like a box with 4 corners and 4 sides. The top and bottom sides are longer than the left and right sides. What shape did Noah draw?',
     choices: ['Circle', 'Triangle', 'Square', 'Rectangle'], correctAnswer: 'Rectangle',
-    solution: 'A rectangle has 4 sides and 4 corners, with longer sides on top/bottom and shorter sides on the left/right.' },
+    solution: 'A rectangle has 4 sides and 4 corners, with longer sides on top/bottom and shorter sides on the left/right.'
+  },
 
-  { id: '1st-81', gradeMin: 1, gradeMax: 1, domain: 'Shapes', difficulty: 2,
+  {
+    id: '1st-81', gradeMin: 1, gradeMax: 1, domain: 'Shapes', difficulty: 2,
     questionText: 'Emma is sorting shapes into groups. She has one group for shapes with corners and another group for shapes without corners. In which group should she put a circle?',
     choices: ['Shapes with corners', 'Shapes without corners', 'Both groups', 'Neither group'], correctAnswer: 'Shapes without corners',
-    solution: 'A circle is perfectly round and has no corners or straight edges.' },
+    solution: 'A circle is perfectly round and has no corners or straight edges.'
+  },
 
-  { id: '1st-82', gradeMin: 1, gradeMax: 1, domain: 'Shapes', difficulty: 2,
+  {
+    id: '1st-82', gradeMin: 1, gradeMax: 1, domain: 'Shapes', difficulty: 2,
     questionText: 'At the playground, Lily sees different shapes around her. The merry-go-round is round, the sandbox is square, and the slide has a triangular ladder. How many different shapes did Lily notice?',
     choices: ['1 shape', '2 shapes', '3 shapes', '4 shapes'], correctAnswer: '3 shapes',
-    solution: 'Lily noticed 3 different shapes: circle (merry-go-round), square (sandbox), and triangle (slide ladder).' },
+    solution: 'Lily noticed 3 different shapes: circle (merry-go-round), square (sandbox), and triangle (slide ladder).'
+  },
 
-  { id: '1st-83', gradeMin: 1, gradeMax: 1, domain: 'Shapes', difficulty: 1,
+  {
+    id: '1st-83', gradeMin: 1, gradeMax: 1, domain: 'Shapes', difficulty: 1,
     questionText: 'Jack is making a robot out of cardboard boxes. For the robot\'s head, he wants to use a shape that looks like a window or a picture frame, with 4 equal sides and 4 equal corners. What shape should Jack choose?',
     choices: ['Circle', 'Triangle', 'Rectangle', 'Square'], correctAnswer: 'Square',
-    solution: 'A square has 4 equal sides and 4 equal corners, just like many windows and picture frames.' },
+    solution: 'A square has 4 equal sides and 4 equal corners, just like many windows and picture frames.'
+  },
 
-  { id: '1st-84', gradeMin: 1, gradeMax: 1, domain: 'Shapes', difficulty: 2,
+  {
+    id: '1st-84', gradeMin: 1, gradeMax: 1, domain: 'Shapes', difficulty: 2,
     questionText: 'Maya is learning about shapes by looking at real objects in her classroom. She sees a clock on the wall, a triangular flag, and a rectangular book. Which object matches the shape that has no straight sides and can roll?',
     choices: ['The clock', 'The flag', 'The book', 'None of them'], correctAnswer: 'The clock',
-    solution: 'The clock is circular - it has no straight sides and a circle can roll. The flag is triangular and the book is rectangular, both have straight sides.' },
+    solution: 'The clock is circular - it has no straight sides and a circle can roll. The flag is triangular and the book is rectangular, both have straight sides.'
+  },
 
   // === Additional Grade 1 Questions (1st-85 to 1st-124) ===
-  { id: '1st-85', gradeMin: 1, gradeMax: 1, domain: 'Number Sense', difficulty: 1,
+  {
+    id: '1st-85', gradeMin: 1, gradeMax: 1, domain: 'Number Sense', difficulty: 1,
     questionText: 'At the zoo, Oliver sees 7 monkeys swinging on branches and 2 monkeys eating bananas on the ground. How many monkeys does Oliver see altogether?',
     choices: ['8 monkeys', '9 monkeys', '10 monkeys', '11 monkeys'], correctAnswer: '9 monkeys',
-    solution: 'Add the monkeys together: 7 + 2 = 9 monkeys total.' },
+    solution: 'Add the monkeys together: 7 + 2 = 9 monkeys total.'
+  },
 
-  { id: '1st-86', gradeMin: 1, gradeMax: 1, domain: 'Number Sense', difficulty: 2,
+  {
+    id: '1st-86', gradeMin: 1, gradeMax: 1, domain: 'Number Sense', difficulty: 2,
     questionText: 'Grace has 13 colorful hair ties in her collection. She gives 4 hair ties to her sister and 2 hair ties to her cousin. How many hair ties does Grace have left?',
     choices: ['6 hair ties', '7 hair ties', '8 hair ties', '9 hair ties'], correctAnswer: '7 hair ties',
-    solution: 'Grace gives away 4 + 2 = 6 hair ties. She has 13 - 6 = 7 hair ties left.' },
+    solution: 'Grace gives away 4 + 2 = 6 hair ties. She has 13 - 6 = 7 hair ties left.'
+  },
 
-  { id: '1st-87', gradeMin: 1, gradeMax: 1, domain: 'Number Sense', difficulty: 1,
+  {
+    id: '1st-87', gradeMin: 1, gradeMax: 1, domain: 'Number Sense', difficulty: 1,
     questionText: 'During snack time, the teacher puts 5 apple slices and 6 orange slices on each table. How many fruit slices are on one table?',
     choices: ['10 slices', '11 slices', '12 slices', '13 slices'], correctAnswer: '11 slices',
-    solution: 'Add the apple and orange slices: 5 + 6 = 11 fruit slices on each table.' },
+    solution: 'Add the apple and orange slices: 5 + 6 = 11 fruit slices on each table.'
+  },
 
-  { id: '1st-88', gradeMin: 1, gradeMax: 1, domain: 'Measurement', difficulty: 2,
+  {
+    id: '1st-88', gradeMin: 1, gradeMax: 1, domain: 'Measurement', difficulty: 2,
     questionText: 'Charlie is comparing the height of his teddy bears. His brown bear is taller than his white bear, but shorter than his black bear. Which bear is the tallest?',
     choices: ['Brown bear', 'White bear', 'Black bear', 'They are all the same'], correctAnswer: 'Black bear',
-    solution: 'The black bear is taller than the brown bear, and the brown bear is taller than the white bear, so the black bear is tallest.' },
+    solution: 'The black bear is taller than the brown bear, and the brown bear is taller than the white bear, so the black bear is tallest.'
+  },
 
-  { id: '1st-89', gradeMin: 1, gradeMax: 1, domain: 'Number Sense', difficulty: 2,
+  {
+    id: '1st-89', gradeMin: 1, gradeMax: 1, domain: 'Number Sense', difficulty: 2,
     questionText: 'The school bus makes 3 stops on the way to school. At the first stop, 4 children get on. At the second stop, 3 children get on. At the third stop, 5 children get on. How many children got on the bus?',
     choices: ['11 children', '12 children', '13 children', '14 children'], correctAnswer: '12 children',
-    solution: 'Add children from all stops: 4 + 3 + 5 = 12 children got on the bus.' },
+    solution: 'Add children from all stops: 4 + 3 + 5 = 12 children got on the bus.'
+  },
 
-  { id: '1st-90', gradeMin: 1, gradeMax: 1, domain: 'Place Value', difficulty: 1,
+  {
+    id: '1st-90', gradeMin: 1, gradeMax: 1, domain: 'Place Value', difficulty: 1,
     questionText: 'Look at the number 25. How many tens and how many ones are in this number?',
     choices: ['1 ten and 5 ones', '2 tens and 5 ones', '5 tens and 2 ones', '3 tens and 2 ones'], correctAnswer: '2 tens and 5 ones',
-    solution: 'In 25, the 2 is in the tens place (2 tens) and the 5 is in the ones place (5 ones).' },
+    solution: 'In 25, the 2 is in the tens place (2 tens) and the 5 is in the ones place (5 ones).'
+  },
 
-  { id: '1st-91', gradeMin: 1, gradeMax: 1, domain: 'Number Sense', difficulty: 1,
+  {
+    id: '1st-91', gradeMin: 1, gradeMax: 1, domain: 'Number Sense', difficulty: 1,
     questionText: 'Mia is organizing her toy animals. She has 8 farm animals and needs to put them into 2 equal groups. How many animals will be in each group?',
     choices: ['3 animals', '4 animals', '5 animals', '6 animals'], correctAnswer: '4 animals',
-    solution: 'Divide 8 animals into 2 equal groups: 8 ÷ 2 = 4 animals in each group.' },
+    solution: 'Divide 8 animals into 2 equal groups: 8 ÷ 2 = 4 animals in each group.'
+  },
 
-  { id: '1st-92', gradeMin: 1, gradeMax: 1, domain: 'Time', difficulty: 1,
+  {
+    id: '1st-92', gradeMin: 1, gradeMax: 1, domain: 'Time', difficulty: 1,
     questionText: 'Yesterday was Monday. What day is today?',
     choices: ['Sunday', 'Monday', 'Tuesday', 'Wednesday'], correctAnswer: 'Tuesday',
-    solution: 'If yesterday was Monday, then today is Tuesday.' },
+    solution: 'If yesterday was Monday, then today is Tuesday.'
+  },
 
-  { id: '1st-93', gradeMin: 1, gradeMax: 1, domain: 'Number Sense', difficulty: 2,
+  {
+    id: '1st-93', gradeMin: 1, gradeMax: 1, domain: 'Number Sense', difficulty: 2,
     questionText: 'During PE class, the students are divided into teams. Team Red has 6 students, Team Blue has 7 students, and Team Green has 5 students. How many students are playing in PE class?',
     choices: ['17 students', '18 students', '19 students', '20 students'], correctAnswer: '18 students',
-    solution: 'Add all team members: 6 + 7 + 5 = 18 students in PE class.' },
+    solution: 'Add all team members: 6 + 7 + 5 = 18 students in PE class.'
+  },
 
-  { id: '1st-94', gradeMin: 1, gradeMax: 1, domain: 'Money', difficulty: 1,
+  {
+    id: '1st-94', gradeMin: 1, gradeMax: 1, domain: 'Money', difficulty: 1,
     questionText: 'Emma found 5 pennies under her bed and 3 pennies in her backpack. How many pennies did Emma find altogether?',
     choices: ['7 pennies', '8 pennies', '9 pennies', '10 pennies'], correctAnswer: '8 pennies',
-    solution: 'Add the pennies from both places: 5 + 3 = 8 pennies total.' },
+    solution: 'Add the pennies from both places: 5 + 3 = 8 pennies total.'
+  },
 
-  { id: '1st-95', gradeMin: 1, gradeMax: 1, domain: 'Number Sense', difficulty: 1,
+  {
+    id: '1st-95', gradeMin: 1, gradeMax: 1, domain: 'Number Sense', difficulty: 1,
     questionText: 'The teacher has 12 crayons to share equally among 3 students. How many crayons will each student get?',
     choices: ['3 crayons', '4 crayons', '5 crayons', '6 crayons'], correctAnswer: '4 crayons',
-    solution: 'Divide 12 crayons among 3 students equally: 12 ÷ 3 = 4 crayons each.' },
+    solution: 'Divide 12 crayons among 3 students equally: 12 ÷ 3 = 4 crayons each.'
+  },
 
-  { id: '1st-96', gradeMin: 1, gradeMax: 1, domain: 'Patterns', difficulty: 2,
+  {
+    id: '1st-96', gradeMin: 1, gradeMax: 1, domain: 'Patterns', difficulty: 2,
     questionText: 'Julia is making a bracelet with a pattern of shapes: star, heart, star, heart, star, heart. What shape should come next?',
     choices: ['Star', 'Heart', 'Circle', 'Triangle'], correctAnswer: 'Star',
-    solution: 'The pattern alternates star, heart, star, heart. After heart comes star.' },
+    solution: 'The pattern alternates star, heart, star, heart. After heart comes star.'
+  },
 
-  { id: '1st-97', gradeMin: 1, gradeMax: 1, domain: 'Number Sense', difficulty: 2,
+  {
+    id: '1st-97', gradeMin: 1, gradeMax: 1, domain: 'Number Sense', difficulty: 2,
     questionText: 'At the school carnival, Ryan plays a game where he knocks down bottles. He knocks down 6 bottles in the first round and 4 bottles in the second round. If there were 15 bottles total, how many bottles are still standing?',
     choices: ['4 bottles', '5 bottles', '6 bottles', '7 bottles'], correctAnswer: '5 bottles',
-    solution: 'Bottles knocked down: 6 + 4 = 10. Bottles still standing: 15 - 10 = 5 bottles.' },
+    solution: 'Bottles knocked down: 6 + 4 = 10. Bottles still standing: 15 - 10 = 5 bottles.'
+  },
 
-  { id: '1st-98', gradeMin: 1, gradeMax: 1, domain: 'Measurement', difficulty: 1,
+  {
+    id: '1st-98', gradeMin: 1, gradeMax: 1, domain: 'Measurement', difficulty: 1,
     questionText: 'Lily is measuring her desk with her hand spans. Her desk is 6 hand spans long. How long is Lily\'s desk?',
     choices: ['5 hand spans', '6 hand spans', '7 hand spans', '8 hand spans'], correctAnswer: '6 hand spans',
-    solution: 'The desk measures exactly 6 hand spans long.' },
+    solution: 'The desk measures exactly 6 hand spans long.'
+  },
 
-  { id: '1st-99', gradeMin: 1, gradeMax: 1, domain: 'Number Sense', difficulty: 1,
+  {
+    id: '1st-99', gradeMin: 1, gradeMax: 1, domain: 'Number Sense', difficulty: 1,
     questionText: 'In the school garden, there are 9 sunflowers in one row and 6 sunflowers in another row. How many sunflowers are in the garden?',
     choices: ['14 sunflowers', '15 sunflowers', '16 sunflowers', '17 sunflowers'], correctAnswer: '15 sunflowers',
-    solution: 'Add sunflowers from both rows: 9 + 6 = 15 sunflowers in the garden.' },
+    solution: 'Add sunflowers from both rows: 9 + 6 = 15 sunflowers in the garden.'
+  },
 
-  { id: '1st-100', gradeMin: 1, gradeMax: 1, domain: 'Number Sense', difficulty: 2,
+  {
+    id: '1st-100', gradeMin: 1, gradeMax: 1, domain: 'Number Sense', difficulty: 2,
     questionText: 'Sam is collecting bottle caps. He has 7 red caps, 3 blue caps, and 2 green caps. How many bottle caps does Sam have in his collection?',
     choices: ['11 caps', '12 caps', '13 caps', '14 caps'], correctAnswer: '12 caps',
-    solution: 'Add all the bottle caps: 7 + 3 + 2 = 12 bottle caps total.' },
+    solution: 'Add all the bottle caps: 7 + 3 + 2 = 12 bottle caps total.'
+  },
 
-  { id: '1st-101', gradeMin: 1, gradeMax: 1, domain: 'Data', difficulty: 1,
+  {
+    id: '1st-101', gradeMin: 1, gradeMax: 1, domain: 'Data', difficulty: 1,
     questionText: 'The class voted for their favorite ice cream flavors. Vanilla got 4 votes, chocolate got 7 votes, and strawberry got 3 votes. Which flavor was the least popular?',
     choices: ['Vanilla', 'Chocolate', 'Strawberry', 'All the same'], correctAnswer: 'Strawberry',
-    solution: 'Strawberry had the fewest votes with 3, which is less than vanilla (4) and chocolate (7).' },
+    solution: 'Strawberry had the fewest votes with 3, which is less than vanilla (4) and chocolate (7).'
+  },
 
-  { id: '1st-102', gradeMin: 1, gradeMax: 1, domain: 'Number Sense', difficulty: 1,
+  {
+    id: '1st-102', gradeMin: 1, gradeMax: 1, domain: 'Number Sense', difficulty: 1,
     questionText: 'Kate has 14 stickers and wants to give an equal number to her 2 best friends. How many stickers will each friend receive?',
     choices: ['6 stickers', '7 stickers', '8 stickers', '9 stickers'], correctAnswer: '7 stickers',
-    solution: 'Divide 14 stickers equally between 2 friends: 14 ÷ 2 = 7 stickers each.' },
+    solution: 'Divide 14 stickers equally between 2 friends: 14 ÷ 2 = 7 stickers each.'
+  },
 
-  { id: '1st-103', gradeMin: 1, gradeMax: 1, domain: 'Number Sense', difficulty: 2,
+  {
+    id: '1st-103', gradeMin: 1, gradeMax: 1, domain: 'Number Sense', difficulty: 2,
     questionText: 'The pet store has birds in cages. There are 4 cages with 3 birds in each cage. How many birds are in the pet store?',
     choices: ['10 birds', '11 birds', '12 birds', '13 birds'], correctAnswer: '12 birds',
-    solution: 'Each of 4 cages has 3 birds: 3 + 3 + 3 + 3 = 12 birds total.' },
+    solution: 'Each of 4 cages has 3 birds: 3 + 3 + 3 + 3 = 12 birds total.'
+  },
 
-  { id: '1st-104', gradeMin: 1, gradeMax: 1, domain: 'Geometry', difficulty: 1,
+  {
+    id: '1st-104', gradeMin: 1, gradeMax: 1, domain: 'Geometry', difficulty: 1,
     questionText: 'Tyler is building with blocks that are shaped like cubes. Each cube has flat faces that are all the same shape. What shape are the faces of Tyler\'s blocks?',
     choices: ['Circles', 'Triangles', 'Squares', 'Rectangles'], correctAnswer: 'Squares',
-    solution: 'A cube has 6 faces, and each face is a square.' },
+    solution: 'A cube has 6 faces, and each face is a square.'
+  },
 
-  { id: '1st-105', gradeMin: 1, gradeMax: 1, domain: 'Number Sense', difficulty: 1,
+  {
+    id: '1st-105', gradeMin: 1, gradeMax: 1, domain: 'Number Sense', difficulty: 1,
     questionText: 'During story time, 8 children sit on the carpet and 5 children sit in chairs. How many children are listening to the story?',
     choices: ['12 children', '13 children', '14 children', '15 children'], correctAnswer: '13 children',
-    solution: 'Add children in both locations: 8 + 5 = 13 children listening to the story.' },
+    solution: 'Add children in both locations: 8 + 5 = 13 children listening to the story.'
+  },
 
-  { id: '1st-106', gradeMin: 1, gradeMax: 1, domain: 'Number Sense', difficulty: 2,
+  {
+    id: '1st-106', gradeMin: 1, gradeMax: 1, domain: 'Number Sense', difficulty: 2,
     questionText: 'Jessica is counting her toy blocks by color. She has 5 red blocks, 4 yellow blocks, and 6 blue blocks. If she uses 3 blocks to build a tower, how many blocks are left?',
     choices: ['11 blocks', '12 blocks', '13 blocks', '14 blocks'], correctAnswer: '12 blocks',
-    solution: 'Total blocks: 5 + 4 + 6 = 15 blocks. Blocks left: 15 - 3 = 12 blocks.' },
+    solution: 'Total blocks: 5 + 4 + 6 = 15 blocks. Blocks left: 15 - 3 = 12 blocks.'
+  },
 
-  { id: '1st-107', gradeMin: 1, gradeMax: 1, domain: 'Time', difficulty: 1,
+  {
+    id: '1st-107', gradeMin: 1, gradeMax: 1, domain: 'Time', difficulty: 1,
     questionText: 'School starts in the morning and ends in the afternoon. Which meal do children usually eat at school?',
     choices: ['Breakfast', 'Lunch', 'Dinner', 'Midnight snack'], correctAnswer: 'Lunch',
-    solution: 'Lunch is the meal eaten in the middle of the day while children are at school.' },
+    solution: 'Lunch is the meal eaten in the middle of the day while children are at school.'
+  },
 
-  { id: '1st-108', gradeMin: 1, gradeMax: 1, domain: 'Number Sense', difficulty: 1,
+  {
+    id: '1st-108', gradeMin: 1, gradeMax: 1, domain: 'Number Sense', difficulty: 1,
     questionText: 'The school library has 11 picture books on the shelf. Students check out 4 picture books. How many picture books are left on the shelf?',
     choices: ['6 books', '7 books', '8 books', '9 books'], correctAnswer: '7 books',
-    solution: 'Subtract the books checked out: 11 - 4 = 7 books left on the shelf.' },
+    solution: 'Subtract the books checked out: 11 - 4 = 7 books left on the shelf.'
+  },
 
-  { id: '1st-109', gradeMin: 1, gradeMax: 1, domain: 'Number Sense', difficulty: 2,
+  {
+    id: '1st-109', gradeMin: 1, gradeMax: 1, domain: 'Number Sense', difficulty: 2,
     questionText: 'At the school fair, Michael buys 2 bags of popcorn for 3 tickets each and 1 cotton candy for 4 tickets. How many tickets did Michael spend?',
     choices: ['9 tickets', '10 tickets', '11 tickets', '12 tickets'], correctAnswer: '10 tickets',
-    solution: 'Popcorn costs: 2 bags x 3 tickets = 6 tickets. Total spent: 6 + 4 = 10 tickets.' },
+    solution: 'Popcorn costs: 2 bags x 3 tickets = 6 tickets. Total spent: 6 + 4 = 10 tickets.'
+  },
 
-  { id: '1st-110', gradeMin: 1, gradeMax: 1, domain: 'Number Sense', difficulty: 1,
+  {
+    id: '1st-110', gradeMin: 1, gradeMax: 1, domain: 'Number Sense', difficulty: 1,
     questionText: 'Anna is planting seeds in her garden. She plants 6 tomato seeds in the first row and 7 flower seeds in the second row. How many seeds did Anna plant?',
     choices: ['12 seeds', '13 seeds', '14 seeds', '15 seeds'], correctAnswer: '13 seeds',
-    solution: 'Add seeds from both rows: 6 + 7 = 13 seeds planted.' },
+    solution: 'Add seeds from both rows: 6 + 7 = 13 seeds planted.'
+  },
 
-  { id: '1st-111', gradeMin: 1, gradeMax: 1, domain: 'Measurement', difficulty: 2,
+  {
+    id: '1st-111', gradeMin: 1, gradeMax: 1, domain: 'Measurement', difficulty: 2,
     questionText: 'David is arranging his toy cars from shortest to longest. His red car is longer than his blue car but shorter than his green car. Which car should go in the middle?',
     choices: ['Red car', 'Blue car', 'Green car', 'All the same length'], correctAnswer: 'Red car',
-    solution: 'If blue < red < green, then the red car goes in the middle position.' },
+    solution: 'If blue < red < green, then the red car goes in the middle position.'
+  },
 
-  { id: '1st-112', gradeMin: 1, gradeMax: 1, domain: 'Number Sense', difficulty: 2,
+  {
+    id: '1st-112', gradeMin: 1, gradeMax: 1, domain: 'Number Sense', difficulty: 2,
     questionText: 'The first grade class is making friendship bracelets. Each bracelet needs 8 beads. If they want to make 3 bracelets, how many beads do they need?',
     choices: ['21 beads', '22 beads', '23 beads', '24 beads'], correctAnswer: '24 beads',
-    solution: 'Each of 3 bracelets needs 8 beads: 8 + 8 + 8 = 24 beads total.' },
+    solution: 'Each of 3 bracelets needs 8 beads: 8 + 8 + 8 = 24 beads total.'
+  },
 
-  { id: '1st-113', gradeMin: 1, gradeMax: 1, domain: 'Money', difficulty: 2,
+  {
+    id: '1st-113', gradeMin: 1, gradeMax: 1, domain: 'Money', difficulty: 2,
     questionText: 'Sophie has 8 pennies in her piggy bank. She spends 3 pennies on stickers and finds 2 more pennies in her desk. How many pennies does Sophie have now?',
     choices: ['6 pennies', '7 pennies', '8 pennies', '9 pennies'], correctAnswer: '7 pennies',
-    solution: 'Sophie starts with 8, spends 3, and finds 2: 8 - 3 + 2 = 7 pennies.' },
+    solution: 'Sophie starts with 8, spends 3, and finds 2: 8 - 3 + 2 = 7 pennies.'
+  },
 
-  { id: '1st-114', gradeMin: 1, gradeMax: 1, domain: 'Number Sense', difficulty: 1,
+  {
+    id: '1st-114', gradeMin: 1, gradeMax: 1, domain: 'Number Sense', difficulty: 1,
     questionText: 'In the school cafeteria, there are 9 round tables and 4 square tables. How many tables are there altogether?',
     choices: ['12 tables', '13 tables', '14 tables', '15 tables'], correctAnswer: '13 tables',
-    solution: 'Add both types of tables: 9 + 4 = 13 tables in the cafeteria.' },
+    solution: 'Add both types of tables: 9 + 4 = 13 tables in the cafeteria.'
+  },
 
-  { id: '1st-115', gradeMin: 1, gradeMax: 1, domain: 'Patterns', difficulty: 1,
+  {
+    id: '1st-115', gradeMin: 1, gradeMax: 1, domain: 'Patterns', difficulty: 1,
     questionText: 'Logan is making a pattern with colored blocks: red, blue, green, red, blue, green, red, blue. What color should come next?',
     choices: ['Red', 'Blue', 'Green', 'Yellow'], correctAnswer: 'Green',
-    solution: 'The pattern repeats red, blue, green. After blue comes green.' },
+    solution: 'The pattern repeats red, blue, green. After blue comes green.'
+  },
 
-  { id: '1st-116', gradeMin: 1, gradeMax: 1, domain: 'Number Sense', difficulty: 2,
+  {
+    id: '1st-116', gradeMin: 1, gradeMax: 1, domain: 'Number Sense', difficulty: 2,
     questionText: 'The school nurse has bandages in her office. She has 12 small bandages and gives out 5 bandages to students who got hurt at recess. Then she receives 3 more bandages from the supply closet. How many bandages does she have now?',
     choices: ['9 bandages', '10 bandages', '11 bandages', '12 bandages'], correctAnswer: '10 bandages',
-    solution: 'Start with 12, give out 5, receive 3: 12 - 5 + 3 = 10 bandages.' },
+    solution: 'Start with 12, give out 5, receive 3: 12 - 5 + 3 = 10 bandages.'
+  },
 
-  { id: '1st-117', gradeMin: 1, gradeMax: 1, domain: 'Number Sense', difficulty: 1,
+  {
+    id: '1st-117', gradeMin: 1, gradeMax: 1, domain: 'Number Sense', difficulty: 1,
     questionText: 'Maya is feeding ducks at the pond. She throws bread crumbs to 6 white ducks and 3 brown ducks. How many ducks is Maya feeding?',
     choices: ['8 ducks', '9 ducks', '10 ducks', '11 ducks'], correctAnswer: '9 ducks',
-    solution: 'Add the white and brown ducks: 6 + 3 = 9 ducks total.' },
+    solution: 'Add the white and brown ducks: 6 + 3 = 9 ducks total.'
+  },
 
-  { id: '1st-118', gradeMin: 1, gradeMax: 1, domain: 'Data', difficulty: 2,
+  {
+    id: '1st-118', gradeMin: 1, gradeMax: 1, domain: 'Data', difficulty: 2,
     questionText: 'The teacher asked students about their favorite playground equipment. Swings got 6 votes, slides got 4 votes, and monkey bars got 2 votes. How many students voted?',
     choices: ['10 students', '11 students', '12 students', '13 students'], correctAnswer: '12 students',
-    solution: 'Add all the votes: 6 + 4 + 2 = 12 students voted.' },
+    solution: 'Add all the votes: 6 + 4 + 2 = 12 students voted.'
+  },
 
-  { id: '1st-119', gradeMin: 1, gradeMax: 1, domain: 'Number Sense', difficulty: 1,
+  {
+    id: '1st-119', gradeMin: 1, gradeMax: 1, domain: 'Number Sense', difficulty: 1,
     questionText: 'Ethan has 15 marbles and wants to put them into 3 equal groups to share with his friends. How many marbles will be in each group?',
     choices: ['4 marbles', '5 marbles', '6 marbles', '7 marbles'], correctAnswer: '5 marbles',
-    solution: 'Divide 15 marbles into 3 equal groups: 15 ÷ 3 = 5 marbles in each group.' },
+    solution: 'Divide 15 marbles into 3 equal groups: 15 ÷ 3 = 5 marbles in each group.'
+  },
 
-  { id: '1st-120', gradeMin: 1, gradeMax: 1, domain: 'Number Sense', difficulty: 2,
+  {
+    id: '1st-120', gradeMin: 1, gradeMax: 1, domain: 'Number Sense', difficulty: 2,
     questionText: 'At the school book fair, Chloe buys 2 books for 4 dollars each and 1 bookmark for 2 dollars. How much money did Chloe spend?',
     choices: ['8 dollars', '9 dollars', '10 dollars', '11 dollars'], correctAnswer: '10 dollars',
-    solution: 'Books cost: 2 x 4 = 8 dollars. Total spent: 8 + 2 = 10 dollars.' },
+    solution: 'Books cost: 2 x 4 = 8 dollars. Total spent: 8 + 2 = 10 dollars.'
+  },
 
-  { id: '1st-121', gradeMin: 1, gradeMax: 1, domain: 'Number Sense', difficulty: 1,
+  {
+    id: '1st-121', gradeMin: 1, gradeMax: 1, domain: 'Number Sense', difficulty: 1,
     questionText: 'The art teacher gives each student 3 paintbrushes. If there are 4 students at the art table, how many paintbrushes does the teacher give out?',
     choices: ['10 paintbrushes', '11 paintbrushes', '12 paintbrushes', '13 paintbrushes'], correctAnswer: '12 paintbrushes',
-    solution: 'Each of 4 students gets 3 brushes: 3 + 3 + 3 + 3 = 12 paintbrushes.' },
+    solution: 'Each of 4 students gets 3 brushes: 3 + 3 + 3 + 3 = 12 paintbrushes.'
+  },
 
-  { id: '1st-122', gradeMin: 1, gradeMax: 1, domain: 'Time', difficulty: 1,
+  {
+    id: '1st-122', gradeMin: 1, gradeMax: 1, domain: 'Time', difficulty: 1,
     questionText: 'Tomorrow is Saturday. What day is today?',
     choices: ['Thursday', 'Friday', 'Saturday', 'Sunday'], correctAnswer: 'Friday',
-    solution: 'If tomorrow is Saturday, then today is Friday.' },
+    solution: 'If tomorrow is Saturday, then today is Friday.'
+  },
 
-  { id: '1st-123', gradeMin: 1, gradeMax: 1, domain: 'Number Sense', difficulty: 2,
+  {
+    id: '1st-123', gradeMin: 1, gradeMax: 1, domain: 'Number Sense', difficulty: 2,
     questionText: 'Isabella is organizing her stuffed animals on shelves. She puts 4 animals on the top shelf, 6 animals on the middle shelf, and 3 animals on the bottom shelf. How many stuffed animals does Isabella have?',
     choices: ['12 animals', '13 animals', '14 animals', '15 animals'], correctAnswer: '13 animals',
-    solution: 'Add animals from all shelves: 4 + 6 + 3 = 13 stuffed animals.' },
+    solution: 'Add animals from all shelves: 4 + 6 + 3 = 13 stuffed animals.'
+  },
 
-  { id: '1st-124', gradeMin: 1, gradeMax: 1, domain: 'Number Sense', difficulty: 2,
+  {
+    id: '1st-124', gradeMin: 1, gradeMax: 1, domain: 'Number Sense', difficulty: 2,
     questionText: 'At the school picnic, there are 3 tables with 5 students sitting at each table. If 2 more students join the picnic, how many students are at the picnic now?',
     choices: ['15 students', '16 students', '17 students', '18 students'], correctAnswer: '17 students',
-    solution: 'Students at tables: 3 x 5 = 15 students. Total with 2 more: 15 + 2 = 17 students.' }
+    solution: 'Students at tables: 3 x 5 = 15 students. Total with 2 more: 15 + 2 = 17 students.'
+  }
 ];
 
 // removed unused import: pertQuestions

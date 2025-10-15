@@ -9,8 +9,8 @@ import { FormattedQuestion, MathDomain } from './types';
 // were unused; removing them clears linter warnings.
 
 export async function generateTestPDF(
-  questions: FormattedQuestion[], 
-  studentName: string, 
+  questions: FormattedQuestion[],
+  studentName: string,
   domains: MathDomain[]
 ): Promise<Uint8Array> {
   try {
@@ -20,30 +20,30 @@ export async function generateTestPDF(
 
     console.log('PDF Generator: Creating new PDF document');
     const pdfDoc = await PDFDocument.create();
-    
+
     // Register fontkit with pdf-lib to handle Unicode fonts
     pdfDoc.registerFontkit(fontkit);
-    
+
     console.log('PDF Generator: Embedding fonts');
-    
-  // Load font files
-  let font, boldFont;
-    
+
+    // Load font files
+    let font, boldFont;
+
     // Try to use DejaVu Sans for excellent Unicode support including mathematical symbols
     try {
       // Path to the DejaVu Sans TTF fonts (excellent Unicode support in pdf-lib)
       const regularFontPath = path.resolve(process.cwd(), 'public/fonts/DejaVuSans.ttf');
       const boldFontPath = path.resolve(process.cwd(), 'public/fonts/DejaVuSans-Bold.ttf');
-      
+
       // Load the fonts
       const dejaVuSansRegular = await fs.readFile(regularFontPath);
       const dejaVuSansBold = await fs.readFile(boldFontPath);
-      
+
       // Embed the fonts - TTF fonts handle Unicode better in pdf-lib
       font = await pdfDoc.embedFont(dejaVuSansRegular);
       boldFont = await pdfDoc.embedFont(dejaVuSansBold);
       console.log('PDF Generator: Successfully embedded DejaVu Sans TTF fonts with full Unicode support');
-  } catch (error: unknown) {
+    } catch (error: unknown) {
       // Fallback to standard fonts if DejaVu can't be loaded
       const message = error instanceof Error ? error.message : String(error);
       console.log('PDF Generator: Falling back to standard fonts:', message);
@@ -108,7 +108,7 @@ export async function generateTestPDF(
     // Draw student info box
     const boxY = yOffset;
     const boxHeight = studentName ? 120 : 80;
-    
+
     // Draw background box with rounded appearance
     currentPage.drawRectangle({
       x: margins.left + 20,
@@ -132,7 +132,7 @@ export async function generateTestPDF(
         color: rgb(0.2, 0.2, 0.2)
       });
       yOffset -= 35;
-      
+
       currentPage.drawText(studentName, {
         x: margins.left + 60,
         y: yOffset,
@@ -260,17 +260,17 @@ export async function generateTestPDF(
     yOffset -= spacing.afterTitle;
 
     // Draw questions
-  for (const [index, q] of questions.entries()) {
+    for (const [index, q] of questions.entries()) {
       // Calculate total space needed for this question
       const questionWidth = width - margins.left - margins.right - 25;
       const words = q.questionText.split(' ');
       const lines = [''];
       let currentLine = 0;
-      
+
       words.forEach(word => {
         const testLine = lines[currentLine] + (lines[currentLine] ? ' ' : '') + word;
         const testWidth = font.widthOfTextAtSize(testLine, 10.5); // Updated to match new font size
-        
+
         if (testWidth <= questionWidth) {
           lines[currentLine] = testLine;
         } else {
@@ -333,7 +333,7 @@ export async function generateTestPDF(
           color: rgb(0, 0, 0)            // All text in black
         });
       });
-      
+
       // Adjust yOffset based on number of lines
       yOffset -= (lines.length * 14 + spacing.afterQuestion);
 
@@ -367,11 +367,11 @@ export async function generateTestPDF(
           const choiceWords = choice.value.split(' ');
           const choiceLines = [''];
           let currentChoiceLine = 0;
-          
+
           choiceWords.forEach(word => {
             const testLine = choiceLines[currentChoiceLine] + (choiceLines[currentChoiceLine] ? ' ' : '') + word;
             const testWidth = font.widthOfTextAtSize(testLine, 10.5); // Updated to match new font size
-            
+
             if (testWidth <= choiceWidth) {
               choiceLines[currentChoiceLine] = testLine;
             } else {
@@ -432,11 +432,11 @@ export async function generateTestPDF(
       const answerWords = answerText.split(' ');
       const answerLines = [''];
       let currentAnswerLine = 0;
-      
+
       answerWords.forEach(word => {
         const testLine = answerLines[currentAnswerLine] + (answerLines[currentAnswerLine] ? ' ' : '') + word;
         const testWidth = font.widthOfTextAtSize(testLine, 12);
-        
+
         if (testWidth <= answerWidth) {
           answerLines[currentAnswerLine] = testLine;
         } else {
@@ -452,7 +452,7 @@ export async function generateTestPDF(
           currentPage = pdfDoc.addPage(pageSize);
           yOffset = height - margins.top;
         }
-        
+
         // Use the line exactly as is without any formatting
         currentPage.drawText(line, {
           x: margins.left + 25,
