@@ -270,12 +270,18 @@ export default function Home() {
                       type="checkbox"
                       id={domain}
                       checked={formData.domains.includes(domain)}
-                      onChange={() => handleDomainChange(domain)}
+                      onClick={(e) => e.stopPropagation()}
+                      onChange={(e) => {
+                        // Prevent parent div onClick from double-handling the toggle
+                        e.stopPropagation()
+                        handleDomainChange(domain)
+                      }}
                       className="h-4 w-4 rounded border-border text-primary focus:ring-primary/20 focus:ring-2"
                     />
                     <label
                       htmlFor={domain}
                       className="ml-3 block text-sm font-medium text-foreground cursor-pointer select-none group-hover:text-primary transition-colors"
+                      onClick={(e) => e.stopPropagation()}
                     >
                       {domain}
                     </label>

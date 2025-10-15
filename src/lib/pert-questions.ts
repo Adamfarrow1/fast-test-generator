@@ -343,10 +343,10 @@ export const pertQuestions: Question[] = [
     gradeMax: 12,
     domain: 'Developmental Math II (MAT0028): Exponent Rules (properties; zero/negative exponents) & Scientific Notation',
     difficulty: 3,
-  questionText: 'Simplify: (3x⁴y⁻²)² × (2x⁻³y)',
-  choices: ['6x⁵y⁻³', '18x⁵y⁻³', '18x⁵y', '6x⁹y⁻³'],
-  correctAnswer: '18x⁵y⁻³',
-  solution: '(3x⁴y⁻²)² × (2x⁻³y) = 9x⁸y⁻⁴ × 2x⁻³y = 18x⁵y⁻³'
+    questionText: 'Simplify: (3x⁴y⁻²)² × (2x⁻³y)',
+    choices: ['6x⁵y⁻³', '18x⁵y⁻³', '18x⁵y', '6x⁹y⁻³'],
+    correctAnswer: '18x⁵y⁻³',
+    solution: '(3x⁴y⁻²)² × (2x⁻³y) = 9x⁸y⁻⁴ × 2x⁻³y = 18x⁵y⁻³'
   },
   {
     id: 'mat0028-exponents-2',
@@ -354,10 +354,10 @@ export const pertQuestions: Question[] = [
     gradeMax: 12,
     domain: 'Developmental Math II (MAT0028): Exponent Rules (properties; zero/negative exponents) & Scientific Notation',
     difficulty: 3,
-  questionText: 'Express 0.0042 in scientific notation.',
-  choices: ['4.2 × 10⁻³', '4.2 × 10³', '0.42 × 10⁻²', '42 × 10⁻⁴'],
-  correctAnswer: '4.2 × 10⁻³',
-  solution: '0.0042 = 4.2 × 10⁻³ (move decimal point 3 places to the right)'
+    questionText: 'Express 0.0042 in scientific notation.',
+    choices: ['4.2 × 10⁻³', '4.2 × 10³', '0.42 × 10⁻²', '42 × 10⁻⁴'],
+    correctAnswer: '4.2 × 10⁻³',
+    solution: '0.0042 = 4.2 × 10⁻³ (move decimal point 3 places to the right)'
   },
   {
     id: 'mat0028-exponents-3',
@@ -1170,10 +1170,10 @@ export const pertQuestions: Question[] = [
     gradeMax: 12,
     domain: 'Intermediate Algebra (MAT1033): Complex Numbers (intro to i; add/subtract/multiply/divide)',
     difficulty: 3,
-  questionText: 'What is i⁸?',
-  choices: ['1', '-1', 'i', '-i'],
-  correctAnswer: '1',
-  solution: 'i⁴ = 1, so i⁸ = (i⁴)² = 1.'
+    questionText: 'What is i⁸?',
+    choices: ['1', '-1', 'i', '-i'],
+    correctAnswer: '1',
+    solution: 'i⁴ = 1, so i⁸ = (i⁴)² = 1.'
   },
   {
     id: 'mat1033-complex-5',

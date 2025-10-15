@@ -150,10 +150,17 @@ export const mockQuestions: Question[] = [
         id: '5-27', gradeMin: 5, gradeMax: 5, domain: 'Fractions', difficulty: 2,
         questionText: 'The fifth-grade class collected 21 canned goods for the food drive. Their teacher announced that exactly 1/3 of these donations would be given to the local shelter, while the remaining cans would go to the community food bank. How many canned goods will be donated to the local shelter?', choices: ['7 cans', '3 cans', '14 cans', '21 cans'], correctAnswer: '7 cans', solution: 'Find 1/3 of 21: 21 x (1/3) = 21 ÷ 3 = 7 canned goods.'
       },
-      {
-        id: '5-28', gradeMin: 5, gradeMax: 5, domain: 'Decimals & Percents', difficulty: 2,
-        questionText: 'Lincoln Middle School ordered 80 new tablets for their computer lab. Due to a special educational discount, they received 50% off the regular price. If the regular price was the full amount, how much did they actually pay in comparison to the original price?', choices: ['40% of original price', '80% of original price', '20% of original price', '60% of original price'], correctAnswer: '40% of original price', solution: 'With 50% off, they pay the remaining 50%: 50% of 80 = 0.5 x 80 = 40% of the original amount.'
-      },
+{
+  id: '5-28',
+  gradeMin: 5,
+  gradeMax: 5,
+  domain: 'Decimals & Percents',
+  difficulty: 2,
+  questionText: 'Lincoln Middle School ordered 80 new tablets for their computer lab. Due to a special educational discount, they received 50% off the regular price. If the regular price was the full amount, how much did they actually pay in comparison to the original price?',
+  choices: ['50% of original price', '80% of original price', '20% of original price', '60% of original price'],
+  correctAnswer: '50% of original price',
+  solution: 'With 50% off, they pay 50% of the original price (i.e., half).'
+},
       {
         id: '5-29', gradeMin: 5, gradeMax: 5, domain: 'Measurement', difficulty: 2,
         questionText: 'The school play rehearsals are scheduled to run for exactly 3 weeks before the performance. The drama teacher wants to tell parents how many days their children will be involved in rehearsals. How many days will the rehearsal period last?', choices: ['21 days', '14 days', '7 days', '28 days'], correctAnswer: '21 days', solution: 'Convert weeks to days: 1 week = 7 days, so 3 weeks = 3 x 7 = 21 days.'
@@ -2274,12 +2281,28 @@ export const mockQuestions: Question[] = [
   { id: '332', gradeMin: 3, gradeMax: 3, domain: 'Fractions', difficulty: 2,
     questionText: 'Simplify 6/8.', choices: ['3/4','2/3','4/6','1/2'], correctAnswer: '3/4',
     solution: 'Divide numerator and denominator by 2 -> 3/4' },
-  { id: '333', gradeMin: 3, gradeMax: 3, domain: 'Fractions', difficulty: 3,
-    questionText: 'What is 2/5 + 3/10?', choices: ['1/2','3/5','4/5','5/5'], correctAnswer: '4/5',
-    solution: '2/5 = 4/10 -> 4/10 + 3/10 = 7/10' },
-  { id: '334', gradeMin: 3, gradeMax: 3, domain: 'Fractions', difficulty: 3,
-    questionText: 'What is 5/6 - 1/3?', choices: ['1/6','2/6','3/6','4/6'], correctAnswer: '1/2',
-    solution: '1/3 = 2/6 -> 5/6 - 2/6 = 3/6 = 1/2' },
+{
+  id: '333',
+  gradeMin: 3,
+  gradeMax: 3,
+  domain: 'Fractions',
+  difficulty: 3,
+  questionText: 'What is 2/5 + 3/10?',
+  choices: ['1/2', '7/10', '4/5', '5/5'],
+  correctAnswer: '7/10',
+  solution: '2/5 = 4/10, so 4/10 + 3/10 = 7/10.'
+},
+{
+  id: '334',
+  gradeMin: 3,
+  gradeMax: 3,
+  domain: 'Fractions',
+  difficulty: 3,
+  questionText: 'What is 5/6 - 1/3?',
+  choices: ['1/6', '1/2', '3/6', '4/6'],
+  correctAnswer: '1/2',
+  solution: '1/3 = 2/6 → 5/6 - 2/6 = 3/6 = 1/2.'
+},
 
   // === Geometry (335–343)
   { id: '335', gradeMin: 3, gradeMax: 3, domain: 'Geometry', difficulty: 1,
@@ -2360,11 +2383,17 @@ export const mockQuestions: Question[] = [
     choices: ['623 dollars', '633 dollars', '643 dollars', '653 dollars'], correctAnswer: '633 dollars',
     solution: 'Total collected: 156 + 283 + 194 = 633 dollars.' },
 
-  { id: '3rd-56', gradeMin: 3, gradeMax: 3, domain: 'Number Sense', difficulty: 2,
-    questionText: 'The school auditorium has 456 seats arranged in rows of 12. About how many rows are there? Estimate by rounding 456 to the nearest hundred.',
-    choices: ['About 38 rows', 'About 40 rows', 'About 42 rows', 'About 45 rows'], correctAnswer: 'About 40 rows',
-    solution: '456 rounds to 500. 500 ÷ 12 = 40 rows (closest estimate).' },
-
+{
+  id: '3rd-56',
+  gradeMin: 3,
+  gradeMax: 3,
+  domain: 'Number Sense',
+  difficulty: 2,
+  questionText: 'The school auditorium has 456 seats arranged in rows of 12. About how many rows are there? Estimate by rounding 456 to the nearest hundred.',
+  choices: ['About 38 rows', 'About 40 rows', 'About 42 rows', 'About 45 rows'],
+  correctAnswer: 'About 42 rows',
+  solution: '456 rounds to 500. 500 ÷ 12 ≈ 41.7, so about 42 rows.'
+},
   { id: '3rd-57', gradeMin: 3, gradeMax: 3, domain: 'Number Sense', difficulty: 2,
     questionText: 'The third grade classes are comparing their reading points. Room A has 1,847 points, Room B has 1,784 points, and Room C has 1,874 points. Which room has the most points?',
     choices: ['Room A', 'Room B', 'Room C', 'They are tied'], correctAnswer: 'Room C',
@@ -2666,9 +2695,17 @@ export const mockQuestions: Question[] = [
   { id: '405', gradeMin: 4, gradeMax: 4, domain: 'Number Sense', difficulty: 3,
     questionText: 'Two elementary schools are combining their fundraising efforts. Lincoln Elementary raised $2,345 and Washington Elementary raised $6,789. How much money did they raise together?', choices: ['9,034','9,124','9,134','9,144'],
     correctAnswer: '9,134', solution: 'Total raised = $2,345 + $6,789 = $9,134' },
-  { id: '406', gradeMin: 4, gradeMax: 4, domain: 'Number Sense', difficulty: 3,
-    questionText: 'A charity organization started with $5,000 in their account. They spent $2,376 on supplies for their event. How much money is left in their account?', choices: ['2,524','2,634','2,744','2,764'],
-    correctAnswer: '2,624', solution: 'Money remaining = $5,000 - $2,376 = $2,624' },
+ {
+  id: '406',
+  gradeMin: 4,
+  gradeMax: 4,
+  domain: 'Number Sense',
+  difficulty: 3,
+  questionText: 'A charity organization started with $5,000 in their account. They spent $2,376 on supplies for their event. How much money is left in their account?',
+  choices: ['2,624', '2,634', '2,744', '2,764'],
+  correctAnswer: '2,624',
+  solution: 'Money remaining = $5,000 - $2,376 = $2,624'
+},
 
   // === Operations & Algebraic Thinking (407–412)
   { id: '407', gradeMin: 4, gradeMax: 4, domain: 'Operations & Algebraic Thinking', difficulty: 1,
@@ -3074,11 +3111,17 @@ export const mockQuestions: Question[] = [
     choices: ['4 weeks', '5 weeks', '6 weeks', '7 weeks'], correctAnswer: '5 weeks',
     solution: 'Solve 20 + 5w = 45: Subtract 20 from both sides: 5w = 25. Divide by 5: w = 5 weeks.' },
   
-  { id: '6-4', gradeMin: 6, gradeMax: 6, domain: 'Algebra', difficulty: 3,
-    questionText: 'The school theater sold tickets for their play. Adult tickets cost $12 each and student tickets cost $8 each. If they sold 15 adult tickets and earned a total of $280, how many student tickets did they sell? Solve: 12(15) + 8s = 280.',
-    choices: ['8 tickets', '10 tickets', '12 tickets', '14 tickets'], correctAnswer: '10 tickets',
-    solution: 'First find adult ticket revenue: 12 x 15 = $180. Then solve: 180 + 8s = 280. Subtract 180: 8s = 100. Divide by 8: s = 12.5, but since we can\'t sell half tickets, check: 10 tickets gives $260 total, which seems more reasonable.' },
-  
+ {
+  id: '6-4',
+  gradeMin: 6,
+  gradeMax: 6,
+  domain: 'Algebra',
+  difficulty: 3,
+  questionText: 'The school theater sold tickets for their play. Adult tickets cost $12 each and student tickets cost $8 each. If they sold 15 adult tickets and earned a total of $276, how many student tickets did they sell? Solve: 12(15) + 8s = 276.',
+  choices: ['8 tickets', '10 tickets', '12 tickets', '14 tickets'],
+  correctAnswer: '12 tickets',
+  solution: 'Adult revenue: 12 x 15 = $180. Then 180 + 8s = 276 → 8s = 96 → s = 12 student tickets.'
+},
   { id: '6-5', gradeMin: 6, gradeMax: 6, domain: 'Algebra', difficulty: 2,
     questionText: 'A rectangle has a length that is 3 units more than its width. If the width is w units, which expression represents the length of the rectangle?',
     choices: ['w - 3', 'w + 3', '3w', 'w / 3'], correctAnswer: 'w + 3',
@@ -4005,10 +4048,17 @@ export const mockQuestions: Question[] = [
   questionText: 'What is the mode of 6, 8, 8, 10, 12?',
   choices: ['6', '8', '10', '12'], correctAnswer: '8',
   solution: '8 appears most often' },
-{ id: '8th-54', gradeMin: 8, gradeMax: 8, domain: 'Statistics', difficulty: 2,
+{
+  id: '8th-54',
+  gradeMin: 8,
+  gradeMax: 8,
+  domain: 'Statistics',
+  difficulty: 2,
   questionText: 'What is the range of 14, 18, 22, 26, 34?',
-  choices: ['16', '17', '18', '19'], correctAnswer: '20',
-  solution: '34 - 14 = 20' },
+  choices: ['16', '18', '20', '19'],
+  correctAnswer: '20',
+  solution: 'Range = max - min = 34 - 14 = 20.'
+},
 { id: '8th-55', gradeMin: 8, gradeMax: 8, domain: 'Statistics', difficulty: 3,
   questionText: 'The scores on a test are 88, 93, 101, 93, 96. What is the mode?',
   choices: ['88', '93', '96', '101'], correctAnswer: '93',

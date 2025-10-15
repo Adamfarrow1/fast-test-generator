@@ -55,16 +55,16 @@ export async function generateTestPDF(
     // Constants for layout
     const pageSize: [number, number] = [612, 792]; // Standard US Letter size
     const margins = {
-      top: 72,    // 1 inch
-      bottom: 72,
-      left: 72,
-      right: 72
+      top: 50,    // Reduced from 72 (1 inch) to 50
+      bottom: 50, // Reduced from 72 to 50
+      left: 50,   // Reduced from 72 to 50
+      right: 50   // Reduced from 72 to 50
     };
     const spacing = {
-      afterTitle: 50,
-      afterQuestion: 30,
-      betweenChoices: 25,
-      betweenQuestions: 40,
+      afterTitle: 30,     // Reduced from 35
+      afterQuestion: 12,  // Reduced from 15
+      betweenChoices: 8,  // Reduced from 12
+      betweenQuestions: 18, // Reduced from 25
       choiceIndent: 20
     };
 
@@ -269,7 +269,7 @@ export async function generateTestPDF(
       
       words.forEach(word => {
         const testLine = lines[currentLine] + (lines[currentLine] ? ' ' : '') + word;
-        const testWidth = font.widthOfTextAtSize(testLine, 12);
+        const testWidth = font.widthOfTextAtSize(testLine, 10.5); // Updated to match new font size
         
         if (testWidth <= questionWidth) {
           lines[currentLine] = testLine;
@@ -289,7 +289,7 @@ export async function generateTestPDF(
           let currentChoiceLine = 0;
           for (const word of choiceWords) {
             const testLine = choiceLines[currentChoiceLine] + (choiceLines[currentChoiceLine] ? ' ' : '') + word;
-            const testWidth = font.widthOfTextAtSize(testLine, 12);
+            const testWidth = font.widthOfTextAtSize(testLine, 10.5); // Updated to match new font size
             if (testWidth <= choiceWidth) {
               choiceLines[currentChoiceLine] = testLine;
             } else {
@@ -297,7 +297,7 @@ export async function generateTestPDF(
               choiceLines[currentChoiceLine] = word;
             }
           }
-          totalChoiceHeight += choiceLines.length * 20 + spacing.betweenChoices;
+          totalChoiceHeight += choiceLines.length * 14 + spacing.betweenChoices; // Updated line height
         } else if (choice.type === 'image') {
           // Estimate image height for layout (fixed value for now)
           totalChoiceHeight += 60 + spacing.betweenChoices;
@@ -305,7 +305,7 @@ export async function generateTestPDF(
       }
 
       // Total space needed for this question
-      const questionHeight = lines.length * 20 + spacing.afterQuestion;
+      const questionHeight = lines.length * 14 + spacing.afterQuestion; // Updated line height
       const totalSpaceNeeded = questionHeight + totalChoiceHeight + spacing.betweenQuestions;
 
       // Check if we need a new page for the entire question
@@ -318,7 +318,7 @@ export async function generateTestPDF(
       currentPage.drawText(`${index + 1}.`, {
         x: margins.left,
         y: yOffset,
-        size: 12,
+        size: 10.5, // Reduced from 11 to 10.5
         font: font
       });
 
@@ -327,15 +327,15 @@ export async function generateTestPDF(
         // Use the line exactly as is
         currentPage.drawText(line, {
           x: margins.left + 25,
-          y: yOffset - (lineIndex * 20),
-          size: 12,                      // Standard size for all text
-          font: font,                    // Regular font for all questions
-          color: rgb(0, 0, 0)           // All text in black
+          y: yOffset - (lineIndex * 14), // Reduced line height from 16 to 14
+          size: 10.5,                     // Reduced font size from 11 to 10.5
+          font: font,                     // Regular font for all questions
+          color: rgb(0, 0, 0)            // All text in black
         });
       });
       
       // Adjust yOffset based on number of lines
-      yOffset -= (lines.length * 20 + spacing.afterQuestion);
+      yOffset -= (lines.length * 14 + spacing.afterQuestion);
 
       // Draw choices
       for (const [choiceIndex, choice] of q.choices.entries()) {
@@ -343,7 +343,7 @@ export async function generateTestPDF(
         currentPage.drawText(`${String.fromCharCode(65 + choiceIndex)})`, {
           x: margins.left + 25,
           y: yOffset,
-          size: 12,
+          size: 10.5, // Reduced from 11 to 10.5
           font: font
         });
 
@@ -370,7 +370,7 @@ export async function generateTestPDF(
           
           choiceWords.forEach(word => {
             const testLine = choiceLines[currentChoiceLine] + (choiceLines[currentChoiceLine] ? ' ' : '') + word;
-            const testWidth = font.widthOfTextAtSize(testLine, 12);
+            const testWidth = font.widthOfTextAtSize(testLine, 10.5); // Updated to match new font size
             
             if (testWidth <= choiceWidth) {
               choiceLines[currentChoiceLine] = testLine;
@@ -385,13 +385,13 @@ export async function generateTestPDF(
             // Use the line exactly as is without any formatting
             currentPage.drawText(line, {
               x: margins.left + 50,
-              y: yOffset - (lineIndex * 20),
-              size: 12,                              // Standard size for all text
-              font: font,                            // Regular font for all choices
-              color: rgb(0, 0, 0)                    // All text in black
+              y: yOffset - (lineIndex * 14), // Reduced line height from 16 to 14
+              size: 10.5,                     // Reduced font size from 11 to 10.5
+              font: font,                     // Regular font for all choices
+              color: rgb(0, 0, 0)            // All text in black
             });
           });
-          yOffset -= (choiceLines.length * 20 + spacing.betweenChoices);
+          yOffset -= (choiceLines.length * 14 + spacing.betweenChoices);
         }
       }
 
