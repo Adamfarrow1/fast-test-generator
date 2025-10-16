@@ -1,6 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { mockQuestions } from '@/lib/questions';
-import { pertQuestions } from '@/lib/pert-questions';
+import { allGradeQuestions, pertQuestions } from '@/lib/allQuestions';
 import { generateTestPDF } from '@/lib/pdf-generator';
 import { MathDomain, QuestionChoice, FormattedQuestion } from '@/lib/types';
 
@@ -29,7 +28,7 @@ export async function POST(req: NextRequest) {
 
     // Choose question source based on PERT flag
     const isPert = !!pert;
-    const source = isPert ? pertQuestions : mockQuestions;
+    const source = isPert ? pertQuestions : allGradeQuestions;
 
     // Filter questions based on grade level and domains
     console.log('API route: Filtering questions...');

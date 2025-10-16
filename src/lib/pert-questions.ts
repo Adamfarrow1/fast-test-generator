@@ -23,7 +23,7 @@ export const pertQuestions: Question[] = [
     questionText: 'Find the circumference of a circle with radius 7 cm.',
     choices: ['14π cm', '49π cm', '14 cm', '44 cm'],
     correctAnswer: '14π cm',
-    solution: 'Circumference = 2πr = 2π × 7 = 14π cm'
+    solution: 'Circumference = 2πr = 2π * 7 = 14π cm'
   },
   {
     id: 'ck-geometry-3',
@@ -34,7 +34,7 @@ export const pertQuestions: Question[] = [
     questionText: 'Find the volume of a rectangular prism with length 5 cm, width 3 cm, and height 2 cm.',
     choices: ['30 cm³', '10 cm³', '15 cm³', '25 cm³'],
     correctAnswer: '30 cm³',
-    solution: 'Volume of rectangular prism = length × width × height = 5 × 3 × 2 = 30 cm³'
+    solution: 'Volume of rectangular prism = length * width * height = 5 * 3 * 2 = 30 cm³'
   },
   {
     id: 'ck-probability-1',
@@ -54,9 +54,9 @@ export const pertQuestions: Question[] = [
     domain: 'Common Knowledge: Probability (Simple & Dependent)',
     difficulty: 3,
     questionText: 'If you roll two fair dice, what is the probability of getting a sum of 7?',
-    choices: ['1/6', '1/12', '5/36', '6/36'],
-    correctAnswer: '6/36',
-    solution: 'Total possible outcomes when rolling two dice = 6 × 6 = 36. Favorable outcomes for sum of 7: (1,6), (2,5), (3,4), (4,3), (5,2), (6,1) = 6 outcomes. Probability = 6/36 = 1/6'
+    choices: ['1/6', '1/12', '5/36', '7/36'],
+    correctAnswer: '1/6',
+    solution: 'Total possible outcomes when rolling two dice = 6 * 6 = 36. Favorable outcomes for sum of 7: (1,6), (2,5), (3,4), (4,3), (5,2), (6,1) = 6 outcomes. Probability = 6/36 = 1/6'
   },
   {
     id: 'ck-probability-3',
@@ -65,8 +65,8 @@ export const pertQuestions: Question[] = [
     domain: 'Common Knowledge: Probability (Simple & Dependent)',
     difficulty: 3,
     questionText: 'A card is drawn from a standard deck of 52 cards. What is the probability of drawing a face card (Jack, Queen, or King)?',
-    choices: ['3/13', '12/52', '1/4', '3/52'],
-    correctAnswer: '12/52',
+    choices: ['3/13', '13/52', '1/4', '3/52'],
+    correctAnswer: '3/13',
     solution: 'A standard deck has 12 face cards (3 face cards in each of 4 suits). Total cards = 52. Probability = 12/52 = 3/13 = 0.231'
   },
   {
@@ -89,7 +89,7 @@ export const pertQuestions: Question[] = [
     questionText: 'In a pie chart representing the favorite fruits of 400 students, the slice for apples takes up 45° of the circle. How many students chose apples as their favorite fruit?',
     choices: ['50 students', '45 students', '90 students', '100 students'],
     correctAnswer: '50 students',
-    solution: 'A full circle is 360°. The proportion of students who chose apples = 45°/360° = 1/8. Number of students = 1/8 × 400 = 50 students'
+    solution: 'A full circle is 360°. The proportion of students who chose apples = 45°/360° = 1/8. Number of students = 1/8 * 400 = 50 students'
   },
   {
     id: 'ck-statistics-3',
@@ -121,10 +121,10 @@ export const pertQuestions: Question[] = [
     gradeMax: 12,
     domain: 'Developmental Math I (MAT0018): Signed Numbers',
     difficulty: 3,
-    questionText: 'Simplify: -8 - (-12) + (-3) × 4',
+    questionText: 'Simplify: -8 - (-12) + (-3) * 4',
     choices: ['-8', '4', '-16', '16'],
     correctAnswer: '-8',
-    solution: '-8 - (-12) + (-3) × 4 = -8 + 12 + (-12) = 4 + (-12) = -8'
+    solution: '-8 - (-12) + (-3) * 4 = -8 + 12 + (-12) = 4 + (-12) = -8'
   },
   {
     id: 'mat0018-signed-3',
@@ -133,9 +133,9 @@ export const pertQuestions: Question[] = [
     domain: 'Developmental Math I (MAT0018): Signed Numbers',
     difficulty: 3,
     questionText: 'Which of the following expressions has the largest value?',
-    choices: ['-5 - 3', '-5 × (-3)', '-5 ÷ (-3)', '-5 + (-3)'],
-    correctAnswer: '-5 × (-3)',
-    solution: '-5 - 3 = -8; -5 × (-3) = 15; -5 ÷ (-3) = 1.67; -5 + (-3) = -8. The largest value is 15.'
+    choices: ['-5 - 3', '-5 * (-3)', '-5 ÷ (-3)', '-5 + (-3)'],
+    correctAnswer: '-5 * (-3)',
+    solution: '-5 - 3 = -8; -5 * (-3) = 15; -5 ÷ (-3) = 1.67; -5 + (-3) = -8. The largest value is 15.'
   },
   {
     id: 'mat0018-decimals-1',
@@ -154,10 +154,10 @@ export const pertQuestions: Question[] = [
     gradeMax: 12,
     domain: 'Developmental Math I (MAT0018): Decimals',
     difficulty: 3,
-    questionText: 'Multiply: 1.25 × 0.4',
-    choices: ['0.5', '0.05', '5', '0.5'],
+    questionText: 'Multiply: 1.25 * 0.4',
+    choices: ['0.5', '0.05', '5', '4'],
     correctAnswer: '0.5',
-    solution: '1.25 × 0.4 = 0.5'
+    solution: '1.25 * 0.4 = 0.5'
   },
   {
     id: 'mat0018-decimals-3',
@@ -201,7 +201,7 @@ export const pertQuestions: Question[] = [
     questionText: 'Convert the mixed number 2 3/4 to an improper fraction.',
     choices: ['8/4', '11/4', '5/4', '6/4'],
     correctAnswer: '11/4',
-    solution: '2 3/4 = (2 × 4 + 3) / 4 = 11/4'
+    solution: '2 3/4 = (2 * 4 + 3) / 4 = 11/4'
   },
   {
     id: 'mat0018-order-ops-1',
@@ -231,10 +231,10 @@ export const pertQuestions: Question[] = [
     gradeMax: 12,
     domain: 'Developmental Math I (MAT0018): Order of Operations',
     difficulty: 3,
-    questionText: 'Evaluate: 16 - 2 × (3² - 5) + 1',
+    questionText: 'Evaluate: 16 - 2 * (3² - 5) + 1',
     choices: ['5', '9', '13', '1'],
     correctAnswer: '9',
-    solution: '16 - 2 × (3² - 5) + 1 = 16 - 2 × (9 - 5) + 1 = 16 - 2 × 4 + 1 = 16 - 8 + 1 = 9'
+    solution: '16 - 2 * (3² - 5) + 1 = 16 - 2 * (9 - 5) + 1 = 16 - 2 * 4 + 1 = 16 - 8 + 1 = 9'
   },
   {
     id: 'mat0018-poly-1-1',
@@ -343,10 +343,10 @@ export const pertQuestions: Question[] = [
     gradeMax: 12,
     domain: 'Developmental Math II (MAT0028): Exponent Rules (properties; zero/negative exponents) & Scientific Notation',
     difficulty: 3,
-    questionText: 'Simplify: (3x⁴y⁻²)² × (2x⁻³y)',
+    questionText: 'Simplify: (3x⁴y⁻²)² * (2x⁻³y)',
     choices: ['6x⁵y⁻³', '18x⁵y⁻³', '18x⁵y', '6x⁹y⁻³'],
     correctAnswer: '18x⁵y⁻³',
-    solution: '(3x⁴y⁻²)² × (2x⁻³y) = 9x⁸y⁻⁴ × 2x⁻³y = 18x⁵y⁻³'
+    solution: '(3x⁴y⁻²)² * (2x⁻³y) = 9x⁸y⁻⁴ * 2x⁻³y = 18x⁵y⁻³'
   },
   {
     id: 'mat0028-exponents-2',
@@ -442,10 +442,10 @@ export const pertQuestions: Question[] = [
     gradeMax: 12,
     domain: 'Developmental Math II (MAT0028): Radicals Lvl. 1 (simplify roots; combine; multiply; rationalize denominator)',
     difficulty: 3,
-    questionText: 'Simplify: 3 * √(18) - 2 * √(8) + √(50)',
-    choices: ['7√2', '5√2', '9√2', '2√2'],
-    correctAnswer: '7√2',
-    solution: '3 * √(18) - 2 * √(8) + √(50) = 3 * √(9 * 2) - 2 * √(4 * 2) + √(25 * 2) = 3 * 3 * √(2) - 2 * 2 * √(2) + 5 * √(2) = 9 * √(2) - 4 * √(2) + 5 * √(2) = 10 * √(2) - 3 * √(2) = 7 * √(2)'
+    questionText: 'Simplify: 3√18 - 2√8 + √50',
+    choices: ['10√2', '5√2', '9√2', '2√2'],
+    correctAnswer: '10√2',
+    solution: '3√18 - 2√8 + √50 = 3√(9 * 2) - 2√(4 * 2) + √(25 * 2) = 3 * 3√2 - 2 * 2√2 + 5√2 = 9√2 - 4√2 + 5√2 = 10√2'
   },
   {
     id: 'mat0028-radicals-1-2',
@@ -453,10 +453,10 @@ export const pertQuestions: Question[] = [
     gradeMax: 12,
     domain: 'Developmental Math II (MAT0028): Radicals Lvl. 1 (simplify roots; combine; multiply; rationalize denominator)',
     difficulty: 3,
-    questionText: 'Multiply and simplify: √(12) × √(3)',
+    questionText: 'Multiply and simplify: √(12) * √(3)',
     choices: ['6', '6√2', '36', '3√3'],
     correctAnswer: '6',
-    solution: '√(12) × √(3) = √(12 × 3) = √(36) = 6'
+    solution: '√(12) * √(3) = √(12 * 3) = √(36) = 6'
   },
   {
     id: 'mat0028-radicals-1-3',
@@ -466,8 +466,8 @@ export const pertQuestions: Question[] = [
     difficulty: 3,
     questionText: 'Rationalize the denominator: 4/(3√(2))',
     choices: ['4√(2)/6', '4√(2)/3', '2√(2)/3', '4/(3√(2))'],
-    correctAnswer: '4√(2)/6',
-    solution: '4/(3√(2)) = 4/(3√(2)) × √(2)/√(2) = 4√(2)/(3 × 2) = 4√(2)/6'
+    correctAnswer: '2√(2)/3',
+    solution: '4/(3√(2)) = 4/(3√(2)) * √(2)/√(2) = 4√(2)/(3 * 2) = 2√(2)/3'
   },
   {
     id: 'mat0028-graphing-1-1',
@@ -568,7 +568,7 @@ export const pertQuestions: Question[] = [
     questionText: 'Simplify the complex fraction: (1/x + 1/y)/(1/x - 1/y)',
     choices: ['(x + y)/(x - y)', '(y + x)/(y - x)', 'xy/(x - y)', 'xy/(y - x)'],
     correctAnswer: '(x + y)/(x - y)',
-    solution: '(1/x + 1/y)/(1/x - 1/y) = ((y + x)/xy)/((y - x)/xy) = ((y + x)/xy) × (xy/(y - x)) = (x + y)/(x - y)'
+    solution: '(1/x + 1/y)/(1/x - 1/y) = ((y + x)/xy)/((y - x)/xy) = ((y + x)/xy) * (xy/(y - x)) = (x + y)/(x - y)'
   },
   {
     id: 'mat1033-factoring-2-1',
@@ -645,7 +645,7 @@ export const pertQuestions: Question[] = [
     questionText: 'Solve the radical equation: √(x) + 5 = x',
     choices: ['x = (11 + √(21))/2', 'x = 6', 'x = 4', 'x = 25'],
     correctAnswer: 'x = (11 + √(21))/2',
-    solution: 'Isolate √(x) = x - 5, so x >= 5. Square: x = (x - 5)² = x² - 10x + 25 -> x² - 11x + 25 = 0. Quadratic formula: x = [11 ± √(121 - 100)]/2 = (11 ± √(21))/2. Only x >= 5 is valid, so x = (11 + √(21))/2 aprox =  7.79. Check: √(7.79) + 5 aprox =  7.79, valid; the other root is extraneous.'
+    solution: 'Isolate √(x) = x - 5, so x ≥ 5. Square: x = (x - 5)² = x² - 10x + 25 → x² - 11x + 25 = 0. Quadratic formula: x = [11 ± √(121 - 100)]/2 = (11 ± √(21))/2. Only x ≥ 5 is valid, so x = (11 + √(21))/2 ≈ 7.79. Check: √(7.79) + 5 ≈ 7.79, valid; the other root is extraneous.'
   },
   {
     id: 'mat1033-radicals-2-2',
@@ -656,7 +656,7 @@ export const pertQuestions: Question[] = [
     questionText: 'Simplify the radical expression: ³√16x¹²',
     choices: ['2x⁴³√2', '2x⁴', '4x⁴³√2', '2³√2x⁴'],
     correctAnswer: '2x⁴³√2',
-    solution: '³√16x¹² = ³√(2⁴) × ³√x¹² = ³√(8 × 2) × x⁴ = ³√8 × ³√2 × x⁴ = 2³√2 × x⁴ = 2x⁴³√2'
+    solution: '³√16x¹² = ³√(2⁴) * ³√x¹² = ³√(8 * 2) * x⁴ = ³√8 * ³√2 * x⁴ = 2³√2 * x⁴ = 2x⁴³√2'
   },
   {
     id: 'mat1033-radicals-2-3',
@@ -687,9 +687,9 @@ export const pertQuestions: Question[] = [
     domain: 'Intermediate Algebra (MAT1033): Complex Numbers (intro to i; add/subtract/multiply/divide)',
     difficulty: 3,
     questionText: 'Divide and simplify: (4 + 2i)/(2 - i)',
-    choices: ['2 + i', '(8 + 4i)/(4 + 1)', '(8 - 4i + 2i - i²)/(5)', '(8 - 2i + 4i - 2i²)/(5)'],
-    correctAnswer: '(8 - 2i + 4i - 2i²)/(5)',
-    solution: '(4 + 2i)/(2 - i) = (4 + 2i)(2 + i)/(2 - i)(2 + i) = (8 + 4i + 2i + i²)/(4 - i²) = (8 + 6i - 1)/(4 + 1) = (7 + 6i)/5 = 7/5 + 6i/5'
+    choices: ['2 + i', '6/5 + 8i/5', '(8 - 4i + 2i - i²)/(5)', '(8 - 2i + 4i - 2i²)/(5)'],
+    correctAnswer: '6/5 + 8i/5',
+    solution: '(4 + 2i)/(2 - i) = (4 + 2i)(2 + i)/(2 - i)(2 + i) = (8 + 4i + 4i + 2i²)/(4 - i²) = (8 + 8i - 2)/(4 + 1) = (6 + 8i)/5 = 6/5 + 8i/5'
   },
   {
     id: 'mat1033-complex-3',
@@ -700,7 +700,7 @@ export const pertQuestions: Question[] = [
     questionText: 'Evaluate: i to the 50th power',
     choices: ['1', '-1', 'i', '-i'],
     correctAnswer: '-1',
-    solution: 'Since i⁴ = 1, we can write i⁵⁰ = (i⁴)¹² × i² = (1)¹² × i² = 1 × (-1) = -1'
+    solution: 'Since i⁴ = 1, we can write i⁵⁰ = (i⁴)¹² * i² = (1)¹² * i² = 1 * (-1) = -1'
   },
   // --- Additional 30 Problems ---
   // Common Knowledge: Basic Geometry
@@ -713,7 +713,7 @@ export const pertQuestions: Question[] = [
     questionText: 'What is the perimeter of a rectangle with length 10 cm and width 4 cm?',
     choices: ['28 cm', '40 cm', '14 cm', '20 cm'],
     correctAnswer: '28 cm',
-    solution: 'Perimeter = 2 × (length + width) = 2 × (10 + 4) = 28 cm'
+    solution: 'Perimeter = 2 * (length + width) = 2 * (10 + 4) = 28 cm'
   },
   {
     id: 'ck-geometry-5',
@@ -779,10 +779,10 @@ export const pertQuestions: Question[] = [
     gradeMax: 12,
     domain: 'Developmental Math I (MAT0018): Signed Numbers',
     difficulty: 3,
-    questionText: 'Evaluate: -7 + 4 × (-2)',
+    questionText: 'Evaluate: -7 + 4 * (-2)',
     choices: ['-15', '-7', '-8', '1'],
     correctAnswer: '-15',
-    solution: '-7 + 4 × (-2) = -7 + (-8) = -15.'
+    solution: '-7 + 4 * (-2) = -7 + (-8) = -15.'
   },
   {
     id: 'mat0018-signed-5',
@@ -828,7 +828,7 @@ export const pertQuestions: Question[] = [
     questionText: 'What is 2/5 of 25?',
     choices: ['5', '10', '15', '20'],
     correctAnswer: '10',
-    solution: '2/5 × 25 = 10.'
+    solution: '2/5 * 25 = 10.'
   },
   {
     id: 'mat0018-fractions-5',
@@ -848,10 +848,10 @@ export const pertQuestions: Question[] = [
     gradeMax: 12,
     domain: 'Developmental Math I (MAT0018): Order of Operations',
     difficulty: 3,
-    questionText: 'Evaluate: 2 + 3 × (4 - 1)',
+    questionText: 'Evaluate: 2 + 3 * (4 - 1)',
     choices: ['9', '11', '15', '7'],
     correctAnswer: '11',
-    solution: '3 × (4 - 1) = 3 × 3 = 9; 2 + 9 = 11.'
+    solution: '3 * (4 - 1) = 3 * 3 = 9; 2 + 9 = 11.'
   },
   {
     id: 'mat0018-order-ops-5',
@@ -859,10 +859,10 @@ export const pertQuestions: Question[] = [
     gradeMax: 12,
     domain: 'Developmental Math I (MAT0018): Order of Operations',
     difficulty: 3,
-    questionText: 'Evaluate: (8 ÷ 2) × (3 + 1)',
+    questionText: 'Evaluate: (8 ÷ 2) * (3 + 1)',
     choices: ['16', '32', '8', '12'],
     correctAnswer: '16',
-    solution: '8 ÷ 2 = 4; 3 + 1 = 4; 4 × 4 = 16.'
+    solution: '8 ÷ 2 = 4; 3 + 1 = 4; 4 * 4 = 16.'
   },
   // Developmental Math I (MAT0018): Polynomials Lvl. 1
   {
@@ -897,7 +897,7 @@ export const pertQuestions: Question[] = [
     questionText: 'Solve for x: x/3 = 5',
     choices: ['x = 8', 'x = 15', 'x = 5', 'x = 3'],
     correctAnswer: 'x = 15',
-    solution: 'x = 5 × 3 = 15.'
+    solution: 'x = 5 * 3 = 15.'
   },
   {
     id: 'mat0018-eq-1-5',
@@ -1023,7 +1023,7 @@ export const pertQuestions: Question[] = [
     questionText: 'Rationalize: 1/√(3)',
     choices: ['√(3)/3', '1/3', '3/√(3)', '√(3)'],
     correctAnswer: '√(3)/3',
-    solution: 'Multiply numerator and denominator by √(3): 1/√(3) × √(3)/√(3) = √(3)/3.'
+    solution: 'Multiply numerator and denominator by √(3): 1/√(3) * √(3)/√(3) = √(3)/3.'
   },
   // Developmental Math II (MAT0028): Graphing Lvl. 1
   {
@@ -1058,7 +1058,7 @@ export const pertQuestions: Question[] = [
     questionText: 'What is the axis of symmetry for f(x) = 2x² - 4x + 1?',
     choices: ['x = 1', 'x = 2', 'x = -1', 'x = -2'],
     correctAnswer: 'x = 1',
-    solution: 'Axis: x = -b/(2a) = 4/(2×2) = 1.'
+    solution: 'Axis: x = -b/(2a) = 4/(2*2) = 1.'
   },
   {
     id: 'mat1033-graphing-2-5',

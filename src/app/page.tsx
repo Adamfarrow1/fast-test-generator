@@ -1,16 +1,9 @@
 "use client"
 
 import type React from "react"
-import { mockQuestions} from "@/lib/questions"
-import { pertQuestions } from "@/lib/pert-questions"
+import { allGradeQuestions, pertQuestions, getAvailableDomainsForGrade, getAvailableDomainsForPERT } from "@/lib/allQuestions"
 import { useState, useMemo } from "react"
 import { Calculator, Download, Eye, BookOpen, Users, Target } from "lucide-react"
-
-function getAvailableDomainsForGrade(grade: number): string[] {
-  return [
-    ...new Set(mockQuestions.filter((q) => q.gradeMin <= grade && q.gradeMax >= grade).map((q) => q.domain)),
-  ].sort()
-}
 
 export default function Home() {
   const [loading, setLoading] = useState(false)
@@ -24,7 +17,7 @@ export default function Home() {
   // Calculate available domains whenever grade changes
   const availableDomains = useMemo(() => {
     if (formData.grade === 'PERT') {
-      return [...new Set(pertQuestions.map((q) => q.domain))].sort()
+      return getAvailableDomainsForPERT()
     }
     return getAvailableDomainsForGrade(Number.parseInt(formData.grade))
   }, [formData.grade])
@@ -33,7 +26,7 @@ export default function Home() {
   const handleGradeChange = (newGrade: string) => {
     let newAvailableDomains: string[] = [];
     if (newGrade === 'PERT') {
-      newAvailableDomains = [...new Set(pertQuestions.map((q) => q.domain))];
+      newAvailableDomains = getAvailableDomainsForPERT();
     } else {
       newAvailableDomains = getAvailableDomainsForGrade(Number.parseInt(newGrade));
     }
@@ -114,7 +107,7 @@ export default function Home() {
     ? pertQuestions.filter(
         (q) => formData.domains.length === 0 || formData.domains.includes(q.domain)
       ).length
-    : mockQuestions.filter(
+    : allGradeQuestions.filter(
         (q) =>
           q.gradeMin <= Number.parseInt(formData.grade) &&
           q.gradeMax >= Number.parseInt(formData.grade) &&
