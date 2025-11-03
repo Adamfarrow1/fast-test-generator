@@ -11,7 +11,8 @@ import { FormattedQuestion, MathDomain } from './types';
 export async function generateTestPDF(
   questions: FormattedQuestion[],
   studentName: string,
-  domains: MathDomain[]
+  domains: MathDomain[],
+  challengeQuestions: FormattedQuestion[] = []
 ): Promise<Uint8Array> {
   try {
     if (!questions || questions.length === 0) {
@@ -396,7 +397,174 @@ export async function generateTestPDF(
       }
 
       yOffset -= spacing.betweenQuestions;
-    };
+    }
+
+    // Draw Challenge Section if challenge questions exist
+    if (challengeQuestions.length > 0) {
+      // Add some extra space before challenge section
+      yOffset -= spacing.betweenQuestions;
+
+      // Check if we need a new page for challenge section
+      if (yOffset < margins.bottom + 100) {
+        currentPage = pdfDoc.addPage(pageSize);
+        yOffset = height - margins.top;
+      }
+
+      // Draw challenge section title
+      currentPage.drawText('Challenge Section', {
+        x: margins.left,
+        y: yOffset,
+        size: 18,
+        font: boldFont,
+        color: rgb(0.7, 0.2, 0.2) // Red color to distinguish challenge section
+      });
+      yOffset -= spacing.afterTitle;
+
+      // Draw challenge section subtitle
+      const challengeSubtitle = 'These questions are from the next grade level - try your best!';
+      currentPage.drawText(challengeSubtitle, {
+        x: margins.left,
+        y: yOffset,
+        size: 11,
+        font: font,
+        color: rgb(0.5, 0.5, 0.5)
+      });
+      yOffset -= spacing.afterTitle;
+
+      // Draw challenge questions using the same logic as main questions
+      for (const [index, q] of challengeQuestions.entries()) {
+        // Calculate total space needed for this question
+        const questionWidth = width - margins.left - margins.right - 25;
+        const words = q.questionText.split(' ');
+        const lines = [''];
+        let currentLine = 0;
+
+        words.forEach(word => {
+          const testLine = lines[currentLine] + (lines[currentLine] ? ' ' : '') + word;
+          const testWidth = font.widthOfTextAtSize(testLine, 10.5);
+
+          if (testWidth <= questionWidth) {
+            lines[currentLine] = testLine;
+          } else {
+            currentLine++;
+            lines[currentLine] = word;
+          }
+        });
+
+        // Calculate space needed for all choices
+        let totalChoiceHeight = 0;
+        for (const choice of q.choices) {
+          if (choice.type === 'text') {
+            const choiceWidth = width - margins.left - margins.right - 50;
+            const choiceWords = choice.value.split(' ');
+            const choiceLines = [''];
+            let currentChoiceLine = 0;
+            for (const word of choiceWords) {
+              const testLine = choiceLines[currentChoiceLine] + (choiceLines[currentChoiceLine] ? ' ' : '') + word;
+              const testWidth = font.widthOfTextAtSize(testLine, 10.5);
+              if (testWidth <= choiceWidth) {
+                choiceLines[currentChoiceLine] = testLine;
+              } else {
+                currentChoiceLine++;
+                choiceLines[currentChoiceLine] = word;
+              }
+            }
+            totalChoiceHeight += choiceLines.length * 14 + spacing.betweenChoices;
+          } else if (choice.type === 'image') {
+            totalChoiceHeight += 60 + spacing.betweenChoices;
+          }
+        }
+
+        // Total space needed for this question
+        const questionHeight = lines.length * 14 + spacing.afterQuestion;
+        const totalSpaceNeeded = questionHeight + totalChoiceHeight + spacing.betweenQuestions;
+
+        // Check if we need a new page for the entire question
+        if (yOffset - totalSpaceNeeded < margins.bottom) {
+          currentPage = pdfDoc.addPage(pageSize);
+          yOffset = height - margins.top;
+        }
+
+        // Draw question number (continue numbering from main questions)
+        const challengeQuestionNumber = questions.length + index + 1;
+        currentPage.drawText(`${challengeQuestionNumber}.`, {
+          x: margins.left,
+          y: yOffset,
+          size: 10.5,
+          font: font,
+          color: rgb(0.7, 0.2, 0.2) // Red color for challenge question numbers
+        });
+
+        // Draw question text line by line
+        lines.forEach((line, lineIndex) => {
+          currentPage.drawText(line, {
+            x: margins.left + 25,
+            y: yOffset - (lineIndex * 14),
+            size: 10.5,
+            font: font,
+            color: rgb(0, 0, 0)
+          });
+        });
+
+        yOffset -= (lines.length * 14 + spacing.afterQuestion);
+
+        // Draw choices
+        for (const [choiceIndex, choice] of q.choices.entries()) {
+          // Draw choice letter
+          currentPage.drawText(`${String.fromCharCode(65 + choiceIndex)})`, {
+            x: margins.left + 25,
+            y: yOffset,
+            size: 10.5,
+            font: font
+          });
+
+          if (choice.type === 'image') {
+            const imagePath = path.join(process.cwd(), 'public', path.basename(choice.src));
+            const svgBuffer = await fs.readFile(imagePath);
+            const pngBuffer = await sharp(svgBuffer).png().toBuffer();
+            const pngImage = await pdfDoc.embedPng(pngBuffer);
+            const imgDims = pngImage.scale(0.4);
+            currentPage.drawImage(pngImage, {
+              x: margins.left + 50,
+              y: yOffset - imgDims.height / 2,
+              width: imgDims.width,
+              height: imgDims.height,
+            });
+            yOffset -= (imgDims.height + spacing.betweenChoices);
+          } else if (choice.type === 'text') {
+            const choiceWidth = width - margins.left - margins.right - 50;
+            const choiceWords = choice.value.split(' ');
+            const choiceLines = [''];
+            let currentChoiceLine = 0;
+
+            choiceWords.forEach(word => {
+              const testLine = choiceLines[currentChoiceLine] + (choiceLines[currentChoiceLine] ? ' ' : '') + word;
+              const testWidth = font.widthOfTextAtSize(testLine, 10.5);
+
+              if (testWidth <= choiceWidth) {
+                choiceLines[currentChoiceLine] = testLine;
+              } else {
+                currentChoiceLine++;
+                choiceLines[currentChoiceLine] = word;
+              }
+            });
+
+            choiceLines.forEach((line, lineIndex) => {
+              currentPage.drawText(line, {
+                x: margins.left + 50,
+                y: yOffset - (lineIndex * 14),
+                size: 10.5,
+                font: font,
+                color: rgb(0, 0, 0)
+              });
+            });
+            yOffset -= (choiceLines.length * 14 + spacing.betweenChoices);
+          }
+        }
+
+        yOffset -= spacing.betweenQuestions;
+      }
+    }
 
     // Create answer key
     currentPage = pdfDoc.addPage(pageSize);
@@ -411,7 +579,7 @@ export async function generateTestPDF(
     });
     yOffset -= spacing.afterTitle;
 
-    // Draw answers
+    // Draw answers for main questions
     questions.forEach((q, index) => {
       if (yOffset < margins.bottom + 50) {
         currentPage = pdfDoc.addPage(pageSize);
@@ -465,6 +633,84 @@ export async function generateTestPDF(
 
       yOffset -= (answerLines.length * 20 + spacing.afterQuestion);
     });
+
+    // Draw answers for challenge questions if they exist
+    if (challengeQuestions.length > 0) {
+      // Add space before challenge answers
+      yOffset -= spacing.betweenQuestions;
+
+      // Check if we need a new page
+      if (yOffset < margins.bottom + 100) {
+        currentPage = pdfDoc.addPage(pageSize);
+        yOffset = height - margins.top;
+      }
+
+      // Draw challenge answers title
+      currentPage.drawText('Challenge Section Answers', {
+        x: margins.left,
+        y: yOffset,
+        size: 16,
+        font: boldFont,
+        color: rgb(0.7, 0.2, 0.2)
+      });
+      yOffset -= spacing.afterTitle;
+
+      challengeQuestions.forEach((q, index) => {
+        if (yOffset < margins.bottom + 50) {
+          currentPage = pdfDoc.addPage(pageSize);
+          yOffset = height - margins.top;
+        }
+
+        // Draw answer number (continue from main questions)
+        const challengeQuestionNumber = questions.length + index + 1;
+        currentPage.drawText(`${challengeQuestionNumber}.`, {
+          x: margins.left,
+          y: yOffset,
+          size: 12,
+          font: font,
+          color: rgb(0.7, 0.2, 0.2)
+        });
+
+        // Draw answer and solution
+        const answerText = `${q.correctAnswer}${q.solution ? ' - ' + q.solution : ''}`;
+        const answerWidth = width - margins.left - margins.right - 25;
+        const answerWords = answerText.split(' ');
+        const answerLines = [''];
+        let currentAnswerLine = 0;
+
+        answerWords.forEach(word => {
+          const testLine = answerLines[currentAnswerLine] + (answerLines[currentAnswerLine] ? ' ' : '') + word;
+          const testWidth = font.widthOfTextAtSize(testLine, 12);
+
+          if (testWidth <= answerWidth) {
+            answerLines[currentAnswerLine] = testLine;
+          } else {
+            currentAnswerLine++;
+            answerLines[currentAnswerLine] = word;
+          }
+        });
+
+        // Draw answer text line by line without formatting
+        answerLines.forEach((line, lineIndex) => {
+          // Check if we need a new page
+          if (yOffset - (lineIndex * 20) < margins.bottom + 50) {
+            currentPage = pdfDoc.addPage(pageSize);
+            yOffset = height - margins.top;
+          }
+
+          // Use the line exactly as is without any formatting
+          currentPage.drawText(line, {
+            x: margins.left + 25,
+            y: yOffset - (lineIndex * 20),
+            size: 12,
+            color: rgb(0, 0, 0),
+            font: font
+          });
+        });
+
+        yOffset -= (answerLines.length * 20 + spacing.afterQuestion);
+      });
+    }
 
     return await pdfDoc.save();
   } catch (error: unknown) {

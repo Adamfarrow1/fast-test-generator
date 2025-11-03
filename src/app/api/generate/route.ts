@@ -1,7 +1,94 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { allGradeQuestions, pertQuestions } from '@/lib/allQuestions';
 import { generateTestPDF } from '@/lib/pdf-generator';
-import { MathDomain, QuestionChoice, FormattedQuestion } from '@/lib/types';
+import { MathDomain, QuestionChoice, FormattedQuestion, Question } from '@/lib/types';
+
+// Helper function to randomly sample from an array
+function sample<T>(arr: T[], n: number): T[] {
+  const copy = arr.slice();
+  const out: T[] = [];
+  while (out.length < n && copy.length) {
+    const i = Math.floor(Math.random() * copy.length);
+    out.push(copy.splice(i, 1)[0]);
+  }
+  return out;
+}
+
+// Helper function to select questions with optional challenge section
+function selectQuestionsWithChallenge(
+  allQuestions: Question[],
+  targetGrade: number,
+  numQuestions: number,
+  domains: string[],
+  isPert: boolean = false,
+  challengeRate: number = 0.2 // 20% challenge questions by default
+): { mainQuestions: Question[], challengeQuestions: Question[] } {
+  // Filter by domains
+  const domainFiltered = allQuestions.filter(q => domains.includes(q.domain));
+
+  if (isPert) {
+    // For PERT, no challenge questions - just regular selection
+    const effectiveGrade = targetGrade ?? 10;
+    const eligibleQuestions = domainFiltered.filter(q => 
+      q.gradeMin <= effectiveGrade && q.gradeMax >= effectiveGrade
+    );
+    return {
+      mainQuestions: sample(eligibleQuestions, Math.min(numQuestions, eligibleQuestions.length)),
+      challengeQuestions: []
+    };
+  }
+
+  // For FAST tests, add challenge questions from grade above
+  const gradePool = domainFiltered.filter(q => 
+    q.gradeMin <= targetGrade && q.gradeMax >= targetGrade
+  );
+
+  const challengeGrade = targetGrade + 1;
+  
+  // First try to get difficulty 2 questions from the upper grade
+  let challengePool = domainFiltered.filter(q => 
+    q.gradeMin <= challengeGrade && q.gradeMax >= challengeGrade && 
+    // Ensure challenge questions are not already in the main grade pool
+    !(q.gradeMin <= targetGrade && q.gradeMax >= targetGrade) &&
+    // Filter for difficulty level 2
+    q.difficulty === 3
+  );
+
+  // Calculate how many challenge questions we want
+  const desiredChallengeQuestions = Math.min(
+    Math.floor(numQuestions * challengeRate),
+    Math.floor(numQuestions / 4) // Cap at 25% of total questions
+  );
+
+  // If not enough difficulty 2 questions, fall back to any difficulty from upper grade
+  if (challengePool.length < desiredChallengeQuestions) {
+    challengePool = domainFiltered.filter(q => 
+      q.gradeMin <= challengeGrade && q.gradeMax >= challengeGrade && 
+      // Ensure challenge questions are not already in the main grade pool
+      !(q.gradeMin <= targetGrade && q.gradeMax >= targetGrade)
+    );
+  }
+
+  const numChallengeQuestions = Math.min(desiredChallengeQuestions, challengePool.length);
+  const numMainQuestions = numQuestions - numChallengeQuestions;
+
+  // Select questions
+  const selectedMainQuestions = sample(gradePool, Math.min(numMainQuestions, gradePool.length));
+  const selectedChallengeQuestions = sample(challengePool, numChallengeQuestions);
+
+  // If we don't have enough main questions, fill from broader pool
+  if (selectedMainQuestions.length < numMainQuestions) {
+    const usedIds = new Set([...selectedMainQuestions, ...selectedChallengeQuestions].map(q => q.id));
+    const fallbackCandidates = domainFiltered.filter(q => !usedIds.has(q.id));
+    const additionalMain = sample(fallbackCandidates, numMainQuestions - selectedMainQuestions.length);
+    selectedMainQuestions.push(...additionalMain);
+  }
+
+  return {
+    mainQuestions: selectedMainQuestions,
+    challengeQuestions: selectedChallengeQuestions
+  };
+}
 
 export async function POST(req: NextRequest) {
     try {
@@ -30,63 +117,62 @@ export async function POST(req: NextRequest) {
     const isPert = !!pert;
     const source = isPert ? pertQuestions : allGradeQuestions;
 
-    // Filter questions based on grade level and domains
-    console.log('API route: Filtering questions...');
-    console.log('Question source:', isPert ? 'PERT' : 'General', 'Total:', source.length);
-    
-    const effectiveGrade = isPert ? (grade ?? 10) : grade;
-    const eligibleQuestions = source.filter(q => {
-      const gradeMatch = q.gradeMin <= effectiveGrade && q.gradeMax >= effectiveGrade;
-      const domainMatch = (domains as string[]).includes(q.domain);
-      
-      if (gradeMatch && !domainMatch) {
-        console.log(`Question ${q.id} matches grade but not domain. Domain: ${q.domain}`);
-      }
-      
-      return gradeMatch && domainMatch;
-    });
+    console.log('API route: Selecting questions...');
+    console.log('Question source:', isPert ? 'PERT' : 'FAST', 'Total available:', source.length);
+    console.log('Target grade:', grade, 'Domains:', domains);
 
-    console.log('Eligible questions found:', eligibleQuestions.length);
-    console.log('Questions by domain:', 
-      eligibleQuestions.reduce((acc, q) => {
-        acc[q.domain] = (acc[q.domain] || 0) + 1;
-        return acc;
-      }, {} as Record<string, number>)
+    // Use the new helper function to select questions with optional challenge section
+    const { mainQuestions, challengeQuestions } = selectQuestionsWithChallenge(
+      source,
+      grade,
+      numQuestions,
+      domains as string[],
+      isPert
     );
 
-    if (eligibleQuestions.length === 0) {
+    const totalSelected = mainQuestions.length + challengeQuestions.length;
+    console.log(`Selected ${mainQuestions.length} main questions and ${challengeQuestions.length} challenge questions (total: ${totalSelected})`);
+
+    if (totalSelected === 0) {
       return NextResponse.json(
         { error: 'No questions available for the selected grade and domains' },
         { status: 400 }
       );
     }
 
-    if (eligibleQuestions.length < numQuestions) {
+    if (totalSelected < numQuestions) {
       return NextResponse.json(
         { 
-          error: `Only ${eligibleQuestions.length} questions available for the selected grade and domains. Please select fewer questions or more domains.` 
+          error: `Only ${totalSelected} questions available for the selected grade and domains. Please select fewer questions or more domains.` 
         },
         { status: 400 }
       );
     }
 
-    // Randomly select the exact requested number of questions
-    const selectedQuestions = [...eligibleQuestions]
-      .sort(() => Math.random() - 0.5)
-      .slice(0, numQuestions);
+    // Combine main and challenge questions for PDF generation
+    const selectedQuestions = [...mainQuestions, ...challengeQuestions];
 
     console.log('API route: Generating PDF with questions:', selectedQuestions.length);
 
     // Convert string choices to proper QuestionChoice format
-    const formattedQuestions: FormattedQuestion[] = selectedQuestions.map(q => ({
-      ...q,
-      choices: Array.isArray(q.choices) && typeof q.choices[0] === 'string' 
-        ? (q.choices as string[]).map(choice => ({ type: 'text' as const, value: choice }))
-        : q.choices as QuestionChoice[]
-    }));
+    const formatQuestions = (questions: Question[]): FormattedQuestion[] => 
+      questions.map(q => ({
+        ...q,
+        choices: Array.isArray(q.choices) && typeof q.choices[0] === 'string' 
+          ? (q.choices as string[]).map(choice => ({ type: 'text' as const, value: choice }))
+          : q.choices as QuestionChoice[]
+      }));
+
+    const formattedMainQuestions = formatQuestions(mainQuestions);
+    const formattedChallengeQuestions = formatQuestions(challengeQuestions);
 
     // Generate PDF
-  const pdfBytes = await generateTestPDF(formattedQuestions, studentName, domains as MathDomain[]);
+    const pdfBytes = await generateTestPDF(
+      formattedMainQuestions, 
+      studentName, 
+      domains as MathDomain[], 
+      formattedChallengeQuestions
+    );
     console.log('API route: PDF generated successfully');
 
     // Return the PDF as a downloadable file

@@ -513,7 +513,7 @@ export const pertQuestions: Question[] = [
     questionText: 'For the quadratic function f(x) = x² - 6x + 8, find the vertex, axis of symmetry, and determine whether it opens up or down.',
     choices: ['Vertex (3, -1), axis x = 3, opens up', 'Vertex (3, -1), axis x = 3, opens down', 'Vertex (3, 1), axis x = 3, opens up', 'Vertex (-3, 1), axis x = -3, opens up'],
     correctAnswer: 'Vertex (3, -1), axis x = 3, opens up',
-    solution: 'For f(x) = ax² + bx + c, x-coordinate of vertex = -b/(2a) = -(-6)/(2x1) = 3. Vertex y-value = f(3) = 9 - 18 + 8 = -1. Axis of symmetry is x = 3. Since a > 0, the parabola opens up.'
+    solution: 'For f(x) = ax² + bx + c, x-coordinate of vertex = -b/(2a) = -(-6)/(2a) = 3. Vertex y-value = f(3) = 9 - 18 + 8 = -1. Axis of symmetry is x = 3. Since a > 0, the parabola opens up.'
   },
   {
     id: 'mat1033-graphing-2-2',
@@ -610,9 +610,9 @@ export const pertQuestions: Question[] = [
     domain: 'Intermediate Algebra (MAT1033): Solving Equations Lvl. 3 (linear systems: graphing, substitution, elimination)',
     difficulty: 3,
     questionText: 'Solve the system of equations using elimination: 2x + 3y = 8 and 4x - 5y = 7',
-    choices: ['x = 2, y = 4/3', 'x = 29/22, y = 6/11', 'x = 2, y = 2/3', 'x = 4, y = 0'],
-    correctAnswer: 'x = 29/22, y = 6/11',
-    solution: 'Multiply first equation by 2: 4x + 6y = 16. Subtract second equation: 11y = 9 -> y = 6/11. Substitute back to find x = 29/22.'
+    choices: ['x = 2, y = 4/3', 'x = 61/22, y = 9/11', 'x = 2, y = 2/3', 'x = 4, y = 0'],
+    correctAnswer: 'x = 61/22, y = 9/11',
+    solution: 'Multiply first equation by 2: 4x + 6y = 16. Subtract second equation: (4x + 6y) - (4x - 5y) = 16 - 7 ⇒ 11y = 9 ⇒ y = 9/11. Substitute y into 2x + 3y = 8: 2x + 27/11 = 8 ⇒ 2x = 61/11 ⇒ x = 61/22.'
   },
   {
     id: 'mat1033-eq-3-2',
@@ -1042,7 +1042,7 @@ export const pertQuestions: Question[] = [
     gradeMin: 9,
     gradeMax: 12,
     domain: 'Developmental Math II (MAT0028): Graphing Lvl. 1 (quadrants, ordered pairs, slope, intercepts)',
-    difficulty: 3,
+    difficulty:  3,
     questionText: 'Which quadrant is the point (5, -2) in?',
     choices: ['I', 'II', 'III', 'IV'],
     correctAnswer: 'IV',

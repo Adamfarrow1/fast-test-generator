@@ -398,7 +398,7 @@ export const grade4Questions: Question[] = [
 {
     id: '4th-5', gradeMin: 4, gradeMax: 4, domain: 'Number Sense', difficulty: 2,
     questionText: 'A store sold 1,234 pencils in January and 2,345 pencils in February. How many pencils did they sell in total?',
-    choices: ['3,579', '3,589', '3,579', '3,579'], correctAnswer: '3,579',
+    choices: ['3,579', '3,589', '3,569', '3,599'], correctAnswer: '3,579',
     solution: '1,234 + 2,345 = 3,579'
   },
 

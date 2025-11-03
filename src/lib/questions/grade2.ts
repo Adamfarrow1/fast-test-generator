@@ -755,7 +755,7 @@ export const grade2Questions: Question[] = [
 {
     id: '2nd-110', gradeMin: 2, gradeMax: 2, domain: 'Place Value', difficulty: 2,
     questionText: 'What number is 100 more than 258?',
-    choices: ['358', '359', '368', '368'], correctAnswer: '358',
+    choices: ['358', '359', '367', '370'], correctAnswer: '358',
     solution: 'Adding 100 to 258: 258 + 100 = 358.'
   },
 

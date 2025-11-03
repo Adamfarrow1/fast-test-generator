@@ -262,7 +262,7 @@ export const grade8Questions: Question[] = [
 {
     id: '8th-27', gradeMin: 8, gradeMax: 8, domain: 'Place Value', difficulty: 1,
     questionText: 'What is 7,210 written in expanded form?',
-    choices: ['7,000+200+10', '7,000+200+10+0', '7,000+100+10', '7,000+100+20'], correctAnswer: '7,000+200+10',
+    choices: ['7,000+200+10', '7,000+200', '7,000+100+10', '7,000+100+20'], correctAnswer: '7,000+200+10',
     solution: '7,210 = 7,000 + 200 + 10'
   },
 
@@ -290,8 +290,8 @@ export const grade8Questions: Question[] = [
 {
     id: '8th-31', gradeMin: 8, gradeMax: 8, domain: 'Fractions', difficulty: 1,
     questionText: 'What is 4/9 + 2/9?',
-    choices: ['4/9', '5/9', '6/9', '1'], correctAnswer: '6/9',
-    solution: '4/9 + 2/9 = 6/9'
+    choices: ['4/9', '5/9', '2/3', '1'], correctAnswer: '2/3',
+    solution: '4/9 + 2/9 = 6/9 = 2/3'
   },
 
 {
@@ -498,8 +498,8 @@ export const grade8Questions: Question[] = [
 {
     id: '8th-60', gradeMin: 8, gradeMax: 8, domain: 'Fractions', difficulty: 2,
     questionText: 'What is 7/10 + 1/10?',
-    choices: ['7/10', '8/10', '9/10', '1'], correctAnswer: '8/10',
-    solution: '7/10 + 1/10 = 8/10'
+    choices: ['7/10', '4/5', '9/10', '1'], correctAnswer: '4/5',
+    solution: '7/10 + 1/10 = 8/10 = 4/5'
   },
 
 { id: '8th-61', gradeMin: 8, gradeMax: 8, domain: 'Number Sense', difficulty: 2, questionText: 'What is the value of 5,000 - 2,345?', choices: ['2,655', '2,665', '2,675', '2,685'], correctAnswer: '2,655', solution: '5,000 - 2,345 = 2,655' },
@@ -522,7 +522,7 @@ export const grade8Questions: Question[] = [
 
 { id: '8th-70', gradeMin: 8, gradeMax: 8, domain: 'Number Sense', difficulty: 3, questionText: 'A bus travels 2,400 miles in 8 days. How many miles does it travel per day?', choices: ['200', '250', '300', '350'], correctAnswer: '300', solution: '2,400 ÷ 8 = 300' },
 
-{ id: '8th-100', gradeMin: 8, gradeMax: 8, domain: 'Fractions', difficulty: 2, questionText: 'What is 3/7 + 4/7?', choices: ['6/7', '7/7', '1', '2'], correctAnswer: '1', solution: '3/7 + 4/7 = 7/7 = 1' },
+{ id: '8th-100', gradeMin: 8, gradeMax: 8, domain: 'Fractions', difficulty: 2, questionText: 'What is 3/7 + 4/7?', choices: ['6/7', '5/7', '1', '2'], correctAnswer: '1', solution: '3/7 + 4/7 = 7/7 = 1' },
 
 { id: '8th-101', gradeMin: 8, gradeMax: 8, domain: 'Number Sense', difficulty: 2, questionText: 'What is the value of 6,000 - 3,245?', choices: ['2,755', '2,765', '2,775', '2,785'], correctAnswer: '2,755', solution: '6,000 - 3,245 = 2,755' },
 
