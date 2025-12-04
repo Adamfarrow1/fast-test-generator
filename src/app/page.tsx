@@ -161,296 +161,359 @@ export default function Home() {
       ).length
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-background via-card to-background">
-      {/* No PERT toggle needed; handled by grade dropdown */}
-      <div className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-primary/5 to-secondary/5" />
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-          <div className="text-center mb-12">
-            <div className="flex justify-center mb-6">
-              <div className="p-4 bg-primary/10 rounded-2xl">
-                <Calculator className="h-12 w-12 text-primary" />
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950">
+      {/* Hero Section */}
+      <div className="relative overflow-hidden bg-gradient-to-b from-blue-600 to-indigo-700 dark:from-blue-900 dark:to-indigo-950">
+        <div className="absolute inset-0 bg-grid-white/[0.05] bg-[size:20px_20px]" />
+        <div className="absolute inset-0 bg-gradient-to-t from-blue-600/50 to-transparent" />
+        
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
+          <div className="text-center">
+            <div className="flex justify-center mb-8">
+              <div className="relative">
+                <div className="absolute inset-0 bg-white/20 blur-2xl rounded-full" />
+                <div className="relative p-5 bg-white/10 backdrop-blur-sm border border-white/20 rounded-3xl shadow-2xl">
+                  <Calculator className="h-14 w-14 text-white" />
+                </div>
               </div>
             </div>
-            <h1 className="text-5xl font-black text-foreground mb-4 text-balance">Math Test Generator</h1>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto text-pretty">
-              Create personalized math assessments in seconds. Choose grade level, topics, and question count to
-              generate professional PDF tests.
+            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-extrabold text-white mb-6 tracking-tight">
+              Math Test Generator
+            </h1>
+            <p className="text-xl sm:text-2xl text-blue-100 max-w-3xl mx-auto mb-8 leading-relaxed">
+              Create personalized math assessments in seconds with our professional-grade test generator
+            </p>
+            <div className="flex flex-wrap justify-center gap-4 text-sm text-blue-100">
+              <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full border border-white/20">
+                <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
+                <span>1000+ Questions Available</span>
+              </div>
+              <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full border border-white/20">
+                <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
+                <span>Instant PDF Generation</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Wave separator */}
+        <div className="absolute bottom-0 left-0 right-0">
+          <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full">
+            <path d="M0,64L80,69.3C160,75,320,85,480,80C640,75,800,53,960,48C1120,43,1280,53,1360,58.7L1440,64L1440,120L1360,120C1280,120,1120,120,960,120C800,120,640,120,480,120C320,120,160,120,80,120L0,120Z" fill="currentColor" className="text-slate-50 dark:text-slate-950"/>
+          </svg>
+        </div>
+      </div>
+
+      {/* Features Section */}
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-8 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="group bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1">
+            <div className="flex justify-center mb-6">
+              <div className="p-4 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-2xl shadow-lg group-hover:scale-110 transition-transform duration-300">
+                <BookOpen className="h-10 w-10 text-white" />
+              </div>
+            </div>
+            <h3 className="font-bold text-xl text-slate-900 dark:text-white mb-3 text-center">Comprehensive Coverage</h3>
+            <p className="text-slate-600 dark:text-slate-400 text-center leading-relaxed">
+              Complete question banks for grades 1-8, plus PERT, Geometry, and Algebra 1 review materials
             </p>
           </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
-            <div className="bg-card/50 backdrop-blur-sm border border-border rounded-xl p-6 text-center">
-              <div className="flex justify-center mb-3">
-                <BookOpen className="h-8 w-8 text-primary" />
+          
+          <div className="group bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1">
+            <div className="flex justify-center mb-6">
+              <div className="p-4 bg-gradient-to-br from-purple-500 to-pink-600 rounded-2xl shadow-lg group-hover:scale-110 transition-transform duration-300">
+                <Target className="h-10 w-10 text-white" />
               </div>
-              <h3 className="font-bold text-lg text-card-foreground mb-2">Grade 1-8</h3>
-              <p className="text-muted-foreground text-sm">
-                Comprehensive coverage across all elementary and middle school levels
-              </p>
             </div>
-            <div className="bg-card/50 backdrop-blur-sm border border-border rounded-xl p-6 text-center">
-              <div className="flex justify-center mb-3">
-                <Target className="h-8 w-8 text-secondary" />
+            <h3 className="font-bold text-xl text-slate-900 dark:text-white mb-3 text-center">Targeted Practice</h3>
+            <p className="text-slate-600 dark:text-slate-400 text-center leading-relaxed">
+              Select specific math domains and difficulty levels to focus on areas that need the most attention
+            </p>
+          </div>
+          
+          <div className="group bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1">
+            <div className="flex justify-center mb-6">
+              <div className="p-4 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-2xl shadow-lg group-hover:scale-110 transition-transform duration-300">
+                <Download className="h-10 w-10 text-white" />
               </div>
-              <h3 className="font-bold text-lg text-card-foreground mb-2">Custom Topics</h3>
-              <p className="text-muted-foreground text-sm">
-                Select specific math domains to focus on areas that need practice
-              </p>
             </div>
-            <div className="bg-card/50 backdrop-blur-sm border border-border rounded-xl p-6 text-center">
-              <div className="flex justify-center mb-3">
-                <Users className="h-8 w-8 text-accent" />
-              </div>
-              <h3 className="font-bold text-lg text-card-foreground mb-2">Instant PDF</h3>
-              <p className="text-muted-foreground text-sm">
-                Generate and download professional test sheets ready for classroom use
-              </p>
-            </div>
+            <h3 className="font-bold text-xl text-slate-900 dark:text-white mb-3 text-center">Professional Output</h3>
+            <p className="text-slate-600 dark:text-slate-400 text-center leading-relaxed">
+              Generate print-ready PDF tests with answer keys, formatted for immediate classroom use
+            </p>
           </div>
         </div>
       </div>
 
-      <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
-        <div className="bg-card border border-border rounded-2xl shadow-lg p-8">
-          <form onSubmit={handleSubmit} className="space-y-8">
-            {!isStaticPDF(formData.grade) && (
-              <div className="space-y-3">
-                <label htmlFor="studentName" className="block text-sm font-semibold text-foreground">
-                  Student Name
-                </label>
-                <input
-                  type="text"
-                  id="studentName"
-                  value={formData.studentName}
-                  onChange={(e) => setFormData((prev) => ({ ...prev, studentName: e.target.value }))}
-                  placeholder="Enter student's name"
-                  className="block w-full rounded-lg border-border bg-input shadow-sm transition-all duration-200
-                    focus:border-primary focus:ring-2 focus:ring-primary/20 hover:border-primary/50
-                    text-foreground px-4 py-3"
-                  required
-                />
+      {/* Form Section */}
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
+        <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl shadow-2xl overflow-hidden">
+          {/* Form Header */}
+          <div className="bg-gradient-to-r from-blue-600 to-indigo-600 dark:from-blue-900 dark:to-indigo-900 px-8 py-6 border-b border-blue-500/20">
+            <h2 className="text-2xl font-bold text-white flex items-center gap-3">
+              <div className="p-2 bg-white/10 rounded-lg">
+                <Calculator className="h-6 w-6" />
               </div>
-            )}
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div className="space-y-3">
-                <label htmlFor="grade" className="block text-sm font-semibold text-foreground">
-                  Grade Level
-                </label>
-                <select
-                  id="grade"
-                  value={formData.grade}
-                  onChange={(e) => handleGradeChange(e.target.value)}
-                  className="block w-full rounded-lg border-border bg-input shadow-sm transition-all duration-200
-                    focus:border-primary focus:ring-2 focus:ring-primary/20 hover:border-primary/50
-                    text-foreground px-4 py-3"
-                  required
-                >
-                  {[1, 2, 3, 4, 5, 6, 7, 8].map((grade) => (
-                    <option key={grade} value={grade}>
-                      Grade {grade}
-                    </option>
-                  ))}
-                  <option value="PERT">PERT Practice Test</option>
-                  <option value="GEOMETRY">Geometry Review Packet</option>
-                  <option value="ALGEBRA1">Algebra 1 Review Packet</option>
-                </select>
-              </div>
+              Configure Your Test
+            </h2>
+            <p className="text-blue-100 mt-2">Fill in the details below to generate your customized assessment</p>
+          </div>
 
+          <div className="p-8">
+            <form onSubmit={handleSubmit} className="space-y-8">
               {!isStaticPDF(formData.grade) && (
                 <div className="space-y-3">
-                  <label htmlFor="numQuestions" className="block text-sm font-semibold text-foreground">
-                    Number of Questions
+                  <label htmlFor="studentName" className="block text-sm font-semibold text-slate-900 dark:text-white">
+                    Student Name <span className="text-red-500">*</span>
                   </label>
                   <input
-                    type="number"
-                    id="numQuestions"
-                    min="1"
-                    max="200"
-                    value={formData.numQuestions}
-                    onChange={(e) => setFormData((prev) => ({ ...prev, numQuestions: e.target.value }))}
-                    className="block w-full rounded-lg border-border bg-input shadow-sm transition-all duration-200
-                      focus:border-primary focus:ring-2 focus:ring-primary/20 hover:border-primary/50
-                      text-foreground px-4 py-3"
+                    type="text"
+                    id="studentName"
+                    value={formData.studentName}
+                    onChange={(e) => setFormData((prev) => ({ ...prev, studentName: e.target.value }))}
+                    placeholder="Enter student's full name"
+                    className="block w-full rounded-xl border-2 border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 shadow-sm transition-all duration-200
+                      focus:border-blue-500 focus:ring-4 focus:ring-blue-500/20 hover:border-slate-300 dark:hover:border-slate-600
+                      text-slate-900 dark:text-white placeholder:text-slate-400 px-4 py-3.5 text-base"
                     required
                   />
-                  <p className="text-sm text-muted-foreground flex items-center gap-2">
-                    <span className="inline-flex items-center justify-center w-5 h-5 bg-primary/10 text-primary rounded-full text-xs font-medium">
-                      {availableQuestions}
-                    </span>
-                    questions available for selection
-                  </p>
                 </div>
               )}
-            </div>
-
-            {isStaticPDF(formData.grade) ? (
-              <div className="p-6 bg-primary/5 rounded-xl border border-primary/30">
-                <div className="flex items-start gap-3">
-                  <BookOpen className="h-5 w-5 text-primary mt-0.5" />
-                  <div>
-                    <h3 className="font-semibold text-foreground mb-2">
-                      {formData.grade === 'GEOMETRY' ? 'Geometry Review Packet' : 'Algebra 1 Review Packet'}
-                    </h3>
-                    <p className="text-sm text-muted-foreground">
-                      This is a comprehensive review packet. Click the buttons below to preview or download the PDF.
-                    </p>
-                  </div>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="space-y-3">
+                  <label htmlFor="grade" className="block text-sm font-semibold text-slate-900 dark:text-white">
+                    Grade Level / Test Type <span className="text-red-500">*</span>
+                  </label>
+                  <select
+                    id="grade"
+                    value={formData.grade}
+                    onChange={(e) => handleGradeChange(e.target.value)}
+                    className="block w-full rounded-xl border-2 border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 shadow-sm transition-all duration-200
+                      focus:border-blue-500 focus:ring-4 focus:ring-blue-500/20 hover:border-slate-300 dark:hover:border-slate-600
+                      text-slate-900 dark:text-white px-4 py-3.5 text-base cursor-pointer"
+                    required
+                  >
+                    <optgroup label="Elementary & Middle School">
+                      {[1, 2, 3, 4, 5, 6, 7, 8].map((grade) => (
+                        <option key={grade} value={grade}>
+                          Grade {grade}
+                        </option>
+                      ))}
+                    </optgroup>
+                    <optgroup label="Practice Tests & Review Packets">
+                      <option value="PERT">PERT Practice Test</option>
+                      <option value="GEOMETRY">Geometry Review Packet</option>
+                      <option value="ALGEBRA1">Algebra 1 Review Packet</option>
+                    </optgroup>
+                  </select>
                 </div>
+
+                {!isStaticPDF(formData.grade) && (
+                  <div className="space-y-3">
+                    <label htmlFor="numQuestions" className="block text-sm font-semibold text-slate-900 dark:text-white">
+                      Number of Questions <span className="text-red-500">*</span>
+                    </label>
+                    <input
+                      type="number"
+                      id="numQuestions"
+                      min="1"
+                      max="200"
+                      value={formData.numQuestions}
+                      onChange={(e) => setFormData((prev) => ({ ...prev, numQuestions: e.target.value }))}
+                      className="block w-full rounded-xl border-2 border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 shadow-sm transition-all duration-200
+                        focus:border-blue-500 focus:ring-4 focus:ring-blue-500/20 hover:border-slate-300 dark:hover:border-slate-600
+                        text-slate-900 dark:text-white px-4 py-3.5 text-base"
+                      required
+                    />
+                    <div className="flex items-center gap-2 mt-2 p-3 bg-blue-50 dark:bg-blue-950/30 rounded-lg border border-blue-200 dark:border-blue-900">
+                      <div className="flex-shrink-0">
+                        <div className="flex items-center justify-center w-6 h-6 bg-blue-500 text-white rounded-full text-xs font-bold">
+                          {availableQuestions}
+                        </div>
+                      </div>
+                      <p className="text-sm text-blue-900 dark:text-blue-100 font-medium">
+                        questions available for your selection
+                      </p>
+                    </div>
+                  </div>
+                )}
               </div>
-            ) : (
-              <div className="space-y-4">
-                <div className="flex items-center justify-between">
-                  <label className="text-sm font-semibold text-foreground">Math Topics</label>
-                  <div className="flex items-center gap-3">
-                    <button
-                      type="button"
-                      onClick={() => {
-                        if (formData.domains.length === availableDomains.length) {
-                          setFormData((prev) => ({ ...prev, domains: [] }))
-                        } else {
-                          setFormData((prev) => ({ ...prev, domains: [...availableDomains] }))
-                        }
-                      }}
-                      className="text-sm text-primary hover:text-primary/80 font-medium underline transition-colors"
-                    >
-                      {formData.domains.length === availableDomains.length ? 'Deselect All' : 'Select All'}
-                    </button>
-                    <div className="flex items-center gap-2">
-                      <span className="text-sm text-muted-foreground">Selected:</span>
-                      <span className="inline-flex items-center justify-center min-w-6 h-6 bg-secondary/10 text-secondary rounded-full text-xs font-bold px-2">
-                        {formData.domains.length}
-                      </span>
+
+              {isStaticPDF(formData.grade) ? (
+                <div className="p-6 bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-blue-950/30 dark:to-indigo-950/30 rounded-2xl border-2 border-blue-200 dark:border-blue-900">
+                  <div className="flex items-start gap-4">
+                    <div className="flex-shrink-0 p-3 bg-blue-500 rounded-xl">
+                      <BookOpen className="h-6 w-6 text-white" />
+                    </div>
+                    <div>
+                      <h3 className="font-bold text-lg text-slate-900 dark:text-white mb-2">
+                        {formData.grade === 'GEOMETRY' ? 'Geometry Review Packet' : 'Algebra 1 Review Packet'}
+                      </h3>
+                      <p className="text-sm text-slate-700 dark:text-slate-300 leading-relaxed">
+                        This is a comprehensive review packet with detailed practice problems and solutions. 
+                        Click the buttons below to preview in your browser or download the PDF directly to your device.
+                      </p>
                     </div>
                   </div>
                 </div>
-
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 p-6 bg-muted/30 rounded-xl border border-border">
-                {availableDomains.map((domain) => (
-                  <div
-                    key={domain}
-                    className={`
-                      group flex items-center p-4 rounded-lg transition-all duration-200 cursor-pointer
-                      border-2 hover:shadow-sm
-                      ${
-                        formData.domains.includes(domain)
-                          ? "bg-primary/5 border-primary/30 shadow-sm"
-                          : "bg-input border-border hover:border-primary/30 hover:bg-primary/5"
-                      }
-                    `}
-                    onClick={() => handleDomainChange(domain)}
-                  >
-                    <input
-                      type="checkbox"
-                      id={domain}
-                      checked={formData.domains.includes(domain)}
-                      onClick={(e) => e.stopPropagation()}
-                      onChange={(e) => {
-                        // Prevent parent div onClick from double-handling the toggle
-                        e.stopPropagation()
-                        handleDomainChange(domain)
-                      }}
-                      className="h-4 w-4 rounded border-border text-primary focus:ring-primary/20 focus:ring-2"
-                    />
-                    <label
-                      htmlFor={domain}
-                      className="ml-3 block text-sm font-medium text-foreground cursor-pointer select-none group-hover:text-primary transition-colors"
-                      onClick={(e) => e.stopPropagation()}
-                    >
-                      {domain}
+              ) : (
+                <div className="space-y-4">
+                  <div className="flex items-center justify-between pb-3 border-b-2 border-slate-200 dark:border-slate-800">
+                    <label className="text-base font-bold text-slate-900 dark:text-white flex items-center gap-2">
+                      <Target className="h-5 w-5 text-blue-600" />
+                      Math Topics
                     </label>
+                    <div className="flex items-center gap-3">
+                      <button
+                        type="button"
+                        onClick={() => {
+                          if (formData.domains.length === availableDomains.length) {
+                            setFormData((prev) => ({ ...prev, domains: [] }))
+                          } else {
+                            setFormData((prev) => ({ ...prev, domains: [...availableDomains] }))
+                          }
+                        }}
+                        className="text-sm text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 font-semibold underline decoration-2 underline-offset-4 transition-colors"
+                      >
+                        {formData.domains.length === availableDomains.length ? 'Deselect All' : 'Select All'}
+                      </button>
+                      <div className="flex items-center gap-2 bg-slate-100 dark:bg-slate-800 px-3 py-1.5 rounded-full">
+                        <span className="text-sm text-slate-600 dark:text-slate-400 font-medium">Selected:</span>
+                        <span className="flex items-center justify-center min-w-6 h-6 bg-blue-500 text-white rounded-full text-xs font-bold px-2">
+                          {formData.domains.length}
+                        </span>
+                      </div>
+                    </div>
                   </div>
-                ))}  
+
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 p-6 bg-slate-50 dark:bg-slate-800/50 rounded-2xl border-2 border-slate-200 dark:border-slate-700">
+                    {availableDomains.map((domain) => (
+                      <div
+                        key={domain}
+                        className={`
+                          group flex items-center p-4 rounded-xl transition-all duration-200 cursor-pointer
+                          border-2 hover:shadow-md
+                          ${
+                            formData.domains.includes(domain)
+                              ? "bg-blue-50 dark:bg-blue-950/30 border-blue-500 shadow-sm"
+                              : "bg-white dark:bg-slate-900 border-slate-200 dark:border-slate-700 hover:border-blue-300 dark:hover:border-blue-700"
+                          }
+                        `}
+                        onClick={() => handleDomainChange(domain)}
+                      >
+                        <input
+                          type="checkbox"
+                          id={domain}
+                          checked={formData.domains.includes(domain)}
+                          onClick={(e) => e.stopPropagation()}
+                          onChange={(e) => {
+                            e.stopPropagation()
+                            handleDomainChange(domain)
+                          }}
+                          className="h-5 w-5 rounded-md border-2 border-slate-300 dark:border-slate-600 text-blue-600 focus:ring-4 focus:ring-blue-500/20 transition-all cursor-pointer"
+                        />
+                        <label
+                          htmlFor={domain}
+                          className="ml-3 block text-sm font-medium text-slate-900 dark:text-white cursor-pointer select-none group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors"
+                          onClick={(e) => e.stopPropagation()}
+                        >
+                          {domain}
+                        </label>
+                      </div>
+                    ))}  
+                  </div>
                 </div>
+              )}
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-6 border-t-2 border-slate-200 dark:border-slate-800">
+                <button
+                  type="button"
+                  onClick={handlePreview}
+                  disabled={loading || (!isStaticPDF(formData.grade) && formData.domains.length === 0)}
+                  className="group inline-flex items-center justify-center gap-3 px-6 py-4 text-base font-bold
+                    rounded-xl transition-all duration-200 
+                    border-2 border-blue-600 text-blue-600 dark:text-blue-400 dark:border-blue-500 bg-white dark:bg-slate-900
+                    hover:bg-blue-50 dark:hover:bg-blue-950/50 hover:shadow-lg hover:scale-[1.02] active:scale-[0.98]
+                    focus:outline-none focus:ring-4 focus:ring-blue-500/30
+                    disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:bg-white dark:disabled:hover:bg-slate-900 disabled:hover:shadow-none disabled:hover:scale-100"
+                >
+                  {loading ? (
+                    <>
+                      <svg
+                        className="animate-spin h-5 w-5"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                      >
+                        <circle
+                          className="opacity-25"
+                          cx="12"
+                          cy="12"
+                          r="10"
+                          stroke="currentColor"
+                          strokeWidth="4"
+                        ></circle>
+                        <path
+                          className="opacity-75"
+                          fill="currentColor"
+                          d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+                        ></path>
+                      </svg>
+                      <span>Generating...</span>
+                    </>
+                  ) : (
+                    <>
+                      <Eye className="h-5 w-5 group-hover:scale-110 transition-transform" />
+                      <span>Preview Test</span>
+                    </>
+                  )}
+                </button>
+
+                <button
+                  type="submit"
+                  disabled={loading || (!isStaticPDF(formData.grade) && formData.domains.length === 0)}
+                  className="group inline-flex items-center justify-center gap-3 px-6 py-4 text-base font-bold
+                    rounded-xl transition-all duration-200
+                    border-2 border-transparent bg-gradient-to-r from-blue-600 to-indigo-600 text-white shadow-lg
+                    hover:shadow-xl hover:scale-[1.02] active:scale-[0.98] hover:from-blue-700 hover:to-indigo-700
+                    focus:outline-none focus:ring-4 focus:ring-blue-500/30
+                    disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:from-blue-600 disabled:hover:to-indigo-600 disabled:hover:shadow-lg disabled:hover:scale-100"
+                >
+                  {loading ? (
+                    <>
+                      <svg
+                        className="animate-spin h-5 w-5"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                      >
+                        <circle
+                          className="opacity-25"
+                          cx="12"
+                          cy="12"
+                          r="10"
+                          stroke="currentColor"
+                          strokeWidth="4"
+                        ></circle>
+                        <path
+                          className="opacity-75"
+                          fill="currentColor"
+                          d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+                        ></path>
+                      </svg>
+                      <span>Generating...</span>
+                    </>
+                  ) : (
+                    <>
+                      <Download className="h-5 w-5 group-hover:scale-110 transition-transform" />
+                      <span>Download Test</span>
+                    </>
+                  )}
+                </button>
               </div>
-            )}
-
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-6">
-              <button
-                type="button"
-                onClick={handlePreview}
-                disabled={loading || (!isStaticPDF(formData.grade) && formData.domains.length === 0)}
-                className="inline-flex items-center justify-center gap-2 px-6 py-4 text-base font-semibold
-                  rounded-xl transition-all duration-200 
-                  border-2 border-primary text-primary bg-primary/5
-                  hover:bg-primary/10 hover:shadow-md focus:outline-none focus:ring-2 focus:ring-primary/20 focus:ring-offset-2
-                  disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:bg-primary/5 disabled:hover:shadow-none"
-              >
-                {loading ? (
-                  <>
-                    <svg
-                      className="animate-spin h-5 w-5"
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                    >
-                      <circle
-                        className="opacity-25"
-                        cx="12"
-                        cy="12"
-                        r="10"
-                        stroke="currentColor"
-                        strokeWidth="4"
-                      ></circle>
-                      <path
-                        className="opacity-75"
-                        fill="currentColor"
-                        d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
-                      ></path>
-                    </svg>
-                    Generating...
-                  </>
-                ) : (
-                  <>
-                    <Eye className="h-5 w-5" />
-                    Preview Test
-                  </>
-                )}
-              </button>
-
-              <button
-                type="submit"
-                disabled={loading || (!isStaticPDF(formData.grade) && formData.domains.length === 0)}
-                className="inline-flex items-center justify-center gap-2 px-6 py-4 text-base font-semibold
-                  rounded-xl transition-all duration-200
-                  border-2 border-transparent bg-primary text-primary-foreground
-                  hover:bg-primary/90 hover:shadow-md focus:outline-none focus:ring-2 focus:ring-primary/20 focus:ring-offset-2
-                  disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:bg-primary disabled:hover:shadow-none"
-              >
-                {loading ? (
-                  <>
-                    <svg
-                      className="animate-spin h-5 w-5"
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                    >
-                      <circle
-                        className="opacity-25"
-                        cx="12"
-                        cy="12"
-                        r="10"
-                        stroke="currentColor"
-                        strokeWidth="4"
-                      ></circle>
-                      <path
-                        className="opacity-75"
-                        fill="currentColor"
-                        d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
-                      ></path>
-                    </svg>
-                    Generating...
-                  </>
-                ) : (
-                  <>
-                    <Download className="h-5 w-5" />
-                    Download Test
-                  </>
-                )}
-              </button>
-            </div>
-          </form>
+            </form>
+          </div>
         </div>
       </div>
     </div>
