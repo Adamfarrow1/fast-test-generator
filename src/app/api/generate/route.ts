@@ -175,11 +175,21 @@ export async function POST(req: NextRequest) {
     );
     console.log('API route: PDF generated successfully');
 
+    // Create URL-friendly filename from student name
+    const sanitizedName = studentName
+      .toLowerCase()
+      .replace(/[^a-z0-9]+/g, '_') // Replace non-alphanumeric with underscore
+      .replace(/^_+|_+$/g, '');     // Remove leading/trailing underscores
+    
+    const filename = isPert 
+      ? `${sanitizedName}_pert_practice_test.pdf`
+      : `${sanitizedName}_math_test.pdf`;
+
     // Return the PDF as a downloadable file
     return new NextResponse(Buffer.from(pdfBytes), {
       headers: {
         'Content-Type': 'application/pdf',
-        'Content-Disposition': 'attachment; filename="math-test.pdf"'
+        'Content-Disposition': `attachment; filename="${filename}"`
       }
     });
   } catch (error: unknown) {

@@ -14,10 +14,16 @@ export default function Home() {
     domains: [] as string[],
   })
 
+  // Check if grade is a static PDF option
+  const isStaticPDF = (grade: string) => grade === 'GEOMETRY' || grade === 'ALGEBRA1';
+
   // Calculate available domains whenever grade changes
   const availableDomains = useMemo(() => {
     if (formData.grade === 'PERT') {
       return getAvailableDomainsForPERT()
+    }
+    if (isStaticPDF(formData.grade)) {
+      return []
     }
     return getAvailableDomainsForGrade(Number.parseInt(formData.grade))
   }, [formData.grade])
@@ -27,7 +33,7 @@ export default function Home() {
     let newAvailableDomains: string[] = [];
     if (newGrade === 'PERT') {
       newAvailableDomains = getAvailableDomainsForPERT();
-    } else {
+    } else if (!isStaticPDF(newGrade)) {
       newAvailableDomains = getAvailableDomainsForGrade(Number.parseInt(newGrade));
     }
     setFormData((prev) => ({
@@ -37,7 +43,34 @@ export default function Home() {
     }))
   }
 
+  const handleStaticPDF = async (preview = false) => {
+    const pdfMap: Record<string, string> = {
+      'GEOMETRY': '/pdfs/geometry.pdf',
+      'ALGEBRA1': '/pdfs/algebra1.pdf'
+    };
+
+    const pdfUrl = pdfMap[formData.grade];
+    if (!pdfUrl) return;
+
+    if (preview) {
+      window.open(pdfUrl, "_blank");
+    } else {
+      const link = document.createElement('a');
+      link.href = pdfUrl;
+      link.download = formData.grade === 'GEOMETRY' ? 'geometry_review.pdf' : 'algebra1_review.pdf';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    }
+  };
+
   const generatePDF = async (preview = false) => {
+    // Handle static PDFs
+    if (isStaticPDF(formData.grade)) {
+      handleStaticPDF(preview);
+      return;
+    }
+
     setLoading(true)
     try {
       // Call the API to generate the PDF
@@ -68,9 +101,20 @@ export default function Home() {
       if (preview) {
         window.open(url, "_blank")
       } else {
+        // Extract filename from Content-Disposition header
+        const contentDisposition = response.headers.get('Content-Disposition');
+        let filename = formData.grade === 'PERT' ? "pert-practice-test.pdf" : "math-test.pdf";
+        
+        if (contentDisposition) {
+          const filenameMatch = contentDisposition.match(/filename="?(.+?)"?$/i);
+          if (filenameMatch) {
+            filename = filenameMatch[1];
+          }
+        }
+        
         const a = document.createElement("a")
         a.href = url
-        a.download = formData.grade === 'PERT' ? "pert-practice-test.pdf" : "math-test.pdf"
+        a.download = filename
         document.body.appendChild(a)
         a.click()
         a.remove()
@@ -103,7 +147,9 @@ export default function Home() {
     }))
   }
 
-  const availableQuestions = formData.grade === 'PERT'
+  const availableQuestions = isStaticPDF(formData.grade)
+    ? 0
+    : formData.grade === 'PERT'
     ? pertQuestions.filter(
         (q) => formData.domains.length === 0 || formData.domains.includes(q.domain)
       ).length
@@ -168,22 +214,24 @@ export default function Home() {
       <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
         <div className="bg-card border border-border rounded-2xl shadow-lg p-8">
           <form onSubmit={handleSubmit} className="space-y-8">
-            <div className="space-y-3">
-              <label htmlFor="studentName" className="block text-sm font-semibold text-foreground">
-                Student Name
-              </label>
-              <input
-                type="text"
-                id="studentName"
-                value={formData.studentName}
-                onChange={(e) => setFormData((prev) => ({ ...prev, studentName: e.target.value }))}
-                placeholder="Enter student's name"
-                className="block w-full rounded-lg border-border bg-input shadow-sm transition-all duration-200
-                  focus:border-primary focus:ring-2 focus:ring-primary/20 hover:border-primary/50
-                  text-foreground px-4 py-3"
-                required
-              />
-            </div>
+            {!isStaticPDF(formData.grade) && (
+              <div className="space-y-3">
+                <label htmlFor="studentName" className="block text-sm font-semibold text-foreground">
+                  Student Name
+                </label>
+                <input
+                  type="text"
+                  id="studentName"
+                  value={formData.studentName}
+                  onChange={(e) => setFormData((prev) => ({ ...prev, studentName: e.target.value }))}
+                  placeholder="Enter student's name"
+                  className="block w-full rounded-lg border-border bg-input shadow-sm transition-all duration-200
+                    focus:border-primary focus:ring-2 focus:ring-primary/20 hover:border-primary/50
+                    text-foreground px-4 py-3"
+                  required
+                />
+              </div>
+            )}
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="space-y-3">
@@ -205,46 +253,80 @@ export default function Home() {
                     </option>
                   ))}
                   <option value="PERT">PERT Practice Test</option>
+                  <option value="GEOMETRY">Geometry Review Packet</option>
+                  <option value="ALGEBRA1">Algebra 1 Review Packet</option>
                 </select>
               </div>
 
-              <div className="space-y-3">
-                <label htmlFor="numQuestions" className="block text-sm font-semibold text-foreground">
-                  Number of Questions
-                </label>
-                <input
-                  type="number"
-                  id="numQuestions"
-                  min="1"
-                  max="200"
-                  value={formData.numQuestions}
-                  onChange={(e) => setFormData((prev) => ({ ...prev, numQuestions: e.target.value }))}
-                  className="block w-full rounded-lg border-border bg-input shadow-sm transition-all duration-200
-                    focus:border-primary focus:ring-2 focus:ring-primary/20 hover:border-primary/50
-                    text-foreground px-4 py-3"
-                  required
-                />
-                <p className="text-sm text-muted-foreground flex items-center gap-2">
-                  <span className="inline-flex items-center justify-center w-5 h-5 bg-primary/10 text-primary rounded-full text-xs font-medium">
-                    {availableQuestions}
-                  </span>
-                  questions available for selection
-                </p>
-              </div>
+              {!isStaticPDF(formData.grade) && (
+                <div className="space-y-3">
+                  <label htmlFor="numQuestions" className="block text-sm font-semibold text-foreground">
+                    Number of Questions
+                  </label>
+                  <input
+                    type="number"
+                    id="numQuestions"
+                    min="1"
+                    max="200"
+                    value={formData.numQuestions}
+                    onChange={(e) => setFormData((prev) => ({ ...prev, numQuestions: e.target.value }))}
+                    className="block w-full rounded-lg border-border bg-input shadow-sm transition-all duration-200
+                      focus:border-primary focus:ring-2 focus:ring-primary/20 hover:border-primary/50
+                      text-foreground px-4 py-3"
+                    required
+                  />
+                  <p className="text-sm text-muted-foreground flex items-center gap-2">
+                    <span className="inline-flex items-center justify-center w-5 h-5 bg-primary/10 text-primary rounded-full text-xs font-medium">
+                      {availableQuestions}
+                    </span>
+                    questions available for selection
+                  </p>
+                </div>
+              )}
             </div>
 
-            <div className="space-y-4">
-              <div className="flex items-center justify-between">
-                <label className="text-sm font-semibold text-foreground">Math Topics</label>
-                <div className="flex items-center gap-2">
-                  <span className="text-sm text-muted-foreground">Selected:</span>
-                  <span className="inline-flex items-center justify-center min-w-6 h-6 bg-secondary/10 text-secondary rounded-full text-xs font-bold px-2">
-                    {formData.domains.length}
-                  </span>
+            {isStaticPDF(formData.grade) ? (
+              <div className="p-6 bg-primary/5 rounded-xl border border-primary/30">
+                <div className="flex items-start gap-3">
+                  <BookOpen className="h-5 w-5 text-primary mt-0.5" />
+                  <div>
+                    <h3 className="font-semibold text-foreground mb-2">
+                      {formData.grade === 'GEOMETRY' ? 'Geometry Review Packet' : 'Algebra 1 Review Packet'}
+                    </h3>
+                    <p className="text-sm text-muted-foreground">
+                      This is a comprehensive review packet. Click the buttons below to preview or download the PDF.
+                    </p>
+                  </div>
                 </div>
               </div>
+            ) : (
+              <div className="space-y-4">
+                <div className="flex items-center justify-between">
+                  <label className="text-sm font-semibold text-foreground">Math Topics</label>
+                  <div className="flex items-center gap-3">
+                    <button
+                      type="button"
+                      onClick={() => {
+                        if (formData.domains.length === availableDomains.length) {
+                          setFormData((prev) => ({ ...prev, domains: [] }))
+                        } else {
+                          setFormData((prev) => ({ ...prev, domains: [...availableDomains] }))
+                        }
+                      }}
+                      className="text-sm text-primary hover:text-primary/80 font-medium underline transition-colors"
+                    >
+                      {formData.domains.length === availableDomains.length ? 'Deselect All' : 'Select All'}
+                    </button>
+                    <div className="flex items-center gap-2">
+                      <span className="text-sm text-muted-foreground">Selected:</span>
+                      <span className="inline-flex items-center justify-center min-w-6 h-6 bg-secondary/10 text-secondary rounded-full text-xs font-bold px-2">
+                        {formData.domains.length}
+                      </span>
+                    </div>
+                  </div>
+                </div>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 p-6 bg-muted/30 rounded-xl border border-border">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 p-6 bg-muted/30 rounded-xl border border-border">
                 {availableDomains.map((domain) => (
                   <div
                     key={domain}
@@ -279,15 +361,16 @@ export default function Home() {
                       {domain}
                     </label>
                   </div>
-                ))}
+                ))}  
+                </div>
               </div>
-            </div>
+            )}
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-6">
               <button
                 type="button"
                 onClick={handlePreview}
-                disabled={loading || formData.domains.length === 0}
+                disabled={loading || (!isStaticPDF(formData.grade) && formData.domains.length === 0)}
                 className="inline-flex items-center justify-center gap-2 px-6 py-4 text-base font-semibold
                   rounded-xl transition-all duration-200 
                   border-2 border-primary text-primary bg-primary/5
@@ -328,7 +411,7 @@ export default function Home() {
 
               <button
                 type="submit"
-                disabled={loading || formData.domains.length === 0}
+                disabled={loading || (!isStaticPDF(formData.grade) && formData.domains.length === 0)}
                 className="inline-flex items-center justify-center gap-2 px-6 py-4 text-base font-semibold
                   rounded-xl transition-all duration-200
                   border-2 border-transparent bg-primary text-primary-foreground
